@@ -4,7 +4,7 @@
 # Status Atual - Obsidian RAG Connector
 
 **Last Updated:** 2026-03-01  
-**Current Phase:** Sprint 01 - Vault Indexing Complete ✅
+**Current Phase:** Sprint 01 - Vault Indexing IN PROGRESS 🔄
 
 ---
 
@@ -13,11 +13,11 @@
 | Phase | Sprint | Status | Completion |
 |-------|--------|--------|------------|
 | Documentation | Sprint 00 | ✅ COMPLETE | 100% |
-| Vault Indexing | Sprint 01 | ✅ COMPLETE | 100% |
-| PDF Ingestion | Sprint 02 | ⏭️ PENDING | 0% |
-| Retrieval & Re-Rank | Sprint 03 | ⏭️ PENDING | 0% |
-| Ollama Validation | Sprint 04 | ⏭️ PENDING | 0% |
-| Output Generation | Sprint 05 | ⏭️ PENDING | 0% |
+| Vault Indexing | Sprint 01 | 🔄 IN PROGRESS | ~60% |
+| PDF Ingestion | Sprint 02 | ⏭️ READY TO START | 0% |
+| Retrieval & Re-Rank | Sprint 03 | ⏸️ BLOCKED | 0% |
+| Ollama Validation | Sprint 04 | ⏸️ BLOCKED | 0% |
+| Output Generation | Sprint 05 | ⏸️ BLOCKED | 0% |
 
 ---
 
@@ -67,6 +67,45 @@
 | Google Gemini API | ✅ | ⏭️ API Key Needed |
 | Obsidian Vault | ✅ | ✅ Exists (3000+ notes) |
 | PDF Library | ✅ | ✅ Exists (user confirmed) |
+
+---
+
+## Sprint 01 Execution Status (🔄 IN PROGRESS)
+
+### Current State
+- **Status:** 🔄 IMPLEMENTATION COMPLETE / EXECUTION PENDING
+- **Started:** 2026-03-01
+- **Last Updated:** 2026-03-01
+- **Estimated Completion:** 4-6 hours (depending on hardware)
+- **Progress:** Code ready, awaiting Ollama execution
+
+### What Was Completed
+✅ All source code implemented:
+- `src/indexing/vault_indexer.py` - Main indexer with CLI
+- `src/indexing/text_cleaner.py` - Text preprocessing
+- `src/indexing/chunker.py` - Token-based chunking (800 tokens, 100 overlap)
+- `src/indexing/chroma_client.py` - ChromaDB wrapper
+- `src/utils/config.py` - Pydantic settings
+- `src/utils/logging.py` - Logging system
+- `src/utils/exceptions.py` - Custom exceptions
+- `tests/unit/test_indexing.py` - Unit tests
+- `run_indexer.sh` - Execution wrapper
+
+### Hardware Constraints
+- **Issue:** Ollama embedding generation slow on CPU
+- **Impact:** ~5-10 seconds per note (estimated)
+- **Total Time:** ~5-10 hours for 3000+ notes on CPU
+- **Mitigation:** 
+  - Code is ready and tested
+  - Can run in background
+  - Proceeding with Sprint 02 in parallel
+
+### Next Steps
+- [ ] Execute indexing: `./run_indexer.sh --clean`
+- [ ] Monitor progress in `data/logs/indexing.log`
+- [ ] Allow Sprint 01 to complete in background
+- [ ] Start Sprint 02 (PDF Ingestion) in parallel
+- [ ] Begin Sprint 03 only after Sprint 01 completes
 
 ---
 

@@ -115,11 +115,43 @@ assert all(match['approved'] for match in output_matches)
 | Phase | Sprint | Status | Description |
 |-------|--------|--------|-------------|
 | Phase 0 | Sprint 00 | ✅ COMPLETE | Documentation & Context Setup |
-| Phase 1 | Sprint 01 | ⏭️ NEXT | Vault Re-Indexing (Embeddings) |
-| Phase 2 | Sprint 02 | ⏭️ FUTURE | PDF Ingestion & Translation |
-| Phase 3 | Sprint 03 | ⏭️ FUTURE | Retrieval & Re-Ranking |
-| Phase 4 | Sprint 04 | ⏭️ FUTURE | Ollama Validation Pipeline |
-| Phase 5 | Sprint 05 | ⏭️ FUTURE | Output & Obsidian Integration |
+| Phase 1 | Sprint 01 | 🔄 IN PROGRESS | Vault Re-Indexing (Embeddings) |
+| Phase 2 | Sprint 02 | ⏭️ READY | PDF Ingestion & Translation |
+| Phase 3 | Sprint 03 | ⏸️ BLOCKED | Retrieval & Re-Ranking |
+| Phase 4 | Sprint 04 | ⏸️ BLOCKED | Ollama Validation Pipeline |
+| Phase 5 | Sprint 05 | ⏸️ BLOCKED | Output & Obsidian Integration |
+
+---
+
+## Parallel Execution Strategy
+
+| Sprint | Can Run Parallel? | Blocks | Blocked By | Notes |
+|--------|-------------------|--------|------------|-------|
+| Sprint 00 | N/A (first) | Sprint 01 | — | Documentation complete |
+| Sprint 01 | N/A | Sprint 03 | — | Hardware-bound (Ollama) |
+| Sprint 02 | ✅ YES | Sprint 03 | — | Independent of ChromaDB |
+| Sprint 03 | ❌ NO | Sprint 04 | Sprint 01 + 02 | Needs populated vectors |
+| Sprint 04 | ❌ NO | Sprint 05 | Sprint 03 | Needs retrieval pipeline |
+| Sprint 05 | ❌ NO | — | Sprint 04 | Final output generation |
+
+### Current Strategy: Sprint 02 Starts While Sprint 01 Completes
+
+**Rationale:**
+- Sprint 01 is hardware-bound (Ollama embeddings on CPU)
+- Sprint 02 processes PDFs and doesn't need ChromaDB to be populated
+- This saves ~4-6 hours of idle time
+
+**Risk Mitigation:**
+- Sprint 03 will wait for BOTH Sprint 01 and 02 to complete
+- If Sprint 01 fails, we can re-index without losing Sprint 02 work
+- Modules are independent (no shared state until Sprint 03)
+
+**Expected Timeline:**
+- Sprint 01: Complete in background (~6-10 hours total)
+- Sprint 02: Develop now (~2-3 hours)
+- Sprint 03: Start after both complete
+
+See `docs/08_SPRINT_DEPENDENCIES.md` for complete dependency graph.
 
 ---
 
