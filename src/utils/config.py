@@ -57,6 +57,26 @@ class Settings(BaseSettings):
         default=100, description="Number of overlapping tokens between chunks"
     )
 
+    # Gemini API Configuration
+    gemini_api_key: str = Field(
+        default="",
+        description="Google Gemini API key for translation",
+    )
+    gemini_model: str = Field(
+        default="gemini-1.5-flash",
+        description="Gemini model for translation",
+    )
+
+    # PDF Configuration
+    pdf_library_path: Path = Field(
+        default=Path("/home/s015533607/Calibre Library"),
+        description="Path to PDF library directory",
+    )
+    translation_target_language: str = Field(
+        default="pt",
+        description="Target language for translation (ISO 639-1 code)",
+    )
+
     @property
     def collection_name(self) -> str:
         """Return the ChromaDB collection name."""

@@ -41,3 +41,21 @@ class IndexingError(ObsidianRAGError):
     """Raised when note indexing fails."""
 
     pass
+
+
+class PDFExtractionError(ObsidianRAGError):
+    """Raised when PDF extraction fails."""
+
+    pass
+
+
+class LanguageDetectionError(ObsidianRAGError):
+    """Raised when language detection fails."""
+
+    pass
+
+
+class TranslationError(ObsidianRAGError):
+    """Raised when translation fails."""
+
+    pass
