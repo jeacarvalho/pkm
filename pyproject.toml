@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "obsidian-rag"
+version = "0.1.0"
+description = "RAG system for Obsidian Vault"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+chromadb = "^0.4.22"
+ollama = "^0.1.7"
+python-dotenv = "^1.0.0"
+pydantic = "^2.5.3"
+pydantic-settings = "^2.1.0"
+tqdm = "^4.66.1"
+tiktoken = "^0.5.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+black = "^23.12.1"
+isort = "^5.13.2"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
