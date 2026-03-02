@@ -36,7 +36,7 @@
 - ✅ Embedding model: `bge-m3` via Ollama (not reusing existing embeddings)
 - ✅ Re-Ranker: `bge-reranker-v2-m3` (eliminates false positives)
 - ✅ Validation: Ollama local with strict JSON output
-- ✅ Translation: Gemini 1.5 Flash (not 2.5 - doesn't exist)
+- ✅ Translation: Gemini 2.0 Flash (via google.genai - new API)
 - ✅ Vector Store: ChromaDB persistent on disk
 - ✅ Chunk sizes: Vault 800 tokens, Book 512 tokens
 
@@ -361,11 +361,12 @@ python3 -m src.output.pipeline --book-chunks "file.json" --output-dir "data/outp
 |-------|----------|--------|------------|
 | Existing embeddings unknown | High | ✅ Resolved | Decision: Re-index all with bge-m3 |
 | False positives in matches | High | ✅ Resolved | Decision: Add Re-Ranker layer |
-| Gemini model name incorrect | Medium | ✅ Resolved | Decision: Use gemini-1.5-flash |
+| Gemini model name incorrect | Medium | ✅ Resolved | Decision: Use gemini-2.0-flash |
 | Ollama model undefined | Medium | ✅ Resolved | Decision: llama3.2 for validation |
 | Accidental data deletion | CRITICAL | ✅ Resolved | Backup scripts, confirmation prompts |
 | ChromaDB version mismatch | CRITICAL | ✅ Resolved | Use system Python with ChromaDB 1.5.1 |
 | JSON parsing errors in Ollama | Medium | ✅ Resolved | Simplified prompt, no markdown |
+| google.generativeai deprecated | High | ✅ Resolved | Use google.genai (new API) |
 
 ---
 
@@ -382,6 +383,8 @@ python3 -m src.output.pipeline --book-chunks "file.json" --output-dir "data/outp
 | 2026-03-02 | Use system Python (not Poetry) | ChromaDB 1.5.1 vs 0.4.24 incompatibility |
 | 2026-03-02 | Use llama3.2 for validation | llama3.1 not available in Ollama |
 | 2026-03-02 | Simplify prompt for JSON | Avoid markdown code blocks in responses |
+| 2026-03-02 | Use google.genai (new API) | google.generativeai is deprecated |
+| 2026-03-02 | Use gemini-2.0-flash | gemini-1.5-flash not available in new API |
 
 ---
 
