@@ -340,3 +340,30 @@ results = collection.query(
 ```
 
 ---
+
+## ChromaDB Collections Status
+
+### Collection: `obsidian_notes` (Sprint 01)
+
+| Property | Value |
+|----------|-------|
+| Status | 🔄 IN PROGRESS |
+| Documents | ~2609 / 3570 (73%) |
+| Embedding Model | bge-m3 (1024 dimensions) |
+| Storage Path | `data/vectors/chroma_db/` |
+| Started | 2026-03-01 |
+| Estimated Completion | ~2-4 hours remaining |
+
+### Collection: `processed_books` (Sprint 02)
+
+| Property | Value |
+|----------|-------|
+| Status | ✅ READY (chunks generated as JSON) |
+| Documents | 183 chunks (test PDF) |
+| Embedding Model | bge-m3 (not yet embedded) |
+| Storage Path | `data/processed/[book_name]_chunks.json` |
+| Completed | 2026-03-01 |
+
+**Note:** Book chunks are ready but cannot be matched to vault notes until Sprint 01 completes.
+
+---

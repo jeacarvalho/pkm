@@ -13,8 +13,8 @@
 | Phase | Sprint | Status | Completion |
 |-------|--------|--------|------------|
 | Documentation | Sprint 00 | ✅ COMPLETE | 100% |
-| Vault Indexing | Sprint 01 | 🔄 IN PROGRESS | ~60% |
-| PDF Ingestion | Sprint 02 | ⏭️ READY TO START | 0% |
+| Vault Indexing | Sprint 01 | 🔄 IN PROGRESS | ~73% (2609/3570 notas) |
+| PDF Ingestion | Sprint 02 | ✅ COMPLETE | 100% (código/testes prontos) |
 | Retrieval & Re-Rank | Sprint 03 | ⏸️ BLOCKED | 0% |
 | Ollama Validation | Sprint 04 | ⏸️ BLOCKED | 0% |
 | Output Generation | Sprint 05 | ⏸️ BLOCKED | 0% |
@@ -73,11 +73,12 @@
 ## Sprint 01 Execution Status (🔄 IN PROGRESS)
 
 ### Current State
-- **Status:** 🔄 IMPLEMENTATION COMPLETE / EXECUTION PENDING
+- **Status:** 🔄 IN PROGRESS (73% complete)
 - **Started:** 2026-03-01
 - **Last Updated:** 2026-03-01
-- **Estimated Completion:** 4-6 hours (depending on hardware)
-- **Progress:** Code ready, awaiting Ollama execution
+- **Progress:** 2609 / 3570 notes processed (~73%)
+- **Remaining:** ~961 notes
+- **Estimated Completion:** ~2-4 hours remaining
 
 ### What Was Completed
 ✅ All source code implemented:
@@ -101,55 +102,62 @@
   - Proceeding with Sprint 02 in parallel
 
 ### Next Steps
-- [ ] Execute indexing: `./run_indexer.sh --clean`
-- [ ] Monitor progress in `data/logs/indexing.log`
-- [ ] Allow Sprint 01 to complete in background
-- [ ] Start Sprint 02 (PDF Ingestion) in parallel
+- [ ] Allow Sprint 01 to complete in background (~961 notes remaining)
 - [ ] Begin Sprint 03 only after Sprint 01 completes
+- [x] Sprint 02 completed in parallel (PDF Ingestion code ready)
 
 ---
 
-## Next: Sprint 01 - Vault Re-Indexing
+## Sprint 02 Execution Status (✅ COMPLETE)
 
-### Tasks
+### Execution Summary
+- **Status:** ✅ COMPLETE (code and tests ready)
+- **Completed:** 2026-03-01
+- **Test PDF:** Rhythms for Life - Alastair Sterne.pdf
+- **Chunks Generated:** 183 chunks from 26 chapters
 
-- [x] Create `src/indexing/` directory structure
-- [x] Implement `vault_indexer.py` with Ollama embedding
-- [x] Configure ChromaDB persistent storage
-- [x] Add text cleaning (frontmatter, links, code blocks)
-- [x] Implement chunking logic (800 tokens, 100 overlap)
-- [x] Add progress tracking (tqdm)
-- [x] Add error logging (skip failed notes, continue)
-- [x] Create `--clean` flag for full rebuild
-- [x] Write unit tests for indexing module
+### Tasks Completed
+- [x] Create `src/ingestion/` directory structure
+- [x] Implement `pdf_processor.py` with CLI
+- [x] Implement `text_extractor.py` with PyMuPDF
+- [x] Implement `translator.py` with Gemini API
+- [x] Implement `language_detector.py` with langdetect
+- [x] Implement `chunker.py` (512 tokens, 50 overlap)
+- [x] Write unit tests (19 tests passing)
+- [x] Update config with Gemini settings
 
-### Deliverables
-
+### Files Created
 ```
-src/indexing/
+src/ingestion/
 ├── __init__.py
-├── vault_indexer.py      # Main script
-├── text_cleaner.py       # Text preprocessing
-├── chunker.py            # Token-based chunking
-└── chroma_client.py      # ChromaDB wrapper
+├── pdf_processor.py      # Main script (CLI)
+├── text_extractor.py     # PyMuPDF wrapper
+├── translator.py         # Gemini API integration
+├── language_detector.py  # Language detection
+└── chunker.py           # 512-token chunking
 
 tests/unit/
-└── test_indexing.py      # Unit tests
-
-data/
-├── vectors/              # ChromaDB storage (auto-created)
-└── logs/
-    └── indexing.log      # Execution log
+└── test_ingestion.py    # 19 unit tests
 ```
 
-### Acceptance Criteria
+### CLI Usage
+```bash
+# Process single PDF
+python3 -m src.ingestion.pdf_processor --book "path/to/book.pdf"
 
-- [ ] All 3000+ notes indexed without errors
-- [ ] ChromaDB collection `obsidian_notes` created
-- [ ] Each chunk has metadata: file_path, note_title, tags, chunk_id
-- [ ] Failed notes logged to `skipped_notes.log`
-- [ ] Re-run with `--clean` produces identical results
-- [ ] Execution time < 30 minutes for full vault
+# Dry run
+python3 -m src.ingestion.pdf_processor --book "path" --dry-run
+
+# Skip translation
+python3 -m src.ingestion.pdf_processor --book "path" --no-translate
+
+# Process library
+python3 -m src.ingestion.pdf_processor --library "/path/to/pdfs"
+```
+
+### Next Steps (Blocked)
+- [ ] Wait for Sprint 01 to complete before running on full library
+- [ ] Process PDFs with translation (requires Gemini API quota)
 
 ---
 

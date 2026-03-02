@@ -10,12 +10,26 @@
 ```
 Sprint 00 (Docs) ✅
        ↓
-Sprint 01 (Vault Indexing) 🔄
-       ↓                    ↘
-Sprint 02 (PDF Ingestion) ✅ → Sprint 03 (Retrieval) ⏸️
-       ↓                              ↓
-Sprint 04 (Validation) ⏸️        Sprint 05 (Output) ⏸️
+Sprint 01 (Vault Indexing) 🔄 IN PROGRESS (73% - 2609/3570)
+       ↓
+Sprint 02 (PDF Ingestion) ✅ COMPLETE
+       ↓
+Sprint 03 (Retrieval) ⏸️ BLOCKED (needs 01 to finish)
+       ↓
+Sprint 04 (Validation) ⏸️ BLOCKED (needs 03)
+       ↓
+Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 ```
+
+## Current Status (2026-03-01)
+
+| Sprint | Progress | Status | Next Action |
+|--------|----------|--------|-------------|
+| Sprint 01 | 2609/3570 (~73%) | 🔄 IN PROGRESS | Continue running in background |
+| Sprint 02 | Code + Tests ready | ✅ COMPLETE | Wait for 01 to finish |
+| Sprint 03 | Not started | ⏸️ BLOCKED | Wait for 01 to finish |
+| Sprint 04 | Not started | ⏸️ BLOCKED | Wait for 03 |
+| Sprint 05 | Not started | ⏸️ BLOCKED | Wait for 04 |
 
 ## Legend
 
