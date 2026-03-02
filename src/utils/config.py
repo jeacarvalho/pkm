@@ -77,6 +77,24 @@ class Settings(BaseSettings):
         description="Target language for translation (ISO 639-1 code)",
     )
 
+    # Retrieval & Re-Rank Configuration (Sprint 03)
+    rerank_model: str = Field(
+        default="BAAI/bge-reranker-v2-m3",
+        description="Cross-encoder model for re-ranking",
+    )
+    rerank_threshold: float = Field(
+        default=0.75,
+        description="Minimum re-rank score to retain (0.0-1.0)",
+    )
+    vector_search_top_k: int = Field(
+        default=20,
+        description="Number of initial results from vector search",
+    )
+    rerank_top_k: int = Field(
+        default=5,
+        description="Number of final results after re-ranking",
+    )
+
     @property
     def collection_name(self) -> str:
         """Return the ChromaDB collection name."""
