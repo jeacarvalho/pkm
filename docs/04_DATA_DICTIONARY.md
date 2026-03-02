@@ -347,12 +347,16 @@ results = collection.query(
 
 | Property | Value |
 |----------|-------|
-| Status | ✅ COMPLETE |
-| Documents | 3570 notes → 10144 chunks |
+| Status | ⚠️ PARTIAL INDEX |
+| Documents | 147 chunks (pasta "30 LIDERANCA" apenas) |
+| Expected Full | 10144 chunks (3570 notas) |
+| Coverage | ~1.4% do vault |
 | Source | User-created Obsidian notes (.md) |
 | Embedding Model | bge-m3 (1024 dimensions) |
 | Storage Path | `data/vectors/chroma_db/` |
-| Searchable | ✅ YES |
+| Searchable | ✅ YES (limitado) |
+
+**Note:** Full vault re-index pending after pipeline validation.
 
 ### Collection: `processed_book_chunks` (Sprint 02)
 

@@ -2,7 +2,34 @@
 
 **Project:** Obsidian RAG Connector  
 **Repository:** https://github.com/jeacarvalho/pkm  
-**Last Updated:** 2026-03-01
+**Last Updated:** 2026-03-02
+
+---
+
+## Session 004 (2026-03-02) - Documentation Correction
+
+### Issue Identified
+- Documentation had conflicting information about Sprint 01 status
+- Some files said "3570 notes indexed" (FALSE)
+- Actual status: "147 chunks from 30 LIDERANCA folder only"
+
+### Correction Made
+- Updated `02_CURRENT_STATUS.md` with real metrics (147 chunks)
+- Updated `08_SPRINT_DEPENDENCIES.md` with partial status
+- Added warning notes about partial index limitations
+- Added partial index limitation section to Recovery.md
+
+### Current Index Status
+```
+$ python3 scripts/verify_index.py
+✅ Collection 'obsidian_notes': 147 chunks
+⚠️  WARNING: Index seems incomplete!
+```
+
+### Lesson Learned
+- Always verify metrics with `scripts/verify_index.py`
+- Use single source of truth for index statistics
+- Document the actual state, not the expected state
 
 ---
 

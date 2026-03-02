@@ -25,9 +25,9 @@ Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 
 | Sprint | Progress | Status | Next Action |
 |--------|----------|--------|-------------|
-| Sprint 01 | 30 LIDERANCA (147 chunks) | ✅ COMPLETE | Rebuild full index later |
+| Sprint 01 | 147 chunks (30 LIDERANCA) | 🔄 PARTIAL | Full re-index após validação |
 | Sprint 02 | Code + Tests ready | ✅ COMPLETE | Ready for Sprint 03 |
-| Sprint 03 | Pipeline implemented | ✅ COMPLETE | Ready for Sprint 04 |
+| Sprint 03 | Pipeline implemented | ✅ COMPLETE | Functional with partial index |
 | Sprint 04 | Prompt tuned, testing | 🔄 IN PROGRESS | Fix JSON parsing |
 | Sprint 05 | Not started | ⏸️ BLOCKED | Wait for 04 |
 
@@ -40,6 +40,20 @@ Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 | ⏸️ | Blocked (waiting for dependencies) |
 | → | Sequential dependency |
 | ↘ | Parallel possible |
+
+---
+
+## ⚠️ Partial Index Limitation
+
+**Sprints 03-04-05 são funcionais mas testes limitados:**
+- Retrieval funciona apenas com 147 chunks indexados (pasta "30 LIDERANCA")
+- Validation funciona apenas com matches deste subconjunto
+- Output funciona mas cobertura limitada (~1.4% do vault)
+
+**Plano:**
+1. Validar pipeline com index parcial (rápido)
+2. Após validação, re-indexar vault completo
+3. Re-executar sprints 03-04-05 com dados completos
 
 ---
 

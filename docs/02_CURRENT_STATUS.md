@@ -13,9 +13,9 @@
 | Phase | Sprint | Status | Completion |
 |-------|--------|--------|------------|
 | Documentation | Sprint 00 | ✅ COMPLETE | 100% |
-| Vault Indexing | Sprint 01 | ✅ COMPLETE | 100% (REBUILT - 30 LIDERANCA, 147 chunks) |
+| Vault Indexing | Sprint 01 | 🔄 PARTIAL | ~1.4% (147/10144 chunks - apenas "30 LIDERANCA") |
 | PDF Ingestion | Sprint 02 | ✅ COMPLETE | 100% |
-| Retrieval & Re-Rank | Sprint 03 | ✅ COMPLETE | 100% |
+| Retrieval & Re-Rank | Sprint 03 | ✅ COMPLETE | 100% (funcional, index parcial) |
 | Ollama Validation | Sprint 04 | 🔄 IN PROGRESS | 70% |
 | Output Generation | Sprint 05 | ⏸️ BLOCKED | 0% |
 
@@ -238,15 +238,29 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 - [x] `docs/RECOVERY.md` - Recovery procedures
 - [x] `scripts/verify_index.py` - Index health check
 
-### Current Index Status
+### Current Index Status (REAL)
 
 | Metric | Value | Status |
 |--------|-------|--------|
-| Total Notes | 3570 | 🔄 REBUILDING |
-| Total Chunks | 10144 | 🔄 REBUILDING |
-| Index Status | 🔄 REBUILDING | In Progress |
+| Total Notes in Vault | 3570 | ✅ Known |
+| **Notes Indexed** | **~30** | **⚠️ PARTIAL** |
+| **Chunks Indexed** | **147** | **⚠️ PARTIAL (1.4%)** |
+| Expected Full Index | 10144 | Future |
 | Last Backup | Available | ✅ Protected |
-| Estimated Time | 10-12 hours | CPU-only |
+| Source Folder | 30 LIDERANCA | Test subset |
+
+### ⚠️ IMPORTANT: Partial Index Limitation
+
+**Status Real do ChromaDB:**
+- **Indexado:** Apenas pasta "30 LIDERANCA" (~30 notas, 147 chunks)
+- **Não Indexado:** Restante do vault (~3423 notas, ~9997 chunks)
+- **Motivo:** Teste de conceito para validação do pipeline
+- **Impacto:** Sprints 03-04-05 funcionais, mas testes limitados ao subconjunto
+
+**Próximos Passos:**
+- [ ] Validar pipeline completo com index parcial
+- [ ] Após validação, re-indexar vault completo (--clean)
+- [ ] Tempo estimado para full index: 10-12 horas
 
 ---
 
