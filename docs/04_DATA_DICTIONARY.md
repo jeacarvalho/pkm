@@ -365,6 +365,16 @@ results = collection.query(
 | Storage Path | `data/processed/[book_name]_chunks.json` |
 | Searchable | ⏸️ Needs embedding (Sprint 03) |
 
+### Retrieval Status (Sprint 03)
+
+| Property | Value |
+|----------|-------|
+| Status | ✅ COMPLETE |
+| Vector Search | Implemented (Top-20 candidates) |
+| Re-Ranker | Implemented (bge-reranker-v2-m3, threshold 0.75) |
+| Pipeline | 2-stage orchestration working |
+| Tested Queries | 3 (antifragilidade, Taleb, hábitos) |
+
 ### Query Strategy for Sprint 03
 
 ```python

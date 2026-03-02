@@ -3,8 +3,8 @@
 ```markdown
 # Status Atual - Obsidian RAG Connector
 
-**Last Updated:** 2026-03-01  
-**Current Phase:** Sprints 01 + 02 Complete ✅ | Sprint 03 Ready to Start
+**Last Updated:** 2026-03-02  
+**Current Phase:** Sprints 01-03 Complete ✅ | Sprint 04 Ready to Start
 
 ---
 
@@ -15,8 +15,8 @@
 | Documentation | Sprint 00 | ✅ COMPLETE | 100% |
 | Vault Indexing | Sprint 01 | ✅ COMPLETE | 100% (3570 notas, 10144 chunks) |
 | PDF Ingestion | Sprint 02 | ✅ COMPLETE | 100% |
-| Retrieval & Re-Rank | Sprint 03 | ⏭️ READY | 0% |
-| Ollama Validation | Sprint 04 | ⏸️ BLOCKED | 0% |
+| Retrieval & Re-Rank | Sprint 03 | ✅ COMPLETE | 100% |
+| Ollama Validation | Sprint 04 | ⏭️ READY | 0% |
 | Output Generation | Sprint 05 | ⏸️ BLOCKED | 0% |
 
 ---
@@ -159,12 +159,66 @@ python3 -m src.ingestion.pdf_processor --library "/path/to/pdfs"
 ```
 
 ### Next Steps (Blocked)
-- [ ] Wait for Sprint 01 to complete before running on full library
-- [ ] Process PDFs with translation (requires Gemini API quota)
+- [x] Sprint 01 complete
+- [x] Sprint 02 complete
+- [x] Sprint 03 complete
+- ⏭️ Sprint 04 ready to start
 
 ---
 
-## Known Issues & Blockers
+## Sprint 03 Execution Status (✅ COMPLETED 2026-03-02)
+
+### Execution Summary
+- **Status:** ✅ COMPLETE
+- **Completed:** 2026-03-02
+- **Embedding Model:** bge-m3 (via Ollama)
+- **Re-Ranker Model:** BAAI/bge-reranker-v2-m3
+- **Collection:** obsidian_notes (10144 chunks)
+
+### Tasks Completed
+- [x] Create `src/retrieval/` directory structure
+- [x] Implement `vector_search.py` with ChromaDB query (Top-20)
+- [x] Implement `reranker.py` with cross-encoder (bge-reranker-v2-m3)
+- [x] Implement `pipeline.py` with 2-stage retrieval orchestration
+- [x] Update config with retrieval settings (threshold, top-k)
+- [x] Write unit tests for retrieval module
+
+### Files Created
+```
+src/retrieval/
+├── __init__.py
+├── vector_search.py      # ChromaDB query (Top-20)
+├── reranker.py          # Cross-encoder re-ranking
+└── pipeline.py          # 2-stage orchestration
+```
+
+### CLI Usage
+```bash
+# Query simples
+python3 -m src.retrieval.pipeline --query "antifragilidade"
+
+# Com arquivo de chunks (Sprint 02)
+python3 -m src.retrieval.pipeline --chunk-file "data/processed/book_chunks.json"
+
+# Com threshold customizado
+python3 -m src.retrieval.pipeline --query "test" --threshold 0.70
+
+# Salvar resultados
+python3 -m src.retrieval.pipeline --query "test" --output "results.json"
+```
+
+### Test Results
+| Query | Top Results |
+|-------|-------------|
+| "antifragilidade conceito resiliência" | Mindset resiliente, resiliência |
+| "Taleb Nassim livro filosofia" | História da Filosofia |
+| "gestão produtividade hábitos" | Hábitos, High Performance |
+
+### Next Steps
+- [x] Sprint 03 complete
+- ⏭️ Sprint 04 ready to start (Ollama Validation)
+
+---
 
 | Issue | Severity | Status | Resolution |
 |-------|----------|--------|------------|
