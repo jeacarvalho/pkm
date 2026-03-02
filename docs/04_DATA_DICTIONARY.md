@@ -341,17 +341,40 @@ results = collection.query(
 
 ---
 
-## ChromaDB Collections Status
+## ChromaDB Collections
 
 ### Collection: `obsidian_notes` (Sprint 01)
 
 | Property | Value |
 |----------|-------|
-| Status | 🔄 IN PROGRESS |
-| Documents | ~2609 / 3570 (73%) |
+| Status | ✅ COMPLETE |
+| Documents | 3570 notes → 10144 chunks |
+| Source | User-created Obsidian notes (.md) |
 | Embedding Model | bge-m3 (1024 dimensions) |
 | Storage Path | `data/vectors/chroma_db/` |
-| Started | 2026-03-01 |
+| Searchable | ✅ YES |
+
+### Collection: `processed_book_chunks` (Sprint 02)
+
+| Property | Value |
+|----------|-------|
+| Status | ⏭️ READY (chunks generated as JSON) |
+| Documents | 183 chunks (test PDF) |
+| Source | PDF book chunks (translated) |
+| Embedding Model | bge-m3 (not yet embedded) |
+| Storage Path | `data/processed/[book_name]_chunks.json` |
+| Searchable | ⏸️ Needs embedding (Sprint 03) |
+
+### Query Strategy for Sprint 03
+
+```python
+# Sprint 03 will query BOTH collections
+results_notes = chroma_client.query(collection="obsidian_notes", ...)
+results_books = chroma_client.query(collection="processed_book_chunks", ...)
+
+# Combine results and re-rank
+combined = merge_and_rerank(results_notes, results_books)
+```
 | Estimated Completion | ~2-4 hours remaining |
 
 ### Collection: `processed_books` (Sprint 02)
