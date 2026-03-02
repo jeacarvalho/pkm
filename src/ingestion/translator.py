@@ -3,7 +3,7 @@
 import time
 from typing import Optional, Tuple
 
-import google.generativeai as genai
+import google.genai as genai
 from google.api_core import exceptions as google_exceptions
 
 from src.utils.config import settings
@@ -16,6 +16,8 @@ logger = get_logger(__name__)
 class GeminiTranslator:
     """Translator using Google Gemini API.
 
+    Uses the new google.genai package (not the deprecated google.generativeai).
+
     Attributes:
         api_key: Gemini API key.
         model: Gemini model name.
@@ -25,32 +27,31 @@ class GeminiTranslator:
     def __init__(
         self,
         api_key: Optional[str] = None,
-        model: str = "gemini-1.5-flash",
+        model: Optional[str] = None,
         rpm_limit: int = 15,
     ):
         """Initialize translator.
 
         Args:
             api_key: Gemini API key. If None, uses settings.gemini_api_key.
-            model: Gemini model to use.
+            model: Gemini model to use. If None, uses settings.gemini_model.
             rpm_limit: Rate limit in requests per minute.
         """
         self.api_key = api_key or settings.gemini_api_key
-        self.model_name = model
+        self.model_name = model or settings.gemini_model
         self.rpm_limit = rpm_limit
         self._last_request_time: Optional[float] = None
 
         if self.api_key:
-            genai.configure(api_key=self.api_key)
-            self.model = genai.GenerativeModel(model)
+            self.client = genai.Client(api_key=self.api_key)
         else:
+            self.client = None
             self.model = None
             logger.warning("No Gemini API key configured. Translation disabled.")
 
     def _rate_limit(self) -> None:
         """Apply rate limiting to respect RPM limits."""
         if self._last_request_time is not None:
-            # Calculate minimum interval between requests
             min_interval = 60.0 / self.rpm_limit
             elapsed = time.time() - self._last_request_time
 
@@ -82,11 +83,10 @@ class GeminiTranslator:
         Raises:
             TranslationError: If all retries fail.
         """
-        if not self.api_key or not self.model:
+        if not self.api_key or not self.client:
             logger.warning("Translation skipped: No API key configured")
             return (text, False)
 
-        # Build prompt
         lang_name = {"pt": "Portuguese", "en": "English", "es": "Spanish"}.get(
             target_lang, target_lang
         )
@@ -113,14 +113,14 @@ class GeminiTranslator:
 
         while attempt < retries:
             try:
-                # Apply rate limiting
                 self._rate_limit()
 
-                # Make API call
-                response = self.model.generate_content(prompt)
+                response = self.client.models.generate_content(
+                    model=self.model_name, contents=[prompt]
+                )
 
-                if response and response.text:
-                    translated = response.text.strip()
+                if response and response.candidates:
+                    translated = response.candidates[0].content.parts[0].text.strip()
                     logger.debug(
                         f"Translated {len(text)} chars -> {len(translated)} chars"
                     )
@@ -129,9 +129,8 @@ class GeminiTranslator:
                     raise TranslationError("Empty response from Gemini API")
 
             except google_exceptions.ResourceExhausted as e:
-                # Rate limit hit, wait and retry
                 attempt += 1
-                wait_time = 5 * (2**attempt)  # Exponential backoff
+                wait_time = 5 * (2**attempt)
                 logger.warning(
                     f"Rate limit hit, waiting {wait_time}s before retry {attempt}"
                 )
@@ -139,7 +138,6 @@ class GeminiTranslator:
                 last_error = e
 
             except google_exceptions.InvalidArgument as e:
-                # Invalid request, don't retry
                 raise TranslationError(f"Invalid API request: {e}") from e
 
             except Exception as e:
@@ -154,7 +152,6 @@ class GeminiTranslator:
                 else:
                     break
 
-        # All retries failed
         raise TranslationError(
             f"Failed to translate after {retries} attempts: {last_error}"
         ) from last_error
@@ -175,35 +172,26 @@ class GeminiTranslator:
         if len(text) <= max_chars:
             return self.translate(text, target_lang)
 
-        # Split text into chunks
         chunks = []
-        current_chunk = []
-        current_length = 0
+        start = 0
 
-        # Split by sentences (approximate)
-        sentences = text.replace(". ", ".\n").split("\n")
+        while start < len(text):
+            end = min(start + max_chars, len(text))
+            if end < len(text):
+                last_newline = text.rfind("\n", start, end)
+                if last_newline > start:
+                    end = last_newline
 
-        for sentence in sentences:
-            if current_length + len(sentence) > max_chars:
-                # Translate current chunk
-                chunk_text = " ".join(current_chunk)
-                translated, _ = self.translate(chunk_text, target_lang)
-                chunks.append(translated)
+            chunk = text[start:end]
+            translated, success = self.translate(chunk, target_lang)
 
-                # Start new chunk
-                current_chunk = [sentence]
-                current_length = len(sentence)
-            else:
-                current_chunk.append(sentence)
-                current_length += len(sentence)
+            if not success:
+                return ("", False)
 
-        # Translate final chunk
-        if current_chunk:
-            chunk_text = " ".join(current_chunk)
-            translated, _ = self.translate(chunk_text, target_lang)
             chunks.append(translated)
+            start = end
 
-        return (" ".join(chunks), True)
+        return ("\n".join(chunks), True)
 
 
 def translate_if_needed(
@@ -225,17 +213,14 @@ def translate_if_needed(
     """
     from src.ingestion.language_detector import detect_language
 
-    # Detect source language
     try:
-        source_lang = detect_language(text[:1000])  # Sample first 1000 chars
+        source_lang = detect_language(text[:1000])
     except Exception:
         source_lang = "en"
 
-    # Check if translation is needed
     if not force and source_lang == target_lang:
         logger.debug(f"Text already in {target_lang}, skipping translation")
         return (text, False)
 
-    # Translate
     translator = GeminiTranslator(api_key=api_key)
     return translator.translate(text, target_lang, source_lang)
