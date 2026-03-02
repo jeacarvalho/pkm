@@ -352,6 +352,62 @@ poetry add google-generativeai pymupdf chromadb ollama
 | Logging | Mask sensitive data in logs |
 | File Paths | Validate paths to prevent directory traversal |
 | Rate Limiting | Respect API limits (Gemini: 15 RPM) |
+
+---
+
+## 11. Data Protection Standards (CRITICAL - ADDED 2026-03-02)
+
+### Rule 1: Never Use `rm -rf` on Data Directories
+
+```bash
+# ❌ NEVER DO THIS
+rm -rf data/vectors/
+rm -rf data/processed/
+
+# ✅ SAFE ALTERNATIVE
+poetry run python src/indexing/vault_indexer.py --clean
+# (Requires confirmation + creates automatic backup)
+```
+
+### Rule 2: Backup Before Destructive Operations
+
+- All `--clean` operations MUST create timestamped backup first
+- Backup location: `data/backups/vectors_YYYYMMDD_HHMMSS/`
+- Keep last 3 backups automatically
+- Restore script: `scripts/restore_vectors.sh <backup_path>`
+
+### Rule 3: Confirmation for Data Loss
+
+- Any operation that deletes embeddings requires explicit confirmation
+- User must type `YES_DELETE` to proceed
+- Display estimated re-index time in warning
+- Exception: `--no-confirm` flag for automated scripts
+
+### Rule 4: Partial Indexing for Development
+
+| Use Case | Command | Time |
+|----------|---------|------|
+| Full re-index | `--clean` | 10+ hours |
+| Folder test | `--folder "Notes/Projetos"` | 1-2 hours |
+| Quick test | `--limit 100` | 5-10 minutes |
+
+### Rule 5: Recovery Procedures
+
+Always maintain `docs/RECOVERY.md` with:
+- Steps to rebuild from scratch
+- Estimated time for each sprint
+- Backup restore procedures
+- Contact for emergencies
+
+### Rule 6: Git Strategy for Data
+
+| Directory | Git Status | Rationale |
+|-----------|------------|-----------|
+| `data/vectors/chroma_db/` | Ignored | Large, regenerable |
+| `data/backups/` | Tracked (.gitkeep) | Recovery option |
+| `scripts/backup*.sh` | Tracked | Critical for recovery |
+| `data/logs/` | Ignored | Sensitive paths |
+| `data/processed/` | Ignored | User content |
 ```
 
 ---

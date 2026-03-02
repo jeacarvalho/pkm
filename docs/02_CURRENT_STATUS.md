@@ -220,12 +220,43 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 
 ---
 
+## Data Protection Status (ADDED 2026-03-02)
+
+### Incident Log
+
+| Date | Incident | Resolution | Prevention |
+|------|----------|------------|------------|
+| 2026-03-02 | ChromaDB deleted via `rm -rf` | Full re-index required | Backup scripts, confirmation prompts |
+
+### Safeguards Implemented
+
+- [x] `scripts/backup_vectors.sh` - Automatic backup before delete
+- [x] `scripts/restore_vectors.sh` - Restore from backup
+- [x] Confirmation prompt for `--clean` (YES_DELETE required)
+- [x] `--folder` flag for partial indexing
+- [x] `--limit` flag for testing
+- [x] `docs/RECOVERY.md` - Recovery procedures
+- [x] `scripts/verify_index.py` - Index health check
+
+### Current Index Status
+
+| Metric | Value | Status |
+|--------|-------|--------|
+| Total Notes | 3570 | 🔄 REBUILDING |
+| Total Chunks | 10144 | 🔄 REBUILDING |
+| Index Status | 🔄 REBUILDING | In Progress |
+| Last Backup | Available | ✅ Protected |
+| Estimated Time | 10-12 hours | CPU-only |
+
+---
+
 | Issue | Severity | Status | Resolution |
 |-------|----------|--------|------------|
 | Existing embeddings unknown | High | ✅ Resolved | Decision: Re-index all with bge-m3 |
 | False positives in matches | High | ✅ Resolved | Decision: Add Re-Ranker layer |
 | Gemini model name incorrect | Medium | ✅ Resolved | Decision: Use gemini-1.5-flash |
 | Ollama model undefined | Medium | ✅ Resolved | Decision: llama3.1 for validation |
+| Accidental data deletion | CRITICAL | ✅ Resolved | Backup scripts, confirmation prompts |
 
 ---
 

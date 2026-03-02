@@ -124,13 +124,23 @@ Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 
 ## Risk Mitigation
 
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| Sprint 01 fails mid-way | High | Can restart with `--clean`, no data loss |
-| Sprint 02 takes longer | Low | Doesn't block Sprint 01 |
-| Sprint 03 needs both | Medium | Clear acceptance criteria for 01+02 |
-| Hardware overheating | Medium | Add delays, monitor temperatures |
-| Ollama crashes | Medium | Implement retry logic with backoff |
+| Risk | Impact | Mitigation | Status |
+|------|--------|------------|--------|
+| Sprint 01 fails mid-way | High | Can restart with `--clean`, no data loss | ✅ |
+| **Accidental data deletion** | **CRITICAL** | **Backup before `--clean`, confirmation required** | ✅ **NEW** |
+| Hardware overheating | Medium | Add delays, monitor temperatures | ✅ |
+| Ollama crashes | Medium | Implement retry logic with backoff | ✅ |
+| Sprint 02 takes longer | Low | Doesn't block Sprint 01 | ✅ |
+| Sprint 03 needs both | Medium | Clear acceptance criteria for 01+02 | ✅ |
+
+## Recovery Time Estimates
+
+| Operation | Time | When to Use |
+|-----------|------|-------------|
+| Restore from backup | 5-10 min | After accidental delete |
+| Partial re-index (--folder) | 1-2 hours | Development/testing |
+| Partial re-index (--limit 100) | 5-10 min | Quick tests |
+| Full re-index | 10-12 hours | Last resort |
 
 ---
 

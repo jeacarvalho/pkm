@@ -34,11 +34,19 @@ ENV/
 *.swo
 *~
 
-# ChromaDB data
+# ChromaDB data (large, regenerable)
 data/vectors/
 
-# Logs
-data/logs/*.log
+# Backups directory - keep structure but track .gitkeep
+data/backups/*
+!data/backups/.gitkeep
+
+# Processed files (user content)
+data/processed/
+
+# Logs (may contain sensitive paths)
+data/logs/
+data/cache/
 
 # OS
 .DS_Store
@@ -48,3 +56,6 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Poetry
+.poetry/

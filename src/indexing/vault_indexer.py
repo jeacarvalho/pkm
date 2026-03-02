@@ -19,6 +19,8 @@ Example:
 
 import argparse
 import hashlib
+import shutil
+import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -36,6 +38,94 @@ from src.utils.logging import get_logger, get_skipped_logger
 
 logger = get_logger(__name__)
 skipped_logger = get_skipped_logger(Path("./data/logs/skipped_notes.log"))
+
+
+def confirm_destruction(collection_name: str, estimated_time: str) -> bool:
+    """Require explicit confirmation before deleting data.
+
+    Args:
+        collection_name: Name of the collection to be deleted.
+        estimated_time: Estimated time for re-indexing.
+
+    Returns:
+        True if user confirms, False otherwise.
+    """
+    warning = f"""
+╔══════════════════════════════════════════════════════════════════╗
+║  ⚠️  DESTRUCTIVE OPERATION WARNING ⚠️                              ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║  You are about to DELETE the entire '{collection_name}'          ║
+║  collection from ChromaDB.                                        ║
+║                                                                   ║
+║  CONSEQUENCES:                                                    ║
+║  • All embeddings will be permanently deleted                     ║
+║  • Re-indexing will be required ({estimated_time})                ║
+║  • This action CANNOT be undone without backup                    ║
+║                                                                   ║
+║  A backup will be created automatically before deletion.          ║
+║                                                                   ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Type 'YES_DELETE' to confirm, or anything else to cancel:        ║
+╚══════════════════════════════════════════════════════════════════╝
+"""
+
+    print(warning, file=sys.stderr)
+    response = input().strip()
+
+    if response != "YES_DELETE":
+        print("❌ Operation cancelled. No data was deleted.")
+        return False
+
+    return True
+
+
+def create_backup(config: Settings) -> Path:
+    """Create timestamped backup of ChromaDB.
+
+    Args:
+        config: Application settings.
+
+    Returns:
+        Path to the backup directory.
+    """
+    source = Path(config.chroma_persist_dir)
+    backup_root = Path("data/backups")
+    backup_root.mkdir(parents=True, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    backup_path = backup_root / f"vectors_{timestamp}"
+
+    if source.exists() and any(source.iterdir()):
+        shutil.copytree(source, backup_path, dirs_exist_ok=True)
+        logger.info(f"Backup created: {backup_path}")
+        logger.info(f"Backup size: {get_directory_size(backup_path)}")
+    else:
+        logger.info("No existing ChromaDB data to backup.")
+
+    return backup_path
+
+
+def get_directory_size(path: Path) -> str:
+    """Get human-readable directory size.
+
+    Args:
+        path: Path to the directory.
+
+    Returns:
+        Size in human-readable format.
+    """
+    import subprocess
+
+    try:
+        result = subprocess.run(
+            ["du", "-sh", str(path)],
+            capture_output=True,
+            text=True,
+        )
+        return result.stdout.split()[0]
+    except Exception:
+        return "Unknown"
 
 
 class VaultIndexer:
@@ -119,7 +209,11 @@ class VaultIndexer:
                     ) from e
 
     def index_vault(
-        self, clean: bool = False, folder: Optional[str] = None, dry_run: bool = False
+        self,
+        clean: bool = False,
+        folder: Optional[str] = None,
+        dry_run: bool = False,
+        limit: Optional[int] = None,
     ) -> Dict[str, int]:
         """Index all notes in vault.
 
@@ -127,6 +221,7 @@ class VaultIndexer:
             clean: If True, delete existing collection before indexing.
             folder: Optional subfolder to index (relative to vault path).
             dry_run: If True, count files only without actual indexing.
+            limit: Optional limit on number of notes to index (for testing).
 
         Returns:
             Statistics dict with counts of indexed, skipped, and error files.
@@ -156,6 +251,11 @@ class VaultIndexer:
         ]
 
         logger.info(f"Found {len(notes)} notes to process")
+
+        # Apply limit if specified
+        if limit:
+            notes = notes[:limit]
+            logger.info(f"Limited to {limit} notes for testing")
 
         if dry_run:
             logger.info(f"DRY RUN: Would index {len(notes)} notes")
@@ -281,12 +381,19 @@ def main():
     parser.add_argument(
         "--clean",
         action="store_true",
-        help="Delete existing collection before indexing",
+        help="Delete existing collection before indexing (requires confirmation)",
     )
     parser.add_argument(
         "--folder",
         type=str,
+        default=None,
         help="Index only a specific folder (relative to vault path)",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Limit number of notes to index (for testing)",
     )
     parser.add_argument(
         "--dry-run", action="store_true", help="Count files only, don't actually index"
@@ -294,11 +401,28 @@ def main():
     parser.add_argument(
         "--stats", action="store_true", help="Show collection statistics and exit"
     )
+    parser.add_argument(
+        "--no-confirm",
+        action="store_true",
+        help="Skip confirmation prompt (use in scripts only)",
+    )
 
     args = parser.parse_args()
 
     # Load configuration
     config = Settings()
+
+    # Handle clean mode with safeguards
+    if args.clean:
+        # Check for confirmation
+        if not args.no_confirm:
+            if not confirm_destruction("obsidian_notes", "10+ hours"):
+                logger.info("Operation cancelled by user")
+                return
+        # Create automatic backup before destructive operation
+        logger.info("Creating automatic backup before deletion...")
+        backup_path = create_backup(config)
+        logger.info(f"Backup saved to: {backup_path}")
 
     # Initialize indexer
     indexer = VaultIndexer(config)
@@ -314,7 +438,10 @@ def main():
     # Run indexing
     logger.info("Starting vault indexing...")
     stats = indexer.index_vault(
-        clean=args.clean, folder=args.folder, dry_run=args.dry_run
+        clean=args.clean,
+        folder=args.folder,
+        dry_run=args.dry_run,
+        limit=args.limit,
     )
 
     # Print summary

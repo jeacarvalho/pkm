@@ -95,6 +95,24 @@ class Settings(BaseSettings):
         description="Number of final results after re-ranking",
     )
 
+    # Validation Configuration (Sprint 04)
+    validation_model: str = Field(
+        default="llama3.1",
+        description="Ollama model for validation",
+    )
+    validation_temperature: float = Field(
+        default=0.0,
+        description="Temperature for validation (0.0 = deterministic)",
+    )
+    validation_timeout: int = Field(
+        default=60,
+        description="Timeout for validation API calls in seconds",
+    )
+    validation_max_retries: int = Field(
+        default=3,
+        description="Maximum retry attempts on validation failure",
+    )
+
     @property
     def collection_name(self) -> str:
         """Return the ChromaDB collection name."""
