@@ -210,22 +210,22 @@ Day 3-4
 
 ## Current Status
 
-| Sprint | Status | Blockers | Next Action |
-|--------|--------|----------|-------------|
-| Sprint 01 | 🔄 Code Ready | Ollama execution | Start background indexing |
-| Sprint 02 | ⏭️ Ready to Start | None | Can begin immediately |
-| Sprint 03 | ⏸️ Blocked | Sprint 01 + 02 | Wait for completion |
-| Sprint 04 | ⏸️ Blocked | Sprint 03 | Wait for completion |
-| Sprint 05 | ⏸️ Blocked | Sprint 04 | Wait for completion |
+| Sprint | Status | Notes |
+|--------|--------|-------|
+| Sprint 01 | 🔄 PARTIAL | 147 chunks indexed (partial) |
+| Sprint 02 | ✅ COMPLETE | Working |
+| Sprint 03 | ✅ COMPLETE | Working |
+| Sprint 04 | ✅ COMPLETE | Working |
+| Sprint 05 | ✅ COMPLETE | Working |
 
 ---
 
 ## Quick Reference
 
-### Check Sprint 01 Progress
+### Verify Index
 ```bash
-tail -f data/logs/indexing.log
-ls -la data/vectors/chroma_db/
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 scripts/verify_index.py
 ```
 
 ### Start Sprint 01 (Background)
