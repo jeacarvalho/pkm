@@ -186,12 +186,19 @@ python3 -m src.ingestion.pdf_processor --library "/path/to/pdfs"
 - [x] Update config with retrieval settings (threshold, top-k)
 - [x] Write unit tests for retrieval module
 
+### Re-Ranker Optimizations (2026-03-02)
+- **Device Configuration:** Auto-detect CUDA/CPU (via `torch.cuda.is_available()`)
+- **Max Length Truncation:** Configurable `max_length` (default 512 tokens)
+- **Batch Processing:** Optimized `batch_rerank()` for single predict() call
+- **Model Warm-up:** `warmup()` method for faster first inference
+- **Config Options:** Added `rerank_max_length` and `rerank_device` to Settings
+
 ### Files Created
 ```
 src/retrieval/
 ├── __init__.py
 ├── vector_search.py      # ChromaDB query (Top-20)
-├── reranker.py          # Cross-encoder re-ranking
+├── reranker.py          # Cross-encoder re-ranking (optimized)
 └── pipeline.py          # 2-stage orchestration
 ```
 

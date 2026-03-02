@@ -86,6 +86,14 @@ class Settings(BaseSettings):
         default=0.75,
         description="Minimum re-rank score to retain (0.0-1.0)",
     )
+    rerank_max_length: int = Field(
+        default=512,
+        description="Max token length for re-ranker document truncation",
+    )
+    rerank_device: Optional[str] = Field(
+        default=None,
+        description="Device for re-ranker ('cuda', 'cpu', or None for auto)",
+    )
     vector_search_top_k: int = Field(
         default=20,
         description="Number of initial results from vector search",

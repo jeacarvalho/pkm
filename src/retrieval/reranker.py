@@ -25,6 +25,7 @@ class ReRanker:
         model: CrossEncoder model instance.
         threshold: Minimum score to retain a document (default: 0.75).
         model_name: Name of the cross-encoder model.
+        max_length: Maximum token length for document truncation.
 
     Example:
         >>> reranker = ReRanker()
@@ -40,6 +41,8 @@ class ReRanker:
         model_name: Optional[str] = None,
         threshold: Optional[float] = None,
         config: Optional[Settings] = None,
+        max_length: Optional[int] = None,
+        device: Optional[str] = None,
     ):
         """Initialize re-ranker with cross-encoder model.
 
@@ -47,6 +50,8 @@ class ReRanker:
             model_name: Cross-encoder model name. If None, uses config.
             threshold: Minimum score to retain. If None, uses config.
             config: Application settings.
+            max_length: Max tokens to truncate documents to. If None, uses config.
+            device: Device to use ('cuda', 'cpu', or None for auto).
 
         Note:
             First initialization downloads the model (~500MB).
@@ -55,10 +60,24 @@ class ReRanker:
         self.config = config or Settings()
         self.model_name = model_name or self.config.rerank_model
         self.threshold = threshold or self.config.rerank_threshold
+        self.max_length = max_length or self.config.rerank_max_length
 
-        logger.info(f"Loading cross-encoder: {self.model_name}")
+        # Determine device (auto-detect if not specified)
+        if device is None:
+            device = self.config.rerank_device
+        if device is None:
+            import torch
+
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = device
+
+        logger.info(f"Loading cross-encoder: {self.model_name} on {self.device}")
         try:
-            self.model = CrossEncoder(self.model_name)
+            self.model = CrossEncoder(
+                self.model_name,
+                max_length=self.max_length,
+                device=self.device,
+            )
             logger.info("Cross-encoder loaded successfully")
         except Exception as e:
             logger.error(f"Failed to load cross-encoder: {e}")
@@ -176,13 +195,31 @@ class ReRanker:
             logger.error(f"Single scoring failed: {e}")
             return 0.0
 
+    def warmup(self) -> None:
+        """Warm up the model with a dummy prediction.
+
+        This pre-compiles the model for faster first-time inference.
+        Call this after initialization for better latency.
+        """
+        logger.info("Warming up cross-encoder model...")
+        try:
+            self.model.predict(
+                [["warmup query", "warmup document"]],
+                show_progress_bar=False,
+            )
+            logger.info("Cross-encoder warm-up complete")
+        except Exception as e:
+            logger.warning(f"Warm-up failed: {e}")
+
     def batch_rerank(
         self,
         queries: List[str],
         documents_list: List[List[Dict[str, any]]],
         top_k: int = 5,
     ) -> List[List[Dict[str, any]]]:
-        """Re-rank multiple queries in batch.
+        """Re-rank multiple queries in batch (optimized).
+
+        Processes all query-document pairs in a single batch for efficiency.
 
         Args:
             queries: List of query strings.
@@ -206,12 +243,55 @@ class ReRanker:
                 f"{len(documents_list)} document lists"
             )
 
+        # Flatten all pairs for batch prediction
+        all_pairs = []
+        doc_indices = []  # Track which query each doc belongs to
+
+        for query_idx, (query, docs) in enumerate(zip(queries, documents_list)):
+            for doc in docs:
+                if "document" in doc:
+                    all_pairs.append([query, doc["document"]])
+                    doc_indices.append(query_idx)
+
+        if not all_pairs:
+            return [[] for _ in queries]
+
+        # Batch predict all pairs at once
+        try:
+            all_scores = self.model.predict(all_pairs, show_progress_bar=False)
+        except Exception as e:
+            logger.error(f"Batch prediction failed: {e}")
+            return [[] for _ in queries]
+
+        # Rebuild results per query from batch scores
+        score_idx = 0
         results = []
-        for query, docs in zip(queries, documents_list):
-            ranked = self.rerank(query, docs, top_k=top_k)
-            results.append(ranked)
+
+        for query_idx, docs in enumerate(documents_list):
+            valid_docs = []
+            for doc in docs:
+                if "document" not in doc:
+                    continue
+                doc_copy = doc.copy()
+                doc_copy["rerank_score"] = float(all_scores[score_idx])
+                score_idx += 1
+                valid_docs.append(doc_copy)
+
+            # Filter and rank
+            filtered = [d for d in valid_docs if d["rerank_score"] >= self.threshold]
+            ranked = sorted(filtered, key=lambda x: x["rerank_score"], reverse=True)
+            results.append(ranked[:top_k])
 
         return results
+
+    def _get_doc_indices(self, documents_list: List[List[Dict]]) -> List[int]:
+        """Get valid document indices for batch processing."""
+        indices = []
+        for docs in documents_list:
+            for i, doc in enumerate(docs):
+                if "document" in doc:
+                    indices.append(i)
+        return indices
 
 
 class HybridReRanker(ReRanker):
