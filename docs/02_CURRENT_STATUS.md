@@ -4,7 +4,7 @@
 # Status Atual - Obsidian RAG Connector
 
 **Last Updated:** 2026-03-01  
-**Current Phase:** Sprint 01 - Vault Indexing IN PROGRESS 🔄
+**Current Phase:** Sprints 01 + 02 Complete ✅ | Sprint 03 Ready to Start
 
 ---
 
@@ -13,8 +13,8 @@
 | Phase | Sprint | Status | Completion |
 |-------|--------|--------|------------|
 | Documentation | Sprint 00 | ✅ COMPLETE | 100% |
-| Vault Indexing | Sprint 01 | 🔄 IN PROGRESS | ~73% (2609/3570 notas) |
-| PDF Ingestion | Sprint 02 | ✅ COMPLETE | 100% (código/testes prontos) |
+| Vault Indexing | Sprint 01 | ✅ COMPLETE | 100% (3570 notas, 10144 chunks) |
+| PDF Ingestion | Sprint 02 | ✅ COMPLETE | 100% |
 | Retrieval & Re-Rank | Sprint 03 | ⏸️ BLOCKED | 0% |
 | Ollama Validation | Sprint 04 | ⏸️ BLOCKED | 0% |
 | Output Generation | Sprint 05 | ⏸️ BLOCKED | 0% |

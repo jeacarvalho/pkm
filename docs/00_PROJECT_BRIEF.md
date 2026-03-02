@@ -115,9 +115,9 @@ assert all(match['approved'] for match in output_matches)
 | Phase | Sprint | Status | Description |
 |-------|--------|--------|-------------|
 | Phase 0 | Sprint 00 | ✅ COMPLETE | Documentation & Context Setup |
-| Phase 1 | Sprint 01 | 🔄 IN PROGRESS (73%) | Vault Re-Indexing (2609/3570) |
+| Phase 1 | Sprint 01 | ✅ COMPLETE | Vault Re-Indexing (3570 notes, 10144 chunks) |
 | Phase 2 | Sprint 02 | ✅ COMPLETE | PDF Ingestion & Translation |
-| Phase 3 | Sprint 03 | ⏸️ BLOCKED | Retrieval & Re-Ranking (aguarda 01) |
+| Phase 3 | Sprint 03 | ✅ READY TO START | Retrieval & Re-Ranking |
 | Phase 4 | Sprint 04 | ⏸️ BLOCKED | Ollama Validation Pipeline |
 | Phase 5 | Sprint 05 | ⏸️ BLOCKED | Output & Obsidian Integration |
 
