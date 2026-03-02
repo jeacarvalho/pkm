@@ -4,7 +4,23 @@
 # Coding Standards - Obsidian RAG Connector
 
 **Language:** Python 3.10+  
-**Last Updated:** 2026-02-28
+**Last Updated:** 2026-03-02
+
+---
+
+## ⚠️ IMPORTANT: Python Environment
+
+**CRITICAL:** Due to ChromaDB version incompatibility (Poetry has 0.4.24, System Python has 1.5.1),
+**ALWAYS use system Python with PYTHONPATH** instead of Poetry:
+
+```bash
+# ✅ CORRECT (use system Python)
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -m src.indexing.vault_indexer --stats
+
+# ❌ WRONG (Poetry has incompatible ChromaDB version)
+poetry run python src/indexing/vault_indexer.py --stats
+```
 
 ---
 
@@ -364,8 +380,9 @@ poetry add google-generativeai pymupdf chromadb ollama
 rm -rf data/vectors/
 rm -rf data/processed/
 
-# ✅ SAFE ALTERNATIVE
-poetry run python src/indexing/vault_indexer.py --clean
+# ✅ SAFE ALTERNATIVE (use system Python, not Poetry)
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -m src.indexing.vault_indexer --clean
 # (Requires confirmation + creates automatic backup)
 ```
 

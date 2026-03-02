@@ -16,7 +16,7 @@ Sprint 02 (PDF Ingestion) ✅ COMPLETE
        ↓
 Sprint 03 (Retrieval) ✅ COMPLETE
        ↓
-Sprint 04 (Validation) 🔄 IN PROGRESS
+Sprint 04 (Validation) ✅ COMPLETE (95%)
        ↓
 Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 ```
@@ -236,13 +236,16 @@ echo $! > data/logs/indexer.pid
 
 ### Start Sprint 02
 ```bash
-poetry run python src/ingestion/pdf_processor.py --book /path/to/book.pdf
+# IMPORTANT: Use system Python (not Poetry)
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -m src.ingestion.pdf_processor --book /path/to/book.pdf
 ```
 
 ### Check Dependencies
 ```bash
 # Verify Sprint 01 complete
-poetry run python src/indexing/vault_indexer.py --stats
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -m src.indexing.vault_indexer --stats
 
 # Verify Sprint 02 complete
 ls -la data/processed/

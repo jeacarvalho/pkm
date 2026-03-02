@@ -28,10 +28,12 @@ cp .env.example .env
 # Edit .env with your VAULT_PATH and API keys
 
 # 4. Run Sprint 01 (Vault Indexing)
-poetry run python src/indexing/vault_indexer.py --clean
+# IMPORTANT: Use system Python (not Poetry) due to ChromaDB version incompatibility
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -m src.indexing.vault_indexer --folder "30 LIDERANCA"
 
 # 5. Run tests
-poetry run pytest tests/ -v
+python3 -m pytest tests/unit/ -v
 ```
 
 ---
@@ -55,13 +57,13 @@ Build a Retrieval-Augmented Generation (RAG) pipeline that connects PDF books to
 | Component | Technology | Status |
 |-----------|------------|--------|
 | Language | Python 3.10+ | ✅ |
-| Package Manager | Poetry | ✅ |
-| Embedding Model | Ollama `bge-m3` | ⏭️ |
-| Re-Ranker | HuggingFace `bge-reranker-v2-m3` | ⏭️ |
-| Vector Store | ChromaDB (Persistent) | ⏭️ |
-| Translation | Google Gemini 1.5 Flash | ⏭️ |
-| Validation LLM | Ollama `llama3.1` or `mistral` | ⏭️ |
-| PDF Parsing | PyMuPDF (fitz) | ⏭️ |
+| Package Manager | Poetry (for deps) / System Python (for run) | ⚠️ Use PYTHONPATH |
+| Embedding Model | Ollama `bge-m3` | ✅ |
+| Re-Ranker | HuggingFace `bge-reranker-v2-m3` | ✅ |
+| Vector Store | ChromaDB 1.5.1 (System Python) | ✅ |
+| Translation | Google Gemini 1.5 Flash | ✅ |
+| Validation LLM | Ollama `llama3.2` | ✅ |
+| PDF Parsing | PyMuPDF (fitz) | ✅ |
 | Testing | Pytest | ⏭️ |
 | Containerization | Docker (optional for Ollama) | ⏭️ |
 

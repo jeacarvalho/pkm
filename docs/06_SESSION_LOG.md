@@ -192,7 +192,8 @@ echo $! > data/logs/indexer.pid
 ### Check Dependencies
 ```bash
 # Verify Sprint 01 complete
-poetry run python src/indexing/vault_indexer.py --stats
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -m src.indexing.vault_indexer --stats
 
 # Verify Sprint 02 complete
 ls -la data/processed/
