@@ -97,7 +97,7 @@ class Settings(BaseSettings):
 
     # Validation Configuration (Sprint 04)
     validation_model: str = Field(
-        default="llama3.1",
+        default="llama3.2",
         description="Ollama model for validation",
     )
     validation_temperature: float = Field(
@@ -111,6 +111,12 @@ class Settings(BaseSettings):
     validation_max_retries: int = Field(
         default=3,
         description="Maximum retry attempts on validation failure",
+    )
+
+    # Output Configuration (Sprint 05)
+    output_dir: Path = Field(
+        default=Path("./data/processed"),
+        description="Output directory for generated Markdown files",
     )
 
     @property

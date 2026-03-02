@@ -120,8 +120,8 @@ assert all(match['approved'] for match in output_matches)
 | Phase 1 | Sprint 01 | 🔄 PARTIAL | Vault Re-Indexing (147 chunks - partial test) |
 | Phase 2 | Sprint 02 | ✅ COMPLETE | PDF Ingestion & Translation |
 | Phase 3 | Sprint 03 | ✅ COMPLETE | Retrieval & Re-Ranking (2-stage pipeline) |
-| Phase 4 | Sprint 04 | ✅ COMPLETE | Ollama Validation Pipeline (95%) |
-| Phase 5 | Sprint 05 | ⏸️ BLOCKED | Output & Obsidian Integration |
+| Phase 4 | Sprint 04 | ✅ COMPLETE | Ollama Validation Pipeline |
+| Phase 5 | Sprint 05 | ✅ COMPLETE | Output Generation (Markdown) |
 
 ---
 
