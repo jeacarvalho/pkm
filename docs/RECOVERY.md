@@ -5,6 +5,19 @@
 
 ---
 
+## ⚠️ CRITICAL: ChromaDB Version Issue
+
+**Problem:** Poetry has ChromaDB 0.4.24, but system Python has 1.5.1. They are incompatible!
+
+**Solution:** Always use system Python (not Poetry) for this project:
+
+```bash
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -c "import chromadb; print(chromadb.__version__)"  # Should be 1.5.1
+```
+
+---
+
 ## 🚨 Emergency: ChromaDB Deleted
 
 ### Option 1: Restore from Backup (FASTEST)
@@ -26,11 +39,14 @@ python3 scripts/verify_index.py
 ### Option 2: Partial Re-Index (FOR TESTING)
 
 ```bash
+# IMPORTANT: Use system Python, not Poetry!
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+
 # Index just one folder for development
-./run_indexer.sh --folder "Notes/Projetos" --no-confirm
+python3 -m src.indexing.vault_indexer --folder "30 LIDERANCA" --no-confirm
 
 # Or limit to 100 notes
-./run_indexer.sh --limit 100 --no-confirm
+python3 -m src.indexing.vault_indexer --limit 100 --no-confirm
 ```
 
 **Time:** 5-60 minutes  
@@ -39,8 +55,11 @@ python3 scripts/verify_index.py
 ### Option 3: Full Re-Index (LAST RESORT)
 
 ```bash
+# IMPORTANT: Use system Python, not Poetry!
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+
 # Start in background (overnight)
-nohup ./run_indexer.sh --clean --no-confirm > data/logs/indexing.out 2>&1 &
+nohup python3 -m src.indexing.vault_indexer --clean --no-confirm > data/logs/indexing.out 2>&1 &
 echo $! > data/logs/indexer.pid
 
 # Monitor progress

@@ -4,7 +4,7 @@
 # Status Atual - Obsidian RAG Connector
 
 **Last Updated:** 2026-03-02  
-**Current Phase:** Sprints 01-03 Complete ✅ | Sprint 04 Ready to Start
+**Current Phase:** Sprint 04 IN PROGRESS | Sprint 05 BLOCKED
 
 ---
 
@@ -13,10 +13,10 @@
 | Phase | Sprint | Status | Completion |
 |-------|--------|--------|------------|
 | Documentation | Sprint 00 | ✅ COMPLETE | 100% |
-| Vault Indexing | Sprint 01 | ✅ COMPLETE | 100% (3570 notas, 10144 chunks) |
+| Vault Indexing | Sprint 01 | ✅ COMPLETE | 100% (REBUILT - 30 LIDERANCA, 147 chunks) |
 | PDF Ingestion | Sprint 02 | ✅ COMPLETE | 100% |
 | Retrieval & Re-Rank | Sprint 03 | ✅ COMPLETE | 100% |
-| Ollama Validation | Sprint 04 | ⏭️ READY | 0% |
+| Ollama Validation | Sprint 04 | 🔄 IN PROGRESS | 70% |
 | Output Generation | Sprint 05 | ⏸️ BLOCKED | 0% |
 
 ---
@@ -48,9 +48,9 @@
 
 | Model | Required | Status | Command |
 |-------|----------|--------|---------|
-| `bge-m3` | ✅ | ⏭️ Pending | `ollama pull bge-m3` |
-| `bge-reranker-v2-m3` | ✅ | ⏭️ Pending | `ollama pull bge-reranker-v2-m3` |
-| `llama3.1` | ✅ | ⏭️ Pending | `ollama pull llama3.1` |
+| `bge-m3` | ✅ | ✅ Ready | `ollama pull bge-m3` |
+| `bge-reranker-v2-m3` | ✅ | ✅ Ready | HuggingFace (sentence-transformers) |
+| `llama3.2` | ✅ | ✅ Ready | `ollama pull llama3.2` |
 
 ### Python Environment
 
@@ -255,8 +255,10 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 | Existing embeddings unknown | High | ✅ Resolved | Decision: Re-index all with bge-m3 |
 | False positives in matches | High | ✅ Resolved | Decision: Add Re-Ranker layer |
 | Gemini model name incorrect | Medium | ✅ Resolved | Decision: Use gemini-1.5-flash |
-| Ollama model undefined | Medium | ✅ Resolved | Decision: llama3.1 for validation |
+| Ollama model undefined | Medium | ✅ Resolved | Decision: llama3.2 for validation |
 | Accidental data deletion | CRITICAL | ✅ Resolved | Backup scripts, confirmation prompts |
+| ChromaDB version mismatch | CRITICAL | ✅ Resolved | Use system Python with ChromaDB 1.5.1 |
+| JSON parsing errors in Ollama | Medium | ✅ Resolved | Simplified prompt, no markdown |
 
 ---
 
@@ -270,6 +272,9 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 | 2026-02-28 | Chunk book at 512 tokens | Denser semantic content = better retrieval |
 | 2026-02-28 | Ollama must read full note | Validation requires full context, not summary |
 | 2026-02-28 | Output as Obsidian Markdown | Native format, usable by user immediately |
+| 2026-03-02 | Use system Python (not Poetry) | ChromaDB 1.5.1 vs 0.4.24 incompatibility |
+| 2026-03-02 | Use llama3.2 for validation | llama3.1 not available in Ollama |
+| 2026-03-02 | Simplify prompt for JSON | Avoid markdown code blocks in responses |
 
 ---
 
@@ -316,6 +321,53 @@ echo $GEMINI_API_KEY  # Should not be empty
    - Too large = diluted semantics
    - Too small = lost context
    - 512-800 tokens is the sweet spot
+
+---
+
+## Current Running Instructions (2026-03-02)
+
+### Environment Setup
+
+```bash
+# IMPORTANT: Use system Python with ChromaDB 1.5.1
+# Poetry has ChromaDB 0.4.24 which is incompatible
+
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+
+# Verify ChromaDB version
+python3 -c "import chromadb; print(chromadb.__version__)"  # Should be 1.5.1
+```
+
+### Indexing a Folder
+
+```bash
+cd /home/s015533607/Documentos/desenv/pkm
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -m src.indexing.vault_indexer --folder "30 LIDERANCA" --no-confirm
+```
+
+### Testing Validation Pipeline
+
+```bash
+cd /home/s015533607/Documentos/desenv/pkm
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -c "
+from src.validation.pipeline import ValidationPipeline
+from src.utils.config import Settings
+config = Settings()
+config.rerank_threshold = 0.3
+config.validation_model = 'llama3.2'
+pipeline = ValidationPipeline(config)
+result = pipeline.process_chunk(chunk_text='liderança')
+print(result)
+"
+```
+
+### Verify Index
+
+```bash
+cd /home/s015533607/Documentos/desenv/pkm
+python3 scripts/verify_index.py
 ```
 
 ---

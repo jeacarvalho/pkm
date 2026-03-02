@@ -10,13 +10,13 @@
 ```
 Sprint 00 (Docs) ✅
        ↓
-Sprint 01 (Vault Indexing) ✅ COMPLETE (3570 notes, 10144 chunks)
+Sprint 01 (Vault Indexing) ✅ COMPLETE (REBUILT - 30 LIDERANCA, 147 chunks)
        ↓
 Sprint 02 (PDF Ingestion) ✅ COMPLETE
        ↓
 Sprint 03 (Retrieval) ✅ COMPLETE
        ↓
-Sprint 04 (Validation) ⏭️ READY TO START
+Sprint 04 (Validation) 🔄 IN PROGRESS
        ↓
 Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 ```
@@ -25,10 +25,10 @@ Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 
 | Sprint | Progress | Status | Next Action |
 |--------|----------|--------|-------------|
-| Sprint 01 | 3570 notes, 10144 chunks | ✅ COMPLETE | Ready for Sprint 03 |
+| Sprint 01 | 30 LIDERANCA (147 chunks) | ✅ COMPLETE | Rebuild full index later |
 | Sprint 02 | Code + Tests ready | ✅ COMPLETE | Ready for Sprint 03 |
 | Sprint 03 | Pipeline implemented | ✅ COMPLETE | Ready for Sprint 04 |
-| Sprint 04 | Not started | ⏭️ READY | Can start now |
+| Sprint 04 | Prompt tuned, testing | 🔄 IN PROGRESS | Fix JSON parsing |
 | Sprint 05 | Not started | ⏸️ BLOCKED | Wait for 04 |
 
 ## Legend
@@ -127,9 +127,11 @@ Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 | Risk | Impact | Mitigation | Status |
 |------|--------|------------|--------|
 | Sprint 01 fails mid-way | High | Can restart with `--clean`, no data loss | ✅ |
-| **Accidental data deletion** | **CRITICAL** | **Backup before `--clean`, confirmation required** | ✅ **NEW** |
+| **Accidental data deletion** | **CRITICAL** | **Backup before `--clean`, confirmation required** | ✅ |
 | Hardware overheating | Medium | Add delays, monitor temperatures | ✅ |
 | Ollama crashes | Medium | Implement retry logic with backoff | ✅ |
+| **ChromaDB version mismatch** | **CRITICAL** | **Use system Python with ChromaDB 1.5.1** | ✅ **NEW** |
+| JSON parsing errors in Ollama | Medium | Simplified prompt, no markdown | ✅ |
 | Sprint 02 takes longer | Low | Doesn't block Sprint 01 | ✅ |
 | Sprint 03 needs both | Medium | Clear acceptance criteria for 01+02 | ✅ |
 

@@ -10,14 +10,19 @@ REGRAS CRÍTICAS:
 4. Similaridade temática não é suficiente - precisa haver conexão conceitual
 
 FORMATO DE RESPOSTA:
-Responda APENAS JSON válido com esta estrutura:
-{
-    "approved": boolean,
-    "confidence": integer (0-100),
-    "reason": "string com explicação detalhada"
-}
+Responda APENAS com JSON válido, sem markdown, sem code blocks, sem texto adicional.
+Use esta estrutura:
+{"approved": boolean, "confidence": integer, "reason": "explicação"}
 
-NÃO inclua texto fora do JSON."""
+Exemplo de resposta correta:
+{"approved": true, "confidence": 85, "reason": "O conceito de antifragilidade no livro é diretamente aplicável à nota sobre resiliência"}
+
+Exemplo de resposta ERRADA:
+```json
+{"approved": true}
+```
+
+NÃO use code blocks. NÃO use markdown. Apenas JSON puro."""
 
 
 def build_validation_prompt(
@@ -41,24 +46,15 @@ def build_validation_prompt(
     truncated_chunk = book_chunk[:2000] if len(book_chunk) > 2000 else book_chunk
     truncated_note = note_content[:3000] if len(note_content) > 3000 else note_content
 
-    return f"""
-CONTEXTO DA VALIDAÇÃO:
+    return f"""Valide esta conexão:
 
-📖 TRECHO DO LIVRO:
-{truncated_chunk}
+Livro: {truncated_chunk}
 
-📝 NOTA DO OBSIDIAN:
-Título: {note_title}
-Conteúdo:
-{truncated_note}
+Nota "{note_title}": {truncated_note}
 
-📊 SCORE DO RE-RANKER: {rerank_score:.3f}
+Score: {rerank_score:.3f}
 
-PERGUNTA:
-Existe uma relação semântica RELEVANTE e DIRETA entre o trecho do livro e a nota?
-O conceito discutido no livro é o MESMO conceito da nota, ou são apenas temas relacionados superficialmente?
-
-Responda em JSON:"""
+Responda apenas JSON: {{"approved": bool, "confidence": 0-100, "reason": "texto"}}"""
 
 
 FALLBACK_RESPONSE = {
