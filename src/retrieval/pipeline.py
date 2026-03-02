@@ -354,6 +354,10 @@ def main():
     # Execute retrieval
     if args.query:
         logger.info(f"Processing query: {args.query}")
+        # Override threshold if provided
+        if args.threshold:
+            pipeline.reranker.threshold = args.threshold
+            pipeline.config.rerank_threshold = args.threshold
         results = pipeline.retrieve(
             query_text=args.query,
             n_results_initial=args.initial_k,
