@@ -70,16 +70,19 @@
 
 ---
 
-## Sprint 01 Execution Log (✅ COMPLETED 2026-03-01)
+## Sprint 01 Execution Log (🔄 PARTIAL - 2026-03-02)
 
-### Execution Metrics
-- **Total Notes Processed:** 3570
-- **Total Chunks Created:** 10144
-- **Failed Notes:** 433 (logged to skipped_notes.log)
-- **Errors:** 0
+### Execution Metrics (PARTIAL - Test Subset)
+- **Total Notes in Vault:** 3570 (known, not indexed)
+- **Notes Indexed:** ~30 (pasta "30 LIDERANCA" only)
+- **Total Chunks Created:** 147 (partial index)
+- **Expected Full Index:** 10144 chunks (when complete)
+- **Index Coverage:** ~1.4% of vault
 - **Embedding Model:** bge-m3 (via Ollama, 1024 dimensions)
 - **Vector Store:** ChromaDB (persistent)
 - **Collection:** obsidian_notes
+
+**Note:** Full index metrics are expected values, not actual. Run `python3 scripts/verify_index.py` for real metrics.
 
 ### Files Created/Modified
 - `src/indexing/vault_indexer.py` ✅
