@@ -16,7 +16,7 @@
 | Vault Indexing | Sprint 01 | 🔄 PARTIAL | ~1.4% (147/10144 chunks - apenas "30 LIDERANCA") |
 | PDF Ingestion | Sprint 02 | ✅ COMPLETE | 100% |
 | Retrieval & Re-Rank | Sprint 03 | ✅ COMPLETE | 100% (funcional, index parcial) |
-| Ollama Validation | Sprint 04 | 🔄 IN PROGRESS | 70% |
+| Ollama Validation | Sprint 04 | ✅ COMPLETE | 95% (falta otimizar performance) |
 | Output Generation | Sprint 05 | ⏸️ BLOCKED | 0% |
 
 ---
@@ -165,7 +165,7 @@ python3 -m src.ingestion.pdf_processor --library "/path/to/pdfs"
 - [x] Sprint 01 complete
 - [x] Sprint 02 complete
 - [x] Sprint 03 complete
-- ⏭️ Sprint 04 ready to start
+- [x] Sprint 04 complete (95% - pending performance optimization)
 
 ---
 
@@ -217,9 +217,56 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 | "Taleb Nassim livro filosofia" | História da Filosofia |
 | "gestão produtividade hábitos" | Hábitos, High Performance |
 
+---
+
+## Sprint 04 Execution Status (✅ COMPLETE 2026-03-02)
+
+### Execution Summary
+- **Status:** ✅ COMPLETE (95%)
+- **Completed:** 2026-03-02
+- **Validation Model:** llama3.2 (via Ollama)
+- **Tested with:** 147 chunks (30 LIDERANCA folder)
+
+### Tasks Completed
+- [x] Create `src/validation/` directory structure
+- [x] Implement `ollama_validator.py` with JSON parsing
+- [x] Implement `prompt_templates.py` with simplified prompts
+- [x] Implement `pipeline.py` with CLI interface
+- [x] Retry logic with exponential backoff
+- [x] Logging of approved/rejected decisions
+- [x] 13 unit tests passing
+
+### Files Created
+```
+src/validation/
+├── __init__.py
+├── ollama_validator.py    # Main validator with retry logic
+├── prompt_templates.py    # Simplified JSON prompts
+└── pipeline.py            # CLI orchestration
+```
+
+### CLI Usage
+```bash
+# Single query validation
+python3 -m src.validation.pipeline --query "liderança"
+
+# With book chunks
+python3 -m src.validation.pipeline --book-chunks "data/processed/book_chunks.json"
+
+# Dry run (no Ollama)
+python3 -m src.validation.pipeline --query "test" --dry-run
+
+# Custom model
+python3 -m src.validation.pipeline --query "test" --model mistral
+```
+
+### Known Issues
+- Performance: ~60s per validation (target: <10s)
+- Optimization: Use faster model or reduce context length
+
 ### Next Steps
 - [x] Sprint 03 complete
-- ⏭️ Sprint 04 ready to start (Ollama Validation)
+- [x] Sprint 04 complete (95% - pending performance optimization)
 
 ---
 

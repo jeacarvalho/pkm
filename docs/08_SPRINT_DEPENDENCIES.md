@@ -25,10 +25,10 @@ Sprint 05 (Output) ⏸️ BLOCKED (needs 04)
 
 | Sprint | Progress | Status | Next Action |
 |--------|----------|--------|-------------|
-| Sprint 01 | 147 chunks (30 LIDERANCA) | 🔄 PARTIAL | Full re-index após validação |
+| Sprint 01 | 147 chunks (30 LIDERANCA) | 🔄 PARTIAL | Full re-index after validation |
 | Sprint 02 | Code + Tests ready | ✅ COMPLETE | Ready for Sprint 03 |
 | Sprint 03 | Pipeline implemented | ✅ COMPLETE | Functional with partial index |
-| Sprint 04 | Prompt tuned, testing | 🔄 IN PROGRESS | Fix JSON parsing |
+| Sprint 04 | Complete (pending optimization) | ✅ COMPLETE | 95% - optimize performance |
 | Sprint 05 | Not started | ⏸️ BLOCKED | Wait for 04 |
 
 ## Legend
