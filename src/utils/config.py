@@ -126,6 +126,20 @@ class Settings(BaseSettings):
         default=Path("./data/processed"),
         description="Output directory for generated Markdown files",
     )
+    
+    # NEW for Sprint 06 - Chapter-Based Processing
+    books_vault_path: str = Field(
+        default="/home/s015533607/MEGAsync/Minhas_notas/100 ARQUIVOS E REFERENCIAS/Livros",
+        description="Path to Obsidian vault books directory",
+    )
+    chapter_validation_top_k: int = Field(
+        default=5,
+        description="Number of top results to validate per chapter",
+    )
+    use_chapter_processing: bool = Field(
+        default=False,
+        description="Whether to use chapter-based processing instead of chunk-based",
+    )
 
     @property
     def collection_name(self) -> str:
