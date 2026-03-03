@@ -259,9 +259,16 @@ Ver `docs/10_ROADMAP_v2.md` para detalhes completos.
 
 | Sprint | Descrição | Blocks | Blocked By |
 |--------|-----------|--------|------------|
-| Sprint 07 | Topic Extractor | Sprint 08 | Sprint 06 |
-| Sprint 08 | Vault Properties | Sprint 09 | Sprint 07 |
-| Sprint 09 | Topic Matching | Sprint 10 | Sprint 08 |
-| Sprint 10 | Translation Cache | Sprint 11 | Sprint 07 |
-| Sprint 11 | Hybrid Retrieval | Sprint 12 | Sprint 09+10 |
-| Sprint 12 | Dataview Integration | — | Sprint 11
+| **Sprint 07** | **Production Hardening** | **Sprint 08** | **Sprint 06** |
+| Sprint 08 | Topic Extractor | Sprint 09 | Sprint 07 |
+| Sprint 09 | Vault Properties | Sprint 10 | Sprint 08 |
+| Sprint 10 | Topic Matching | Sprint 11 | Sprint 09 |
+| Sprint 11 | Translation Cache | Sprint 12 | Sprint 08 |
+| Sprint 12 | Hybrid Retrieval | Sprint 13 | Sprint 10+11 |
+| Sprint 13 | Dataview Integration | — | Sprint 12 |
+
+**Nota:** Sprint 07 (Production Hardening) inclui:
+- Incremental Indexing
+- Backup & Rollback
+- Bug Fixes (Placeholders, Duplicação)
+- Gemini Consolidation

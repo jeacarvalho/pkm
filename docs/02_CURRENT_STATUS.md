@@ -491,6 +491,48 @@ python3 scripts/verify_index.py
 
 ---
 
+## Sprint 07: Production Hardening (✅ COMPLETE)
+
+### Execution Summary
+- **Status:** ✅ COMPLETE
+- **Completed:** 2026-03-04
+- **Version:** v1.2.0
+
+### Features Implemented
+- **Incremental Indexing:** `src/indexing/incremental_indexer.py`
+  - Detecta notas novas, modificadas e excluídas
+  - Indexa apenas mudanças (não re-indexa tudo)
+  - Estado persistido em `data/state/vault_state.json`
+  
+- **Backup & Rollback:** `src/indexing/backup_manager.py`
+  - Backup criado ANTES de indexação incremental
+  - Rollback automático se indexação falhar
+  - Apenas últimos 3 backups mantidos
+
+- **Cron Job:** `scripts/setup_incremental_cron.sh`
+  - Executa diariamente às 23:59
+  - Logs em `data/logs/incremental_cron.log`
+
+### Bug Fixes
+- ✅ **Placeholders:** Removido `[[Nota 1]]`, `[[Nota 2]]` hardcoded
+- ✅ **Duplicação:** Adicionado `deduplicate_matches()` para Top 5 único
+- ✅ **Gemini:** Consolidação em `gemini-2.5-flash-lite` em todo o sistema
+
+### CLI Usage
+```bash
+# Testar indexação incremental (dry-run)
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+python3 -m src.indexing.incremental_cli --dry-run --verbose
+
+# Setup cron job
+bash scripts/setup_incremental_cron.sh
+
+# Verificar cron instalado
+crontab -l
+```
+
+---
+
 ## 🚀 Próximas Fases (v2.0)
 
 | Fase | Versão | Status | Link |
