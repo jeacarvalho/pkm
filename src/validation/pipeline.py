@@ -18,6 +18,40 @@ from src.utils.logging import get_logger
 logger = get_logger(__name__)
 
 
+def deduplicate_candidates(candidates: List[Dict], max_unique: int = 10) -> List[Dict]:
+    """Remove duplicate notes from candidate list.
+
+    Args:
+        candidates: List of retrieved candidates (may have same note multiple times)
+        max_unique: Maximum number of unique notes to return
+
+    Returns:
+        List of candidates with unique note titles only
+    """
+    seen_notes = set()
+    unique_candidates = []
+
+    for candidate in candidates:
+        note_title = candidate.get("metadata", {}).get("note_title", "")
+        file_path = candidate.get("metadata", {}).get("file_path", "")
+
+        note_id = file_path if file_path else note_title
+
+        if note_id not in seen_notes:
+            seen_notes.add(note_id)
+            unique_candidates.append(candidate)
+
+            if len(unique_candidates) >= max_unique:
+                break
+
+    if len(candidates) > len(unique_candidates):
+        logger.info(
+            f"🔄 Deduplicated: {len(candidates)} → {len(unique_candidates)} unique notes"
+        )
+
+    return unique_candidates
+
+
 class ValidationPipeline:
     """End-to-end validation pipeline: Retrieve → Re-Rank → Validate.
 
@@ -113,15 +147,19 @@ class ValidationPipeline:
             n_results_final=self.config.rerank_top_k,
             generate_embedding=False,
         )
-        logger.info(f"🔄 Re-ranking {len(candidates)} candidates...")
+
+        # Deduplicate candidates before validation
+        unique_candidates = deduplicate_candidates(candidates, max_unique=10)
+
+        logger.info(f"🔄 Re-ranking {len(unique_candidates)} unique candidates...")
 
         # Stage 3: Ollama Validation (Sprint 04)
         logger.info(
-            f"🤖 Calling Ollama ({self.config.validation_model}) for validation of {len(candidates)} candidates..."
+            f"🤖 Calling Ollama ({self.config.validation_model}) for validation of {len(unique_candidates)} candidates..."
         )
         validated = self.validator.validate_batch(
             book_chunk=chunk_text,
-            candidates=candidates,
+            candidates=unique_candidates,
         )
         logger.info(f"✅ Validation complete: {len(validated)} matches approved")
 
@@ -130,7 +168,8 @@ class ValidationPipeline:
             if len(chunk_text) > 500
             else chunk_text,
             "candidates_retrieved": self.config.vector_search_top_k,
-            "candidates_reranked": len(candidates),
+            "candidates_reranked": len(unique_candidates),
+            "unique_candidates": len(unique_candidates),
             "matches_validated": len(validated),
             "validated_matches": validated,
         }
@@ -172,11 +211,16 @@ class ValidationPipeline:
             generate_embedding=True,
         )
 
+        # Deduplicate candidates before validation
+        unique_candidates = deduplicate_candidates(candidates, max_unique=10)
+
         # Stage 3: Ollama Validation (Sprint 04)
-        logger.debug(f"Validating {len(candidates)} candidates with Ollama...")
+        logger.debug(
+            f"Validating {len(unique_candidates)} unique candidates with Ollama..."
+        )
         validated = self.validator.validate_batch(
             book_chunk=chapter_text,
-            candidates=candidates,
+            candidates=unique_candidates,
         )
 
         # Filter to only get the top-k validated matches as specified by config

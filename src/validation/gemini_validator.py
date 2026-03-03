@@ -28,7 +28,7 @@ class GeminiValidator:
     """
 
     def __init__(
-        self, config: Optional[Settings] = None, model: str = "gemini-2.0-flash"
+        self, config: Optional[Settings] = None, model: str = "gemini-2.5-flash-lite"
     ):
         """Initialize Gemini validator.
 
