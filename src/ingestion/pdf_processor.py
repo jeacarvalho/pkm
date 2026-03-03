@@ -133,118 +133,176 @@ class PDFProcessor:
             logger.info(f"DRY RUN: Would process {len(chapters)} chapters")
             return {"success": True, "chapters": len(chapters), "dry_run": True}
 
-        # Step 3: Extract text for each chapter based on page ranges
-        logger.info("Extracting text for each chapter...")
-        from PyPDF2 import PdfReader
+        # Step 4: Check cache and process chapters
+        from src.ingestion.translation_cache import TranslationCache
 
-        reader = PdfReader(str(pdf_path))
+        cache = TranslationCache(self.vault_path, self.book_name)
+        chapters_to_process = []
 
-        chapter_texts = []
-        for chapter in chapters:
-            # Extract text from the specified page range (adjusting for 0-based indexing)
-            chapter_text = ""
-            for page_num in range(
-                chapter.start_page - 1, min(chapter.end_page, len(reader.pages))
-            ):
-                chapter_text += reader.pages[page_num].extract_text() + "\n"
+        # Check which chapters need processing
+        all_chapters = [
+            {"num": c.num, "start_page": c.start_page, "end_page": c.end_page}
+            for c in chapters
+        ]
+        missing_chapters = cache.get_missing_chapters(all_chapters)
 
-            chapter_info = {
-                "chapter_num": chapter.num,
-                "start_page": chapter.start_page,
-                "end_page": chapter.end_page,
-                "text": chapter_text,
-                "title": f"Chapter {chapter.num + 1}",
-            }
-            chapter_texts.append(chapter_info)
-
-        logger.info(f"Extracted text for {len(chapter_texts)} chapters")
-
-        # Step 4: Detect document language
-        logger.info("Detecting document language...")
-        try:
-            # Sample pages for language detection
-            doc_language = detect_document_language(chapter_texts, sample_size=5)
-            logger.info(f"Detected language: {get_language_name(doc_language)}")
-        except Exception as e:
-            logger.warning(f"Language detection failed: {e}")
-            doc_language = "en"
-
-        # Step 5: Translate if needed
-        translated_chapters = []
-
-        if self.enable_translation and doc_language != self.target_language:
+        if not missing_chapters:
             logger.info(
-                f"Translating from {get_language_name(doc_language)} to "
-                f"{get_language_name(self.target_language)}..."
+                "✅ All chapters already processed! Use --force-retranslate to reprocess."
             )
-
-            for chapter in tqdm(chapter_texts, desc="Translating chapters"):
-                try:
-                    translated_text, was_translated = translate_if_needed(
-                        chapter["text"],
-                        target_lang=self.target_language,
-                        api_key=settings.gemini_api_key,
-                    )
-
-                    chapter_copy = chapter.copy()
-                    chapter_copy["text"] = translated_text
-                    chapter_copy["translated"] = str(was_translated)
-                    chapter_copy["original_language"] = doc_language
-                    translated_chapters.append(chapter_copy)
-
-                    # Small delay to respect rate limits
-                    time.sleep(1)
-
-                except Exception as e:
-                    logger.error(
-                        f"Translation failed for chapter '{chapter.get('title', 'Unknown')}': {e}"
-                    )
-                    # Keep original text on failure
-                    chapter_copy = chapter.copy()
-                    chapter_copy["translated"] = "false"
-                    chapter_copy["translation_error"] = str(e)
-                    translated_chapters.append(chapter_copy)
+            # Still load existing chapters for output
+            chapters_to_process = []
         else:
-            # No translation needed
-            translated_chapters = [
-                {**ch, "translated": "false", "original_language": doc_language}
-                for ch in chapter_texts
-            ]
+            logger.info(f"🔄 Processing {len(missing_chapters)} new chapters...")
+            chapters_to_process = missing_chapters
 
-        # Step 6: Validate chapters using the validation pipeline
+        # Step 5: Extract text for chapters that need processing
+        if chapters_to_process:
+            logger.info("Extracting text for new chapters...")
+            from PyPDF2 import PdfReader
+
+            reader = PdfReader(str(pdf_path))
+
+            new_chapter_texts = []
+            for ch in chapters_to_process:
+                chapter_text = ""
+                for page_num in range(
+                    ch["start_page"] - 1, min(ch["end_page"], len(reader.pages))
+                ):
+                    chapter_text += reader.pages[page_num].extract_text() + "\n"
+
+                chapter_info = {
+                    "chapter_num": ch["num"],
+                    "start_page": ch["start_page"],
+                    "end_page": ch["end_page"],
+                    "text": chapter_text,
+                    "title": f"Chapter {ch['num'] + 1}",
+                }
+                new_chapter_texts.append(chapter_info)
+
+            # Step 6: Detect document language
+            logger.info("Detecting document language...")
+            try:
+                doc_language = detect_document_language(
+                    new_chapter_texts, sample_size=5
+                )
+                logger.info(f"Detected language: {get_language_name(doc_language)}")
+            except Exception as e:
+                logger.warning(f"Language detection failed: {e}")
+                doc_language = "en"
+
+            # Step 7: Translate new chapters if needed
+            if self.enable_translation and doc_language != self.target_language:
+                logger.info(
+                    f"Translating from {get_language_name(doc_language)} to {get_language_name(self.target_language)}..."
+                )
+
+                translated_chapters = []
+                for chapter in tqdm(new_chapter_texts, desc="Translating chapters"):
+                    try:
+                        translated_text, was_translated = translate_if_needed(
+                            chapter["text"],
+                            target_lang=self.target_language,
+                            api_key=settings.gemini_api_key,
+                        )
+
+                        chapter_copy = chapter.copy()
+                        chapter_copy["chapter_text"] = translated_text
+                        chapter_copy["translated"] = str(was_translated)
+                        chapter_copy["was_cached"] = False
+                        translated_chapters.append(chapter_copy)
+
+                        time.sleep(1)
+
+                    except Exception as e:
+                        logger.error(f"Translation failed: {e}")
+                        chapter_copy = chapter.copy()
+                        chapter_copy["chapter_text"] = chapter["text"]
+                        chapter_copy["translated"] = "false"
+                        chapter_copy["was_cached"] = False
+                        translated_chapters.append(chapter_copy)
+            else:
+                translated_chapters = [
+                    {
+                        **ch,
+                        "chapter_text": ch["text"],
+                        "translated": "false",
+                        "was_cached": False,
+                    }
+                    for ch in new_chapter_texts
+                ]
+
+        # Step 8: Load cached chapters for chapters already processed
+        all_chapters_data = []
+        for ch in all_chapters:
+            if ch in chapters_to_process:
+                # This chapter was just translated
+                all_chapters_data.append(
+                    translated_chapters[
+                        [c["chapter_num"] for c in translated_chapters].index(ch["num"])
+                    ]
+                )
+            else:
+                # Load from cache
+                cached_content = cache.load_translated_content(ch["num"])
+                if cached_content:
+                    all_chapters_data.append(
+                        {
+                            "chapter_num": ch["num"],
+                            "start_page": ch["start_page"],
+                            "end_page": ch["end_page"],
+                            "chapter_text": cached_content,
+                            "title": f"Chapter {ch['num'] + 1}",
+                            "was_cached": True,
+                        }
+                    )
+                else:
+                    logger.warning(
+                        f"Chapter {ch['num']} marked as cached but content not found!"
+                    )
+
+        # Step 9: Validate chapters if requested
         if self.skip_validation:
             logger.info("Skipping validation (--skip-validation flag)")
-            validated_chapters = translated_chapters
+            validated_chapters = all_chapters_data
         else:
-            logger.info("Validating chapters with Ollama...")
+            logger.info("Validating chapters with Gemini...")
             try:
-                from src.validation.pipeline import ValidationPipeline
+                from src.validation.gemini_validator import GeminiValidator
+                from src.retrieval.pipeline import RetrievalPipeline
                 from src.utils.config import Settings
 
-                # Use very low threshold to get more candidates
                 config = Settings()
-                config.rerank_threshold = 0.1
+                config.rerank_threshold = (
+                    0.0  # Use 0 to get candidates even with low scores
+                )
 
-                validation_pipeline = ValidationPipeline(config)
-                validation_pipeline.retrieval.reranker.threshold = 0.1
+                validator = GeminiValidator(config)
+                retrieval = RetrievalPipeline(config)
 
                 validated_chapters = []
-                for i, chapter in enumerate(
-                    tqdm(translated_chapters, desc="Validating chapters")
-                ):
-                    # Process each chapter through the validation pipeline
-                    validation_result = validation_pipeline.process_chapter(
-                        chapter_text=chapter["text"],
-                        chapter_num=i,
-                        chapter_title=chapter.get("title", ""),
-                        chapter_pages=f"{chapter['start_page']}-{chapter['end_page']}",
+                for chapter in tqdm(all_chapters_data, desc="Validating chapters"):
+                    # Get candidates from retrieval
+                    logger.info(f"🔍 Processing chapter {chapter['chapter_num']}...")
+                    candidates = retrieval.retrieve(
+                        query_text=chapter["chapter_text"],
+                        n_results_initial=20,
+                        n_results_final=5,
+                        generate_embedding=True,
                     )
 
-                    # Combine chapter info with validation results
-                    validated_chapter = {**chapter, **validation_result}
-                    validated_chapters.append(validated_chapter)
+                    # Validate with Gemini
+                    validated = validator.validate_batch(
+                        book_chunk=chapter["chapter_text"],
+                        candidates=candidates,
+                    )
+
+                    chapter["validated_matches"] = validated
+                    validated_chapters.append(chapter)
 
             except Exception as e:
+                logger.error(f"Validation failed: {e}")
+                validated_chapters = all_chapters_data
                 logger.error(f"Validation failed: {e}")
                 # If validation fails, continue with original translated chapters
                 validated_chapters = translated_chapters

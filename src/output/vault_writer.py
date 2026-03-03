@@ -9,6 +9,7 @@ class VaultWriter:
     """Write chapter files to Obsidian vault."""
 
     def __init__(self, vault_path: str, book_name: str):
+        # vault_path already includes "100 ARQUIVOS E REFERENCIAS/Livros"
         self.vault_path = Path(vault_path)
         self.book_folder = self.vault_path / book_name
 
@@ -18,86 +19,94 @@ class VaultWriter:
         return self.book_folder
 
     def write_chapter(self, chapter_num: int, chapter_data: Dict) -> Path:
-        """Write single chapter file."""
-        # Create book folder if it doesn't exist
+        """Write single chapter file with full translated content."""
         self.create_book_folder()
 
-        # Format chapter number with leading zeros
         filename = f"{chapter_num:02d}_Capitulo_{chapter_num + 1:02d}.md"
         filepath = self.book_folder / filename
 
-        # Get the book title from chapter data or use book_name
-        book_title = chapter_data.get("title", self.book_folder.name.replace("_", " "))
+        content = self._build_markdown(chapter_num, chapter_data)
 
-        # Extract author from metadata if available
-        author = chapter_data.get("author", "")
-        if not author and "metadata" in chapter_data:
-            author = chapter_data["metadata"].get("author", "")
-
-        # Extract validation results if available, otherwise use placeholders
-        validated_matches = chapter_data.get("validated_matches", [])
-
-        # Create connections section based on validation results
-        connections_section = "## Conexões Validadas com o Vault (Top 5)\n\n"
-
-        if validated_matches:
-            # Sort matches by confidence score if available, otherwise by rerank score
-            sorted_matches = sorted(
-                validated_matches,
-                key=lambda x: x.get("validation", {}).get(
-                    "confidence", x.get("rerank_score", 0)
-                ),
-                reverse=True,
-            )[:5]  # Take only top 5
-
-            for idx, match in enumerate(sorted_matches, 1):
-                note_title = match.get("metadata", {}).get("note_title", f"Nota {idx}")
-                rerank_score = match.get("rerank_score", 0)
-                validation_info = match.get("validation", {})
-                confidence = validation_info.get("confidence", "N/A")
-                reason = validation_info.get("reason", "N/A")
-
-                connections_section += f"### [[{note_title}]]\n"
-                connections_section += f"- **Re-Rank Score:** {rerank_score:.2f}\n"
-                connections_section += f"- **Confiança Ollama:** {confidence}/100\n"
-                connections_section += f"- **Motivo:** {reason}\n\n"
-        else:
-            # No validation results available
-            connections_section += "*Nenhuma nota validada para este capítulo (validação não executada ou sem matches)*\n\n"
-
-        # Create markdown content with frontmatter
-        frontmatter = f"""---
-book_title: {book_title}
-author: {author}
-chapter_number: {chapter_num + 1}
-chapter_title: {chapter_data.get("title", f"Chapter {chapter_num + 1}") or f"Chapter {chapter_num + 1}"}
-chapter_pages: {chapter_data.get("start_page", 1)}-{chapter_data.get("end_page", "?")}
-processed_date: {datetime.now().strftime("%Y-%m-%d")}
-validation_engine: ollama
-validation_model: llama3.2
-rerank_threshold: 0.75
-tags:
-  - #book-connections
-  - #rag-validated
-  - #ollama-approved
-  - #{self.book_folder.name.lower()}
----
-
-# Capítulo {chapter_num + 1}: {chapter_data.get("title", f"Chapter {chapter_num + 1}") or f"Chapter {chapter_num + 1}"}
-
-## Resumo do Capítulo
-{chapter_data.get("text", "")[:500]}...
-
-{connections_section}
----
-*Processado por Obsidian RAG v1.1.0*
-"""
-
-        # Write the content to the file
         with open(filepath, "w", encoding="utf-8") as f:
-            f.write(frontmatter)
+            f.write(content)
 
+        print(f"✅ Written: {filepath}")
         return filepath
+
+    def _build_markdown(self, chapter_num: int, chapter_data: Dict) -> str:
+        """Build Markdown with full translated content + validated matches."""
+        lines = []
+
+        # Frontmatter
+        lines.append("---")
+        lines.append(f"book_title: {chapter_data.get('book_title', 'Unknown')}")
+        lines.append(f"author: {chapter_data.get('author', '')}")
+        lines.append(f"chapter_number: {chapter_num + 1}")
+        lines.append(
+            f"chapter_title: {chapter_data.get('title', f'Chapter {chapter_num + 1}')}"
+        )
+        lines.append(
+            f"chapter_pages: {chapter_data.get('start_page', '?')}-{chapter_data.get('end_page', '?')}"
+        )
+        lines.append(f"processed_date: {datetime.now().strftime('%Y-%m-%d')}")
+        lines.append(f"validation_engine: gemini")
+        lines.append(f"validation_model: gemini-2.0-flash")
+        lines.append(f"rerank_threshold: {chapter_data.get('rerank_threshold', 0.75)}")
+        lines.append(f"translation_cached: {chapter_data.get('was_cached', False)}")
+        lines.append("tags:")
+        lines.append("  - #book-connections")
+        lines.append("  - #rag-validated")
+        lines.append("  - #gemini-approved")
+        lines.append(f"  - #{self.book_folder.name.lower()}")
+        lines.append("---")
+        lines.append("")
+
+        # Title
+        lines.append(
+            f"# Capítulo {chapter_num + 1}: {chapter_data.get('title', f'Capítulo {chapter_num + 1}')}"
+        )
+        lines.append("")
+
+        # FULL TRANSLATED CONTENT (not summary!)
+        lines.append("## Conteúdo Traduzido")
+        lines.append("")
+        lines.append(chapter_data.get("chapter_text", "").strip())
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+
+        # Validated matches
+        lines.append("## Conexões Validadas com o Vault (Top 5)")
+        lines.append("")
+
+        validated_matches = chapter_data.get("validated_matches", [])
+        if validated_matches:
+            for match in validated_matches[:5]:
+                note_title = match.get("metadata", {}).get("note_title", "Unknown")
+                rerank_score = match.get("rerank_score", 0.0)
+                validation = match.get("validation", {})
+                confidence = validation.get("confidence", 0)
+                reason = validation.get("reason", "Sem motivo")
+
+                lines.append(f"### [[{note_title}]]")
+                lines.append("")
+                lines.append(f"- **Re-Rank Score:** {rerank_score:.3f}")
+                lines.append(f"- **Confiança Gemini:** {confidence}/100")
+                lines.append(f"- **Motivo:** {reason}")
+                lines.append("")
+        else:
+            lines.append(
+                "*Nenhuma conexão validada para este capítulo (use --validate para executar validação)*"
+            )
+            lines.append("")
+
+        # Footer
+        lines.append("---")
+        lines.append(
+            f"*Processado por Obsidian RAG v1.1.1 | Validação: Gemini 2.0 Flash*"
+        )
+
+        return "\n".join(lines)
 
     def write_all_chapters(self, chapters: List[Dict]) -> List[Path]:
         """Write all chapter files."""
