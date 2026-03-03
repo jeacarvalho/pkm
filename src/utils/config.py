@@ -63,7 +63,7 @@ class Settings(BaseSettings):
         description="Google Gemini API key for translation",
     )
     gemini_model: str = Field(
-        default="gemini-2.0-flash",
+        default="gemini-2.5-flash-lite",
         description="Gemini model for translation",
     )
 
@@ -105,8 +105,8 @@ class Settings(BaseSettings):
 
     # Validation Configuration (Sprint 04)
     validation_model: str = Field(
-        default="llama3.2",
-        description="Ollama model for validation",
+        default="gemini-2.5-flash-lite",
+        description="Model for validation (gemini or ollama)",
     )
     validation_temperature: float = Field(
         default=0.0,
@@ -126,7 +126,7 @@ class Settings(BaseSettings):
         default=Path("./data/processed"),
         description="Output directory for generated Markdown files",
     )
-    
+
     # NEW for Sprint 06 - Chapter-Based Processing
     books_vault_path: str = Field(
         default="/home/s015533607/MEGAsync/Minhas_notas/100 ARQUIVOS E REFERENCIAS/Livros",
