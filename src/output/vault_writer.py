@@ -50,7 +50,7 @@ class VaultWriter:
         )
         lines.append(f"processed_date: {datetime.now().strftime('%Y-%m-%d')}")
         lines.append(f"validation_engine: gemini")
-        lines.append(f"validation_model: gemini-2.0-flash")
+        lines.append(f"validation_model: {self.config.validation_model}")
         lines.append(f"rerank_threshold: {chapter_data.get('rerank_threshold', 0.75)}")
         lines.append(f"translation_cached: {chapter_data.get('was_cached', False)}")
         lines.append("tags:")

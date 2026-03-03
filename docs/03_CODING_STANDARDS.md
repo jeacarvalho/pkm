@@ -288,7 +288,7 @@ CHROMA_PERSIST_DIR=./data/vectors
 OLLAMA_HOST=http://localhost:11434
 GEMINI_API_KEY=your_api_key_here
 EMBEDDING_MODEL=bge-m3
-VALIDATION_MODEL=llama3.1
+VALIDATION_MODEL=gemini-2.5-flash-lite
 RERANK_THRESHOLD=0.75
 ```
 
@@ -304,7 +304,7 @@ class Settings(BaseSettings):
     ollama_host: str = "http://localhost:11434"
     gemini_api_key: str
     embedding_model: str = "bge-m3"
-    validation_model: str = "llama3.1"
+    validation_model: str = "gemini-2.5-flash-lite"
     rerank_threshold: float = 0.75
 
     class Config:

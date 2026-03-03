@@ -60,11 +60,11 @@ Generated markdown files with validated matches.
 
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|
-| `frontmatter.validation_engine` | String | Validation system used | `ollama` |
+| `frontmatter.validation_engine` | String | Validation system used | `gemini` |
 | `frontmatter.validation_status` | String | Overall status | `approved` |
 | `frontmatter.book_title` | String | Source book title | `Antifragile` |
 | `frontmatter.processed_date` | Date | Processing date | `2026-02-28` |
-| `frontmatter.ollama_model` | String | Model used for validation | `llama3.1` |
+| `frontmatter.validation_model` | String | Model used for validation | `gemini-2.5-flash-lite` |
 | `content.sections[].book_chunk` | String | Excerpt from book | "Chapter 1: ..." |
 | `content.sections[].matched_notes` | List | Validated note links | `[[Antifragilidade]]` |
 | `content.sections[].validation_reason` | String | Why match was approved | "Both discuss risk concepts" |
@@ -74,11 +74,11 @@ Generated markdown files with validated matches.
 
 ```markdown
 ---
-validation_engine: ollama
+validation_engine: gemini
 validation_status: approved
 book_title: Antifragile
 processed_date: 2026-02-28
-ollama_model: llama3.1
+validation_model: gemini-2.5-flash-lite
 rerank_threshold: 0.75
 ---
 
@@ -93,12 +93,12 @@ rerank_threshold: 0.75
 
 #### [[Antifragilidade]]
 - **Re-Rank Score:** 0.85
-- **Confiança Ollama:** 95
+- **Confiança Gemini:** 95
 - **Motivo:** Ambos discutem o conceito de antifragilidade e resposta ao estresse
 
 #### [[Gestão de Risco]]
 - **Re-Rank Score:** 0.78
-- **Confiança Ollama:** 88
+- **Confiança Gemini:** 88
 - **Motivo:** Conceitos de risco e exposição a volatilidade
 
 ---
@@ -139,7 +139,7 @@ rerank_threshold: 0.75
 | Metric | Type | Range | Description |
 |--------|------|-------|-------------|
 | `rerank_score` | Float | 0.0 - 1.0 | Cross-encoder similarity |
-| `ollama_confidence` | Integer | 0 - 100 | LLM confidence percentage |
+| `gemini_confidence` | Integer | 0 - 100 | LLM confidence percentage |
 | `vector_similarity` | Float | 0.0 - 1.0 | Cosine similarity from ChromaDB |
 
 ---
@@ -267,7 +267,7 @@ results = collection.query(
         ↓
 [Re-Rank: bge-reranker-v2-m3, threshold 0.75]
         ↓
-[Validate: Ollama llama3.1]
+[Validate: Gemini gemini-2.5-flash-lite]
         ↓
 [Output: Markdown with approved matches]
 ```

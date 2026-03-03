@@ -34,7 +34,7 @@ class GeminiValidator:
 
         Args:
             config: Application settings.
-            model: Gemini model to use (default: gemini-2.0-flash).
+            model: Gemini model to use (default: gemini-2.5-flash-lite).
         """
         self.config = config or Settings()
         self.model = model

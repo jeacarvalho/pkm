@@ -52,7 +52,7 @@
 |-------|----------|--------|---------|
 | `bge-m3` | ✅ | ✅ Ready | `ollama pull bge-m3` |
 | `bge-reranker-v2-m3` | ✅ | ✅ Ready | HuggingFace (sentence-transformers) |
-| `llama3.2` | ✅ | ✅ Ready | `ollama pull llama3.2` |
+| `gemini-2.5-flash-lite` | ✅ | ✅ Ready | Gemini API |
 
 ### Python Environment
 
@@ -234,12 +234,12 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 ### Execution Summary
 - **Status:** ✅ COMPLETE (95%)
 - **Completed:** 2026-03-02
-- **Validation Model:** llama3.2 (via Ollama)
+- **Validation Model:** gemini-2.5-flash-lite (via Gemini API)
 - **Tested with:** 10144 chunks (3570 notas - vault COMPLETO) ✅
 
 ### Tasks Completed
 - [x] Create `src/validation/` directory structure
-- [x] Implement `ollama_validator.py` with JSON parsing
+- [x] Implement `gemini_validator.py` with JSON parsing
 - [x] Implement `prompt_templates.py` with simplified prompts
 - [x] Implement `pipeline.py` with CLI interface
 - [x] Retry logic with exponential backoff
@@ -250,7 +250,7 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 ```
 src/validation/
 ├── __init__.py
-├── ollama_validator.py    # Main validator with retry logic
+├── gemini_validator.py    # Main validator with retry logic
 ├── prompt_templates.py    # Simplified JSON prompts
 └── pipeline.py            # CLI orchestration
 ```
@@ -428,8 +428,8 @@ python3 -m src.ingestion.pdf_processor \
 |-------|----------|--------|------------|
 | Existing embeddings unknown | High | ✅ Resolved | Decision: Re-index all with bge-m3 |
 | False positives in matches | High | ✅ Resolved | Decision: Add Re-Ranker layer |
-| Gemini model name incorrect | Medium | ✅ Resolved | Decision: Use gemini-2.0-flash |
-| Ollama model undefined | Medium | ✅ Resolved | Decision: llama3.2 for validation |
+| Gemini model name incorrect | Medium | ✅ Resolved | Decision: Use gemini-2.5-flash-lite (latest) |
+| Ollama model undefined | Medium | ✅ Resolved | Decision: gemini-2.5-flash-lite for validation (via API) |
 | Accidental data deletion | CRITICAL | ✅ Resolved | Backup scripts, confirmation prompts |
 | ChromaDB version mismatch | CRITICAL | ✅ Resolved | Use system Python with ChromaDB 1.5.1 |
 | JSON parsing errors in Ollama | Medium | ✅ Resolved | Simplified prompt, no markdown |
@@ -448,10 +448,10 @@ python3 -m src.ingestion.pdf_processor \
 | 2026-02-28 | Ollama must read full note | Validation requires full context, not summary |
 | 2026-02-28 | Output as Obsidian Markdown | Native format, usable by user immediately |
 | 2026-03-02 | Use system Python (not Poetry) | ChromaDB 1.5.1 vs 0.4.24 incompatibility |
-| 2026-03-02 | Use llama3.2 for validation | llama3.1 not available in Ollama |
+| 2026-03-02 | Use gemini-2.5-flash-lite for validation | Faster than Ollama, better API integration |
 | 2026-03-02 | Simplify prompt for JSON | Avoid markdown code blocks in responses |
 | 2026-03-02 | Use google.genai (new API) | google.generativeai is deprecated |
-| 2026-03-02 | Use gemini-2.0-flash | gemini-1.5-flash not available in new API |
+| 2026-03-02 | Use gemini-2.5-flash-lite | gemini-2.0-flash deprecated, use latest |
 
 ---
 
@@ -533,7 +533,7 @@ from src.validation.pipeline import ValidationPipeline
 from src.utils.config import Settings
 config = Settings()
 config.rerank_threshold = 0.3
-config.validation_model = 'llama3.2'
+config.validation_model = 'gemini-2.5-flash-lite'
 pipeline = ValidationPipeline(config)
 result = pipeline.process_chunk(chunk_text='liderança')
 print(result)
