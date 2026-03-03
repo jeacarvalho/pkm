@@ -1,0 +1,54 @@
+[
+  {
+    "chunk_id": 0,
+    "chunk_text": "István Mészáros\nA EDUCAÇÃO PARA ALÉM\nDO CAPITAL\n\nSobre A EDUCAÇÃO PARA ALÉM DO CAPITAL\nA educação para além do capital é um pequeno livro no qual\nIstván Mészáros nos oferece uma reflexão densa e críti",
+    "candidates_reranked": 5,
+    "matches_validated": 5,
+    "validated_matches": [
+      {
+        "note_title": "2001robinson-Out of Our Minds",
+        "confidence": 92,
+        "rerank_score": 0.966,
+        "approved": true
+      },
+      {
+        "note_title": "Debate com chatpdf sobre o conteudo das aulas de educacao em direitos humanos",
+        "confidence": 90,
+        "rerank_score": 0.95,
+        "approved": true
+      },
+      {
+        "note_title": "2013zizek-fimtempos",
+        "confidence": 92,
+        "rerank_score": 0.948,
+        "approved": true
+      },
+      {
+        "note_title": "2021weise-Long Life Learning",
+        "confidence": 92,
+        "rerank_score": 0.938,
+        "approved": true
+      },
+      {
+        "note_title": "2001robinson-Out of Our Minds",
+        "confidence": 92,
+        "rerank_score": 0.937,
+        "approved": true
+      }
+    ]
+  },
+  {
+    "chunk_id": 1,
+    "chunk_text": " extrai do\npensamento de José Martí a direção e as tarefas para\neducadores que não querem apenas reformar o sistema do\ncapital, mas ir para além dele – “as soluções não podem ser\napenas formais; elas ",
+    "candidates_reranked": 0,
+    "matches_validated": 0,
+    "validated_matches": []
+  },
+  {
+    "chunk_id": 2,
+    "chunk_text": "Copyright © István Mészáros \nCopyright desta edição © Boitempo Editorial, 2005\nTitulo original: Education Beyond Capital\nCoordenação editorial\nIvana Jinkings\nAssistência\nAna Paula Castellani\nTradução\n",
+    "candidates_reranked": 5,
+    "matches_validated": 0,
+    "validated_matches": []
+  }
+]
