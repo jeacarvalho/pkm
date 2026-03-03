@@ -250,3 +250,18 @@ python3 -m src.indexing.vault_indexer --stats
 # Verify Sprint 02 complete
 ls -la data/processed/
 ```
+
+---
+
+## 🔄 Próximas Sprints (v2.0)
+
+Ver `docs/10_ROADMAP_v2.md` para detalhes completos.
+
+| Sprint | Descrição | Blocks | Blocked By |
+|--------|-----------|--------|------------|
+| Sprint 07 | Topic Extractor | Sprint 08 | Sprint 06 |
+| Sprint 08 | Vault Properties | Sprint 09 | Sprint 07 |
+| Sprint 09 | Topic Matching | Sprint 10 | Sprint 08 |
+| Sprint 10 | Translation Cache | Sprint 11 | Sprint 07 |
+| Sprint 11 | Hybrid Retrieval | Sprint 12 | Sprint 09+10 |
+| Sprint 12 | Dataview Integration | — | Sprint 11

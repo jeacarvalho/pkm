@@ -490,3 +490,14 @@ python3 scripts/verify_index.py
 ```
 
 ---
+
+## 🚀 Próximas Fases (v2.0)
+
+| Fase | Versão | Status | Link |
+|------|--------|--------|------|
+| Embedding Pipeline | v1.0 | ✅ COMPLETE | `docs/08_SPRINT_DEPENDENCIES.md` |
+| Topic Classification | v2.0 | 📋 PLANNING | `docs/10_ROADMAP_v2.md` |
+
+**Ver `docs/10_ROADMAP_v2.md` para detalhes completos do roadmap v2.0.**
+
+---

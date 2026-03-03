@@ -38,3 +38,16 @@
 - Cada capítulo tem Top 5 matches validados pelo Ollama
 
 **Exemplo de `capitulos.txt`:**
+
+---
+
+## v2.0 Roadmap
+
+**Ver `docs/10_ROADMAP_v2.md` para plano completo.**
+
+Resumo:
+- Topic Classification via Gemini (não Ollama)
+- Properties no frontmatter das notas
+- Matching por sobreposição de tópicos
+- Cache de tradução (não retraduzir)
+- Integração com Dataview/Bases
