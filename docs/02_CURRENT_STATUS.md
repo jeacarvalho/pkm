@@ -19,6 +19,7 @@
 | Retrieval & Re-Rank | Sprint 03 | ✅ COMPLETE | 100% (full vault coverage) |
 | Ollama Validation | Sprint 04 | ✅ COMPLETE | 100% |
 | Output Generation | Sprint 05 | ✅ COMPLETE | 100% |
+| Chapter Processing | Sprint 06 | ✅ COMPLETE | 100% |
 
 ---
 
@@ -317,8 +318,65 @@ python3 -m src.output.pipeline --book-chunks "file.json" --output-dir "data/outp
 ```
 
 ### Next Steps
-- [ ] Run full validation with book chunks
-- [ ] Import to Obsidian vault (optional)
+- [x] Sprint 06 ready to start
+
+---
+
+## Sprint 06 Execution Status (✅ COMPLETE 2026-03-03)
+
+### Execution Summary
+- **Status:** ✅ COMPLETE
+- **Completed:** 2026-03-03
+- **New Feature:** Chapter-based processing with Vault Integration
+
+### Tasks Completed
+- [x] Create `src/ingestion/chapter_parser.py` - Parser for capitulos.txt
+- [x] Create `src/output/vault_writer.py` - Write chapters to Obsidian vault
+- [x] Update `src/utils/config.py` - Add books_vault_path, chapter_validation_top_k
+- [x] Update `src/validation/pipeline.py` - Add process_chapter() method
+- [x] Update `src/ingestion/pdf_processor.py` - Add chapter-based mode
+- [x] Create `tests/unit/test_chapter_processing.py`
+
+### Files Created/Modified
+```
+src/ingestion/
+├── chapter_parser.py      # NEW - Parse capitulos.txt
+└── pdf_processor.py      # MODIFIED - Added chapter mode
+
+src/output/
+├── vault_writer.py       # NEW - Write chapters to vault
+
+src/utils/
+└── config.py            # MODIFIED - books_vault_path, chapter_validation_top_k
+
+src/validation/
+└── pipeline.py          # MODIFIED - process_chapter() method
+
+tests/unit/
+└── test_chapter_processing.py  # NEW
+```
+
+### CLI Usage
+```bash
+# Process book by chapters
+python3 -m src.ingestion.pdf_processor \
+  --book "/path/to/book.pdf" \
+  --chapters "data/test/capitulos.txt" \
+  --book-name "Nome_Livro" \
+  --vault-path "/home/s015533607/MEGAsync/Minhas_notas/100 ARQUIVOS E REFERENCIAS/Livros"
+```
+
+### Configuration
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `books_vault_path` | `/home/s015533607/MEGAsync/Minhas_notas/100 ARQUIVOS E REFERENCIAS/Livros` | Output folder for processed books |
+| `chapter_validation_top_k` | 5 | Number of validated matches per chapter |
+| `use_chapter_processing` | false | Enable chapter-based mode |
+
+### Test Results
+- ChapterParser: Validates chapter ranges ✅
+- VaultWriter: Creates folder and writes chapters ✅
+- Integration: PDF → Chapters → Validation → Vault ✅
 
 ---
 
