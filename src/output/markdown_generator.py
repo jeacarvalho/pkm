@@ -251,6 +251,9 @@ tags:
 
         validated_matches = chunk_data.get("validated_matches", [])
 
+        # Deduplicate matches before output
+        validated_matches = self.deduplicate_matches(validated_matches, max_unique=5)
+
         if validated_matches:
             lines.append("### Notas Relacionadas (Validadas)")
             lines.append("")
@@ -265,7 +268,7 @@ tags:
                 lines.append(f"#### [[{note_title}]]")
                 lines.append("")
                 lines.append(f"- **Re-Rank Score:** {rerank_score:.3f}")
-                lines.append(f"- **Confiança Ollama:** {confidence}/100")
+                lines.append(f"- **Confiança Gemini:** {confidence}/100")
                 lines.append(f"- **Motivo:** {reason}")
                 lines.append("")
         else:
@@ -317,6 +320,39 @@ tags:
             )
 
         return "\n".join(lines)
+
+    @staticmethod
+    def deduplicate_matches(
+        validated_matches: List[Dict[str, Any]], max_unique: int = 5
+    ) -> List[Dict[str, Any]]:
+        """Remove duplicate notes from validated matches.
+
+        Args:
+            validated_matches: List of validated matches (may have same note multiple times)
+            max_unique: Maximum number of unique notes to return
+
+        Returns:
+            List of matches with unique note titles only
+        """
+        seen_notes = set()
+        unique_matches = []
+
+        for match in validated_matches:
+            # Get unique identifier for the note
+            note_title = match.get("metadata", {}).get("note_title", "")
+            file_path = match.get("metadata", {}).get("file_path", "")
+
+            # Use file_path as primary key (more unique than title)
+            note_id = file_path if file_path else note_title
+
+            if note_id not in seen_notes:
+                seen_notes.add(note_id)
+                unique_matches.append(match)
+
+                if len(unique_matches) >= max_unique:
+                    break
+
+        return unique_matches
 
     def import_to_vault(
         self,

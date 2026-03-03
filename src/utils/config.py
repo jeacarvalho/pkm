@@ -103,10 +103,14 @@ class Settings(BaseSettings):
         description="Number of final results after re-ranking",
     )
 
-    # Validation Configuration (Sprint 04)
+    # Validation Configuration (Sprint 07 - Updated for Gemini)
+    validation_provider: str = Field(
+        default="gemini",
+        description="Validation provider: 'gemini' or 'ollama'",
+    )
     validation_model: str = Field(
-        default="llama3.2",
-        description="Ollama model for validation",
+        default="gemini-2.5-flash-lite",
+        description="Model for validation (gemini-2.5-flash-lite or ollama model)",
     )
     validation_temperature: float = Field(
         default=0.0,

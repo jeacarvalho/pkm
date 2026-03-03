@@ -171,6 +171,43 @@ class ChromaClient:
         except Exception:
             return None
 
+    def get_by_file_path(self, file_path: str) -> Dict[str, Any]:
+        """Get all documents for a specific file path.
+
+        Args:
+            file_path: Path to the source file.
+
+        Returns:
+            Dictionary with ids, documents, metadatas, embeddings.
+        """
+        try:
+            return self.collection.get(
+                where={"file_path": file_path},
+                include=["ids", "documents", "metadatas", "embeddings"],
+            )
+        except Exception as e:
+            raise ChromaDBError(f"Failed to get documents by file_path: {e}") from e
+
+    def delete_by_file_path(self, file_path: str) -> int:
+        """Delete all documents for a specific file path.
+
+        Args:
+            file_path: Path to the source file.
+
+        Returns:
+            Number of documents deleted.
+        """
+        try:
+            results = self.collection.get(
+                where={"file_path": file_path}, include=["ids"]
+            )
+            if results and results.get("ids"):
+                self.collection.delete(ids=results["ids"])
+                return len(results["ids"])
+            return 0
+        except Exception as e:
+            raise ChromaDBError(f"Failed to delete documents: {e}") from e
+
     @staticmethod
     def generate_id(file_path: str, chunk_id: int) -> str:
         """Generate a unique ID for a document chunk.
