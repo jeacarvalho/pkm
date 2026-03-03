@@ -94,15 +94,18 @@ class ValidationPipeline:
         """
         # Generate embedding if not provided
         if chunk_embedding is None:
-            logger.debug("Generating embedding for chunk...")
+            logger.info(
+                f"🤖 Calling Ollama ({self.config.embedding_model}) for embedding..."
+            )
             response = ollama.embeddings(
                 model=self.config.embedding_model,
                 prompt=chunk_text[:8000],
             )
             chunk_embedding = response["embedding"]
+            logger.info(f"✅ Embedding generated: {len(chunk_embedding)} dimensions")
 
         # Stage 1-2: Retrieval + Re-Ranking (Sprint 03)
-        logger.debug("Running retrieval (Sprint 03)...")
+        logger.info("🗄️ Querying ChromaDB for candidates...")
         candidates = self.retrieval.retrieve(
             query_text=chunk_text,
             query_embedding=chunk_embedding,
@@ -110,13 +113,17 @@ class ValidationPipeline:
             n_results_final=self.config.rerank_top_k,
             generate_embedding=False,
         )
+        logger.info(f"🔄 Re-ranking {len(candidates)} candidates...")
 
         # Stage 3: Ollama Validation (Sprint 04)
-        logger.debug(f"Validating {len(candidates)} candidates with Ollama...")
+        logger.info(
+            f"🤖 Calling Ollama ({self.config.validation_model}) for validation of {len(candidates)} candidates..."
+        )
         validated = self.validator.validate_batch(
             book_chunk=chunk_text,
             candidates=candidates,
         )
+        logger.info(f"✅ Validation complete: {len(validated)} matches approved")
 
         return {
             "chunk_text": chunk_text[:500] + "..."
@@ -151,8 +158,10 @@ class ValidationPipeline:
             - matches_validated: Number of approved matches (top-k)
             - validated_matches: List of top-k approved matches with validation metadata
         """
-        logger.info(f"Processing chapter {chapter_num}: {chapter_title or f'Chapter {chapter_num}'}")
-        
+        logger.info(
+            f"Processing chapter {chapter_num}: {chapter_title or f'Chapter {chapter_num}'}"
+        )
+
         # Stage 1-2: Retrieval + Re-Ranking (Sprint 03)
         logger.debug("Running retrieval (Sprint 03)...")
         candidates = self.retrieval.retrieve(
@@ -171,8 +180,10 @@ class ValidationPipeline:
         )
 
         # Filter to only get the top-k validated matches as specified by config
-        validated_matches = sorted(validated, key=lambda x: x['rerank_score'], reverse=True)
-        top_validated = validated_matches[:self.config.chapter_validation_top_k]
+        validated_matches = sorted(
+            validated, key=lambda x: x["rerank_score"], reverse=True
+        )
+        top_validated = validated_matches[: self.config.chapter_validation_top_k]
 
         return {
             "chapter_info": {
