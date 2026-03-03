@@ -52,6 +52,7 @@ class PDFProcessor:
         chapters_file: Optional[str] = None,
         vault_path: Optional[str] = None,
         book_name: Optional[str] = None,
+        skip_validation: bool = False,
     ):
         """Initialize PDF processor.
 
@@ -64,6 +65,7 @@ class PDFProcessor:
             chapters_file: Path to capitulos.txt file.
             vault_path: Path to Obsidian vault for output.
             book_name: Name of the book for folder creation in vault.
+            skip_validation: Skip Ollama validation (for testing).
         """
         self.target_language = target_language
         self.enable_translation = enable_translation
@@ -72,6 +74,7 @@ class PDFProcessor:
         self.chapters_file = chapters_file
         self.vault_path = vault_path or settings.books_vault_path
         self.book_name = book_name or ""
+        self.skip_validation = skip_validation
 
         if enable_translation:
             self.translator = GeminiTranslator(
@@ -104,18 +107,20 @@ class PDFProcessor:
         else:
             return self._process_by_chunks(pdf_path, dry_run)
 
-    def _process_by_chapters(self, pdf_path: Path, dry_run: bool = False) -> Dict[str, Any]:
+    def _process_by_chapters(
+        self, pdf_path: Path, dry_run: bool = False
+    ) -> Dict[str, Any]:
         """Process PDF by chapter ranges defined in capitulos.txt."""
         logger.info(f"Processing PDF by chapters: {pdf_path}")
-        
+
         # Step 1: Parse chapter ranges
         logger.info(f"Parsing chapter file: {self.chapters_file}")
         chapter_parser = ChapterParser()
         chapters = chapter_parser.parse(self.chapters_file)
         chapter_parser.validate(chapters)
-        
+
         logger.info(f"Loaded {len(chapters)} chapters")
-        
+
         # Step 2: Extract metadata
         try:
             metadata = get_pdf_metadata(pdf_path)
@@ -131,24 +136,27 @@ class PDFProcessor:
         # Step 3: Extract text for each chapter based on page ranges
         logger.info("Extracting text for each chapter...")
         from PyPDF2 import PdfReader
+
         reader = PdfReader(str(pdf_path))
-        
+
         chapter_texts = []
         for chapter in chapters:
             # Extract text from the specified page range (adjusting for 0-based indexing)
             chapter_text = ""
-            for page_num in range(chapter.start_page - 1, min(chapter.end_page, len(reader.pages))):
+            for page_num in range(
+                chapter.start_page - 1, min(chapter.end_page, len(reader.pages))
+            ):
                 chapter_text += reader.pages[page_num].extract_text() + "\n"
-            
+
             chapter_info = {
                 "chapter_num": chapter.num,
                 "start_page": chapter.start_page,
                 "end_page": chapter.end_page,
                 "text": chapter_text,
-                "title": f"Chapter {chapter.num + 1}"
+                "title": f"Chapter {chapter.num + 1}",
             }
             chapter_texts.append(chapter_info)
-        
+
         logger.info(f"Extracted text for {len(chapter_texts)} chapters")
 
         # Step 4: Detect document language
@@ -204,39 +212,55 @@ class PDFProcessor:
             ]
 
         # Step 6: Validate chapters using the validation pipeline
-        logger.info("Validating chapters with Ollama...")
-        try:
-            from src.validation.pipeline import ValidationPipeline
-            validation_pipeline = ValidationPipeline()
-            
-            validated_chapters = []
-            for i, chapter in enumerate(tqdm(translated_chapters, desc="Validating chapters")):
-                # Process each chapter through the validation pipeline
-                validation_result = validation_pipeline.process_chapter(
-                    chapter_text=chapter["text"],
-                    chapter_num=i,
-                    chapter_title=chapter.get("title", ""),
-                    chapter_pages=f"{chapter['start_page']}-{chapter['end_page']}"
-                )
-                
-                # Combine chapter info with validation results
-                validated_chapter = {**chapter, **validation_result}
-                validated_chapters.append(validated_chapter)
-                
-        except Exception as e:
-            logger.error(f"Validation failed: {e}")
-            # If validation fails, continue with original translated chapters
+        if self.skip_validation:
+            logger.info("Skipping validation (--skip-validation flag)")
             validated_chapters = translated_chapters
+        else:
+            logger.info("Validating chapters with Ollama...")
+            try:
+                from src.validation.pipeline import ValidationPipeline
+                from src.utils.config import Settings
+
+                # Use very low threshold to get more candidates
+                config = Settings()
+                config.rerank_threshold = 0.1
+
+                validation_pipeline = ValidationPipeline(config)
+                validation_pipeline.retrieval.reranker.threshold = 0.1
+
+                validated_chapters = []
+                for i, chapter in enumerate(
+                    tqdm(translated_chapters, desc="Validating chapters")
+                ):
+                    # Process each chapter through the validation pipeline
+                    validation_result = validation_pipeline.process_chapter(
+                        chapter_text=chapter["text"],
+                        chapter_num=i,
+                        chapter_title=chapter.get("title", ""),
+                        chapter_pages=f"{chapter['start_page']}-{chapter['end_page']}",
+                    )
+
+                    # Combine chapter info with validation results
+                    validated_chapter = {**chapter, **validation_result}
+                    validated_chapters.append(validated_chapter)
+
+            except Exception as e:
+                logger.error(f"Validation failed: {e}")
+                # If validation fails, continue with original translated chapters
+                validated_chapters = translated_chapters
 
         # Step 7: Save processed data to vault
         if not dry_run:
             try:
                 # Import vault writer here to avoid circular imports
                 from src.output.vault_writer import VaultWriter
+
                 writer = VaultWriter(self.vault_path, self.book_name)
                 chapter_paths = writer.write_all_chapters(validated_chapters)
-                
-                logger.info(f"Saved chapters to vault: {len(chapter_paths)} files created")
+
+                logger.info(
+                    f"Saved chapters to vault: {len(chapter_paths)} files created"
+                )
             except Exception as e:
                 logger.error(f"Failed to save chapters to vault: {e}")
                 return {"success": False, "error": str(e)}
@@ -247,7 +271,9 @@ class PDFProcessor:
             "language": doc_language,
         }
 
-    def _process_by_chunks(self, pdf_path: Path, dry_run: bool = False) -> Dict[str, Any]:
+    def _process_by_chunks(
+        self, pdf_path: Path, dry_run: bool = False
+    ) -> Dict[str, Any]:
         """Process a single PDF file using the original chunk-based approach.
 
         Args:
@@ -429,13 +455,18 @@ def main():
         "--chapters", type=str, help="Path to capitulos.txt file with chapter ranges"
     )
     parser.add_argument(
-        "--vault-path", type=str, 
+        "--vault-path",
+        type=str,
         default=settings.books_vault_path,
-        help="Path to Obsidian vault for output (default from config)"
+        help="Path to Obsidian vault for output (default from config)",
     )
     parser.add_argument(
-        "--book-name", type=str, 
-        help="Name of the book for folder creation in vault"
+        "--book-name", type=str, help="Name of the book for folder creation in vault"
+    )
+    parser.add_argument(
+        "--skip-validation",
+        action="store_true",
+        help="Skip Ollama validation (for testing)",
     )
 
     args = parser.parse_args()
@@ -445,15 +476,17 @@ def main():
 
     # Determine if we're using chapter-based processing
     use_chapter_mode = bool(args.chapters)
-    
+
     # Initialize processor
     processor = PDFProcessor(
-        target_language=args.target_lang, 
+        target_language=args.target_lang,
         enable_translation=not args.no_translate,
         use_chapter_mode=use_chapter_mode,
         chapters_file=args.chapters,
         vault_path=args.vault_path,
-        book_name=args.book_name or (args.book and Path(args.book).stem.replace(' ', '_'))
+        book_name=args.book_name
+        or (args.book and Path(args.book).stem.replace(" ", "_")),
+        skip_validation=args.skip_validation,
     )
 
     # Process
