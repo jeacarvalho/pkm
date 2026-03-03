@@ -269,6 +269,7 @@ class PDFProcessor:
             logger.info("Validating chapters with Gemini...")
             try:
                 from src.validation.gemini_validator import GeminiValidator
+                from src.validation.pipeline import deduplicate_candidates
                 from src.retrieval.pipeline import RetrievalPipeline
                 from src.utils.config import Settings
 
@@ -287,14 +288,22 @@ class PDFProcessor:
                     candidates = retrieval.retrieve(
                         query_text=chapter["chapter_text"],
                         n_results_initial=20,
-                        n_results_final=5,
+                        n_results_final=10,  # Get more for deduplication
                         generate_embedding=True,
+                    )
+
+                    # Deduplicate candidates before validation
+                    unique_candidates = deduplicate_candidates(
+                        candidates, max_unique=10
+                    )
+                    logger.info(
+                        f"🔄 Validating {len(unique_candidates)} unique notes..."
                     )
 
                     # Validate with Gemini
                     validated = validator.validate_batch(
                         book_chunk=chapter["chapter_text"],
-                        candidates=candidates,
+                        candidates=unique_candidates,
                     )
 
                     chapter["validated_matches"] = validated
