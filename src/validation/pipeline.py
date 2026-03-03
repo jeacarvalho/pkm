@@ -28,6 +28,10 @@ class ValidationPipeline:
     The pipeline processes book chunks and returns only validated matches
     that are approved by the LLM (approved == true).
 
+    For Sprint 06, it also supports chapter-based validation where
+    the entire chapter text is validated against the vault to find
+    top matches for the whole chapter instead of individual chunks.
+
     Attributes:
         config: Application settings.
         retrieval: RetrievalPipeline instance (Sprint 03).
@@ -122,6 +126,64 @@ class ValidationPipeline:
             "candidates_reranked": len(candidates),
             "matches_validated": len(validated),
             "validated_matches": validated,
+        }
+
+    def process_chapter(
+        self,
+        chapter_text: str,
+        chapter_num: int,
+        chapter_title: str = "",
+        chapter_pages: str = "",
+    ) -> Dict[str, Any]:
+        """Process an entire chapter through validation pipeline to find top matches.
+
+        Args:
+            chapter_text: Full chapter text to validate against vault
+            chapter_num: Chapter number for tracking
+            chapter_title: Title of the chapter
+            chapter_pages: Page range of the chapter
+
+        Returns:
+            Dict with:
+            - chapter_info: Information about the chapter
+            - candidates_retrieved: Number from vector search
+            - candidates_reranked: Number after re-ranking
+            - matches_validated: Number of approved matches (top-k)
+            - validated_matches: List of top-k approved matches with validation metadata
+        """
+        logger.info(f"Processing chapter {chapter_num}: {chapter_title or f'Chapter {chapter_num}'}")
+        
+        # Stage 1-2: Retrieval + Re-Ranking (Sprint 03)
+        logger.debug("Running retrieval (Sprint 03)...")
+        candidates = self.retrieval.retrieve(
+            query_text=chapter_text,
+            query_embedding=None,  # Will be generated internally
+            n_results_initial=self.config.vector_search_top_k,
+            n_results_final=self.config.chapter_validation_top_k,  # Use chapter-specific top-k
+            generate_embedding=True,
+        )
+
+        # Stage 3: Ollama Validation (Sprint 04)
+        logger.debug(f"Validating {len(candidates)} candidates with Ollama...")
+        validated = self.validator.validate_batch(
+            book_chunk=chapter_text,
+            candidates=candidates,
+        )
+
+        # Filter to only get the top-k validated matches as specified by config
+        validated_matches = sorted(validated, key=lambda x: x['rerank_score'], reverse=True)
+        top_validated = validated_matches[:self.config.chapter_validation_top_k]
+
+        return {
+            "chapter_info": {
+                "chapter_num": chapter_num,
+                "chapter_title": chapter_title or f"Chapter {chapter_num}",
+                "chapter_pages": chapter_pages,
+            },
+            "candidates_retrieved": self.config.vector_search_top_k,
+            "candidates_reranked": len(candidates),
+            "matches_validated": len(top_validated),
+            "validated_matches": top_validated,
         }
 
     def process_book(
