@@ -2,7 +2,41 @@
 
 **Project:** Obsidian RAG Connector  
 **Repository:** https://github.com/jeacarvalho/pkm  
-**Last Updated:** 2026-03-02
+**Last Updated:** 2026-03-03
+
+---
+
+## Session 006 (2026-03-03) - Sprint 06: Chapter-Based Processing
+
+### Summary
+Implemented Sprint 06: Chapter-based processing with Vault Integration.
+New feature allows processing books by chapter ranges defined in `capitulos.txt`.
+
+### What Was Done
+- [x] Created `src/ingestion/chapter_parser.py` - Parser for capitulos.txt
+- [x] Created `src/output/vault_writer.py` - Write chapters to vault
+- [x] Updated `src/utils/config.py` - Added books_vault_path, chapter_validation_top_k
+- [x] Updated `src/validation/pipeline.py` - Added process_chapter() method
+- [x] Updated `src/ingestion/pdf_processor.py` - Added chapter-based mode
+- [x] Created `tests/unit/test_chapter_processing.py`
+
+### New Features
+- **Chapter-based processing:** Process books by chapter ranges (via capitulos.txt)
+- **Vault Integration:** Write processed chapters directly to Obsidian vault
+- **Top-k Validation:** Validate top 5 matches per chapter
+
+### Configuration Added
+| Setting | Default |
+|---------|---------|
+| `books_vault_path` | `/home/s015533607/MEGAsync/Minhas_notas/100 ARQUIVOS E REFERENCIAS/Livros` |
+| `chapter_validation_top_k` | 5 |
+| `use_chapter_processing` | false |
+
+### Test Files
+- `tests/unit/test_chapter_processing.py` - ChapterParser validation tests
+
+### Tag Created
+- v1.1.0 - Sprint 06 implementation
 
 ---
 

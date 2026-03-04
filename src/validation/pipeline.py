@@ -18,6 +18,40 @@ from src.utils.logging import get_logger
 logger = get_logger(__name__)
 
 
+def deduplicate_candidates(candidates: List[Dict], max_unique: int = 10) -> List[Dict]:
+    """Remove duplicate notes from candidate list.
+
+    Args:
+        candidates: List of retrieved candidates (may have same note multiple times)
+        max_unique: Maximum number of unique notes to return
+
+    Returns:
+        List of candidates with unique note titles only
+    """
+    seen_notes = set()
+    unique_candidates = []
+
+    for candidate in candidates:
+        note_title = candidate.get("metadata", {}).get("note_title", "")
+        file_path = candidate.get("metadata", {}).get("file_path", "")
+
+        note_id = file_path if file_path else note_title
+
+        if note_id not in seen_notes:
+            seen_notes.add(note_id)
+            unique_candidates.append(candidate)
+
+            if len(unique_candidates) >= max_unique:
+                break
+
+    if len(candidates) > len(unique_candidates):
+        logger.info(
+            f"🔄 Deduplicated: {len(candidates)} → {len(unique_candidates)} unique notes"
+        )
+
+    return unique_candidates
+
+
 class ValidationPipeline:
     """End-to-end validation pipeline: Retrieve → Re-Rank → Validate.
 
@@ -27,6 +61,10 @@ class ValidationPipeline:
 
     The pipeline processes book chunks and returns only validated matches
     that are approved by the LLM (approved == true).
+
+    For Sprint 06, it also supports chapter-based validation where
+    the entire chapter text is validated against the vault to find
+    top matches for the whole chapter instead of individual chunks.
 
     Attributes:
         config: Application settings.
@@ -90,15 +128,18 @@ class ValidationPipeline:
         """
         # Generate embedding if not provided
         if chunk_embedding is None:
-            logger.debug("Generating embedding for chunk...")
+            logger.info(
+                f"🤖 Calling Ollama ({self.config.embedding_model}) for embedding..."
+            )
             response = ollama.embeddings(
                 model=self.config.embedding_model,
                 prompt=chunk_text[:8000],
             )
             chunk_embedding = response["embedding"]
+            logger.info(f"✅ Embedding generated: {len(chunk_embedding)} dimensions")
 
         # Stage 1-2: Retrieval + Re-Ranking (Sprint 03)
-        logger.debug("Running retrieval (Sprint 03)...")
+        logger.info("🗄️ Querying ChromaDB for candidates...")
         candidates = self.retrieval.retrieve(
             query_text=chunk_text,
             query_embedding=chunk_embedding,
@@ -107,21 +148,97 @@ class ValidationPipeline:
             generate_embedding=False,
         )
 
+        # Deduplicate candidates before validation
+        unique_candidates = deduplicate_candidates(candidates, max_unique=10)
+
+        logger.info(f"🔄 Re-ranking {len(unique_candidates)} unique candidates...")
+
         # Stage 3: Ollama Validation (Sprint 04)
-        logger.debug(f"Validating {len(candidates)} candidates with Ollama...")
+        logger.info(
+            f"🤖 Calling Ollama ({self.config.validation_model}) for validation of {len(unique_candidates)} candidates..."
+        )
         validated = self.validator.validate_batch(
             book_chunk=chunk_text,
-            candidates=candidates,
+            candidates=unique_candidates,
         )
+        logger.info(f"✅ Validation complete: {len(validated)} matches approved")
 
         return {
             "chunk_text": chunk_text[:500] + "..."
             if len(chunk_text) > 500
             else chunk_text,
             "candidates_retrieved": self.config.vector_search_top_k,
-            "candidates_reranked": len(candidates),
+            "candidates_reranked": len(unique_candidates),
+            "unique_candidates": len(unique_candidates),
             "matches_validated": len(validated),
             "validated_matches": validated,
+        }
+
+    def process_chapter(
+        self,
+        chapter_text: str,
+        chapter_num: int,
+        chapter_title: str = "",
+        chapter_pages: str = "",
+    ) -> Dict[str, Any]:
+        """Process an entire chapter through validation pipeline to find top matches.
+
+        Args:
+            chapter_text: Full chapter text to validate against vault
+            chapter_num: Chapter number for tracking
+            chapter_title: Title of the chapter
+            chapter_pages: Page range of the chapter
+
+        Returns:
+            Dict with:
+            - chapter_info: Information about the chapter
+            - candidates_retrieved: Number from vector search
+            - candidates_reranked: Number after re-ranking
+            - matches_validated: Number of approved matches (top-k)
+            - validated_matches: List of top-k approved matches with validation metadata
+        """
+        logger.info(
+            f"Processing chapter {chapter_num}: {chapter_title or f'Chapter {chapter_num}'}"
+        )
+
+        # Stage 1-2: Retrieval + Re-Ranking (Sprint 03)
+        logger.debug("Running retrieval (Sprint 03)...")
+        candidates = self.retrieval.retrieve(
+            query_text=chapter_text,
+            query_embedding=None,  # Will be generated internally
+            n_results_initial=self.config.vector_search_top_k,
+            n_results_final=self.config.chapter_validation_top_k,  # Use chapter-specific top-k
+            generate_embedding=True,
+        )
+
+        # Deduplicate candidates before validation
+        unique_candidates = deduplicate_candidates(candidates, max_unique=10)
+
+        # Stage 3: Ollama Validation (Sprint 04)
+        logger.debug(
+            f"Validating {len(unique_candidates)} unique candidates with Ollama..."
+        )
+        validated = self.validator.validate_batch(
+            book_chunk=chapter_text,
+            candidates=unique_candidates,
+        )
+
+        # Filter to only get the top-k validated matches as specified by config
+        validated_matches = sorted(
+            validated, key=lambda x: x["rerank_score"], reverse=True
+        )
+        top_validated = validated_matches[: self.config.chapter_validation_top_k]
+
+        return {
+            "chapter_info": {
+                "chapter_num": chapter_num,
+                "chapter_title": chapter_title or f"Chapter {chapter_num}",
+                "chapter_pages": chapter_pages,
+            },
+            "candidates_retrieved": self.config.vector_search_top_k,
+            "candidates_reranked": len(candidates),
+            "matches_validated": len(top_validated),
+            "validated_matches": top_validated,
         }
 
     def process_book(

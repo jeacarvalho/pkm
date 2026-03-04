@@ -127,7 +127,7 @@
        ↓
 [Re-Ranking: bge-reranker-v2-m3, keep score >= 0.75]
        ↓
-[Ollama Validation: llama3.1 reads chunk + note content]
+[Gemini Validation: gemini-2.5-flash-lite reads chunk + note content]
        ↓
 [Output: Markdown with approved matches only]
 ```
@@ -166,12 +166,12 @@
 - Cross-encoder (re-ranker) = slow but precise
 - Eliminates false positives before LLM validation
 
-### 3.3 Validation LLM: `llama3.1` or `mistral`
+### 3.3 Validation LLM: `gemini-2.5-flash-lite`
 
 | Property | Value |
 |----------|-------|
-| Provider | Ollama Local |
-| Model | llama3.1 (8B) or mistral (7B) |
+| Provider | Google Gemini API |
+| Model | gemini-2.5-flash-lite |
 | Input | Book chunk + Note content |
 | Output | JSON: `{approved, confidence, reason}` |
 | Temperature | 0.0 (deterministic) |

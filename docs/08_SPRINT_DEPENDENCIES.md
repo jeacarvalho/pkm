@@ -19,6 +19,8 @@ Sprint 03 (Retrieval) ✅ COMPLETE
 Sprint 04 (Validation) ✅ COMPLETE
        ↓
 Sprint 05 (Output) ✅ COMPLETE
+       ↓
+Sprint 06 (Chapter Processing) ✅ COMPLETE
 ```
 
 ## Current Status (2026-03-03)
@@ -30,6 +32,7 @@ Sprint 05 (Output) ✅ COMPLETE
 | Sprint 03 | Pipeline implemented | ✅ COMPLETE | Full vault coverage |
 | Sprint 04 | Complete | ✅ COMPLETE | Working |
 | Sprint 05 | Complete | ✅ COMPLETE | Validated end-to-end |
+| Sprint 06 | Chapter processing | ✅ COMPLETE | Ready for use |
 
 ## Legend
 

@@ -15,10 +15,9 @@
 ## Quick Start for New Agents
 
 ```bash
-# 1. Pull required Ollama models
+# 1. Pull required models (embedding via Ollama, validation via Gemini API)
 ollama pull bge-m3
-ollama pull bge-reranker-v2-m3
-ollama pull llama3.1
+# Validation uses Gemini API (gemini-2.5-flash-lite)
 
 # 2. Install Python dependencies
 poetry install
@@ -45,7 +44,7 @@ Build a Retrieval-Augmented Generation (RAG) pipeline that connects PDF books to
 1. **Ingest** PDF books (chunking, translation if needed)
 2. **Retrieve** semantically similar notes from the vault
 3. **Re-Rank** candidates to eliminate false positives
-4. **Validate** matches with Ollama (semantic curation)
+4. **Validate** matches with Gemini (semantic curation)
 5. **Output** validated connections as Obsidian Markdown
 
 **Critical Rule:** No match is considered valid without explicit Ollama approval after reading both the book chunk and the note content.
@@ -62,7 +61,7 @@ Build a Retrieval-Augmented Generation (RAG) pipeline that connects PDF books to
 | Re-Ranker | HuggingFace `bge-reranker-v2-m3` | ✅ |
 | Vector Store | ChromaDB 1.5.1 (System Python) | ✅ |
 | Translation | Google Gemini 1.5 Flash | ✅ |
-| Validation LLM | Ollama `llama3.2` | ✅ |
+| Validation LLM | Gemini `gemini-2.5-flash-lite` | ✅ |
 | PDF Parsing | PyMuPDF (fitz) | ✅ |
 | Testing | Pytest | ⏭️ |
 | Containerization | Docker (optional for Ollama) | ⏭️ |
@@ -122,6 +121,7 @@ assert all(match['approved'] for match in output_matches)
 | Phase 3 | Sprint 03 | ✅ COMPLETE | Retrieval & Re-Ranking (2-stage pipeline) |
 | Phase 4 | Sprint 04 | ✅ COMPLETE | Ollama Validation Pipeline |
 | Phase 5 | Sprint 05 | ✅ COMPLETE | Output Generation (Markdown) |
+| Phase 6 | Sprint 06 | ✅ COMPLETE | Chapter-Based Processing + Vault Integration |
 
 ---
 
@@ -211,7 +211,7 @@ src/
 │   ├── reranker.py           # Sprint 03
 │   └── __init__.py
 ├── validation/
-│   ├── ollama_validator.py   # Sprint 04
+│   ├── gemini_validator.py   # Sprint 04
 │   └── __init__.py
 ├── output/
 │   ├── markdown_generator.py # Sprint 05
@@ -246,10 +246,15 @@ docs/
 
 ## Quick Reference
 
-### Check Ollama Models
+### Check Ollama Models (for embeddings)
 ```bash
 ollama list
-# Should show: bge-m3, bge-reranker-v2-m3, llama3.1
+# Should show: bge-m3
+```
+
+### Check Gemini API
+```bash
+echo $GEMINI_API_KEY  # Should not be empty
 ```
 
 ### Check ChromaDB Status

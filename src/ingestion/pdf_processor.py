@@ -1,4 +1,4 @@
-"""PDF Processing Pipeline - Main script for Sprint 02."""
+"""PDF Processing Pipeline - Main script for Sprint 02 and Sprint 06."""
 
 import argparse
 import json
@@ -11,6 +11,7 @@ from typing import Any, Dict, List, Optional
 from tqdm import tqdm
 
 from src.ingestion.chunker import chunk_book_by_chapters
+from src.ingestion.chapter_parser import ChapterParser
 from src.ingestion.language_detector import detect_document_language, get_language_name
 from src.ingestion.text_extractor import extract_chapters, get_pdf_metadata
 from src.ingestion.translator import GeminiTranslator, translate_if_needed
@@ -26,14 +27,19 @@ class PDFProcessor:
     This class handles the complete pipeline:
     1. Extract text from PDF (by chapters or pages)
     2. Detect language and translate if needed
-    3. Chunk text into smaller pieces (512 tokens)
-    4. Generate metadata and save for Sprint 03
+    3. Chunk text into smaller pieces (512 tokens) - Legacy mode
+    4. OR Process by chapter ranges defined in capitulos.txt - Sprint 06 mode
+    5. Generate metadata and save for Sprint 03
 
     Attributes:
         translator: GeminiTranslator instance.
         target_language: Target language for translation.
         enable_translation: Whether to enable translation.
         output_dir: Directory to save processed chunks.
+        use_chapter_mode: Whether to process by chapter ranges instead of chunks.
+        chapters_file: Path to capitulos.txt file.
+        vault_path: Path to Obsidian vault for output.
+        book_name: Name of the book for folder creation in vault.
     """
 
     def __init__(
@@ -42,6 +48,11 @@ class PDFProcessor:
         target_language: str = "pt",
         enable_translation: bool = True,
         output_dir: Optional[Path] = None,
+        use_chapter_mode: bool = False,
+        chapters_file: Optional[str] = None,
+        vault_path: Optional[str] = None,
+        book_name: Optional[str] = None,
+        skip_validation: bool = False,
     ):
         """Initialize PDF processor.
 
@@ -50,10 +61,20 @@ class PDFProcessor:
             target_language: Target language code (default: 'pt').
             enable_translation: Whether to enable translation.
             output_dir: Directory to save processed chunks.
+            use_chapter_mode: Whether to process by chapter ranges instead of chunks.
+            chapters_file: Path to capitulos.txt file.
+            vault_path: Path to Obsidian vault for output.
+            book_name: Name of the book for folder creation in vault.
+            skip_validation: Skip Ollama validation (for testing).
         """
         self.target_language = target_language
         self.enable_translation = enable_translation
         self.output_dir = output_dir or Path("./data/processed")
+        self.use_chapter_mode = use_chapter_mode
+        self.chapters_file = chapters_file
+        self.vault_path = vault_path or settings.books_vault_path
+        self.book_name = book_name or ""
+        self.skip_validation = skip_validation
 
         if enable_translation:
             self.translator = GeminiTranslator(
@@ -65,10 +86,262 @@ class PDFProcessor:
             logger.info("Translation disabled")
 
         # Ensure output directory exists
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        if not use_chapter_mode:
+            self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def process_pdf(self, pdf_path: Path, dry_run: bool = False) -> Dict[str, Any]:
         """Process a single PDF file.
+
+        Args:
+            pdf_path: Path to PDF file.
+            dry_run: If True, don't save output.
+
+        Returns:
+            Processing result with metadata and chunks.
+        """
+        logger.info(f"Processing PDF: {pdf_path}")
+
+        # Check if we're using chapter-based processing
+        if self.use_chapter_mode and self.chapters_file:
+            return self._process_by_chapters(pdf_path, dry_run)
+        else:
+            return self._process_by_chunks(pdf_path, dry_run)
+
+    def _process_by_chapters(
+        self, pdf_path: Path, dry_run: bool = False
+    ) -> Dict[str, Any]:
+        """Process PDF by chapter ranges defined in capitulos.txt."""
+        logger.info(f"Processing PDF by chapters: {pdf_path}")
+
+        # Step 1: Parse chapter ranges
+        logger.info(f"Parsing chapter file: {self.chapters_file}")
+        chapter_parser = ChapterParser()
+        chapters = chapter_parser.parse(self.chapters_file)
+        chapter_parser.validate(chapters)
+
+        logger.info(f"Loaded {len(chapters)} chapters")
+
+        # Step 2: Extract metadata
+        try:
+            metadata = get_pdf_metadata(pdf_path)
+            logger.info(f"PDF Metadata: {metadata.get('title', 'Unknown')}")
+        except Exception as e:
+            logger.warning(f"Could not extract metadata: {e}")
+            metadata = {}
+
+        if dry_run:
+            logger.info(f"DRY RUN: Would process {len(chapters)} chapters")
+            return {"success": True, "chapters": len(chapters), "dry_run": True}
+
+        # Step 4: Check cache and process chapters
+        from src.ingestion.translation_cache import TranslationCache
+
+        cache = TranslationCache(self.vault_path, self.book_name)
+        chapters_to_process = []
+
+        # Check which chapters need processing
+        all_chapters = [
+            {"num": c.num, "start_page": c.start_page, "end_page": c.end_page}
+            for c in chapters
+        ]
+        missing_chapters = cache.get_missing_chapters(all_chapters)
+
+        if not missing_chapters:
+            logger.info(
+                "✅ All chapters already processed! Use --force-retranslate to reprocess."
+            )
+            # Still load existing chapters for output
+            chapters_to_process = []
+        else:
+            logger.info(f"🔄 Processing {len(missing_chapters)} new chapters...")
+            chapters_to_process = missing_chapters
+
+        # Step 5: Extract text for chapters that need processing
+        if chapters_to_process:
+            logger.info("Extracting text for new chapters...")
+            from PyPDF2 import PdfReader
+
+            reader = PdfReader(str(pdf_path))
+
+            new_chapter_texts = []
+            for ch in chapters_to_process:
+                chapter_text = ""
+                for page_num in range(
+                    ch["start_page"] - 1, min(ch["end_page"], len(reader.pages))
+                ):
+                    chapter_text += reader.pages[page_num].extract_text() + "\n"
+
+                chapter_info = {
+                    "chapter_num": ch["num"],
+                    "start_page": ch["start_page"],
+                    "end_page": ch["end_page"],
+                    "text": chapter_text,
+                    "title": f"Chapter {ch['num'] + 1}",
+                }
+                new_chapter_texts.append(chapter_info)
+
+            # Step 6: Detect document language
+            logger.info("Detecting document language...")
+            try:
+                doc_language = detect_document_language(
+                    new_chapter_texts, sample_size=5
+                )
+                logger.info(f"Detected language: {get_language_name(doc_language)}")
+            except Exception as e:
+                logger.warning(f"Language detection failed: {e}")
+                doc_language = "en"
+
+            # Step 7: Translate new chapters if needed
+            if self.enable_translation and doc_language != self.target_language:
+                logger.info(
+                    f"Translating from {get_language_name(doc_language)} to {get_language_name(self.target_language)}..."
+                )
+
+                translated_chapters = []
+                for chapter in tqdm(new_chapter_texts, desc="Translating chapters"):
+                    try:
+                        translated_text, was_translated = translate_if_needed(
+                            chapter["text"],
+                            target_lang=self.target_language,
+                            api_key=settings.gemini_api_key,
+                        )
+
+                        chapter_copy = chapter.copy()
+                        chapter_copy["chapter_text"] = translated_text
+                        chapter_copy["translated"] = str(was_translated)
+                        chapter_copy["was_cached"] = False
+                        translated_chapters.append(chapter_copy)
+
+                        time.sleep(1)
+
+                    except Exception as e:
+                        logger.error(f"Translation failed: {e}")
+                        chapter_copy = chapter.copy()
+                        chapter_copy["chapter_text"] = chapter["text"]
+                        chapter_copy["translated"] = "false"
+                        chapter_copy["was_cached"] = False
+                        translated_chapters.append(chapter_copy)
+            else:
+                translated_chapters = [
+                    {
+                        **ch,
+                        "chapter_text": ch["text"],
+                        "translated": "false",
+                        "was_cached": False,
+                    }
+                    for ch in new_chapter_texts
+                ]
+
+        # Step 8: Load cached chapters for chapters already processed
+        all_chapters_data = []
+        for ch in all_chapters:
+            if ch in chapters_to_process:
+                # This chapter was just translated
+                all_chapters_data.append(
+                    translated_chapters[
+                        [c["chapter_num"] for c in translated_chapters].index(ch["num"])
+                    ]
+                )
+            else:
+                # Load from cache
+                cached_content = cache.load_translated_content(ch["num"])
+                if cached_content:
+                    all_chapters_data.append(
+                        {
+                            "chapter_num": ch["num"],
+                            "start_page": ch["start_page"],
+                            "end_page": ch["end_page"],
+                            "chapter_text": cached_content,
+                            "title": f"Chapter {ch['num'] + 1}",
+                            "was_cached": True,
+                        }
+                    )
+                else:
+                    logger.warning(
+                        f"Chapter {ch['num']} marked as cached but content not found!"
+                    )
+
+        # Step 9: Validate chapters if requested
+        if self.skip_validation:
+            logger.info("Skipping validation (--skip-validation flag)")
+            validated_chapters = all_chapters_data
+        else:
+            logger.info("Validating chapters with Gemini...")
+            try:
+                from src.validation.gemini_validator import GeminiValidator
+                from src.validation.pipeline import deduplicate_candidates
+                from src.retrieval.pipeline import RetrievalPipeline
+                from src.utils.config import Settings
+
+                config = Settings()
+                config.rerank_threshold = (
+                    0.0  # Use 0 to get candidates even with low scores
+                )
+
+                validator = GeminiValidator(config)
+                retrieval = RetrievalPipeline(config)
+
+                validated_chapters = []
+                for chapter in tqdm(all_chapters_data, desc="Validating chapters"):
+                    # Get candidates from retrieval
+                    logger.info(f"🔍 Processing chapter {chapter['chapter_num']}...")
+                    candidates = retrieval.retrieve(
+                        query_text=chapter["chapter_text"],
+                        n_results_initial=20,
+                        n_results_final=10,  # Get more for deduplication
+                        generate_embedding=True,
+                    )
+
+                    # Deduplicate candidates before validation
+                    unique_candidates = deduplicate_candidates(
+                        candidates, max_unique=10
+                    )
+                    logger.info(
+                        f"🔄 Validating {len(unique_candidates)} unique notes..."
+                    )
+
+                    # Validate with Gemini
+                    validated = validator.validate_batch(
+                        book_chunk=chapter["chapter_text"],
+                        candidates=unique_candidates,
+                    )
+
+                    chapter["validated_matches"] = validated
+                    validated_chapters.append(chapter)
+
+            except Exception as e:
+                logger.error(f"Validation failed: {e}")
+                validated_chapters = all_chapters_data
+                logger.error(f"Validation failed: {e}")
+                # If validation fails, continue with original translated chapters
+                validated_chapters = translated_chapters
+
+        # Step 7: Save processed data to vault
+        if not dry_run:
+            try:
+                # Import vault writer here to avoid circular imports
+                from src.output.vault_writer import VaultWriter
+
+                writer = VaultWriter(self.vault_path, self.book_name)
+                chapter_paths = writer.write_all_chapters(validated_chapters)
+
+                logger.info(
+                    f"Saved chapters to vault: {len(chapter_paths)} files created"
+                )
+            except Exception as e:
+                logger.error(f"Failed to save chapters to vault: {e}")
+                return {"success": False, "error": str(e)}
+
+        return {
+            "success": True,
+            "chapters_processed": len(validated_chapters),
+            "language": doc_language,
+        }
+
+    def _process_by_chunks(
+        self, pdf_path: Path, dry_run: bool = False
+    ) -> Dict[str, Any]:
+        """Process a single PDF file using the original chunk-based approach.
 
         Args:
             pdf_path: Path to PDF file.
@@ -244,15 +517,43 @@ def main():
         default="pt",
         help="Target language for translation (default: pt)",
     )
+    # New arguments for Sprint 06 - Chapter-based processing
+    parser.add_argument(
+        "--chapters", type=str, help="Path to capitulos.txt file with chapter ranges"
+    )
+    parser.add_argument(
+        "--vault-path",
+        type=str,
+        default=settings.books_vault_path,
+        help="Path to Obsidian vault for output (default from config)",
+    )
+    parser.add_argument(
+        "--book-name", type=str, help="Name of the book for folder creation in vault"
+    )
+    parser.add_argument(
+        "--skip-validation",
+        action="store_true",
+        help="Skip Ollama validation (for testing)",
+    )
 
     args = parser.parse_args()
 
     if not args.book and not args.library:
         parser.error("Must specify --book or --library")
 
+    # Determine if we're using chapter-based processing
+    use_chapter_mode = bool(args.chapters)
+
     # Initialize processor
     processor = PDFProcessor(
-        target_language=args.target_lang, enable_translation=not args.no_translate
+        target_language=args.target_lang,
+        enable_translation=not args.no_translate,
+        use_chapter_mode=use_chapter_mode,
+        chapters_file=args.chapters,
+        vault_path=args.vault_path,
+        book_name=args.book_name
+        or (args.book and Path(args.book).stem.replace(" ", "_")),
+        skip_validation=args.skip_validation,
     )
 
     # Process

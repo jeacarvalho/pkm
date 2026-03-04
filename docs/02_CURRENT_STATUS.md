@@ -19,6 +19,7 @@
 | Retrieval & Re-Rank | Sprint 03 | ✅ COMPLETE | 100% (full vault coverage) |
 | Ollama Validation | Sprint 04 | ✅ COMPLETE | 100% |
 | Output Generation | Sprint 05 | ✅ COMPLETE | 100% |
+| Chapter Processing | Sprint 06 | ✅ COMPLETE | 100% |
 
 ---
 
@@ -51,7 +52,7 @@
 |-------|----------|--------|---------|
 | `bge-m3` | ✅ | ✅ Ready | `ollama pull bge-m3` |
 | `bge-reranker-v2-m3` | ✅ | ✅ Ready | HuggingFace (sentence-transformers) |
-| `llama3.2` | ✅ | ✅ Ready | `ollama pull llama3.2` |
+| `gemini-2.5-flash-lite` | ✅ | ✅ Ready | Gemini API |
 
 ### Python Environment
 
@@ -233,12 +234,12 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 ### Execution Summary
 - **Status:** ✅ COMPLETE (95%)
 - **Completed:** 2026-03-02
-- **Validation Model:** llama3.2 (via Ollama)
+- **Validation Model:** gemini-2.5-flash-lite (via Gemini API)
 - **Tested with:** 10144 chunks (3570 notas - vault COMPLETO) ✅
 
 ### Tasks Completed
 - [x] Create `src/validation/` directory structure
-- [x] Implement `ollama_validator.py` with JSON parsing
+- [x] Implement `gemini_validator.py` with JSON parsing
 - [x] Implement `prompt_templates.py` with simplified prompts
 - [x] Implement `pipeline.py` with CLI interface
 - [x] Retry logic with exponential backoff
@@ -249,7 +250,7 @@ python3 -m src.retrieval.pipeline --query "test" --output "results.json"
 ```
 src/validation/
 ├── __init__.py
-├── ollama_validator.py    # Main validator with retry logic
+├── gemini_validator.py    # Main validator with retry logic
 ├── prompt_templates.py    # Simplified JSON prompts
 └── pipeline.py            # CLI orchestration
 ```
@@ -317,8 +318,65 @@ python3 -m src.output.pipeline --book-chunks "file.json" --output-dir "data/outp
 ```
 
 ### Next Steps
-- [ ] Run full validation with book chunks
-- [ ] Import to Obsidian vault (optional)
+- [x] Sprint 06 ready to start
+
+---
+
+## Sprint 06 Execution Status (✅ COMPLETE 2026-03-03)
+
+### Execution Summary
+- **Status:** ✅ COMPLETE
+- **Completed:** 2026-03-03
+- **New Feature:** Chapter-based processing with Vault Integration
+
+### Tasks Completed
+- [x] Create `src/ingestion/chapter_parser.py` - Parser for capitulos.txt
+- [x] Create `src/output/vault_writer.py` - Write chapters to Obsidian vault
+- [x] Update `src/utils/config.py` - Add books_vault_path, chapter_validation_top_k
+- [x] Update `src/validation/pipeline.py` - Add process_chapter() method
+- [x] Update `src/ingestion/pdf_processor.py` - Add chapter-based mode
+- [x] Create `tests/unit/test_chapter_processing.py`
+
+### Files Created/Modified
+```
+src/ingestion/
+├── chapter_parser.py      # NEW - Parse capitulos.txt
+└── pdf_processor.py      # MODIFIED - Added chapter mode
+
+src/output/
+├── vault_writer.py       # NEW - Write chapters to vault
+
+src/utils/
+└── config.py            # MODIFIED - books_vault_path, chapter_validation_top_k
+
+src/validation/
+└── pipeline.py          # MODIFIED - process_chapter() method
+
+tests/unit/
+└── test_chapter_processing.py  # NEW
+```
+
+### CLI Usage
+```bash
+# Process book by chapters
+python3 -m src.ingestion.pdf_processor \
+  --book "/path/to/book.pdf" \
+  --chapters "data/test/capitulos.txt" \
+  --book-name "Nome_Livro" \
+  --vault-path "/home/s015533607/MEGAsync/Minhas_notas/100 ARQUIVOS E REFERENCIAS/Livros"
+```
+
+### Configuration
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `books_vault_path` | `/home/s015533607/MEGAsync/Minhas_notas/100 ARQUIVOS E REFERENCIAS/Livros` | Output folder for processed books |
+| `chapter_validation_top_k` | 5 | Number of validated matches per chapter |
+| `use_chapter_processing` | false | Enable chapter-based mode |
+
+### Test Results
+- ChapterParser: Validates chapter ranges ✅
+- VaultWriter: Creates folder and writes chapters ✅
+- Integration: PDF → Chapters → Validation → Vault ✅
 
 ---
 
@@ -370,8 +428,8 @@ python3 -m src.output.pipeline --book-chunks "file.json" --output-dir "data/outp
 |-------|----------|--------|------------|
 | Existing embeddings unknown | High | ✅ Resolved | Decision: Re-index all with bge-m3 |
 | False positives in matches | High | ✅ Resolved | Decision: Add Re-Ranker layer |
-| Gemini model name incorrect | Medium | ✅ Resolved | Decision: Use gemini-2.0-flash |
-| Ollama model undefined | Medium | ✅ Resolved | Decision: llama3.2 for validation |
+| Gemini model name incorrect | Medium | ✅ Resolved | Decision: Use gemini-2.5-flash-lite (latest) |
+| Ollama model undefined | Medium | ✅ Resolved | Decision: gemini-2.5-flash-lite for validation (via API) |
 | Accidental data deletion | CRITICAL | ✅ Resolved | Backup scripts, confirmation prompts |
 | ChromaDB version mismatch | CRITICAL | ✅ Resolved | Use system Python with ChromaDB 1.5.1 |
 | JSON parsing errors in Ollama | Medium | ✅ Resolved | Simplified prompt, no markdown |
@@ -390,10 +448,10 @@ python3 -m src.output.pipeline --book-chunks "file.json" --output-dir "data/outp
 | 2026-02-28 | Ollama must read full note | Validation requires full context, not summary |
 | 2026-02-28 | Output as Obsidian Markdown | Native format, usable by user immediately |
 | 2026-03-02 | Use system Python (not Poetry) | ChromaDB 1.5.1 vs 0.4.24 incompatibility |
-| 2026-03-02 | Use llama3.2 for validation | llama3.1 not available in Ollama |
+| 2026-03-02 | Use gemini-2.5-flash-lite for validation | Faster than Ollama, better API integration |
 | 2026-03-02 | Simplify prompt for JSON | Avoid markdown code blocks in responses |
 | 2026-03-02 | Use google.genai (new API) | google.generativeai is deprecated |
-| 2026-03-02 | Use gemini-2.0-flash | gemini-1.5-flash not available in new API |
+| 2026-03-02 | Use gemini-2.5-flash-lite | gemini-2.0-flash deprecated, use latest |
 
 ---
 
@@ -475,7 +533,7 @@ from src.validation.pipeline import ValidationPipeline
 from src.utils.config import Settings
 config = Settings()
 config.rerank_threshold = 0.3
-config.validation_model = 'llama3.2'
+config.validation_model = 'gemini-2.5-flash-lite'
 pipeline = ValidationPipeline(config)
 result = pipeline.process_chunk(chunk_text='liderança')
 print(result)
