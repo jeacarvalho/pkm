@@ -25,11 +25,12 @@ Extraia os 10 tópicos principais desta nota E sugira classificação CDU.
 
 REGRAS OBRIGATÓRIAS:
 1. Retorne APENAS JSON válido (sem markdown, sem texto extra)
-2. Tópicos: name (str), weight (inteiro 5-10), confidence (float 0.0-1.0)
+2. Tópicos: name (str), weight (inteiro OBRIGATORIAMENTE entre 5 e 10), confidence (float 0.0-1.0)
 3. Tópicos em português, snake_case, específicos (evite genéricos como "filosofia")
 4. CDU: formato "XXX.X" (ex: "321.1", "305.8")
 5. Se não houver CDU óbvio, use null para cdu_primary
 6. Exatamente 10 tópicos, não mais, não menos
+7. IMPORTANTE: weight deve ser 5, 6, 7, 8, 9 ou 10 (nunca abaixo de 5)
 
 CONTEÚDO DA NOTA:
 {note_content}
@@ -58,10 +59,16 @@ class TopicExtractor:
         self.config = config or TopicsConfig()
         self.validator = TopicValidator(self.config)
 
-        if not self.config.gemini_api_key:
+        # Get API key from main settings
+        from src.utils.config import Settings
+
+        settings = Settings()
+        self.gemini_api_key = settings.gemini_api_key
+
+        if not self.gemini_api_key:
             raise ValueError("GEMINI_API_KEY not configured")
 
-        self.client = genai.Client(api_key=self.config.gemini_api_key)
+        self.client = genai.Client(api_key=self.gemini_api_key)
         logger.info(
             f"Initialized TopicExtractor with model: {self.config.gemini_model}"
         )
