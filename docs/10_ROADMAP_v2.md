@@ -38,8 +38,8 @@ Evoluir o sistema RAG de **embedding-based** para **topic-based classification**
 
 | Sprint | Descrição | Dependência | Tempo Est. | Status |
 |--------|-----------|-------------|------------|--------|
-| **Sprint 07** | Topic Extractor (Gemini) | Sprint 06 | 4-6 horas | ⏭️ READY |
-| **Sprint 08** | Vault Properties Writer | Sprint 07 | 3-4 horas | ⏭️ BLOCKED |
+| **Sprint 07** | Topic Extractor (Gemini) | Sprint 06 | 4-6 horas | ✅ COMPLETE |
+| **Sprint 08** | Vault Properties Writer | Sprint 07 | 3-4 horas | ⏭️ READY |
 | **Sprint 09** | Topic Matching Engine | Sprint 08 | 4-6 horas | ⏭️ BLOCKED |
 | **Sprint 10** | Translation Cache System | Sprint 07 | 2-3 horas | ⏭️ BLOCKED |
 | **Sprint 11** | Hybrid Retrieval (v1+v2) | Sprint 09+10 | 4-6 horas | ⏭️ BLOCKED |
@@ -77,7 +77,37 @@ Evoluir o sistema RAG de **embedding-based** para **topic-based classification**
 
 ---
 
-## 📝 Sprint 07: Topic Extractor (Gemini)
+## 📝 Sprint 07: Topic Extractor (Gemini) ✅ COMPLETE
+
+**Status:** ✅ COMPLETE (2026-03-04)  
+**Arquivos:** `src/topics/topic_extractor.py`, `src/topics/topic_validator.py`, `src/topics/taxonomy_manager.py`  
+**Documentação:** `docs/11_TOPIC_EXTRACTION.md`  
+**Custo Real:** ~$0.34 USD para vault completo (3570 notas)  
+
+### ✅ Implementado
+- [x] Extração de 10 tópicos por nota
+- [x] Pesos 5-10, Confidence 0.0-1.0
+- [x] Classificação CDU (primária + secundária)
+- [x] CLI com --test-dir e --dry-run
+- [x] Retry logic com exponential backoff
+- [x] Validação JSON estrita
+- [x] Testado com 101 notas da pasta "30 LIDERANCA"
+
+### Como Usar
+```bash
+# Teste dry-run
+python3 -m src.topics.topic_extractor --test-dir "30 LIDERANCA" --dry-run
+
+# Extração real (teste piloto)
+python3 -m src.topics.topic_extractor --test-dir "30 LIDERANCA"
+
+# Vault completo
+python3 -m src.topics.topic_extractor
+```
+
+Veja `docs/11_TOPIC_EXTRACTION.md` para guia completo.
+
+---
 
 ### Objetivo
 Extrair 10 tópicos principais de cada nota do vault com pesos (5-10).
