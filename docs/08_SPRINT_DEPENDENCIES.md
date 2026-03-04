@@ -41,6 +41,7 @@ Sprint 09 (Vault Properties) ⏭️ READY
 | Sprint 06 | Chapter processing | ✅ COMPLETE | Ready for use |
 | Sprint 07 | Production Hardening | ✅ COMPLETE | Incremental indexing ready |
 | Sprint 08 | Topic Extractor v2.0 | ✅ COMPLETE | See docs/11_TOPIC_EXTRACTION.md |
+| Sprint 09 | Vault Properties Writer | ✅ COMPLETE | See docs/10_ROADMAP_v2.md |
 
 ## Legend
 

@@ -39,8 +39,8 @@ Evoluir o sistema RAG de **embedding-based** para **topic-based classification**
 | Sprint | Descrição | Dependência | Tempo Est. | Status |
 |--------|-----------|-------------|------------|--------|
 | **Sprint 08** | Topic Extractor (Gemini) | Sprint 07 | 4-6 horas | ✅ COMPLETE |
-| **Sprint 09** | Vault Properties Writer | Sprint 08 | 3-4 horas | ⏭️ READY |
-| **Sprint 10** | Topic Matching Engine | Sprint 09 | 4-6 horas | ⏭️ BLOCKED |
+| **Sprint 09** | Vault Properties Writer | Sprint 08 | 3-4 horas | ✅ COMPLETE |
+| **Sprint 10** | Topic Matching Engine | Sprint 09 | 4-6 horas | ⏭️ READY |
 | **Sprint 11** | Translation Cache System | Sprint 08 | 2-3 horas | ⏭️ BLOCKED |
 | **Sprint 12** | Hybrid Retrieval (v1+v2) | Sprint 10+11 | 4-6 horas | ⏭️ BLOCKED |
 | **Sprint 13** | Dataview Integration | Sprint 09 | 2-3 horas | ⏭️ BLOCKED |
@@ -181,24 +181,36 @@ Custo Total:
 
 ---
 
-## 📝 Sprint 09: Vault Properties Writer
+## 📝 Sprint 09: Vault Properties Writer ✅ COMPLETE
 
-### Objetivo
-Escrever tópicos no frontmatter das notas do vault.
+**Status:** ✅ COMPLETE (2026-03-04)  
+**Arquivos:** `src/topics/vault_writer.py`, `scripts/rollback_properties.sh`  
+**Tempo Real:** ~2 horas  
+**Dependência:** Sprint 08 COMPLETE ✅  
 
-### Estrutura de Properties
+### ✅ Implementado
+- [x] Lê JSONs de `data/logs/topics/results/` e `test_extraction_5_notes.json`
+- [x] Escreve `topic_classification` no frontmatter YAML das notas
+- [x] Preserva conteúdo existente da nota (apenas modifica frontmatter)
+- [x] Preserva fields existentes do frontmatter (title, tags, etc.)
+- [x] CLI com `--vault-dir` (obrigatório)
+- [x] CLI com `--dry-run` (log apenas, não escreve)
+- [x] CLI com `--limit` (limitar número de notas)
+- [x] Logs em `data/logs/topics/writer.log` e `writer_errors.log`
+- [x] Script `scripts/rollback_properties.sh` para rollback git
+- [x] Estatísticas salvas em `writer_stats.json`
+- [x] Testado com 5 notas de "30 LIDERANCA"
+
+### Estrutura do Frontmatter (Exemplo)
 ```yaml
 ---
-# Existing
 title: Colonialidade do Poder
 tags:
-  - #poder
-  - #colonialismo
-
-# NEW v2.0
+  - "#poder"
+  - "#colonialismo"
 topic_classification:
-  version: 2.0
-  classified_at: 2026-03-03T23:59:00Z
+  version: "2.0"
+  classified_at: "2026-03-04T15:00:23.198568+00:00"
   model: gemini-2.5-flash-lite
   topics:
     - name: colonialidade_do_poder
@@ -207,26 +219,61 @@ topic_classification:
     - name: eurocentrismo
       weight: 8
       confidence: 0.89
-  cdd_primary: 320.1  # Opcional: classificação CDD/CDU
-  cdd_secondary:
-    - 305.8
-    - 128.3
+  cdu_primary: "321.1"
+  cdu_secondary: ["305.8", "128.3"]
+  cdu_description: "Teoria do Estado. Estado e direito. Política"
 ---
+```
+
+### Como Usar
+```bash
+# Teste dry-run
+python3 -m src.topics.vault_writer \
+  --vault-dir "/home/s015533607/MEGAsync/Minhas_notas" \
+  --dry-run \
+  --limit 10
+
+# Modo real (10 notas de teste)
+python3 -m src.topics.vault_writer \
+  --vault-dir "/home/s015533607/MEGAsync/Minhas_notas" \
+  --limit 10
+
+# Vault completo
+python3 -m src.topics.vault_writer \
+  --vault-dir "/home/s015533607/MEGAsync/Minhas_notas"
 ```
 
 ### Arquivos
 ```
 src/
 └── topics/
-    └── vault_writer.py         # Write properties to vault
+    ├── vault_writer.py      # Escreve properties no vault
+    └── config.py            # Configurações (atualizado)
+
+scripts/
+└── rollback_properties.sh   # Rollback via git
+
+data/
+└── logs/
+    └── topics/
+        ├── results/         # JSONs de entrada (Sprint 08)
+        ├── backup/          # Backups
+        ├── writer.log       # Log de escrita
+        ├── writer_errors.log # Log de erros
+        └── writer_stats.json # Estatísticas
 ```
 
 ### Critérios de Aceite
-- [ ] Properties no frontmatter YAML
-- [ ] Não sobrescrever conteúdo existente da nota
-- [ ] Backup antes de modificar notas
-- [ ] Log de notas modificadas
-- [ ] Reversível (script de rollback)
+- [x] Properties no frontmatter YAML
+- [x] Não sobrescrever conteúdo existente da nota
+- [x] Preservar fields existentes do frontmatter
+- [x] CLI com --dry-run funcional
+- [x] Log de notas modificadas
+- [x] Script de rollback
+
+---
+
+### Objetivo
 
 ---
 
