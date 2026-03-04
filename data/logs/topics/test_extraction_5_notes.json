@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-03-04T10:18:07",
+  "test_type": "5_notes_extraction",
+  "model": "gemini-2.5-flash-lite",
+  "results": {
+    "total": 5,
+    "success": 5,
+    "errors": 0,
+    "notes": [
+      {
+        "file": "Lacuna de alinhamento.md",
+        "cdu": "658.012",
+        "cdu_description": "Gestão e organização. Planejamento e controle. Comportamento organizacional e conformidade.",
+        "topics": [
+          {"name": "diferenca_planejado_executado", "weight": 10, "confidence": 0.98},
+          {"name": "frustracao_estrategica", "weight": 8, "confidence": 0.95},
+          {"name": "confusao_operacional", "weight": 9, "confidence": 0.97},
+          {"name": "iniciativas_desalinhadas", "weight": 7, "confidence": 0.92},
+          {"name": "aumento_controle", "weight": 6, "confidence": 0.90}
+        ]
+      },
+      {
+        "file": "coordenar significa fazer com que as pessoas certas estejam nos lugares certos para executar a função correta.md",
+        "cdu": "658.3",
+        "cdu_description": "Gestão de pessoal. Administração de pessoal. Recursos humanos.",
+        "topics": [
+          {"name": "coordenacao_organizacional", "weight": 10, "confidence": 0.98},
+          {"name": "alocacao_de_recursos_humanos", "weight": 9, "confidence": 0.95},
+          {"name": "gestao_de_pessoas", "weight": 8, "confidence": 0.92},
+          {"name": "eficiencia_operacional", "weight": 7, "confidence": 0.90},
+          {"name": "planejamento_estrategico", "weight": 6, "confidence": 0.88}
+        ]
+      },
+      {
+        "file": "O poder real para mudar a direção de algo está naqueles que estão colocando a mão na massa.md",
+        "cdu": "629.13",
+        "cdu_description": "Engenharia aeronáutica, produção industrial, gestão empresarial e ética.",
+        "topics": [
+          {"name": "historia_boeing", "weight": 10, "confidence": 0.98},
+          {"name": "mudanca_cultural_empresarial", "weight": 9, "confidence": 0.97},
+          {"name": "cultura_mcdonnell_douglas", "weight": 8, "confidence": 0.95},
+          {"name": "impacto_ge_na_cultura_boeing", "weight": 7, "confidence": 0.93},
+          {"name": "priorizacao_lucro_sobre_seguranca", "weight": 10, "confidence": 0.99}
+        ]
+      },
+      {
+        "file": "10 grandes TED Talks para líderes.md",
+        "cdu": "658.3",
+        "cdu_description": "Gestão de pessoal. Administração de pessoal. Liderança. Motivação. Comunicação. Desenvolvimento de equipas. Psicologia social aplicada à gestão.",
+        "topics": [
+          {"name": "lideranca_inspiracional", "weight": 10, "confidence": 0.98},
+          {"name": "motivacao_no_trabalho", "weight": 9, "confidence": 0.95},
+          {"name": "desenvolvimento_de_lideres", "weight": 8, "confidence": 0.92},
+          {"name": "criacao_de_movimentos", "weight": 7, "confidence": 0.88},
+          {"name": "marketing_de_ideias", "weight": 7, "confidence": 0.85}
+        ]
+      },
+      {
+        "file": "lacunas que devemos lidar no dia a dia do trabalho corporativo.md",
+        "cdu": "005.3",
+        "cdu_description": "Gestão do conhecimento e tomada de decisão, com foco em lacunas de conhecimento, alinhamento e efeitos.",
+        "topics": [
+          {"name": "lacuna_conhecimento", "weight": 8, "confidence": 0.90},
+          {"name": "lacuna_alinhamento", "weight": 8, "confidence": 0.90},
+          {"name": "lacuna_efeitos", "weight": 8, "confidence": 0.90},
+          {"name": "lidar_lacunas", "weight": 10, "confidence": 0.95},
+          {"name": "dominio_habilidades", "weight": 9, "confidence": 0.92}
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "total_notes": 5,
+    "success": 5,
+    "errors": 0,
+    "unique_cdu": 4,
+    "cdu_distribution": {
+      "658.012": 1,
+      "658.3": 2,
+      "629.13": 1,
+      "005.3": 1
+    }
+  }
+}
