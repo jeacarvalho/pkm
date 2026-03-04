@@ -37,6 +37,26 @@ class TopicsConfig(BaseSettings):
         default=2.0, description="Initial delay between retries (seconds)"
     )
 
+    # Sprint 09: Vault Writer Settings
+    dry_run: bool = Field(
+        default=False, description="Dry-run mode (log only, don't write)"
+    )
+    limit: int = Field(
+        default=0, description="Limit number of notes to process (0 = unlimited)"
+    )
+
+    # Paths
+    log_dir: Path = Field(
+        default=Path("data/logs/topics"),
+        description="Directory for topic extraction logs",
+    )
+    retry_attempts: int = Field(
+        default=3, description="Number of retry attempts on API failure"
+    )
+    retry_delay: float = Field(
+        default=2.0, description="Initial delay between retries (seconds)"
+    )
+
     # Paths
     log_dir: Path = Field(
         default=Path("data/logs/topics"),
