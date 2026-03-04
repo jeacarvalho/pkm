@@ -53,14 +53,14 @@ class CDUManager:
 
     @classmethod
     def validate_cdu_format(cls, cdu: str) -> bool:
-        """Validate CDU format (XXX.X or XX.X or X.X)."""
+        """Validate CDU format (XXX.X, XX.X, X.X, or XXX.XX, etc.)."""
         if not cdu:
             return False
 
         # Remove any whitespace
         cdu = cdu.strip()
 
-        # Check format: should be like "321.1" or "305.8"
+        # Check format: should be like "321.1", "305.8", "658.012"
         parts = cdu.split(".")
         if len(parts) != 2:
             return False
@@ -69,8 +69,8 @@ class CDUManager:
         if not parts[0].isdigit() or len(parts[0]) > 3 or len(parts[0]) < 1:
             return False
 
-        # Second part should be 1-2 digits
-        if not parts[1].isdigit() or len(parts[1]) > 2:
+        # Second part should be 1-4 digits (accepting more precision)
+        if not parts[1].isdigit() or len(parts[1]) > 4 or len(parts[1]) < 1:
             return False
 
         return True
