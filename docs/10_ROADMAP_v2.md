@@ -38,12 +38,12 @@ Evoluir o sistema RAG de **embedding-based** para **topic-based classification**
 
 | Sprint | Descrição | Dependência | Tempo Est. | Status |
 |--------|-----------|-------------|------------|--------|
-| **Sprint 07** | Topic Extractor (Gemini) | Sprint 06 | 4-6 horas | ✅ COMPLETE |
-| **Sprint 08** | Vault Properties Writer | Sprint 07 | 3-4 horas | ⏭️ READY |
-| **Sprint 09** | Topic Matching Engine | Sprint 08 | 4-6 horas | ⏭️ BLOCKED |
-| **Sprint 10** | Translation Cache System | Sprint 07 | 2-3 horas | ⏭️ BLOCKED |
-| **Sprint 11** | Hybrid Retrieval (v1+v2) | Sprint 09+10 | 4-6 horas | ⏭️ BLOCKED |
-| **Sprint 12** | Dataview Integration | Sprint 08 | 2-3 horas | ⏭️ BLOCKED |
+| **Sprint 08** | Topic Extractor (Gemini) | Sprint 07 | 4-6 horas | ✅ COMPLETE |
+| **Sprint 09** | Vault Properties Writer | Sprint 08 | 3-4 horas | ⏭️ READY |
+| **Sprint 10** | Topic Matching Engine | Sprint 09 | 4-6 horas | ⏭️ BLOCKED |
+| **Sprint 11** | Translation Cache System | Sprint 08 | 2-3 horas | ⏭️ BLOCKED |
+| **Sprint 12** | Hybrid Retrieval (v1+v2) | Sprint 10+11 | 4-6 horas | ⏭️ BLOCKED |
+| **Sprint 13** | Dataview Integration | Sprint 09 | 2-3 horas | ⏭️ BLOCKED |
 
 **Total Estimado:** ~18-25 horas de desenvolvimento
 
@@ -77,7 +77,7 @@ Evoluir o sistema RAG de **embedding-based** para **topic-based classification**
 
 ---
 
-## 📝 Sprint 07: Topic Extractor (Gemini) ✅ COMPLETE
+## 📝 Sprint 08: Topic Extractor (Gemini) ✅ COMPLETE
 
 **Status:** ✅ COMPLETE (2026-03-04)  
 **Arquivos:** `src/topics/topic_extractor.py`, `src/topics/topic_validator.py`, `src/topics/taxonomy_manager.py`  
@@ -181,7 +181,7 @@ Custo Total:
 
 ---
 
-## 📝 Sprint 08: Vault Properties Writer
+## 📝 Sprint 09: Vault Properties Writer
 
 ### Objetivo
 Escrever tópicos no frontmatter das notas do vault.
@@ -230,7 +230,7 @@ src/
 
 ---
 
-## 📝 Sprint 09: Topic Matching Engine
+## 📝 Sprint 10: Topic Matching Engine
 
 ### Objetivo
 Match entre tópicos do capítulo e tópicos das notas do vault.
@@ -283,7 +283,7 @@ src/
 
 ---
 
-## 📝 Sprint 10: Translation Cache System
+## 📝 Sprint 11: Translation Cache System
 
 ### Objetivo
 Não retraduzir capítulos já processados.
@@ -310,7 +310,7 @@ src/
 
 ---
 
-## 📝 Sprint 11: Hybrid Retrieval (v1 + v2)
+## 📝 Sprint 12: Hybrid Retrieval (v1 + v2)
 
 ### Objetivo
 Permitir uso de embedding (v1) + topics (v2) simultaneamente.
@@ -342,7 +342,7 @@ src/
 
 ---
 
-## 📝 Sprint 12: Dataview Integration
+## 📝 Sprint 13: Dataview Integration
 
 ### Objetivo
 Habilitar queries Dataview/Bases com properties dos tópicos.

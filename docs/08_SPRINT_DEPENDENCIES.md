@@ -1,6 +1,6 @@
 # Sprint Dependencies - Obsidian RAG
 
-**Last Updated:** 2026-03-02  
+**Last Updated:** 2026-03-04  
 **Status:** Active
 
 ---
@@ -17,13 +17,19 @@ Sprint 02 (PDF Ingestion) ✅ COMPLETE
 Sprint 03 (Retrieval) ✅ COMPLETE
        ↓
 Sprint 04 (Validation) ✅ COMPLETE
-       ↓
+↓
 Sprint 05 (Output) ✅ COMPLETE
-       ↓
+↓
 Sprint 06 (Chapter Processing) ✅ COMPLETE
+↓
+Sprint 07 (Production Hardening) ✅ COMPLETE
+↓
+Sprint 08 (Topic Extractor) ✅ COMPLETE
+↓
+Sprint 09 (Vault Properties) ⏭️ READY
 ```
 
-## Current Status (2026-03-03)
+## Current Status (2026-03-04)
 
 | Sprint | Progress | Status | Next Action |
 |--------|----------|--------|-------------|
@@ -33,6 +39,8 @@ Sprint 06 (Chapter Processing) ✅ COMPLETE
 | Sprint 04 | Complete | ✅ COMPLETE | Working |
 | Sprint 05 | Complete | ✅ COMPLETE | Validated end-to-end |
 | Sprint 06 | Chapter processing | ✅ COMPLETE | Ready for use |
+| Sprint 07 | Production Hardening | ✅ COMPLETE | Incremental indexing ready |
+| Sprint 08 | Topic Extractor v2.0 | ✅ COMPLETE | See docs/11_TOPIC_EXTRACTION.md |
 
 ## Legend
 
@@ -263,7 +271,7 @@ Ver `docs/10_ROADMAP_v2.md` para detalhes completos.
 | Sprint | Descrição | Blocks | Blocked By |
 |--------|-----------|--------|------------|
 | **Sprint 07** | **Production Hardening** | **Sprint 08** | **Sprint 06** |
-| Sprint 08 | Topic Extractor | Sprint 09 | Sprint 07 |
+| **Sprint 08** | **Topic Extractor** | **Sprint 09** | **Sprint 07** |
 | Sprint 09 | Vault Properties | Sprint 10 | Sprint 08 |
 | Sprint 10 | Topic Matching | Sprint 11 | Sprint 09 |
 | Sprint 11 | Translation Cache | Sprint 12 | Sprint 08 |
@@ -275,3 +283,9 @@ Ver `docs/10_ROADMAP_v2.md` para detalhes completos.
 - Backup & Rollback
 - Bug Fixes (Placeholders, Duplicação)
 - Gemini Consolidation
+
+**Nota:** Sprint 08 (Topic Extractor) inclui:
+- Extração de 10 tópicos por nota
+- Classificação CDU
+- Gemini 2.5 Flash-Lite
+- Retry logic com exponential backoff

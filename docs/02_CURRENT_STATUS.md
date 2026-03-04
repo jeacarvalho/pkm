@@ -596,8 +596,8 @@ crontab -l
 | Fase | Versão | Status | Link |
 |------|--------|--------|------|
 | Embedding Pipeline | v1.0 | ✅ COMPLETE | `docs/08_SPRINT_DEPENDENCIES.md` |
-| Sprint 07 v2.0 (Topic Extractor) | v2.0 | ✅ COMPLETE | `docs/11_TOPIC_EXTRACTION.md` |
-| Sprint 08+ (Vault Properties) | v2.0 | ⏭️ READY | `docs/10_ROADMAP_v2.md` |
+| Sprint 08 v2.0 (Topic Extractor) | v2.0 | ✅ COMPLETE | `docs/11_TOPIC_EXTRACTION.md` |
+| Sprint 09+ (Vault Properties) | v2.0 | ⏭️ READY | `docs/10_ROADMAP_v2.md` |
 
 **Ver `docs/11_TOPIC_EXTRACTION.md` para guia do Topic Extractor.**  
 **Ver `docs/10_ROADMAP_v2.md` para próximas sprints v2.0.**
