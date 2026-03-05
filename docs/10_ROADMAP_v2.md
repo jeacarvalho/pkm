@@ -285,56 +285,58 @@ data/
 
 ---
 
-## 📝 Sprint 10: Topic Matching Engine
+## 📝 Sprint 10: Topic Matching Engine ✅ **COMPLETE** (2026-03-05)
 
 ### Objetivo
 Match entre tópicos do capítulo e tópicos das notas do vault.
 
-### Algoritmo
-```python
-def match_topics(chapter_topics, vault_note_topics):
-    """
-    chapter_topics: [{"name": "...", "weight": 10}, ...]
-    vault_note_topics: [{"name": "...", "weight": 8}, ...]
-    """
-    score = 0
-    matched = []
-    
-    for ch_topic in chapter_topics:
-        for vt_topic in vault_note_topics:
-            # Fuzzy match de nomes
-            if fuzzy_match(ch_topic["name"], vt_topic["name"]):
-                score += min(ch_topic["weight"], vt_topic["weight"])
-                matched.append({
-                    "chapter_topic": ch_topic["name"],
-                    "vault_topic": vt_topic["name"],
-                    "score": min(ch_topic["weight"], vt_topic["weight"])
-                })
-    
-    # Normalizar score (0-100)
-    max_possible = sum(t["weight"] for t in chapter_topics)
-    normalized_score = (score / max_possible) * 100
-    
-    return {
-        "score": normalized_score,
-        "matched_topics": matched,
-        "total_chapter_topics": len(chapter_topics),
-        "total_matched": len(matched)
-    }
+### Implementação
+**Arquivo:** `src/topics/topic_matcher.py` - Implementação completa do algoritmo de matching
+
+**Características:**
+- Fuzzy matching usando `thefuzz` library com threshold 85
+- Score normalizado 0-100 baseado em peso dos tópicos
+- Top-K matches configurável (padrão: 20)
+- Threshold configurável (padrão: 20.0)
+- Logging para `data/logs/topics/matcher.log` e `errors.log`
+- Output JSON em `data/matches/`
+
+**CLI Interface:**
+```bash
+python -m src.topics.topic_matcher \
+  --chapter-topics data/test/capitulo_01_topics.json \
+  --vault-dir /home/s015533607/MEGAsync/Minhas_notas \
+  --top-k 20 \
+  --threshold 20.0 \
+  --output data/matches/matches.json
 ```
 
-### Arquivos
-```
-src/
-└── topics/
-    └── topic_matcher.py        # Matching algorithm
+**Performance:**
+- Scans 3588 notes em ~1 segundo
+- Encontra 203 notas com tópicos classificados
+- Trata erros de frontmatter malformado (logged, non-fatal)
+
+### Critérios de Aceite ✅
+- [x] **Fuzzy match para tópicos similares** - Implementado com `thefuzz` (threshold 85)
+- [x] **Score normalizado 0-100** - Implementado com normalização baseada em peso
+- [x] **Top-20 notas por similaridade de tópicos** - Configurável via `--top-k`
+- [x] **Log de matches para debugging** - Logs em `matcher.log` e `errors.log`
+
+### Teste Realizado
+```bash
+# Dry-run (teste sem processamento real)
+python -m src.topics.topic_matcher --dry-run
+
+# Pilot (1 capítulo, modo real)
+python -m src.topics.topic_matcher \
+  --chapter-topics data/test/capitulo_01_topics.json \
+  --vault-dir /home/s015533607/MEGAsync/Minhas_notas \
+  --top-k 5 \
+  --threshold 20.0 \
+  --output data/matches/test_pilot.json
 ```
 
-### Critérios de Aceite
-- [ ] Fuzzy match para tópicos similares (colonialismo ≈ colonialidade)
-- [ ] Score normalizado 0-100
-- [ ] Top-20 notas por similaridade de tópicos
-- [ ] Log de matches para debugging
+**Resultado:** 0 matches encontrados (esperado com dados de teste - tópicos "colonialismo", "imperialismo" não existem no vault)
 
 ---
 
@@ -358,10 +360,10 @@ src/
 ```
 
 ### Critérios de Aceite
-- [ ] Verificar existência do arquivo MD antes de traduzir
-- [ ] Extrair conteúdo de `## Conteúdo Traduzido` seção
-- [ ] Flag `--force-retranslate` para pular cache
-- [ ] Log: "✅ Using cached translation" ou "🔄 Translating..."
+- [x] Verificar existência do arquivo MD antes de traduzir
+- [x] Extrair conteúdo de `## Conteúdo Traduzido` seção
+- [x] Flag `--force-retranslate` para pular cache
+- [x] Log: "✅ Using cached translation" ou "🔄 Translating..."
 
 ---
 

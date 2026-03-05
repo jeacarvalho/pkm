@@ -1,0 +1,52 @@
+[
+  {
+    "name": "colonialismo",
+    "weight": 10,
+    "cdu": "32"
+  },
+  {
+    "name": "imperialismo",
+    "weight": 9,
+    "cdu": "32"
+  },
+  {
+    "name": "resistência",
+    "weight": 8,
+    "cdu": "316.7"
+  },
+  {
+    "name": "identidade",
+    "weight": 7,
+    "cdu": "159.9"
+  },
+  {
+    "name": "cultura",
+    "weight": 6,
+    "cdu": "008"
+  },
+  {
+    "name": "poder",
+    "weight": 9,
+    "cdu": "32"
+  },
+  {
+    "name": "hegemonia",
+    "weight": 8,
+    "cdu": "32"
+  },
+  {
+    "name": "dominação",
+    "weight": 9,
+    "cdu": "32"
+  },
+  {
+    "name": "libertação",
+    "weight": 7,
+    "cdu": "316.7"
+  },
+  {
+    "name": "teologia",
+    "weight": 6,
+    "cdu": "2"
+  }
+]

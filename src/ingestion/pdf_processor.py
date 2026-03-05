@@ -15,6 +15,9 @@ from src.ingestion.chapter_parser import ChapterParser
 from src.ingestion.language_detector import detect_document_language, get_language_name
 from src.ingestion.text_extractor import extract_chapters, get_pdf_metadata
 from src.ingestion.translator import GeminiTranslator, translate_if_needed
+from src.topics.topic_extractor import TopicExtractor
+from src.topics.topic_matcher import TopicMatcher
+from src.topics.config import TopicConfig
 from src.utils.config import settings
 from src.utils.logging import get_logger
 
@@ -53,6 +56,7 @@ class PDFProcessor:
         vault_path: Optional[str] = None,
         book_name: Optional[str] = None,
         skip_validation: bool = False,
+        force_retranslate: bool = False,
     ):
         """Initialize PDF processor.
 
@@ -66,15 +70,22 @@ class PDFProcessor:
             vault_path: Path to Obsidian vault for output.
             book_name: Name of the book for folder creation in vault.
             skip_validation: Skip Ollama validation (for testing).
+            force_retranslate: Force retranslation even if chapter exists in cache.
         """
         self.target_language = target_language
         self.enable_translation = enable_translation
         self.output_dir = output_dir or Path("./data/processed")
         self.use_chapter_mode = use_chapter_mode
         self.chapters_file = chapters_file
-        self.vault_path = vault_path or settings.books_vault_path
+        vault_path_str = (
+            str(vault_path)
+            if vault_path
+            else str(settings.vault_path / "100 ARQUIVOS E REFERENCIAS/Livros")
+        )
+        self.vault_path = vault_path_str
         self.book_name = book_name or ""
         self.skip_validation = skip_validation
+        self.force_retranslate = force_retranslate
 
         if enable_translation:
             self.translator = GeminiTranslator(
@@ -116,7 +127,7 @@ class PDFProcessor:
         # Step 1: Parse chapter ranges
         logger.info(f"Parsing chapter file: {self.chapters_file}")
         chapter_parser = ChapterParser()
-        chapters = chapter_parser.parse(self.chapters_file)
+        chapters = chapter_parser.parse(str(self.chapters_file))
         chapter_parser.validate(chapters)
 
         logger.info(f"Loaded {len(chapters)} chapters")
@@ -133,133 +144,128 @@ class PDFProcessor:
             logger.info(f"DRY RUN: Would process {len(chapters)} chapters")
             return {"success": True, "chapters": len(chapters), "dry_run": True}
 
-        # Step 4: Check cache and process chapters
-        from src.ingestion.translation_cache import TranslationCache
+        # Step 4: Initialize cache and prepare chapters
+        from src.topics.translation_cache import TranslationCache
 
-        cache = TranslationCache(self.vault_path, self.book_name)
-        chapters_to_process = []
+        cache = TranslationCache(
+            self.vault_path, self.book_name, force_retranslate=self.force_retranslate
+        )
 
-        # Check which chapters need processing
+        # Prepare chapter information
         all_chapters = [
             {"num": c.num, "start_page": c.start_page, "end_page": c.end_page}
             for c in chapters
         ]
-        missing_chapters = cache.get_missing_chapters(all_chapters)
 
-        if not missing_chapters:
-            logger.info(
-                "✅ All chapters already processed! Use --force-retranslate to reprocess."
-            )
-            # Still load existing chapters for output
-            chapters_to_process = []
-        else:
-            logger.info(f"🔄 Processing {len(missing_chapters)} new chapters...")
-            chapters_to_process = missing_chapters
+        # Step 5: Extract text for ALL chapters first
+        logger.info("Extracting text for chapters...")
+        from PyPDF2 import PdfReader
 
-        # Step 5: Extract text for chapters that need processing
-        if chapters_to_process:
-            logger.info("Extracting text for new chapters...")
-            from PyPDF2 import PdfReader
+        reader = PdfReader(str(pdf_path))
+        chapter_texts = []
 
-            reader = PdfReader(str(pdf_path))
+        for ch in all_chapters:
+            chapter_text = ""
+            for page_num in range(
+                ch["num"] - 1, min(ch["end_page"], len(reader.pages))
+            ):
+                chapter_text += reader.pages[page_num].extract_text() + "\n"
 
-            new_chapter_texts = []
-            for ch in chapters_to_process:
-                chapter_text = ""
-                for page_num in range(
-                    ch["start_page"] - 1, min(ch["end_page"], len(reader.pages))
-                ):
-                    chapter_text += reader.pages[page_num].extract_text() + "\n"
+            chapter_info = {
+                "chapter_num": ch["num"],
+                "start_page": ch["start_page"],
+                "end_page": ch["end_page"],
+                "text": chapter_text,
+                "title": f"Chapter {ch['num'] + 1}",
+            }
+            chapter_texts.append(chapter_info)
 
-                chapter_info = {
-                    "chapter_num": ch["num"],
-                    "start_page": ch["start_page"],
-                    "end_page": ch["end_page"],
-                    "text": chapter_text,
-                    "title": f"Chapter {ch['num'] + 1}",
-                }
-                new_chapter_texts.append(chapter_info)
+        # Step 6: Detect document language
+        logger.info("Detecting document language...")
+        try:
+            doc_language = detect_document_language(chapter_texts, sample_size=5)
+            logger.info(f"Detected language: {get_language_name(doc_language)}")
+        except Exception as e:
+            logger.warning(f"Language detection failed: {e}")
+            doc_language = "en"
 
-            # Step 6: Detect document language
-            logger.info("Detecting document language...")
+        # Step 7: Process all chapters with cache support
+        all_chapters_data = []
+        cached_count = 0
+        translated_count = 0
+
+        for chapter in tqdm(chapter_texts, desc="Processing chapters"):
             try:
-                doc_language = detect_document_language(
-                    new_chapter_texts, sample_size=5
-                )
-                logger.info(f"Detected language: {get_language_name(doc_language)}")
-            except Exception as e:
-                logger.warning(f"Language detection failed: {e}")
-                doc_language = "en"
+                # First check cache
+                cached_content = cache.get_cached_translation(chapter["chapter_num"])
 
-            # Step 7: Translate new chapters if needed
-            if self.enable_translation and doc_language != self.target_language:
-                logger.info(
-                    f"Translating from {get_language_name(doc_language)} to {get_language_name(self.target_language)}..."
-                )
-
-                translated_chapters = []
-                for chapter in tqdm(new_chapter_texts, desc="Translating chapters"):
-                    try:
+                if cached_content:
+                    # Use cached content
+                    chapter_data = {
+                        "chapter_num": chapter["chapter_num"],
+                        "start_page": chapter["start_page"],
+                        "end_page": chapter["end_page"],
+                        "chapter_text": cached_content,
+                        "title": chapter["title"],
+                        "translated": "true",
+                        "was_cached": True,
+                    }
+                    cached_count += 1
+                    logger.debug(
+                        f"✅ Using cached translation for chapter {chapter['chapter_num']}"
+                    )
+                else:
+                    # Need to process (translate if needed)
+                    if self.enable_translation and doc_language != self.target_language:
+                        logger.info(
+                            f"🔄 Translating chapter {chapter['chapter_num']}..."
+                        )
                         translated_text, was_translated = translate_if_needed(
                             chapter["text"],
                             target_lang=self.target_language,
                             api_key=settings.gemini_api_key,
                         )
+                    else:
+                        # No translation needed
+                        translated_text = chapter["text"]
+                        was_translated = False
 
-                        chapter_copy = chapter.copy()
-                        chapter_copy["chapter_text"] = translated_text
-                        chapter_copy["translated"] = str(was_translated)
-                        chapter_copy["was_cached"] = False
-                        translated_chapters.append(chapter_copy)
-
-                        time.sleep(1)
-
-                    except Exception as e:
-                        logger.error(f"Translation failed: {e}")
-                        chapter_copy = chapter.copy()
-                        chapter_copy["chapter_text"] = chapter["text"]
-                        chapter_copy["translated"] = "false"
-                        chapter_copy["was_cached"] = False
-                        translated_chapters.append(chapter_copy)
-            else:
-                translated_chapters = [
-                    {
-                        **ch,
-                        "chapter_text": ch["text"],
-                        "translated": "false",
+                    chapter_data = {
+                        "chapter_num": chapter["chapter_num"],
+                        "start_page": chapter["start_page"],
+                        "end_page": chapter["end_page"],
+                        "chapter_text": translated_text,
+                        "title": chapter["title"],
+                        "translated": str(was_translated),
                         "was_cached": False,
                     }
-                    for ch in new_chapter_texts
-                ]
+                    translated_count += 1
 
-        # Step 8: Load cached chapters for chapters already processed
-        all_chapters_data = []
-        for ch in all_chapters:
-            if ch in chapters_to_process:
-                # This chapter was just translated
-                all_chapters_data.append(
-                    translated_chapters[
-                        [c["chapter_num"] for c in translated_chapters].index(ch["num"])
-                    ]
+                    # Small delay to respect rate limits
+                    if was_translated:
+                        time.sleep(1)
+
+                all_chapters_data.append(chapter_data)
+
+            except Exception as e:
+                logger.error(
+                    f"Processing failed for chapter {chapter['chapter_num']}: {e}"
                 )
-            else:
-                # Load from cache
-                cached_content = cache.load_translated_content(ch["num"])
-                if cached_content:
-                    all_chapters_data.append(
-                        {
-                            "chapter_num": ch["num"],
-                            "start_page": ch["start_page"],
-                            "end_page": ch["end_page"],
-                            "chapter_text": cached_content,
-                            "title": f"Chapter {ch['num'] + 1}",
-                            "was_cached": True,
-                        }
-                    )
-                else:
-                    logger.warning(
-                        f"Chapter {ch['num']} marked as cached but content not found!"
-                    )
+                chapter_data = {
+                    "chapter_num": chapter["chapter_num"],
+                    "start_page": chapter["start_page"],
+                    "end_page": chapter["end_page"],
+                    "chapter_text": chapter["text"],
+                    "title": chapter["title"],
+                    "translated": "false",
+                    "was_cached": False,
+                }
+                all_chapters_data.append(chapter_data)
+
+        # Log summary
+        logger.info(f"📊 Processed {len(all_chapters_data)} chapters:")
+        logger.info(f"   ✅ {cached_count} from cache")
+        logger.info(f"   🔄 {translated_count} newly processed")
 
         # Step 9: Validate chapters if requested
         if self.skip_validation:
@@ -311,19 +317,143 @@ class PDFProcessor:
 
             except Exception as e:
                 logger.error(f"Validation failed: {e}")
+                # If validation fails, continue with original chapters
                 validated_chapters = all_chapters_data
-                logger.error(f"Validation failed: {e}")
-                # If validation fails, continue with original translated chapters
-                validated_chapters = translated_chapters
 
-        # Step 7: Save processed data to vault
+        # Step 7: Extract topics and find thematic connections
+        logger.info("Extracting topics and finding thematic connections...")
+        chapters_with_topics = []
+
+        try:
+            # Initialize topic extractor and matcher
+            topic_config = TopicConfig()
+            topic_extractor = TopicExtractor(topic_config)
+            topic_matcher = TopicMatcher(topic_config)
+
+            for chapter in tqdm(validated_chapters, desc="Extracting topics"):
+                try:
+                    # Extract topics from chapter content (use chapter-specific prompt for generic topics)
+                    logger.info(
+                        f"📚 Extracting topics for chapter {chapter['chapter_num']}..."
+                    )
+                    topic_result = topic_extractor.extract_topics(
+                        chapter["chapter_text"], is_chapter=True
+                    )
+
+                    # Add topic classification to chapter data
+                    chapter["topic_classification"] = {
+                        "topics": topic_result.get("topics", []),
+                        "cdu_primary": topic_result.get("cdu_primary"),
+                        "cdu_secondary": topic_result.get("cdu_secondary", []),
+                        "cdu_description": topic_result.get("cdu_description"),
+                        "extraction_date": datetime.now().strftime("%Y-%m-%d"),
+                    }
+
+                    # Find thematic connections in vault
+                    logger.info(
+                        f"🔍 Finding thematic connections for chapter {chapter['chapter_num']}..."
+                    )
+
+                    # Create temporary JSON file with chapter topics for matcher
+                    import tempfile
+                    import json
+
+                    with tempfile.NamedTemporaryFile(
+                        mode="w", suffix=".json", delete=False
+                    ) as tmp:
+                        json.dump(
+                            {
+                                "topics": topic_result.get("topics", []),
+                                "chapter_title": chapter.get(
+                                    "title", f"Chapter {chapter['chapter_num']}"
+                                ),
+                                "chapter_number": chapter["chapter_num"],
+                            },
+                            tmp,
+                            ensure_ascii=False,
+                            indent=2,
+                        )
+                        tmp_path = tmp.name
+
+                    try:
+                        # Run topic matcher
+                        match_result = topic_matcher.run(
+                            chapter_topics_path=Path(tmp_path),
+                            vault_dir=settings.vault_path,  # Use vault root directory directly
+                            output_path=None,  # Don't save to file, we'll use the result directly
+                            top_k=5,  # Changed from 20 to 5 per user request
+                            threshold=2.0,
+                        )
+
+                        # Add thematic connections to chapter data
+                        if "matches" in match_result:
+                            # Filter out self-references (chapter matching with itself)
+                            filtered_matches = []
+                            for match in match_result["matches"]:
+                                note_path = match.get("note_path", "")
+                                # Skip if note_path contains the current book directory
+                                book_name_lower = self.book_name.lower()
+                                if book_name_lower in note_path.lower():
+                                    continue
+                                filtered_matches.append(match)
+
+                            chapter["thematic_connections"] = filtered_matches
+                            logger.info(
+                                f"✅ Found {len(filtered_matches)} thematic connections for chapter {chapter['chapter_num']} (filtered from {len(match_result['matches'])} total)"
+                            )
+                        else:
+                            chapter["thematic_connections"] = []
+                            logger.info(
+                                f"⚠️ No thematic connections found for chapter {chapter['chapter_num']}"
+                            )
+
+                    finally:
+                        # Clean up temporary file
+                        import os
+
+                        if os.path.exists(tmp_path):
+                            os.unlink(tmp_path)
+
+                except Exception as e:
+                    logger.error(
+                        f"Topic processing failed for chapter {chapter['chapter_num']}: {e}"
+                    )
+                    # Add empty topic classification if extraction fails
+                    chapter["topic_classification"] = {
+                        "topics": [],
+                        "cdu_primary": None,
+                        "cdu_secondary": [],
+                        "cdu_description": None,
+                        "extraction_date": datetime.now().strftime("%Y-%m-%d"),
+                        "error": str(e),
+                    }
+                    chapter["thematic_connections"] = []
+
+                chapters_with_topics.append(chapter)
+
+        except Exception as e:
+            logger.error(f"Topic processing failed: {e}")
+            # Continue without topics
+            chapters_with_topics = validated_chapters
+            for chapter in chapters_with_topics:
+                chapter["topic_classification"] = {
+                    "topics": [],
+                    "cdu_primary": None,
+                    "cdu_secondary": [],
+                    "cdu_description": None,
+                    "extraction_date": datetime.now().strftime("%Y-%m-%d"),
+                    "error": str(e),
+                }
+                chapter["thematic_connections"] = []
+
+        # Step 8: Save processed data to vault
         if not dry_run:
             try:
                 # Import vault writer here to avoid circular imports
                 from src.output.vault_writer import VaultWriter
 
                 writer = VaultWriter(self.vault_path, self.book_name)
-                chapter_paths = writer.write_all_chapters(validated_chapters)
+                chapter_paths = writer.write_all_chapters(chapters_with_topics)
 
                 logger.info(
                     f"Saved chapters to vault: {len(chapter_paths)} files created"
@@ -524,7 +654,7 @@ def main():
     parser.add_argument(
         "--vault-path",
         type=str,
-        default=settings.books_vault_path,
+        default=str(settings.vault_path / "100 ARQUIVOS E REFERENCIAS/Livros"),
         help="Path to Obsidian vault for output (default from config)",
     )
     parser.add_argument(
@@ -534,6 +664,11 @@ def main():
         "--skip-validation",
         action="store_true",
         help="Skip Ollama validation (for testing)",
+    )
+    parser.add_argument(
+        "--force-retranslate",
+        action="store_true",
+        help="Force retranslation even if chapter exists in cache",
     )
 
     args = parser.parse_args()
@@ -554,6 +689,7 @@ def main():
         book_name=args.book_name
         or (args.book and Path(args.book).stem.replace(" ", "_")),
         skip_validation=args.skip_validation,
+        force_retranslate=args.force_retranslate,
     )
 
     # Process

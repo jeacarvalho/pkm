@@ -7,8 +7,8 @@ from pydantic import Field
 from pydantic_settings import BaseSettings
 
 
-class TopicsConfig(BaseSettings):
-    """Configuration for topic extraction."""
+class TopicConfig(BaseSettings):
+    """Configuration for topic extraction and matching."""
 
     # Gemini Configuration
     gemini_model: str = Field(
@@ -45,16 +45,13 @@ class TopicsConfig(BaseSettings):
         default=0, description="Limit number of notes to process (0 = unlimited)"
     )
 
-    # Paths
-    log_dir: Path = Field(
-        default=Path("data/logs/topics"),
-        description="Directory for topic extraction logs",
+    # Sprint 10: Topic Matching Settings
+    fuzzy_threshold: int = Field(
+        default=85, description="Threshold para fuzzy match (0-100)"
     )
-    retry_attempts: int = Field(
-        default=3, description="Number of retry attempts on API failure"
-    )
-    retry_delay: float = Field(
-        default=2.0, description="Initial delay between retries (seconds)"
+    match_top_k: int = Field(default=20, description="Top-K matches para retornar")
+    match_threshold: float = Field(
+        default=10.0, description="Score mínimo para match (0-100)"
     )
 
     # Paths
@@ -71,8 +68,12 @@ class TopicsConfig(BaseSettings):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         # Ensure log directory exists
+        self.create_log_dir()
+
+    def create_log_dir(self):
+        """Create log directory if it doesn't exist."""
         self.log_dir.mkdir(parents=True, exist_ok=True)
 
 
 # Global config instance
-topics_config = TopicsConfig()
+topics_config = TopicConfig()

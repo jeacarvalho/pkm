@@ -1,0 +1,2980 @@
+{
+  "timestamp": "2026-03-05T15:06:41.982710+00:00",
+  "config": {
+    "dry_run": false,
+    "target_dir": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA",
+    "model": "gemini-2.5-flash-lite"
+  },
+  "results": [
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/monopólios modificam as relações oferta x demanda.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "monopolios_e_relacoes_oferta_demanda",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "escassez_artificial_por_concentracao_de_bens",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "influencia_monopolios_no_aumento_de_precos",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "pensamento_economico_chines_antigo",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "guanzi_e_conceitos_economicos",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "valor_relativo_oferta_demanda",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "critica_economia_neoclassica_foco_em_equilibrio",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "analise_das_razoes_da_mudanca_na_demanda",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "distribuicao_de_bens_entre_produtores",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "controle_de_oferta_por_poucos",
+            "weight": 5,
+            "confidence": 0.78
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "338.5",
+          "338.8"
+        ],
+        "cdu_description": "Teoria econômica; Preços; Monopólios",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/monopólios modificam as relações oferta x demanda.md",
+          "file_name": "monopólios modificam as relações oferta x demanda.md",
+          "processed_at": "2026-03-05T14:31:36.460695+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/PIB.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/AVA1 Mercado Financeiro.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90b9d0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/TCC economia.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb908a00 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/capitalismo.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/para o guanzi chinês o alimento é a medida de todas as coisas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "guanzi_conceito_alimento_medida_valor",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "guanzi_relacao_preco_grao_dinheiro",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "guanzi_influencia_grao_precos_mercadorias",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "guanzi_determinacao_valor_dinheiro_grao",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "guanzi_conceito_alimento_centro_debate_economico",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "guanzi_politica_governo_celeiros_publicos",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "guanzi_armazenamento_graos_governo",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "guanzi_economia_agricola_antiga_china",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "guanzi_filosofia_economica_antiga",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "guanzi_conceito_medida_todas_coisas",
+            "weight": 5,
+            "confidence": 0.88
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "338.1",
+          "339.2"
+        ],
+        "cdu_description": "Teoria econômica; História econômica; Preços; Agricultura",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/para o guanzi chinês o alimento é a medida de todas as coisas.md",
+          "file_name": "para o guanzi chinês o alimento é a medida de todas as coisas.md",
+          "processed_at": "2026-03-05T14:32:01.678251+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Uma balela o mantra do aumento de eficiência com privatizações.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "privatizacao_ineficiencia",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "aumento_eficiencia_privatizacao_critica",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "fracasso_gerenciamento_privado_testes_covid",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "extravio_testes_covid_reino_unido",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "fracasso_g4s_jogos_olimpicos_londres_2012",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "contratos_publicos_empresas_privadas",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "servicos_seguranca_privada_eventos_publicos",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "convocacao_militar_falha_privada",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "critica_deloitte_gerenciamento_publico",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "balela_mantra_eficiencia",
+            "weight": 10,
+            "confidence": 0.99
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "351.74",
+          "614.4"
+        ],
+        "cdu_description": "Economia. Finanças. Produção. Consumo. Administração. Gestão. Organização. Planejamento. Controle. Segurança pública. Serviços de segurança. Saúde pública. Epidemiologia.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Uma balela o mantra do aumento de eficiência com privatizações.md",
+          "file_name": "Uma balela o mantra do aumento de eficiência com privatizações.md",
+          "processed_at": "2026-03-05T14:32:04.315318+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/a tarefa do governante não é a melhor versão desejada mas sim a melhor versão possível no estado atual das coisas.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90a200 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Mercados se tornando o novo governo e a nova religião.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb9585b0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/o que seria uma vida boa e digna.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "conceito_vida_boa_2025",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "direitos_sociais_constituicao_federal",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "elementos_vida_digna_familia",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "salario_minimo_necessidades_basicas",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "comparacao_conceitos_vida_boa_nacoes",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "educacao_como_direito_social",
+            "weight": 5,
+            "confidence": 0.92
+          },
+          {
+            "name": "saude_como_direito_social",
+            "weight": 5,
+            "confidence": 0.92
+          },
+          {
+            "name": "moradia_como_direito_social",
+            "weight": 5,
+            "confidence": 0.92
+          },
+          {
+            "name": "alimentacao_como_direito_social",
+            "weight": 5,
+            "confidence": 0.92
+          },
+          {
+            "name": "protecao_maternidade_infancia",
+            "weight": 5,
+            "confidence": 0.91
+          }
+        ],
+        "cdu_primary": "316.3",
+        "cdu_secondary": [
+          "342.7",
+          "331.2"
+        ],
+        "cdu_description": "Sociologia da vida social e das condições de vida; Sociologia da família; Direitos sociais; Salário mínimo",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/o que seria uma vida boa e digna.md",
+          "file_name": "o que seria uma vida boa e digna.md",
+          "processed_at": "2026-03-05T14:32:28.623772+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Estado.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Mesmo tendo começado em 2007 um plano para mais ventiladores mecânicos os EUA foram pegos sem capacidade pela covid em 2020.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb959cc0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/neoliberalismo.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb95bb20 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Quem nos governa.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "lavagem_dinheiro_bancos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "historia_hsbc",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "trafico_drogas_financiamento",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "capitalismo_financeiro_criminalidade",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "guerra_opio_colonialismo",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "fraude_fiscal_evasao_divisas",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "regulamentacao_bancaria",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "poder_instituicoes_financeiras",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "corrupcao_politica_bancos",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "historia_imperialismo_britanico",
+            "weight": 6,
+            "confidence": 0.85
+          }
+        ],
+        "cdu_primary": "336.7",
+        "cdu_secondary": [
+          "339.9",
+          "327.3",
+          "343.34"
+        ],
+        "cdu_description": "Finanças. Bancos. Crédito. Moeda. (336.7 - Bancos em geral)",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Quem nos governa.md",
+          "file_name": "Quem nos governa.md",
+          "processed_at": "2026-03-05T14:32:52.818551+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Feudalismo.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Elite brasileira está entre as que menos geram valor no mundo.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "elite_brasileira_geracao_valor",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "ranking_qualidade_elite",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "comparacao_elite_internacional",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "elite_singapura_alemania_reino_unido",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "elite_brics_baixo_desempenho",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "fatores_regressividade_tributaria",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "modelos_negocio_criacao_valor",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "modelos_negocio_extracao_valor",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "estudo_universidade_st_gallen",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "elite_dominancia_economias_politicas",
+            "weight": 7,
+            "confidence": 0.87
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "323.32",
+          "316.4"
+        ],
+        "cdu_description": "Economia. Economia política. Relações econômicas. Economia social. Economia e sociedade. Classes sociais. Grupos sociais. Elites. Grupos de poder. Estrutura social. Mudança social.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Elite brasileira está entre as que menos geram valor no mundo.md",
+          "file_name": "Elite brasileira está entre as que menos geram valor no mundo.md",
+          "processed_at": "2026-03-05T14:32:56.056270+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Manifesto em defesa da Reconstrução Revolucionária do PCB.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "reconstrucao_revolucionaria_partido_comunista_brasileiro",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "centralismo_democratico",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "luta_de_classes",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "revolucao_socialista",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "crise_partidaria_pcb",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "expurgo_politico",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "movimento_comunista_internacional",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "marxismo_leninismo",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "imperialismo",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "critica_autocritica",
+            "weight": 6,
+            "confidence": 0.82
+          }
+        ],
+        "cdu_primary": "329.14",
+        "cdu_secondary": [
+          "335.4",
+          "323.2"
+        ],
+        "cdu_description": "329.14 - Partidos comunistas e operários. 335.4 - Socialismo marxista. 323.2 - Luta de classes, revoluções, movimentos sociais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Manifesto em defesa da Reconstrução Revolucionária do PCB.md",
+          "file_name": "Manifesto em defesa da Reconstrução Revolucionária do PCB.md",
+          "processed_at": "2026-03-05T14:32:58.807116+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/inovação.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/A questão não está em dividir as coisas igualmente mas em administrar a força de uns contra os outros.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "administracao_forca_social",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "dinamica_poder_social",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "natureza_humana_poder",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "controle_social_forca",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "distribuicao_igualitaria_desigualdade",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "acumulacao_riqueza_esperteza",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "percepcao_social_poder",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "estrategias_controle_social",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "relacoes_forca_sociedade",
+            "weight": 9,
+            "confidence": 0.78
+          },
+          {
+            "name": "influencia_poder_distribuicao",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "cdu_primary": "323.4",
+        "cdu_secondary": [
+          "316.3",
+          "330.5"
+        ],
+        "cdu_description": "Poder. Força. Controle social. Relações de poder. Influência social. Dinâmicas sociais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/A questão não está em dividir as coisas igualmente mas em administrar a força de uns contra os outros.md",
+          "file_name": "A questão não está em dividir as coisas igualmente mas em administrar a força de uns contra os outros.md",
+          "processed_at": "2026-03-05T14:33:01.932035+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Economia.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/revolução industrial.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/elite brasileira.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/CORSI - CAP5.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "crise_economica_brasil_1960s",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "golpe_militar_1964",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "governo_juscelino_kubitschek",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "governo_janio_quadros",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "governo_joao_goulart",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "substituicao_de_importacoes",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "crise_politica_brasil_1960s",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "distribuicao_de_renda_brasil",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "industrializacao_substitutiva_brasil",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "eleicao_presidencial_1960",
+            "weight": 6,
+            "confidence": 0.88
+          }
+        ],
+        "cdu_primary": "323.28",
+        "cdu_secondary": [
+          "330.5",
+          "338.1",
+          "324.2",
+          "308.2"
+        ],
+        "cdu_description": "A CDU primária 323.28 abrange a agitação política e a revolução, que se encaixa no contexto do golpe militar e da crise política. As secundárias incluem: 330.5 (Economia em geral, com ênfase em distribuição de renda), 338.1 (Economia da produção, com foco em industrialização e substituição de importações), 324.2 (Eleições e plebiscitos, especificamente a eleição de 1960) e 308.2 (Estudos sociais e culturais do Brasil, cobrindo o período histórico e social).",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/CORSI - CAP5.md",
+          "file_name": "CORSI - CAP5.md",
+          "processed_at": "2026-03-05T14:33:06.647972+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Crise de 1929.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Panaceia da privatização deixou EUA e Reino Unido presos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "privatizacao_eua_reino_unido",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "enfraquecimento_capacidade_governar",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "ideologia_governo_minimo",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "gestao_publica_desvalorizada",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "terceirizacao_competencias_publicas",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "foco_medidas_estaticas_eficiencia",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "dependencia_panaceias_tecnologicas",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "inteligencia_artificial_governo",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "reducao_investimento_capacidades_publicas",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "dependencia_empresas_consultoria",
+            "weight": 9,
+            "confidence": 0.96
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "351.71",
+          "323.3"
+        ],
+        "cdu_description": "Economia política. Administração pública. Relações entre Estado e sociedade. Políticas públicas.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Panaceia da privatização deixou EUA e Reino Unido presos.md",
+          "file_name": "Panaceia da privatização deixou EUA e Reino Unido presos.md",
+          "processed_at": "2026-03-05T14:33:10.151472+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Piores Elites do mundo.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb9584c0 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Bibliografia Economia.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "historia_do_pensamento_economico",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "teoria_monetaria_moderna",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "critica_ao_capitalismo",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "papel_do_estado_na_economia",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "economia_politica",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "desigualdade_economica",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "monopolios_e_competicao",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "politicas_de_austeridade",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "economia_brasileira",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "etica_na_economia",
+            "weight": 5,
+            "confidence": 0.85
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "330.8",
+          "336.74",
+          "338.5",
+          "338.2",
+          "330.5"
+        ],
+        "cdu_description": "Economia. Teoria econômica. História do pensamento econômico. Economia política.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Bibliografia Economia.md",
+          "file_name": "Bibliografia Economia.md",
+          "processed_at": "2026-03-05T14:41:25.011206+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/inflação.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90a9e0 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Para a china a discussão não é sobre a existência ou não de monopólios mas sim quem os controla.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "monopolio_estatal_recursos_naturais",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "controle_monopolio_privado_vs_publico",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "politica_economica_sang",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "teoria_monopolio_natural_precoce",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "distribuicao_beneficios_economicos_recursos",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "regulacao_uso_montanhas_recursos_hidricos",
+            "weight": 5,
+            "confidence": 0.88
+          },
+          {
+            "name": "estado_equilibrio_social_economico",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "alivio_necessitados_politica_estatal",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "visao_chinesa_economia_monopolios",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "producao_sal_ferro_monopolio",
+            "weight": 8,
+            "confidence": 0.94
+          }
+        ],
+        "cdu_primary": "330.111",
+        "cdu_secondary": [
+          "338.43",
+          "330.14",
+          "321.02"
+        ],
+        "cdu_description": "Economia. Teoria econômica. Monopólios. Política econômica. História econômica da China.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Para a china a discussão não é sobre a existência ou não de monopólios mas sim quem os controla.md",
+          "file_name": "Para a china a discussão não é sobre a existência ou não de monopólios mas sim quem os controla.md",
+          "processed_at": "2026-03-05T14:49:06.928641+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Clientelismo.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/homo economicus.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "homo_economicus",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "racionalidade_financeira",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "tomada_de_decisao_economica",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "bem_estar_individual",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "minimizacao_de_custos",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "conceito_teorico_economia",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "critica_a_john_stuart_mill",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "economia_politica",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "comportamento_do_consumidor",
+            "weight": 5,
+            "confidence": 0.65
+          },
+          {
+            "name": "teoria_da_escolha_racional",
+            "weight": 8,
+            "confidence": 0.9
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "316.3",
+          "177.2"
+        ],
+        "cdu_description": "Teoria econômica, comportamento humano em economia, ética e economia",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/homo economicus.md",
+          "file_name": "homo economicus.md",
+          "processed_at": "2026-03-05T14:49:09.759953+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Diferença entre a China e a Russia quando da abertura econômica na década de 1980.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "abertura_economica_china_decada_1980",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "abertura_economica_russia_decada_1980",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "comparacao_reformas_economicas_china_russia",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "terapia_de_choque_economia",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "redistribuicao_regressiva_riqueza",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "liberalizacao_radical_precos",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "transicao_economia_mercado_pos_sovietica",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "inflacao_alta_russia_pos_colapso_sovietico",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "queda_producao_russia_pos_colapso_sovietico",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "planejamento_industrial_estado",
+            "weight": 7,
+            "confidence": 0.87
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "338.1",
+          "338.2",
+          "338.5",
+          "330.342"
+        ],
+        "cdu_description": "Economia. Economia e sociedade. Economia política. Economia de mercado. Reformas econômicas. Transição econômica. China. Rússia. Década de 1980.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Diferença entre a China e a Russia quando da abertura econômica na década de 1980.md",
+          "file_name": "Diferença entre a China e a Russia quando da abertura econômica na década de 1980.md",
+          "processed_at": "2026-03-05T14:49:12.593898+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/patrimonialismo.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/CORSI - CAP3 - A criação das bases da industrialização (1930-1945).md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "revolucao_1930_brasil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "getulio_vargas_poder",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "industrializacao_brasil_periodo",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "estado_novo_brasil",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "crise_economica_brasil_1930s",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "legislacao_trabalhista_brasil_vargas",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "grande_depressao_impacto_brasil",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "burguesia_cafeicultura_brasil",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "lutas_classes_brasil_1930s",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "estado_desenvolvimentista_brasil",
+            "weight": 8,
+            "confidence": 0.94
+          }
+        ],
+        "cdu_primary": "338.1",
+        "cdu_secondary": [
+          "323.2",
+          "330.5",
+          "349.2",
+          "338.45"
+        ],
+        "cdu_description": "338.1 - Desenvolvimento econômico. Política econômica. Produção. Serviços. Preços. Concorrência. Organização econômica. Economia aplicada. 323.2 - Movimentos sociais e políticos. Agitação. Desordem. 330.5 - Economia política. 349.2 - Direito do trabalho. 338.45 - Industrialização.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/CORSI - CAP3 - A criação das bases da industrialização (1930-1945).md",
+          "file_name": "CORSI - CAP3 - A criação das bases da industrialização (1930-1945).md",
+          "processed_at": "2026-03-05T14:49:15.753040+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Como conseguiram dar valor ao diamante.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "historia_publicidade_diamantes",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "psicologia_comportamental_consumo",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "marketing_simbolico_compromisso",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "etica_valor_economico_diamantes",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "relacionamentos_amor_casamento_seculo_20",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "teoria_sinalizacao_consumo_conspicuo",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "influencia_publicidade_normas_sociais",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "biologia_evolucionista_selecao_parceiros",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "criatividade_redacao_publicitaria",
+            "weight": 7,
+            "confidence": 0.89
+          },
+          {
+            "name": "historia_empresa_de_beers",
+            "weight": 6,
+            "confidence": 0.87
+          }
+        ],
+        "cdu_primary": "659.1",
+        "cdu_secondary": [
+          "316.6",
+          "391.7",
+          "177.3",
+          "330.1"
+        ],
+        "cdu_description": "Publicidade e propaganda. Marketing. Relações públicas. Psicologia social. Sociologia da família. Ética. Economia. Biologia evolutiva.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Como conseguiram dar valor ao diamante.md",
+          "file_name": "Como conseguiram dar valor ao diamante.md",
+          "processed_at": "2026-03-05T14:49:21.141353+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/burguesia.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/tecnofeudalismo.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "tecnofeudalismo",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "fim_do_capitalismo",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "privatizacao_da_internet",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "gigantes_da_tecnologia",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "poder_politico_e_tecnologia",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "crise_economica_europeia",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "austeridade_excessiva",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "influencia_de_yanis_varoufakis",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "mutacao_do_capitalismo",
+            "weight": 5,
+            "confidence": 0.78
+          },
+          {
+            "name": "trabalho_nao_remunerado_online",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "305.2",
+          "338.4",
+          "004.7"
+        ],
+        "cdu_description": "Economia. Teoria econômica. Capitalismo e suas mutações. Impacto da tecnologia e da internet na economia e na política. Crises econômicas e políticas na Europa.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/tecnofeudalismo.md",
+          "file_name": "tecnofeudalismo.md",
+          "processed_at": "2026-03-05T14:49:24.106394+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Prioridade na china parece ser o povo e o pobre.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "prioridade_governo_chines_no_povo",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "estrategias_estatais_de_controle_de_precos",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "enriquecimento_do_povo_como_objetivo_de_governo",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "intervencao_estatal_na_economia_chinesa",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "gestao_de_precos_e_abastecimento_de_alimentos_na_china",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "politicas_de_apoio_a_pequenos_produtores_rurais",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "combate_a_fome_e_desigualdade_na_china",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "influencia_de_latifundiarios_e_agiotas_na_economia",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "evolucao_da_administracao_publica_chinesa",
+            "weight": 5,
+            "confidence": 0.78
+          },
+          {
+            "name": "relacao_entre_poder_politico_e_mercado_na_china",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "321.1",
+          "338.5",
+          "305.8"
+        ],
+        "cdu_description": "Economia e sociedade na China, com foco em políticas de bem-estar social, intervenção estatal e gestão de preços.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Prioridade na china parece ser o povo e o pobre.md",
+          "file_name": "Prioridade na china parece ser o povo e o pobre.md",
+          "processed_at": "2026-03-05T14:49:27.339229+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Nós perdemos. Nós somos derrotados.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb95a890 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/UVA pólo RO.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb958490 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria dos rendimentos decrescentes.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90aad0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Analise de Investimento.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "analise_de_investimentos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "matematica_financeira",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "tomada_de_decisao_empresarial",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "estrategia_empresarial",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "engenharia_economica",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "retorno_de_investimento",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "lucro_empresarial",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "calculos_financeiros_hp12c",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "analise_de_projetos_industriais",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "impacto_da_inflacao_em_projetos",
+            "weight": 7,
+            "confidence": 0.87
+          }
+        ],
+        "cdu_primary": "336.7",
+        "cdu_secondary": [
+          "330.13",
+          "658.15"
+        ],
+        "cdu_description": "Finanças. Economia monetária e bancária. Finanças empresariais. Análise de investimentos. Matemática financeira. Engenharia econômica. Tomada de decisão em projetos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Analise de Investimento.md",
+          "file_name": "Analise de Investimento.md",
+          "processed_at": "2026-03-05T14:55:16.143876+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria do valor do trabalho.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "trabalho_como_fonte_de_riqueza",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "criacao_de_capital_pelo_trabalho",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "medicao_da_riqueza",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "quantidade_de_trabalho_necessario",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "economia_politica",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "escola_fisiocrata",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "escola_classica",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "relacao_trabalho_riqueza",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "conceito_de_capital",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "valor_trabalho",
+            "weight": 7,
+            "confidence": 0.88
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "330.11",
+          "330.12"
+        ],
+        "cdu_description": "Teoria econômica geral. Economia política. Riqueza. Produção. Capital.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria do valor do trabalho.md",
+          "file_name": "Teoria do valor do trabalho.md",
+          "processed_at": "2026-03-05T14:55:18.268470+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria das Vantagens comparativas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "vantagem_comparativa",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "teoria_ricardiana",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "criticas_estruturalistas",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "raul_prebisch",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "escola_cepalina",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "dinamica_precos_longo_prazo",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "especializacao_produtiva",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "custo_transporte",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "ganhos_escala",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "comercio_internacional",
+            "weight": 9,
+            "confidence": 0.93
+          }
+        ],
+        "cdu_primary": "339.9",
+        "cdu_secondary": [
+          "330.115",
+          "338.45"
+        ],
+        "cdu_description": "Economia internacional. Política econômica internacional. Comércio internacional. Teoria econômica. Economia do desenvolvimento.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria das Vantagens comparativas.md",
+          "file_name": "Teoria das Vantagens comparativas.md",
+          "processed_at": "2026-03-05T14:55:20.490003+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Para o chinês a tarefa do governante não é apelar para a moralidade do povo mas usar os interesses predominantes e regular os lucros do povo.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90b430 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia brasileira.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "economia_brasileira_primeira_republica_governo_lula",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "fundamentos_economia",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "politica_economica_brasil_dois_seculos",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "economia_brasileira_geral",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "formacao_economica_brasil",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "economia_e_mercado",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "era_vargas_desenvolvimentismo",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "historia_economia_brasil",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "desenvolvimentismo_economia_sociedade",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "livros_didaticos_economia",
+            "weight": 6,
+            "confidence": 0.7
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "338.1",
+          "330.8"
+        ],
+        "cdu_description": "Economia. Economia brasileira. História econômica.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia brasileira.md",
+          "file_name": "Economia brasileira.md",
+          "processed_at": "2026-03-05T14:55:32.405179+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia do setor publico.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb958df0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FORMAÇÃO ECONÔMICA BRASILEIRA/FORMAÇÃO ECONÔMICA BRASILEIRA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "formacao_economica_brasil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "historia_economia_brasil",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "transformacoes_economicas_brasil",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "era_colonial_economia",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "industrializacao_brasil",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "economia_seculo_xix",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "economia_pos_1945",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "fatores_transformacao_economica",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "impacto_transformacao_economica",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "consequencias_economia_atual",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "338.1",
+          "330.1"
+        ],
+        "cdu_description": "Economia. Economia aplicada. Economia nacional. Economia brasileira.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FORMAÇÃO ECONÔMICA BRASILEIRA/FORMAÇÃO ECONÔMICA BRASILEIRA.md",
+          "file_name": "FORMAÇÃO ECONÔMICA BRASILEIRA.md",
+          "processed_at": "2026-03-05T14:55:44.318057+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FORMAÇÃO ECONÔMICA BRASILEIRA/texto livro formacao economica.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb958400 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FORMAÇÃO ECONÔMICA BRASILEIRA/Aula 1 formação econômica.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "colonizacao_portuguesa_brasil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "formacao_economica_brasil_colonial",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "escravismo_na_formacao_do_brasil",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "capitalismo_comercial_iberico",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "expansao_maritima_portuguesa",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "guerras_coloniais_europeias",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "relacoes_internacionais_brasil_colonial",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "capitanias_hereditarias_brasil",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "poder_regio_e_colonos",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "formacao_do_estado_interventor_brasil",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "cdu_primary": "981.02",
+        "cdu_secondary": [
+          "330.5",
+          "325.33",
+          "305.8"
+        ],
+        "cdu_description": "História do Brasil Colonial, com ênfase na colonização portuguesa, formação econômica, escravismo, expansão marítima, relações internacionais, capitanias hereditárias e a relação entre poder régio e colonos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FORMAÇÃO ECONÔMICA BRASILEIRA/Aula 1 formação econômica.md",
+          "file_name": "Aula 1 formação econômica.md",
+          "processed_at": "2026-03-05T14:55:57.760700+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FILOSOFIA/FILOSOFIA - Economia UVA.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb959030 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Contabilidade Social/CONTABILIDADE SOCIAL - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_introdutoria",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "contabilidade_intermediaria",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "contabilidade_social",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "macroeconomia",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "teoria_economica",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "contas_nacionais",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "sistema_de_contas_nacionais_brasileiro",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "calculo_do_pib",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "historia_da_contabilidade_social",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "estatistica_economica",
+            "weight": 6,
+            "confidence": 0.9
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "336.74",
+          "657.1",
+          "657.4"
+        ],
+        "cdu_description": "Economia. Economia e estatística. Contabilidade social. Contas nacionais. Contabilidade nacional. Contabilidade geral. Contabilidade empresarial.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Contabilidade Social/CONTABILIDADE SOCIAL - UVA.md",
+          "file_name": "CONTABILIDADE SOCIAL - UVA.md",
+          "processed_at": "2026-03-05T14:56:11.196809+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/História do pensamento econômico/HISTÓRIA DO PENSAMENTO ECONÔMICO - UVA.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb909db0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Orcamento e Custos/Orçamento e Custos - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_geral",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "contabilidade_de_custos",
+            "weight": 10,
+            "confidence": 0.95
+          },
+          {
+            "name": "orcamento_empresarial",
+            "weight": 10,
+            "confidence": 0.95
+          },
+          {
+            "name": "planejamento_financeiro",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "controle_gerencial",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "precificacao",
+            "weight": 7,
+            "confidence": 0.75
+          },
+          {
+            "name": "gestao_de_lucros",
+            "weight": 7,
+            "confidence": 0.75
+          },
+          {
+            "name": "desenvolvimento_sustentavel",
+            "weight": 6,
+            "confidence": 0.65
+          },
+          {
+            "name": "administracao_empresarial",
+            "weight": 7,
+            "confidence": 0.7
+          },
+          {
+            "name": "fruto_do_espirito",
+            "weight": 5,
+            "confidence": 0.5
+          }
+        ],
+        "cdu_primary": "657.42",
+        "cdu_secondary": [
+          "657.1",
+          "658.15",
+          "338.47"
+        ],
+        "cdu_description": "Contabilidade de custos e orçamentação empresarial, com menção a desenvolvimento sustentável e conceitos bíblicos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Orcamento e Custos/Orçamento e Custos - UVA.md",
+          "file_name": "Orçamento e Custos - UVA.md",
+          "processed_at": "2026-03-05T14:56:24.208294+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/DESENVOLVIMENTO ECONÔMICO/DESENVOLVIMENTO ECONÔMICO.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb9089d0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Microeconomia - Teoria do Produtor/Microeconomia - Teoria do Produtor.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "teoria_da_empresa",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "natureza_da_firma_e_lucro",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "funcao_de_producao",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "produto_medio_e_marginal",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "isoquantas_e_combinacao_de_fatores",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "retornos_de_escala_na_producao",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "elasticidade_de_substituicao_entre_fatores",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "custos_economicos_e_de_oportunidade",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "custos_variaveis_fixos_e_totais",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "custo_marginal_na_tomada_de_decisao",
+            "weight": 8,
+            "confidence": 0.95
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "338.5",
+          "338.4"
+        ],
+        "cdu_description": "Economia. Teoria econômica. Teoria da produção e custos. Custos de produção. Preços.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Microeconomia - Teoria do Produtor/Microeconomia - Teoria do Produtor.md",
+          "file_name": "Microeconomia - Teoria do Produtor.md",
+          "processed_at": "2026-03-05T14:56:36.736256+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/MICROECONOMIA - TEORIA DO CONSUMIDOR/MICROECONOMIA - TEORIA DO CONSUMIDOR.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "custo_irrecuperavel",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "custo_reembolsavel",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "custo_de_oportunidade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "escolhas_racionais",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "escolhas_irracionais",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "tomada_de_decisao_economica",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "aspectos_relevantes_decisao",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "analise_de_custos",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "consequencias_decisao_incorreta",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "microeconomia_aplicada",
+            "weight": 6,
+            "confidence": 0.7
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "330.111",
+          "330.112"
+        ],
+        "cdu_description": "Teoria econômica geral. Microeconomia. Macroeconomia. Teoria da decisão. Teoria dos custos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/MICROECONOMIA - TEORIA DO CONSUMIDOR/MICROECONOMIA - TEORIA DO CONSUMIDOR.md",
+          "file_name": "MICROECONOMIA - TEORIA DO CONSUMIDOR.md",
+          "processed_at": "2026-03-05T14:56:39.250352+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ÉTICA E RESPONSABILIDADE SOCIAL/ÉTICA E RESPONSABILIDADE SOCIOAMBIENTAL.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb95a5c0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Convenção nº 182.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb9586d0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Recomendação nº 190 da OIT.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90ab60 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Debate com chatpdf sobre o conteudo das aulas de educacao em direitos humanos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "dignidade_humana_base_direitos_humanos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "educacao_promocao_direitos_humanos",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "escola_convivencia_diversidade",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "papel_educador_mediador_facilitador",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "gestao_democratica_escolar",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "atividades_praticas_ensino_direitos_humanos",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "reflexao_critica_desigualdades_cidadania",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "documentos_legislacoes_direito_educacao",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "onu_programas_educacao_direitos_humanos",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "educacao_nao_formal_emancipacao_autonomia",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "cdu_primary": "37.01",
+        "cdu_secondary": [
+          "342.7",
+          "305.8"
+        ],
+        "cdu_description": "Educação. Teoria e política da educação. Educação em direitos humanos. Direitos humanos. Diversidade. Cidadania.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Debate com chatpdf sobre o conteudo das aulas de educacao em direitos humanos.md",
+          "file_name": "Debate com chatpdf sobre o conteudo das aulas de educacao em direitos humanos.md",
+          "processed_at": "2026-03-05T14:57:13.662014+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Educação em Direitos Humanos.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb9095d0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Aulas-Educacao-Direitos-Humanos-PDF.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb959750 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/GESTÃO FINANCEIRA/GESTÃO FINANCEIRA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "analise_de_investimentos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "administracao_financeira",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "fluxo_de_caixa_projetado",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "valor_presente_liquido_vpl",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "tempo_de_retorno_payback",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "custo_de_capital",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "custo_de_oportunidade",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "viabilidade_financeira",
+            "weight": 9,
+            "confidence": 0.91
+          },
+          {
+            "name": "gestao_de_investimentos",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "tomada_de_decisao_empresarial",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "cdu_primary": "658.15",
+        "cdu_secondary": [
+          "336.77",
+          "004.77"
+        ],
+        "cdu_description": "Finanças empresariais; Gestão financeira; Análise de investimentos; Fluxo de caixa; Valor presente líquido; Payback; Custo de capital; Custo de oportunidade; Viabilidade financeira; Serviços de tecnologia da informação.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/GESTÃO FINANCEIRA/GESTÃO FINANCEIRA.md",
+          "file_name": "GESTÃO FINANCEIRA.md",
+          "processed_at": "2026-03-05T14:57:37.332325+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/GESTÃO FINANCEIRA/aulas-gestao-financeira.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb95a800 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ECONOMIA MONETÁRIA/ECONOMIA MONETÁRIA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "plano_collor_bloqueio_contas",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "liquidez_monetaria_reduzida",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "funcao_moeda_meio_trocas",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "funcao_moeda_reserva_valor",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "confianca_na_moeda_prejudicada",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "politicas_monetarias_impacto",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "economia_brasileira_pandemia_covid19",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "taxa_juros_queda_2020",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "oferta_demanda_moeda_2020",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "politica_monetaria_flexivel_regras",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "cdu_primary": "336.7",
+        "cdu_secondary": [
+          "330.5",
+          "336.1"
+        ],
+        "cdu_description": "Economia monetária e financeira, política monetária, mercado financeiro, introdução à economia, impacto de políticas econômicas na liquidez e funções da moeda, com análise de cenário pandêmico e histórico (Plano Collor).",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ECONOMIA MONETÁRIA/ECONOMIA MONETÁRIA.md",
+          "file_name": "ECONOMIA MONETÁRIA.md",
+          "processed_at": "2026-03-05T14:57:50.844252+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/MACROECONOMIA ABERTA/MACROECONOMIA ABERTA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "macroeconomia_avancada",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "teoria_do_crescimento_economico",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "politica_economica_macroeconomica",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "modelos_macroeconomicos",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "analise_macroeconomica",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "conceitos_macroeconomicos_basicos",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "estudos_de_caso_macroeconomia",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "livros_didaticos_macroeconomia",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "referencias_bibliograficas_macroeconomia",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "ebooks_de_economia",
+            "weight": 5,
+            "confidence": 0.65
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "330.14",
+          "330.34"
+        ],
+        "cdu_description": "Economia. Relações econômicas. Economia política. Finanças. Seguros. Estatística econômica. Economia do trabalho. Economia social. Economia de empresas. Economia de mercado. Economia de planejamento. Economia de desenvolvimento. Economia de bem-estar. Economia de consumo. Economia de produção. Economia de distribuição. Economia de preços. Economia de moeda. Economia de crédito. Economia de investimento. Economia de comércio. Economia de transporte. Economia de energia. Economia de recursos naturais. Economia de habitação. Economia de saúde. Economia de educação. Economia de cultura. Economia de lazer. Economia de turismo. Economia de desporto. Economia de política. Economia de segurança. Economia de defesa. Economia de justiça. Economia de administração. Economia de organização. Economia de gestão. Economia de marketing. Economia de vendas. Economia de compras. Economia de logística. Economia de produção. Economia de qualidade. Economia de inovação. Economia de tecnologia. Economia de informação. Economia de comunicação. Economia de mídia. Economia de internet. Economia de redes. Economia de sistemas. Economia de dados. Economia de inteligência artificial. Economia de robótica. Economia de automação. Economia de energia. Economia de transporte. Economia de habitação. Economia de saúde. Economia de educação. Economia de cultura. Economia de lazer. Economia de turismo. Economia de desporto. Economia de política. Economia de segurança. Economia de defesa. Economia de justiça. Economia de administração. Economia de organização. Economia de gestão. Economia de marketing. Economia de vendas. Economia de compras. Economia de logística. Economia de produção. Economia de qualidade. Economia de inovação. Economia de tecnologia. Economia de informação. Economia de comunicação. Economia de mídia. Economia de internet. Economia de redes. Economia de sistemas. Economia de dados. Economia de inteligência artificial. Economia de robótica. Economia de automação.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/MACROECONOMIA ABERTA/MACROECONOMIA ABERTA.md",
+          "file_name": "MACROECONOMIA ABERTA.md",
+          "processed_at": "2026-03-05T14:57:53.688153+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Matemática Financeira/Matemática Financeira.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "matematica_financeira_conceitos_fundamentais",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "regime_capitalizacao_simples",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "historia_bancos_e_banqueiros",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "sistema_financeiro_mundial",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "sistema_financeiro_brasileiro",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "juros_capital_taxa_prazo_montante",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "calculadoras_financeiras_hp12c",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "planilhas_eletronicas_excel_matematica_financeira",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "periodos_nao_inteiros_capitalizacao",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "descontos_matematica_financeira",
+            "weight": 6,
+            "confidence": 0.88
+          }
+        ],
+        "cdu_primary": "336.7",
+        "cdu_secondary": [
+          "004.45",
+          "330.1",
+          "336.1",
+          "336.74"
+        ],
+        "cdu_description": "336.7 Finanças. Crédito. Moeda. Bancos. Seguros. Finanças públicas. Finanças privadas. 336.74 Juros. Descontos. 004.45 Software de aplicação. 330.1 Economia política. 336.1 Finanças públicas.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Matemática Financeira/Matemática Financeira.md",
+          "file_name": "Matemática Financeira.md",
+          "processed_at": "2026-03-05T14:57:56.527863+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Macroeconomia/Macroeconomia - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "macroeconomia_conceitos_basicos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "produto_interno_bruto_pib",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "atividade_economica",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "teoria_crescimento_economico",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "oferta_agregada",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "demanda_agregada",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "inflacao_taxa",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "politica_macroeconomica",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "contabilidade_nacional",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "paises_desenvolvidos_vs_em_desenvolvimento",
+            "weight": 5,
+            "confidence": 0.8
+          }
+        ],
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "330.1",
+          "330.35",
+          "330.51",
+          "330.54"
+        ],
+        "cdu_description": "Economia. Economia e desenvolvimento. Economia nacional. Contabilidade nacional. Produto nacional. Renda nacional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Macroeconomia/Macroeconomia - UVA.md",
+          "file_name": "Macroeconomia - UVA.md",
+          "processed_at": "2026-03-05T14:57:59.108417+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia do Meio Ambiente e Valoração Ambiental/Economia do Meio Ambiente e Valoração Ambiental - UVA.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90ae60 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria dos Jogos/Teoria dos Jogos - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "teoria_dos_jogos",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "jogos_de_empresa",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "estrategia_empresarial",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "tomada_de_decisao",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "politica_comercial",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "oligopolio",
+            "weight": 6,
+            "confidence": 0.7
+          },
+          {
+            "name": "contratos_estrategicos",
+            "weight": 5,
+            "confidence": 0.65
+          },
+          {
+            "name": "leiloes",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "economia",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "gestao",
+            "weight": 7,
+            "confidence": 0.85
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "338.5",
+          "339.1"
+        ],
+        "cdu_description": "Economia. Teoria dos jogos aplicada à economia, gestão, estratégia empresarial, oligopólio, contratos e leilões.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria dos Jogos/Teoria dos Jogos - UVA.md",
+          "file_name": "Teoria dos Jogos - UVA.md",
+          "processed_at": "2026-03-05T14:58:13.321569+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Cultura e contemporaneidade/Cultura e contemporaneidade.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Econometria/Econometria UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "econometria_basica",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "introducao_a_econometria",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "metodos_econometricos",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "econometria_de_series_temporais",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "estatistica_aplicada_a_econometria",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "livros_didaticos_econometria",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "recursos_bibliograficos_econometria",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "ebooks_econometria",
+            "weight": 5,
+            "confidence": 0.65
+          },
+          {
+            "name": "referencia_bibliografica",
+            "weight": 5,
+            "confidence": 0.6
+          },
+          {
+            "name": "avaliacao_econometria",
+            "weight": 5,
+            "confidence": 0.55
+          }
+        ],
+        "cdu_primary": "330.4",
+        "cdu_secondary": [],
+        "cdu_description": "Economia. Econometria",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Econometria/Econometria UVA.md",
+          "file_name": "Econometria UVA.md",
+          "processed_at": "2026-03-05T14:58:16.344668+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia Internacional e Comércio Exterior/Economia Internacional e Comércio Exterior.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "economia_internacional_teoria_pratica",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "exportacao_comercio_exterior",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "fundamentos_economia",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "mercantilismo_teoria_classica_comercio",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "teoria_dotacao_fatores_comercio",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "ganhos_comercio_internacional",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "protecionismo_politicas_comerciais",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "substituicao_importacao_modelos_economicos",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "globalizacao_impacto_cenario_internacional",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "vantagens_comparativas_comercio",
+            "weight": 8,
+            "confidence": 0.95
+          }
+        ],
+        "cdu_primary": "339.9",
+        "cdu_secondary": [
+          "330.1",
+          "339.5",
+          "338.48"
+        ],
+        "cdu_description": "Economia internacional. Comércio internacional. Globalização. Protecionismo. Teorias do comércio.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia Internacional e Comércio Exterior/Economia Internacional e Comércio Exterior.md",
+          "file_name": "Economia Internacional e Comércio Exterior.md",
+          "processed_at": "2026-03-05T14:58:18.914329+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Oficina de leitura/Oficina de Leitura e Interpretação.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90b460 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia Política/Segunda revolução industrial.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb95abf0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia Política/Economia Política.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "economia_politica_definicao",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "escola_fisiocrata",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "adam_smith",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "escola_classica",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "laissez_faire",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "teoria_valor_trabalho",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "recursos_escasos",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "necessidades_humanas",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "producao_bens_servicos",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "distribuicao_bens_servicos",
+            "weight": 5,
+            "confidence": 0.8
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "330.11",
+          "330.12",
+          "330.14"
+        ],
+        "cdu_description": "Economia. Teoria econômica. História do pensamento econômico. Escolas econômicas.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia Política/Economia Política.md",
+          "file_name": "Economia Política.md",
+          "processed_at": "2026-03-05T14:58:43.874756+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Matemática Aplicada/MATEMÁTICA APLICADA.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb959060 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ECONOMIA BRASILEIRA CONTEMPORANEA/O crescimento econômico estagnou. Vamos resolver isso.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb971270 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ECONOMIA BRASILEIRA CONTEMPORANEA/ECONOMIA BRASILEIRA CONTEMPORANEA.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f6bbb90a1a0 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/História Econômica Geral/História Econômica Geral - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "historia_social_e_economica_moderna",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "macroeconomia_do_emprego_e_da_renda",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "historia_do_pensamento_economico",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "genesis_do_capitalismo_moderno",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "revolucao_industrial",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "sociedade_e_economia_no_novo_milenio",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "relacoes_internacionais_na_idade_moderna",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "historia_economica_geral",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "grande_depressao",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "new_deal",
+            "weight": 7,
+            "confidence": 0.92
+          }
+        ],
+        "cdu_primary": "330.1",
+        "cdu_secondary": [
+          "330.5",
+          "338.1",
+          "330.8",
+          "331.1",
+          "338.5"
+        ],
+        "cdu_description": "Economia. História econômica. Pensamento econômico. Revolução Industrial. Capitalismo. Grande Depressão. New Deal.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/História Econômica Geral/História Econômica Geral - UVA.md",
+          "file_name": "História Econômica Geral - UVA.md",
+          "processed_at": "2026-03-05T15:06:41.481669+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total": 81,
+    "success": 39,
+    "error": 42,
+    "dry_run": 0
+  }
+}

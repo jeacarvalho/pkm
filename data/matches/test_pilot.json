@@ -1,0 +1,62 @@
+{
+  "chapter": "capitulo_01_topics",
+  "chapter_topics": [
+    {
+      "name": "colonialismo",
+      "weight": 10,
+      "cdu": "32"
+    },
+    {
+      "name": "imperialismo",
+      "weight": 9,
+      "cdu": "32"
+    },
+    {
+      "name": "resistência",
+      "weight": 8,
+      "cdu": "316.7"
+    },
+    {
+      "name": "identidade",
+      "weight": 7,
+      "cdu": "159.9"
+    },
+    {
+      "name": "cultura",
+      "weight": 6,
+      "cdu": "008"
+    },
+    {
+      "name": "poder",
+      "weight": 9,
+      "cdu": "32"
+    },
+    {
+      "name": "hegemonia",
+      "weight": 8,
+      "cdu": "32"
+    },
+    {
+      "name": "dominação",
+      "weight": 9,
+      "cdu": "32"
+    },
+    {
+      "name": "libertação",
+      "weight": 7,
+      "cdu": "316.7"
+    },
+    {
+      "name": "teologia",
+      "weight": 6,
+      "cdu": "2"
+    }
+  ],
+  "matches": [],
+  "total_notes_scanned": 3588,
+  "notes_with_topics": 203,
+  "total_matches_found": 0,
+  "threshold": 20.0,
+  "top_k": 5,
+  "processed_at": "2026-03-05T14:35:48.051123"
+}

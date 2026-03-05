@@ -60,7 +60,23 @@ class CDUManager:
         # Remove any whitespace
         cdu = cdu.strip()
 
-        # Check format: should be like "321.1", "305.8", "330.341.5"
+        # Check for parentheses format (e.g., "94(37)")
+        if "(" in cdu and ")" in cdu:
+            # Extract main class and auxiliary
+            main_part = cdu.split("(")[0].strip()
+            aux_part = cdu.split("(")[1].split(")")[0].strip()
+
+            # Validate main part (should be digits)
+            if not main_part.isdigit() or len(main_part) > 3 or len(main_part) < 1:
+                return False
+
+            # Validate auxiliary part (should be digits)
+            if not aux_part.isdigit() or len(aux_part) > 4 or len(aux_part) < 1:
+                return False
+
+            return True
+
+        # Standard format: should be like "321.1", "305.8", "330.341.5"
         parts = cdu.split(".")
         if len(parts) < 2:  # Must have at least 2 parts (main class + subclass)
             return False
@@ -83,6 +99,7 @@ class CDUManager:
         Fixes common issues:
         - "32" becomes "32.0" (adds missing decimal for single numbers)
         - Preserves existing multi-level classifications (e.g., 330.341.5 stays as is)
+        - Converts parentheses format "94(37)" to standard format "94.37"
 
         Args:
             cdu: Raw CDU string from API
@@ -95,8 +112,13 @@ class CDUManager:
 
         cdu = cdu.strip()
 
-        # Check if already valid (supports multi-level)
+        # Check if already valid (supports multi-level and parentheses)
         if cls.validate_cdu_format(cdu):
+            # Convert parentheses format to standard format
+            if "(" in cdu and ")" in cdu:
+                main_part = cdu.split("(")[0].strip()
+                aux_part = cdu.split("(")[1].split(")")[0].strip()
+                return f"{main_part}.{aux_part}"
             return cdu
 
         parts = cdu.split(".")

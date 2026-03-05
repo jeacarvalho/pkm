@@ -1,0 +1,4508 @@
+{
+  "timestamp": "2026-03-04T23:41:13.637305+00:00",
+  "target_dir": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS",
+  "dry_run": false,
+  "results": [
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/O mundo nos acelera e nos priva de sermos profundos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "superficialidade_do_conhecimento",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "pressao_social_por_rapidez",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "falta_de_profundidade_intelectual",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "desmotivacao_para_aprendizado",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "mudanca_constante_de_prioridades",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "impacto_no_desenvolvimento_de_habilidades",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "pensamento_critico_limitado",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "busca_por_conhecimento_facil",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "sabedoria_contextual",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "resistencia_a_mudancas_culturais",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota discute como a sociedade moderna, com suas constantes mudanças de prioridades e a busca por conhecimento rápido, impede o aprofundamento intelectual e o desenvolvimento de habilidades essenciais. É enfatizada a necessidade de sabedoria para navegar nesse contexto e lutar por uma cultura de aprendizado mais perene.",
+        "cdu_primary": "303.4",
+        "cdu_secondary": [
+          "37.01",
+          "159.94"
+        ],
+        "cdu_description": "Métodos de pesquisa social e investigação; Teoria e filosofia da educação; Psicologia da motivação",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/O mundo nos acelera e nos priva de sermos profundos.md",
+          "file_name": "O mundo nos acelera e nos priva de sermos profundos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:03.788137+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Aprender a aprender.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "conhecimento",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "aprendizagem_autodirigida",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "metacognicao",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "processos_cognitivos",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "estrategias_de_aprendizagem",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "autoavaliacao_cognitiva",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "monitoramento_cognitivo",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "regulação_cognitiva",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "desenvolvimento_intelectual",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "teorias_de_aprendizagem",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota introduz o conceito de 'aprender a aprender', focando nos ingredientes da metacognição. Explora como o conhecimento e os processos cognitivos se relacionam com a aprendizagem autodirigida e estratégias eficazes.",
+        "cdu_primary": "159.953",
+        "cdu_secondary": [],
+        "cdu_description": "Psicologia da aprendizagem. Processos cognitivos e metacognitivos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Aprender a aprender.md",
+          "file_name": "Aprender a aprender.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:06.037637+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/chatgpt.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "arquitetura_gpt",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "treinamento_gpt",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "aplicacoes_chatgpt",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "limitacoes_chatgpt",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "etica_ia_generativa",
+            "weight": 6,
+            "confidence": 0.7
+          },
+          {
+            "name": "modelos_linguagem_grande",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "processamento_linguagem_natural",
+            "weight": 8,
+            "confidence": 0.88
+          },
+          {
+            "name": "interacao_humano_computador",
+            "weight": 7,
+            "confidence": 0.75
+          },
+          {
+            "name": "desenvolvimento_ia",
+            "weight": 5,
+            "confidence": 0.6
+          },
+          {
+            "name": "futuro_chatbots",
+            "weight": 8,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "Nota de índice sobre ChatGPT. Serve como referência/link para conteúdos relacionados à arquitetura, treinamento, aplicações, limitações, ética, modelos de linguagem grande, processamento de linguagem natural, interação humano-computador, desenvolvimento de IA e o futuro dos chatbots.",
+        "cdu_primary": "004.8",
+        "cdu_secondary": [
+          "004.89",
+          "007"
+        ],
+        "cdu_description": "004.8 - Inteligência artificial; 004.89 - Processamento de linguagem natural; 007 - Cibernética. Teoria da informação. Comunicações. Controle. Computadores.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/chatgpt.md",
+          "file_name": "chatgpt.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-04T23:37:08.187683+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "chatgpt"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/arte de gerar valor.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/método.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "metodologia_cientifica",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "definicao_metodo",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "conhecimento_cientifico",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "processos_ordenados",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "tecnicas_cientificas",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "erros_cientificos",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "decisoes_cientistas",
+            "weight": 5,
+            "confidence": 0.78
+          },
+          {
+            "name": "conhecimento_objetivado",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "abordagem_sistematica",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "abordagem_racional",
+            "weight": 7,
+            "confidence": 0.86
+          }
+        ],
+        "content_summary": "A nota define metodologia científica como um conjunto de atividades sistemáticas e racionais que visam alcançar conhecimentos válidos e verdadeiros, traçando um caminho seguro e econômico para o cientista. O método é apresentado como um conjunto de processos ordenados que levam ao conhecimento objetivado.",
+        "cdu_primary": "001.4",
+        "cdu_secondary": [],
+        "cdu_description": "Metodologia da ciência. Teoria do conhecimento científico",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/método.md",
+          "file_name": "método.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:10.850301+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/anedota.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "anedota_definicao",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "caso_curioso",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "acontecimento_peculiar",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "acontecimento_engracado",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "divulgacao_limitada",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "contexto_evento_principal",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "narrativa_breve",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "caracteristica_anedota",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "origem_anedota",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "significado_anedota",
+            "weight": 9,
+            "confidence": 0.96
+          }
+        ],
+        "content_summary": "Uma anedota é definida como um caso ou acontecimento curioso, peculiar ou engraçado, que geralmente ocorre em segundo plano de um evento mais significativo e tem pouca divulgação.",
+        "cdu_primary": null,
+        "cdu_secondary": [],
+        "cdu_description": null,
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/anedota.md",
+          "file_name": "anedota.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:12.796657+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Valores e princípios impulsionam o comportamento - habilidades e conhecimentos permitem o comportamento..md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "valores_comportamentais",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "princípios_comportamentais",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "direcionamento_comportamental",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "habilidades_comportamentais",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "conhecimento_comportamental",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "capacitação_comportamental",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "influência_de_valores",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "influência_de_princípios",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "papel_das_habilidades",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "papel_do_conhecimento",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "Valores e princípios são os motores do comportamento, enquanto habilidades e conhecimento são os facilitadores que o tornam possível.",
+        "cdu_primary": "159.947",
+        "cdu_secondary": [],
+        "cdu_description": "Psicologia do comportamento e da motivação",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Valores e princípios impulsionam o comportamento - habilidades e conhecimentos permitem o comportamento..md",
+          "file_name": "Valores e princípios impulsionam o comportamento - habilidades e conhecimentos permitem o comportamento..md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:15.458899+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Estamos em uma matrix comandada pelas forças produtivas da sociedade.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "resistência_a_mudança",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "natureza_humana_superior_inferior",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "gratificação_imediata_vs_crescimento_longo_prazo",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "forças_produtivas_sociais",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "matriz_social_controladora",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "priorização_do_lucro",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "integridade_pessoal",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "busca_por_sustento_diário",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "luta_contra_inimigo_interno",
+            "weight": 5,
+            "confidence": 0.78
+          },
+          {
+            "name": "autodesenvolvimento_e_saúde",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A nota discute a resistência a atos que priorizam o crescimento a longo prazo em detrimento da gratificação imediata, sugerindo que essa resistência pode ser uma força social controladora focada no lucro. O autor questiona se essa luta é contra um inimigo interno ou uma força externa.",
+        "cdu_primary": "159.9",
+        "cdu_secondary": [
+          "305.8",
+          "170.4"
+        ],
+        "cdu_description": "Filosofia da vida. Ética. Resistência a mudanças e desenvolvimento pessoal em face de pressões sociais e econômicas.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Estamos em uma matrix comandada pelas forças produtivas da sociedade.md",
+          "file_name": "Estamos em uma matrix comandada pelas forças produtivas da sociedade.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:17.916273+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/prompt analise meditacao e sermao.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb6132a10 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Ler é ouvir.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/O valor dos livros - Gene Rosemberry.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "valor_da_leitura_de_livros",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "experiencias_multiplas_através_de_livros",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "livros_como_maquina_do_tempo",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "livros_e_empatia",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "identificação_com_personagens_literários",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "sabedoria_acumulada_em_livros",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "humor_e_autocrítica",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "aprendizado_contínuo_ao_longo_da_vida",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "perspectiva_do_leitor_na_interpretação",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "aceitação_da_imperfeição_humana",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota destaca o valor inestimável da leitura de livros como uma forma de experimentar múltiplas vidas, viajar no tempo e desenvolver empatia, além de ressaltar a importância do humor e do aprendizado contínuo para a felicidade e a educação.",
+        "cdu_primary": "82.0",
+        "cdu_secondary": [
+          "008",
+          "17",
+          "305.8"
+        ],
+        "cdu_description": "Teoria e crítica literária; Cultura e civilização; Ética; Relações raciais e étnicas",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/O valor dos livros - Gene Rosemberry.md",
+          "file_name": "O valor dos livros - Gene Rosemberry.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:31.331026+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Book analysis on chatGPT.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "resumo_de_conteudo_textual",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "identificacao_ideias_principais",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "proposta_acoes_praticas",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "exercicios_reflexivos",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "referencias_autores_concordantes",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "referencias_autores_discordantes",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "analise_pontos_fortes_fracos",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "solucoes_teoricas_pontos_baixos",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "solucoes_praticas_pontos_baixos",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "fortalecimento_pontos_fortes",
+            "weight": 7,
+            "confidence": 0.9
+          }
+        ],
+        "content_summary": "A nota detalha um processo de extração e análise de conteúdo textual, focando na identificação de ideias principais, proposição de ações práticas e reflexivas, análise crítica de pontos fortes e fracos, e sugestão de referências bibliográficas e soluções teóricas/práticas.",
+        "cdu_primary": "004.9",
+        "cdu_secondary": [
+          "007",
+          "37.01",
+          "800.9"
+        ],
+        "cdu_description": "Processamento de dados textuais e informacionais, com ênfase em inteligência artificial, métodos de ensino e aprendizagem, e linguística aplicada à tecnologia.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Book analysis on chatGPT.md",
+          "file_name": "Book analysis on chatGPT.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:33.891729+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Regras para o desenvolvimento de Feynman.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "compreensao_profunda",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "valorizacao_conceitos",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "cultivo_insights",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "busca_clareza_mental",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "valorizacao_razao",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "exploracao_ideias",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "cultivo_curiosidade",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "busca_sabedoria",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "promocao_criatividade",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "distincao_significado_palavras",
+            "weight": 7,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "A nota enfatiza a importância de buscar a compreensão profunda, o significado, os conceitos, os insights, a clareza, a razão, as ideias, a curiosidade, a sabedoria e a criatividade, em contraposição a focar apenas em palavras, fatos, procedimentos, informações, respostas, regras, métodos, habilidades ou técnicas.",
+        "cdu_primary": "159.9",
+        "cdu_secondary": [],
+        "cdu_description": "Psicologia. A psicologia do pensamento. Processos cognitivos superiores. Criatividade.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Regras para o desenvolvimento de Feynman.md",
+          "file_name": "Regras para o desenvolvimento de Feynman.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:36.256682+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Tese.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "estrutura_tese",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "metodologia_pesquisa_tese",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "revisao_literatura_tese",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "analise_dados_tese",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "redacao_cientifica_tese",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "formatação_tese_abnt",
+            "weight": 7,
+            "confidence": 0.75
+          },
+          {
+            "name": "orientacao_academica_tese",
+            "weight": 6,
+            "confidence": 0.7
+          },
+          {
+            "name": "defesa_tese",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "plagio_tese",
+            "weight": 5,
+            "confidence": 0.6
+          },
+          {
+            "name": "publicacao_tese",
+            "weight": 6,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "Nota de índice sobre Tese. Serve como referência/link para conteúdos relacionados à elaboração, estrutura, metodologia, revisão de literatura, análise de dados, redação científica, formatação, orientação, defesa e publicação de teses acadêmicas.",
+        "cdu_primary": "001.891",
+        "cdu_secondary": [
+          "378.4",
+          "808.0"
+        ],
+        "cdu_description": "001.891 - Metodologia da pesquisa científica; 378.4 - Doutorado, Tese de doutorado; 808.0 - Redação científica",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Tese.md",
+          "file_name": "Tese.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-04T23:37:38.601736+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "Tese"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/quando modelo algo, limito a realidade.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb5f88e20 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/história.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "historia_verdadeira",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "historiador_moralista",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "busca_por_verdade_historica",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "justica_no_tempo",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "compreensao_historica",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "receptividade_passiva",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "negacao_do_tempo",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "negacao_da_propria_historia",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "filosofia_da_historia",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "pensamento_de_jacques_le_goff",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota discute a natureza da história como busca por verdade e justiça no tempo, contrastando a compreensão ativa com a receptividade passiva que nega o tempo e a própria história. O historiador é visto como um moralista que realiza a verdade e a justiça.",
+        "cdu_primary": "901",
+        "cdu_secondary": [],
+        "cdu_description": "Teoria e filosofia da história",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/história.md",
+          "file_name": "história.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:37:50.787413+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Educar x transformar.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb6133e50 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Vai ser preciso dar liberdade para o aprendizado escolar.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "educacao_pos_gutemberg",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "aulas_online_tradicionais",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "reestruturacao_educacional",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "acesso_informacao_ubiqua",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "validacao_informacao",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "pensamento_cientifico_aprendizado",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "aprendizado_orientado_a_problemas",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "aprendizado_com_especialistas_globais",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "papel_mediador_do_professor",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "escola_do_futuro",
+            "weight": 9,
+            "confidence": 0.97
+          }
+        ],
+        "content_summary": "A nota discute a necessidade de repensar a educação para a era pós-Gutemberg, onde a informação é abundante, enfatizando a validação, o pensamento científico e o aprendizado orientado a problemas, com o professor atuando como mediador.",
+        "cdu_primary": "37.01",
+        "cdu_secondary": [
+          "004.451",
+          "007",
+          "371.3"
+        ],
+        "cdu_description": "Filosofia e teoria da educação; Educação e tecnologia; Cibernética; Métodos e meios de ensino em geral",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Vai ser preciso dar liberdade para o aprendizado escolar.md",
+          "file_name": "Vai ser preciso dar liberdade para o aprendizado escolar.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:03.690121+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/viés de confirmação.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "viés_de_confirmação",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "processamento_de_informação",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "crenças_pessoais",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "tomada_de_decisão",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "psicologia_cognitiva",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "interpretação_de_dados",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "evidências_seletivas",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "pensamento_crítico",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "influência_social",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "aprendizado_humano",
+            "weight": 7,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "O viés de confirmação é a tendência de indivíduos buscarem e utilizarem informações que validam suas próprias ideias ou crenças, desconsiderando dados que as contradizem.",
+        "cdu_primary": "159.942",
+        "cdu_secondary": [],
+        "cdu_description": "Psicologia do pensamento. Processos cognitivos. Viés de confirmação.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/viés de confirmação.md",
+          "file_name": "viés de confirmação.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:06.147684+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/como Thomas Carlyle e Immanuel Kant enfatizavam a constância metódica.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "filosofia_etica_kantiana",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "imperativo_categorico_kant",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "dever_moral_kant",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "filosofia_social_carlyle",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "evangelho_do_trabalho_carlyle",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "heroísmo_carlyle",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "conceito_moderno_grit",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "perseverança_longo_prazo",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "paixao_dedicacao_trabalho",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "esforco_vs_talento",
+            "weight": 6,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "A nota explora a constância metódica em Immanuel Kant e Thomas Carlyle, conectando-a ao conceito moderno de Grit. Kant foca no dever e na lei moral, enquanto Carlyle enfatiza o trabalho e o heroísmo, ambos precursores da paixão e perseverança necessárias para o Grit.",
+        "cdu_primary": "100",
+        "cdu_secondary": [
+          "19",
+          "30",
+          "316.7"
+        ],
+        "cdu_description": "Filosofia. Ética. Psicologia. Sociologia. Filosofia social.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/como Thomas Carlyle e Immanuel Kant enfatizavam a constância metódica.md",
+          "file_name": "como Thomas Carlyle e Immanuel Kant enfatizavam a constância metódica.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:08.912805+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/IA prompt pratica meus dados.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "trauma_infantil_bullying",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "trauma_infantil_abandono",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "busca_perfeicao",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "autoestima_baixa",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "desenvolvimento_pessoal_aplicado",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "psicologia_trauma",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "identidade_masculina",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "classe_media_pais_desenvolvimento",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "resiliencia_emocional",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "superacao_traumas_passado",
+            "weight": 5,
+            "confidence": 0.78
+          }
+        ],
+        "content_summary": "A nota descreve a criação de um personagem fictício, um homem de 52 anos, que vivenciou traumas infantis de bullying e abandono, resultando em uma busca por perfeição e baixa autoestima. O objetivo é aplicar os ensinamentos de um livro através da história desse personagem, capítulo a capítulo, detalhando suas ações práticas.",
+        "cdu_primary": "159.9",
+        "cdu_secondary": [
+          "305.8",
+          "316.6"
+        ],
+        "cdu_description": "Psicologia do desenvolvimento pessoal e social, com ênfase em traumas, autoestima e superação, aplicado a um contexto social específico.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/IA prompt pratica meus dados.md",
+          "file_name": "IA prompt pratica meus dados.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:11.572294+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Akita - Aprendizado na beira do Caos.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb5fa6410 state=finished raised ServerError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/A arte de produzir fome - Rubem Alves.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb5f8bd00 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/inimigo não é o desconhecido, mas o conhecido sutilmente alterado.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "percepcao_distorcida_realidade",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "manipulacao_psicologica_sutil",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "engenharia_social_disfarçada",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "desinformacao_insidiosa",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "viés_cognitivo_na_interpretacao",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "propaganda_velada",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "influencia_subliminar_na_opiniao",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "reconfiguracao_de_memoria_coletiva",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "o_perigo_da_familiaridade_enganosa",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "identificacao_de_alteracoes_imperceptiveis",
+            "weight": 8,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "Nota de índice sobre a natureza insidiosa do 'inimigo' que não é o desconhecido, mas sim o familiar sutilmente alterado. Explora como a manipulação psicológica, a desinformação velada e as distorções perceptivas podem operar sobre o que já conhecemos, tornando-as mais perigosas do que ameaças abertamente reconhecidas. Serve como referência para conteúdos que abordam engenharia social, viés cognitivo, propaganda e estratégias de identificação de alterações sutis na realidade percebida.",
+        "cdu_primary": "159.942.5",
+        "cdu_secondary": [
+          "316.77",
+          "304.2"
+        ],
+        "cdu_description": "159.942.5: Percepção e cognição; 316.77: Comunicação social. Influência social; 304.2: Influência do meio social. Socialização.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/inimigo não é o desconhecido, mas o conhecido sutilmente alterado.md",
+          "file_name": "inimigo não é o desconhecido, mas o conhecido sutilmente alterado.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-04T23:38:33.798110+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "inimigo não é o desconhecido, mas o conhecido sutilmente alterado"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Educação sequencial x educação para um problema.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "ensino_sequencial_desatualizado",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "velocidade_evolucao_conhecimento",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "trinomio_custo_tempo_escopo",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "ideacao_mvp_dados",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "construir_medir_aprender",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "dever_casa_vs_resolver_problema",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "inovacao_educacao_4_0",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "tecnologia_na_educacao",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "foco_em_pessoas_na_educacao",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "metodologias_agile_educacao",
+            "weight": 7,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "A nota critica os processos de ensino sequenciais e lentos, contrastando-os com a rápida evolução do conhecimento e propondo abordagens mais ágeis como 'construir, medir e aprender' em vez de tarefas tradicionais.",
+        "cdu_primary": "37.01",
+        "cdu_secondary": [
+          "004.9",
+          "371.3"
+        ],
+        "cdu_description": "Teoria e filosofia da educação; Inovação educacional e tecnologias digitais; Métodos de ensino",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Educação sequencial x educação para um problema.md",
+          "file_name": "Educação sequencial x educação para um problema.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:35.946330+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/aprendizado.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "modelagem_conhecimento",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "limitações_realidade_modelagem",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "bisus_obsidian",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "idea_compass",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "leis_interesse",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "organização_informação",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "ferramentas_produtividade",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "gerenciamento_conhecimento_pessoal",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "técnicas_estudo",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "desenvolvimento_pessoal",
+            "weight": 5,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "A nota aborda a modelagem de conhecimento, suas limitações em relação à realidade, e apresenta dicas para o uso do Obsidian, o conceito de Idea Compass e as 23 Leis do Interesse.",
+        "cdu_primary": "004.9",
+        "cdu_secondary": [
+          "159.947",
+          "005.3"
+        ],
+        "cdu_description": "Tratamento da informação. Organização e apresentação da informação. Sistemas de informação. Gestão do conhecimento. Psicologia do interesse. Processamento de dados.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/aprendizado.md",
+          "file_name": "aprendizado.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:38.276916+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Ciência é uma das formas de adquirir conhecimento não a única.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "natureza_do_conhecimento",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "base_apropriada_conhecimento",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "formula_geral_conhecimento",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "pensamento_moderno_critica",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "metodo_cientifico_limitacoes",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "conhecimento_alfabeto_grego",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "conhecimento_arte_moral",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "conhecimento_relacionamentos_pessoais",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "ciencia_experiencia_validacao",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "conhecimento_sentir_crer_amar",
+            "weight": 7,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "A nota discute que a ciência é uma forma de adquirir conhecimento, mas não a única, e que a definição de 'base apropriada' varia conforme o tipo de conhecimento. O método científico é específico para cada área e não se aplica a conhecimentos como arte, moral ou sentimentos.",
+        "cdu_primary": "001",
+        "cdu_secondary": [
+          "17",
+          "159.9"
+        ],
+        "cdu_description": "Teoria do conhecimento; Epistemologia; Filosofia da ciência; Ética; Psicologia",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Ciência é uma das formas de adquirir conhecimento não a única.md",
+          "file_name": "Ciência é uma das formas de adquirir conhecimento não a única.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:40.727178+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/pensamento convergente.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb5fa6b00 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/entropia.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "conceito_de_entropia",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "grau_de_desorganizacao",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "numero_de_variaveis_em_sistemas",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "tendencia_natural_da_entropia",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "aumento_da_desordem",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "intervencoes_para_conter_desordem",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "promocao_de_equilibrio",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "entropia_na_natureza",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "entropia_na_sociedade",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "sistemas_complexos",
+            "weight": 7,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "Entropia refere-se ao grau de desorganização e número de variáveis em um sistema. Na natureza e sociedade, a entropia tende a aumentar, necessitando de intervenções para manter o equilíbrio.",
+        "cdu_primary": "536.7",
+        "cdu_secondary": [],
+        "cdu_description": "Termodinâmica. Entropia",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/entropia.md",
+          "file_name": "entropia.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:51.725937+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Fake.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Prompt padrão análise capítulos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "compreensao_profunda_de_conteudos",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "analise_critica_de_textos",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "desenvolvimento_de_tecnicas_anti_ansiedade",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "aplicabilidade_de_ideias_cientificas",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "lacunas_e_expansao_tematica",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "conexao_interdisciplinar_do_conhecimento",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "exemplos_concretos_de_aplicacao",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "acoes_praticas_para_reducao_de_ansiedade",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "superacao_de_resistencia_a_mudancas",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "integracao_de_conhecimento_cotidiano",
+            "weight": 8,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "Este conteúdo detalha um método para extrair conhecimento profundo de textos, focando na análise crítica, proposição de ações práticas para lidar com a ansiedade e na conexão com outras áreas do saber, visando a aplicação cotidiana.",
+        "cdu_primary": "159.9",
+        "cdu_secondary": [
+          "001.8",
+          "316.3"
+        ],
+        "cdu_description": "Psicologia. Estudos da ansiedade e suas técnicas de manejo, com ênfase na metodologia de análise e aplicação de conhecimento.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Prompt padrão análise capítulos.md",
+          "file_name": "Prompt padrão análise capítulos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:54.890847+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Indicações de livros por 50 fundarores de negócios bilionários.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "livros_influentes_bilionarios",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "recomendacoes_literarias_sucesso",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "autores_mega_bestsellers",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "desenvolvimento_pessoal_leitura",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "psicologia_persuasao_livros",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "estrategia_negocios_livros",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "biografias_empreendedores",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "filosofia_incerteza_livros",
+            "weight": 5,
+            "confidence": 0.87
+          },
+          {
+            "name": "produtividade_gestao_livros",
+            "weight": 5,
+            "confidence": 0.86
+          },
+          {
+            "name": "narrativas_inspiradoras_literatura",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota lista os livros mais presenteados e favoritos de pessoas de grande sucesso, incluindo bilionários e autores best-sellers, como um guia para a escolha de leituras que moldam o pensamento e o sucesso.",
+        "cdu_primary": "028.5",
+        "cdu_secondary": [
+          "159.9",
+          "005.5",
+          "338.0"
+        ],
+        "cdu_description": "Seleção e recomendação de livros para desenvolvimento pessoal e profissional, com foco em biografias, negócios, psicologia e filosofia.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Indicações de livros por 50 fundarores de negócios bilionários.md",
+          "file_name": "Indicações de livros por 50 fundarores de negócios bilionários.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:38:57.450961+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Design Thinking.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "conceitos_fundamentais_design_thinking",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "fases_do_design_thinking",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "ferramentas_design_thinking",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "aplicacoes_design_thinking_negocios",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "aplicacoes_design_thinking_educacao",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "aplicacoes_design_thinking_social",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "cultura_inovacao_design_thinking",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "metodologias_agile_vs_design_thinking",
+            "weight": 5,
+            "confidence": 0.91
+          },
+          {
+            "name": "estudos_caso_design_thinking",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "desafios_implementacao_design_thinking",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "Nota de índice sobre Design Thinking. Serve como referência/link para conteúdos relacionados a conceitos fundamentais, fases, ferramentas, aplicações em negócios, educação e social, cultura de inovação, comparação com metodologias ágeis, estudos de caso e desafios de implementação.",
+        "cdu_primary": "004.9",
+        "cdu_secondary": [
+          "658.012.4",
+          "37.018.4"
+        ],
+        "cdu_description": "004.9 - Tratamento da informação. Processamento de dados. Sistemas de computadores. Organização. Gestão. 658.012.4 - Gestão da inovação. 37.018.4 - Métodos de ensino. Pedagogia.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Design Thinking.md",
+          "file_name": "Design Thinking.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-04T23:38:59.908916+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "Design Thinking"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/prompt tradução chatgpt.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "traducao_ingles_portugues",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "traducao_literaria",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "traducao_brasil",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "processo_tradutorio",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "revisao_traducao",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "linguistica_aplicada",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "competencia_linguistica",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "qualidade_traducao",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "ferramentas_traducao",
+            "weight": 5,
+            "confidence": 0.65
+          },
+          {
+            "name": "norma_linguistica_portuguesa",
+            "weight": 6,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "A nota descreve o papel de uma tradutora experiente em converter textos de inglês para português do Brasil, com foco no processo de tradução, revisão e entrega do conteúdo traduzido.",
+        "cdu_primary": "808.1",
+        "cdu_secondary": [
+          "808.2"
+        ],
+        "cdu_description": "Linguagem e estilos. Tradução. Tradução de e para línguas específicas. Línguas germânicas. Inglês.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/prompt tradução chatgpt.md",
+          "file_name": "prompt tradução chatgpt.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:02.161109+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Idea Compass.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "metodo_zettelkasten",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "tomada_de_notas",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "ansiedade_perda_pensamento",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "formacao_opiniao",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "escrita_produtiva",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "conexao_ideias",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "pensamento_rigoroso",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "organização_conhecimento",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "geracao_conteudo",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "niklas_luhmann",
+            "weight": 6,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "O artigo explora o método Zettelkasten para tomada de notas, destacando a dificuldade em conectar ideias e a importância da escrita consistente para formar opiniões bem fundamentadas. Aborda a ansiedade de perda de pensamento e a busca por um sistema eficaz de organização do conhecimento.",
+        "cdu_primary": "004.9",
+        "cdu_secondary": [
+          "159.9",
+          "001.8"
+        ],
+        "cdu_description": "Processamento de informação e conhecimento; Organização do conhecimento; Psicologia do pensamento e da aprendizagem; Metodologia científica",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Idea Compass.md",
+          "file_name": "Idea Compass.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:04.700895+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/7 dicas para melhorar a maneira como você pensa mais do que ler 7 livros sobre isso.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "tecnicas_pensamento_critico",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "desenvolvimento_cognitivo",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "conexao_de_ideias",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "aprendizagem_ativa",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "reconhecimento_de_padroes",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "analise_comparativa",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "compreensao_profunda",
+            "weight": 6,
+            "confidence": 0.83
+          },
+          {
+            "name": "contextualizacao_de_informacao",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "pensamento_original",
+            "weight": 5,
+            "confidence": 0.78
+          },
+          {
+            "name": "emergencia_de_ideias",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A nota apresenta sete prompts para aprimorar o pensamento, focando em fazer conexões, identificar padrões e entender a importância e origem das ideias. O objetivo é promover uma forma mais profunda e ativa de trabalhar com o conhecimento.",
+        "cdu_primary": "159.95",
+        "cdu_secondary": [
+          "004.9"
+        ],
+        "cdu_description": "Psicologia do pensamento e da inteligência; Processos cognitivos; Organização e representação do conhecimento; Notas digitais",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/7 dicas para melhorar a maneira como você pensa mais do que ler 7 livros sobre isso.md",
+          "file_name": "7 dicas para melhorar a maneira como você pensa mais do que ler 7 livros sobre isso.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:07.179706+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/storytelling.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "narrativas_empresariais",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "tecnicas_de_narracao",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "arquitetura_de_historias",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "personagens_em_narrativas",
+            "weight": 7,
+            "confidence": 0.82
+          },
+          {
+            "name": "jornada_do_heroi",
+            "weight": 8,
+            "confidence": 0.88
+          },
+          {
+            "name": "storytelling_para_marketing",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "storytelling_em_apresentacoes",
+            "weight": 8,
+            "confidence": 0.87
+          },
+          {
+            "name": "elementos_de_uma_boa_historia",
+            "weight": 9,
+            "confidence": 0.91
+          },
+          {
+            "name": "impacto_emocional_da_narrativa",
+            "weight": 7,
+            "confidence": 0.83
+          },
+          {
+            "name": "storytelling_transmedial",
+            "weight": 6,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "Nota de índice sobre storytelling. Serve como referência/link para conteúdos relacionados a técnicas de narração, construção de narrativas, arquétipos de personagens, a jornada do herói, e aplicações práticas em marketing, apresentações e comunicação.",
+        "cdu_primary": "808.54",
+        "cdu_secondary": [],
+        "cdu_description": "808.54 - Oratória. Discursos. Apresentações. Comunicação oral. Inclui técnicas de persuasão e narração.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/storytelling.md",
+          "file_name": "storytelling.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-04T23:39:09.534256+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "storytelling"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/valor.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "conceito_de_valor",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "tipos_de_valor",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "valor_economico",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "valor_social",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "valor_cultural",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "valor_subjetivo",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "valor_objetivo",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "avaliação_de_valor",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "teorias_de_valor",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "importância_do_valor",
+            "weight": 9,
+            "confidence": 0.9
+          }
+        ],
+        "content_summary": "Nota de índice sobre o conceito de valor. Serve como referência/link para conteúdos relacionados que exploram as diversas facetas do valor, incluindo suas definições, classificações, teorias e aplicações em diferentes contextos.",
+        "cdu_primary": null,
+        "cdu_secondary": [],
+        "cdu_description": null,
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/valor.md",
+          "file_name": "valor.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-04T23:39:11.308586+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "valor"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/The ingredients of metacognition.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "metacognicao_componentes",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "planejamento_aprendizagem",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "conhecimento_declarativo",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "conhecimento_procedural",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "conhecimento_condicional",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "monitoramento_progresso",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "autoavaliacao_estrategias",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "reavaliacao_desempenho",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "otimizacao_desempenho",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "habilidades_metacognitivas",
+            "weight": 10,
+            "confidence": 0.98
+          }
+        ],
+        "content_summary": "A metacognição é composta por três habilidades essenciais: planejamento, monitoramento e avaliação. Dominar essas etapas auxilia na otimização do aprendizado e desempenho.",
+        "cdu_primary": "159.953",
+        "cdu_secondary": [],
+        "cdu_description": "Psicologia da inteligência e do pensamento. Processos cognitivos. Metacognição",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/The ingredients of metacognition.md",
+          "file_name": "The ingredients of metacognition.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:13.322759+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/IA x Aprendizado x pagto pelo trabalho.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "musica_gerada_por_ia",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "direitos_autorais_musica",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "propriedade_intelectual_ia",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "remuneracao_artistas_ia",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "processo_criativo_musical",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "aprendizado_artistico",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "influencia_artistica",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "historia_da_criacao",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "etica_na_musica_ia",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "industria_musical",
+            "weight": 5,
+            "confidence": 0.65
+          }
+        ],
+        "content_summary": "A nota discute a questão ética e de direitos autorais da música gerada por IA, comparando o aprendizado humano com a base de dados de treinamento das IAs e questionando a remuneração da indústria criativa.",
+        "cdu_primary": "004.938",
+        "cdu_secondary": [
+          "78.01",
+          "347.78"
+        ],
+        "cdu_description": "Inteligência artificial aplicada à criação musical e questões de direitos autorais e propriedade intelectual.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/IA x Aprendizado x pagto pelo trabalho.md",
+          "file_name": "IA x Aprendizado x pagto pelo trabalho.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:15.371355+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Abundância x escassez.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "minimalismo_voluntario",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "percepcao_de_abundancia",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "mentalidade_de_escassez",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "consumismo_e_insatisfacao",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "valorizacao_do_essencial",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "experiencia_de_acampar",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "experiencia_de_cicloviagem",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "vida_simples_e_gratidao",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "comparacao_social_e_bem_estar",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "desapego_material",
+            "weight": 6,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A nota explora como a experiência de viver com menos, como em acampamentos ou cicloviajens, pode levar à percepção de abundância ao retornar à vida cotidiana. Em contraste, experiências de luxo podem gerar uma mentalidade de escassez e insatisfação com o que se possui.",
+        "cdu_primary": "177.8",
+        "cdu_secondary": [],
+        "cdu_description": "Psicologia da vida quotidiana. Psicologia social. Psicologia da vida quotidiana. Psicologia da vida quotidiana. Psicologia da vida quotidiana. Psicologia da vida quotidiana. Psicologia da vida quotidiana. Psicologia da vida quotidiana. Psicologia da vida quotidiana. Psicologia da vida quotidiana.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Abundância x escassez.md",
+          "file_name": "Abundância x escassez.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:17.686769+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/prompt notebook criado a partir de meus diários.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "gestao_ansiedade_perfeccionismo",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "integracao_fé_trabalho",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "desenvolvimento_espiritual_pessoal",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "relacionamento_com_instituicao_religiosa",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "estimulo_intelectual_prazer_fluxo",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "acolhimento_crianca_interior",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "saude_fisica_bem_estar_integral",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "transformacao_conhecimento_em_acao",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "superacao_medo_errar",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "beleza_ordinario_vida_presente",
+            "weight": 8,
+            "confidence": 0.96
+          }
+        ],
+        "content_summary": "O prompt mestre define a persona de um mentor intelectual e espiritual para José, um homem de 50+ anos com múltiplas facetas (TI, teologia, estudos diversos, ansiedade), com o objetivo de integrar suas áreas de vida, combater o perfeccionismo e transformar conhecimento em ação, focando na graça e no descanso.",
+        "cdu_primary": "159.9",
+        "cdu_secondary": [
+          "2",
+          "004",
+          "316"
+        ],
+        "cdu_description": "Psicologia da vida pessoal e do comportamento. A psicologia da vida pessoal abrange o estudo do desenvolvimento humano, da personalidade, da motivação, das emoções e das relações interpessoais. A psicologia do comportamento foca nos aspectos observáveis e mensuráveis do comportamento humano. A nota também aborda temas de teologia (2), tecnologia da informação (004) e sociologia (316) em sua integração com a vida pessoal.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/prompt notebook criado a partir de meus diários.md",
+          "file_name": "prompt notebook criado a partir de meus diários.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:20.380940+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Kintsugi.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "arte_reparo_ceramica_ouro",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "kintsugi_filosofia",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "metáfora_narrativa",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "valorização_imperfeições",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "beleza_falhas",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "abordagem_cultural_narrativa",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "prática_contar_histórias",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "experiências_autênticas",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "narradores_valorização_imperfeição",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "estética_reparo",
+            "weight": 6,
+            "confidence": 0.87
+          }
+        ],
+        "content_summary": "A arte de reparar cerâmicas quebradas com ouro, conhecida como Kintsugi, é apresentada como uma metáfora para a narrativa, onde falhas e imperfeições agregam valor e beleza à história. Essa perspectiva cultural incentiva a valorização de experiências autênticas e imperfeitas na prática de contar histórias.",
+        "cdu_primary": "700",
+        "cdu_secondary": [
+          "305.8",
+          "800"
+        ],
+        "cdu_description": "Artes. Artes e ciências humanas. Artes em geral. Artes decorativas. Artes aplicadas. Artesanato. Artes plásticas. Artes visuais. Artes do espetáculo. Artes literárias. Artes gráficas. Artes do fogo. Cerâmica. Escultura. Pintura. Desenho. Gravura. Fotografia. Cinema. Teatro. Música. Dança. Literatura. Poesia. Narrativa. Conto. Romance. Crítica literária. História da arte. Estética. Filosofia da arte. Artes e cultura japonesa.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Kintsugi.md",
+          "file_name": "Kintsugi.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:22.847292+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Artes liberais.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "artes_liberais",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "trivium",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "quadrivium",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "logica",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "gramatica",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "retorica",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "aritmetica",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "geometria",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "musica",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "astronomia",
+            "weight": 7,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "A nota descreve as Artes Liberais, divididas em Trivium (lógica, gramática, retórica) e Quadrivium (aritmética, geometria, música, astronomia).",
+        "cdu_primary": "008.012",
+        "cdu_secondary": [],
+        "cdu_description": "História e desenvolvimento da cultura. Educação clássica e liberal.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Artes liberais.md",
+          "file_name": "Artes liberais.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:24.845435+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Leitura.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Agentic design patterns.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "inteligencia_artificial_geral",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "aprendizado_de_maquina",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "redes_neurais",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "processamento_linguagem_natural",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "visao_computacional",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "etica_ia",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "aplicacoes_ia_saude",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "aplicacoes_ia_financas",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "ia_e_sociedade",
+            "weight": 5,
+            "confidence": 0.78
+          },
+          {
+            "name": "futuro_ia",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A nota explora os fundamentos da inteligência artificial, abordando seus principais ramos como aprendizado de máquina, redes neurais e processamento de linguagem natural. Discute também as implicações éticas e as diversas aplicações da IA em setores como saúde e finanças, além de seu impacto na sociedade e perspectivas futuras.",
+        "cdu_primary": "004.8",
+        "cdu_secondary": [],
+        "cdu_description": "Inteligência artificial",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Agentic design patterns.md",
+          "file_name": "Agentic design patterns.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:27.761352+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Precisamos tirar as escolas do Século XIV - Silvio Meira.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "transformacao_digital_na_educacao",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "inovacao_educacional",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "introducao_tecnologia_sala_aula",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "estrategias_aprendizagem",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "ciclo_vicioso_inovacao_educacao",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "definicao_inovacao_drucker",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "mudanca_comportamento_agentes",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "processo_experimental_inovacao",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "escalabilidade_sustentabilidade_educacao",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "pandemia_aceleracao_processos",
+            "weight": 6,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "O artigo discute a necessidade de modernizar a educação, indo além da simples introdução de tecnologia, e propõe um modelo de inovação baseado em experimentação, mudança de comportamento e escalabilidade, impulsionado pela aceleração de processos pela pandemia.",
+        "cdu_primary": "37.01",
+        "cdu_secondary": [
+          "004.7",
+          "330.12"
+        ],
+        "cdu_description": "Filosofia e teoria da educação; Inovação e tecnologia educacional; Mudança de comportamento e processos de aprendizagem.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Precisamos tirar as escolas do Século XIV - Silvio Meira.md",
+          "file_name": "Precisamos tirar as escolas do Século XIV - Silvio Meira.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:30.218805+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/coragem de colocar pensamentos e fé à prova.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "coragem_intelectual",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "questionamento_de_crencas_fundamentais",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "validade_da_fe",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "consideracao_imparcial_de_argumentos",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "fundamentos_da_vida",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "medo_de_ideias_ameacadoras",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "virtudes_intelectuais",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "autenticidade_da_fe",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "risco_existencial_da_fe",
+            "weight": 6,
+            "confidence": 0.86
+          },
+          {
+            "name": "compreensao_religiosa",
+            "weight": 5,
+            "confidence": 0.84
+          }
+        ],
+        "content_summary": "A nota discute a coragem intelectual necessária para questionar crenças fundamentais e a fé, argumentando que esse processo fortalece a compreensão e a autenticidade. Colocar a fé à prova, mesmo com o risco de enfraquecimento ou desilusão, é essencial para uma postura genuinamente justa e para evitar a hipocrisia.",
+        "cdu_primary": "201",
+        "cdu_secondary": [
+          "101",
+          "230"
+        ],
+        "cdu_description": "Religião. Teologia. Filosofia da religião. Teologia sistemática. Teologia cristã. Teologia moral. Ética religiosa. Filosofia da fé. Risco e coragem na fé. Questionamento de crenças.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/coragem de colocar pensamentos e fé à prova.md",
+          "file_name": "coragem de colocar pensamentos e fé à prova.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:32.984157+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Feynman.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "tecnica_feynman_aprendizagem",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "superar_dificuldades_aprendizagem",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "simplificacao_conceitos",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "ensinar_para_aprender",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "identificacao_lacunas_conhecimento",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "revisitar_material_fonte",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "organizacao_conhecimento",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "linguagem_simples_explicacao",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "evitar_jargao_tecnico",
+            "weight": 7,
+            "confidence": 0.89
+          },
+          {
+            "name": "compreensao_profunda_conceitos",
+            "weight": 9,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A Técnica Feynman é um método de aprendizagem que envolve explicar um conceito em termos simples, como se estivesse ensinando a uma criança, para identificar lacunas no conhecimento e aprofundar a compreensão. O processo de simplificação e identificação de falhas no entendimento leva a um aprendizado mais eficaz e duradouro.",
+        "cdu_primary": "37.0",
+        "cdu_secondary": [],
+        "cdu_description": "Educação. Ensino. Pedagogia. Formação profissional. Educação de adultos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Feynman.md",
+          "file_name": "Feynman.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:35.544266+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Não somos naturalmente objetivos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "influencia_politica_economia",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "emocoes_na_tomada_decisao",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "rejeicao_informacao_cientifica",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "polarizacao_politica_e_ciencia",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "preconceitos_cognitivos",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "falta_de_objetividade_humana",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "identificacao_tribal_e_analise",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "percepcao_da_realidade_politica",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "heranca_familiar_e_opiniao",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "negacionismo_climatico_politico",
+            "weight": 7,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "A nota discute como a política e as emoções influenciam a percepção da informação científica, levando à rejeição de fatos que contrariam preconceitos e identificações de grupo, resultando em falta de objetividade.",
+        "cdu_primary": "304",
+        "cdu_secondary": [
+          "316.6",
+          "32"
+        ],
+        "cdu_description": "Influência de fatores sociais e políticos no comportamento e na ciência.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Não somos naturalmente objetivos.md",
+          "file_name": "Não somos naturalmente objetivos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:37.695372+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/YouTube é educação gratuita.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "educacao_gratuita_youtube",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "canais_educacionais_youtube",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "aprendizado_online",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "desenvolvimento_pessoal",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "negocios_e_empreendedorismo",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "criacao_de_conteudo",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "programacao_e_tecnologia",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "produtividade_e_eficiencia",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "mentalidade_e_mindset",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "autoaperfeicoamento",
+            "weight": 7,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "A nota apresenta uma lista de 17 canais do YouTube que oferecem conteúdo educacional gratuito em diversas áreas, como negócios, tecnologia, desenvolvimento pessoal e produtividade. O objetivo é incentivar o aprendizado online e a descoberta de 'professores virtuais'.",
+        "cdu_primary": "374.7",
+        "cdu_secondary": [
+          "004",
+          "334.7",
+          "659.1"
+        ],
+        "cdu_description": "Educação de adultos e educação continuada, com ênfase em recursos online e plataformas como o YouTube para aprendizado autodirigido e desenvolvimento profissional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/YouTube é educação gratuita.md",
+          "file_name": "YouTube é educação gratuita.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:40.255489+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/prompt padrao IA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "analise_critica_de_conteudo",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "sintese_de_capitulos",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "argumentacao_do_autor",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "dialogo_com_outras_obras",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "comparacao_de_abordagens",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "relevancia_contemporanea",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "aplicacao_pratica_de_ideias",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "influencia_em_debates",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "estrutura_escrita_argumentativa",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "profundidade_analitica",
+            "weight": 6,
+            "confidence": 0.92
+          }
+        ],
+        "content_summary": "A nota descreve a função de um especialista em GitOps para analisar um capítulo, focando em síntese, crítica, comparação com outras obras e relevância contemporânea, com o objetivo de gerar um plano de projeto.",
+        "cdu_primary": "001.4",
+        "cdu_secondary": [
+          "004.4",
+          "001.8"
+        ],
+        "cdu_description": "Metodologia da pesquisa científica; Organização e gestão de sistemas de informação; Métodos de estudo e trabalho",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/prompt padrao IA.md",
+          "file_name": "prompt padrao IA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:42.610268+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Copiando o outro para aprender a fazer como ele.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb5fa7760 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Anúncio golpe 64 O Globo elogiando.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "viés_de_confirmação",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "poder_e_controle",
+            "weight": 10,
+            "confidence": 0.95
+          },
+          {
+            "name": "manutenção_de_poder",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "contradições_humanas",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "desejo_de_poder",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "falta_de_interesse_na_verdade",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "utilidade_da_verdade",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "manipulação_de_informação",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "psicologia_social_do_poder",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "discurso_político",
+            "weight": 5,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "A nota discute como o viés de confirmação e o desejo de manter poder influenciam a percepção da verdade, que é secundária aos interesses de quem detém o controle. As contradições humanas são exacerbadas pela busca por manutenção no poder.",
+        "cdu_primary": "321.1",
+        "cdu_secondary": [
+          "159.942",
+          "305.8"
+        ],
+        "cdu_description": "Formas de governo; Poder e controle social; Psicologia social",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Anúncio golpe 64 O Globo elogiando.md",
+          "file_name": "Anúncio golpe 64 O Globo elogiando.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:55.102414+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/23 LEIS DO INTERESSE.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "sair_da_zona_de_conforto",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "buscar_inspiracao_fora_do_comum",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "importancia_do_circulo_social",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "pensar_e_agir_diferente",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "conexao_de_ideias_e_elementos",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "ouvir_ativamente",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "abraçar_a_singularidade",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "aprender_com_o_fracasso",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "fazer_perguntas_interessantes",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "aprender_novas_habilidades",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota explora 23 leis para se tornar uma pessoa mais interessante, enfatizando a importância de sair da zona de conforto, buscar inspiração em fontes diversas, cultivar um círculo social estimulante e abraçar a própria singularidade. O conteúdo sugere que a curiosidade, a escuta ativa e a disposição para aprender e experimentar são fundamentais para o desenvolvimento pessoal e a criatividade.",
+        "cdu_primary": "159.94",
+        "cdu_secondary": [
+          "005.32",
+          "17",
+          "37.01"
+        ],
+        "cdu_description": "Psicologia da personalidade e do comportamento; Psicologia da criatividade e da inovação; Ética; Educação e formação",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/23 LEIS DO INTERESSE.md",
+          "file_name": "23 LEIS DO INTERESSE.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:39:58.277766+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Como van gogh foi influenciado por diversas pessoas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "evolucao_artistica_van_gogh",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "influencia_realismo_holandes",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "transicao_cores_vibrantes",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "influencia_anton_mauve",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "periodo_nuenen_pinturas_camponeses",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "influencia_impressionismo_paris",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "relacao_theo_van_gogh",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "estudo_academico_belgica",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "influencia_peter_paul_rubens",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "influencia_alphonse_monticelli",
+            "weight": 8,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "A nota detalha a evolução artística de Vincent van Gogh, desde suas primeiras obras sombrias influenciadas pelo Realismo holandês e Anton Mauve, até sua transição para cores vibrantes após se mudar para Paris e ser exposto ao Impressionismo e à obra de artistas como Rubens e Monticelli.",
+        "cdu_primary": "75.04",
+        "cdu_secondary": [
+          "75.01",
+          "75.03"
+        ],
+        "cdu_description": "Pintura. História da pintura. Pintura holandesa. Pintura francesa. Estilos e movimentos artísticos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Como van gogh foi influenciado por diversas pessoas.md",
+          "file_name": "Como van gogh foi influenciado por diversas pessoas.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:01.041946+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Idea Compass Resumo.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb5fa7310 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Educação.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "papel_social_da_educacao",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "educacao_para_transformacao_social",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "educacao_individual_vs_coletiva",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "impacto_social_da_educacao",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "educacao_e_desenvolvimento_humano",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "educacao_e_agencia_social",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "educacao_sequencial",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "educacao_para_resolucao_de_problemas",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "futuro_da_educacao",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "relacao_educacao_treinamento",
+            "weight": 5,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "A nota discute o papel social da educação, argumentando que ela deve preparar os indivíduos para agir socialmente e transformar a sociedade, e não apenas para o desenvolvimento individual. Menciona a importância da educação para a mudança social e a cumplicidade do indivíduo nesse processo.",
+        "cdu_primary": "37.01",
+        "cdu_secondary": [
+          "303.4",
+          "316.4"
+        ],
+        "cdu_description": "Filosofia e teoria da educação; Sociologia da educação; Mudança social",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Educação.md",
+          "file_name": "Educação.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:11.999137+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Ataque ao conhecimento é a maior ameaça global na era da pós-verdade, diz pesquisadora - BBC News Brasil.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "seguranca_epistemica",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "era_pos_verdade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "desinformacao_pandemia",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "ameaca_global_conhecimento",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "confianca_informacao",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "crise_climatica",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "escassez_atencao",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "coordenacao_social",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "vacina_hesitacao",
+            "weight": 5,
+            "confidence": 0.78
+          },
+          {
+            "name": "riscos_futuros_sociedade",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A pesquisadora Elizabeth Seger argumenta que a 'segurança epistêmica', a capacidade de confiar em informações confiáveis, é a maior ameaça global na era da pós-verdade, impactando a resposta a crises como pandemias e mudanças climáticas.",
+        "cdu_primary": "303.4",
+        "cdu_secondary": [
+          "004.77",
+          "316.77",
+          "323.28"
+        ],
+        "cdu_description": "Métodos de investigação social. Teoria do conhecimento. Segurança epistêmica como a capacidade de uma sociedade de manter seu conhecimento seguro e confiável diante de ameaças como desinformação e escassez de atenção, crucial para a resposta a crises globais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Ataque ao conhecimento é a maior ameaça global na era da pós-verdade, diz pesquisadora - BBC News Brasil.md",
+          "file_name": "Ataque ao conhecimento é a maior ameaça global na era da pós-verdade, diz pesquisadora - BBC News Brasil.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:14.691264+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Diferença entre educação e treinamento.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb5fa5690 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/A democracia pode se desvirtuar para tirania da maioria ou para a plutocracia dos ricos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "tirania_da_maioria",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "plutocracia_no_brasil",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "riscos_da_democracia",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "respeito_as_minorias",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "justica_imparcial",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "estado_de_direito",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "bem_comum",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "equilibrio_direitos_deveres",
+            "weight": 5,
+            "confidence": 0.91
+          },
+          {
+            "name": "poder_financeiro_concentrado",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "corrupcao_politica",
+            "weight": 8,
+            "confidence": 0.9
+          }
+        ],
+        "content_summary": "A nota discute os perigos da democracia, como a tirania da maioria e a plutocracia, especialmente no contexto brasileiro, onde o poder financeiro concentrado domina o governo. São destacados elementos essenciais para uma democracia saudável, como respeito às minorias e justiça.",
+        "cdu_primary": "321.1",
+        "cdu_secondary": [
+          "330.5",
+          "323.44"
+        ],
+        "cdu_description": "Formas de governo. Democracia. Tirania. Plutocracia. Direitos das minorias. Estado de direito.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/A democracia pode se desvirtuar para tirania da maioria ou para a plutocracia dos ricos.md",
+          "file_name": "A democracia pode se desvirtuar para tirania da maioria ou para a plutocracia dos ricos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:27.359165+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Inovação e Educação 4.0 - Tecnologia ou pessoas - Guilherme Horta Travassos.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7fdbb61323e0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/ciência.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "metodologia_cientifica",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "filosofia_da_ciencia",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "historia_da_ciencia",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "epistemologia",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "teoria_do_conhecimento_cientifico",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "etica_na_pesquisa",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "classificacao_do_conhecimento",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "relacao_ciencia_tecnologia",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "validade_cientifica",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "progresso_cientifico",
+            "weight": 6,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "Nota de índice sobre ciência. Serve como referência/link para conteúdos relacionados à natureza, métodos, história, filosofia e ética da ciência, bem como sua classificação e impacto.",
+        "cdu_primary": "001",
+        "cdu_secondary": [],
+        "cdu_description": "001 - Ciência em geral. Conhecimento. Organização do conhecimento. Ciência e tecnologia. Informação. Documentação. Museus. Arquivos. Bibliotecas. Publicações.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/ciência.md",
+          "file_name": "ciência.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-04T23:40:40.773685+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "ciência"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Nossa coragem precisa nos ajudar a fazer perguntas difíceis, mesmo que as respostas possam abalar nossa vida.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "coragem_intelectual",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "questionamento_crencas_fundamentais",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "virtudes_intelectuais",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "reflexao_existencial",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "fe_versus_razao",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "desafio_a_visoes_de_mundo",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "medo_da_mudanca_de_perspectiva",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "busca_por_verdade",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "autenticidade_intelectual",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "psicologia_da_crenca",
+            "weight": 5,
+            "confidence": 0.65
+          }
+        ],
+        "content_summary": "A nota discute a coragem intelectual necessária para questionar crenças fundamentais, mesmo quando isso abala a visão de mundo e exige reflexão existencial sobre a natureza da realidade e do significado.",
+        "cdu_primary": "159.947",
+        "cdu_secondary": [
+          "201",
+          "100"
+        ],
+        "cdu_description": "Psicologia da coragem e da convicção; Relação entre religião e ciência; Filosofia da religião",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Nossa coragem precisa nos ajudar a fazer perguntas difíceis, mesmo que as respostas possam abalar nossa vida.md",
+          "file_name": "Nossa coragem precisa nos ajudar a fazer perguntas difíceis, mesmo que as respostas possam abalar nossa vida.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:43.026392+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Divisões da filosofia.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "filosofia_teorica",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "teologia",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "fisica",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "matematica",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "filosofia_pratica",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "etica_individual",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "etica_privada",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "etica_publica",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "filosofia_mecanica",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "logica",
+            "weight": 9,
+            "confidence": 0.97
+          }
+        ],
+        "content_summary": "A nota apresenta uma classificação da filosofia em teórica, prática e mecânica, detalhando subdisciplinas dentro de cada uma. Questiona a aplicabilidade atual dessa estrutura e a abrangência do conhecimento humano.",
+        "cdu_primary": "1",
+        "cdu_secondary": [
+          "101",
+          "16",
+          "17"
+        ],
+        "cdu_description": "Filosofia. Teoria geral da filosofia. Lógica. Ética.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Divisões da filosofia.md",
+          "file_name": "Divisões da filosofia.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:44.966525+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Didascalion.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "didactica_filosofica",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "ensino_filosofico",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "metodologia_de_estudo",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "artes_liberais_na_educacao",
+            "weight": 6,
+            "confidence": 0.95
+          },
+          {
+            "name": "fundamentos_do_estudo",
+            "weight": 5,
+            "confidence": 0.94
+          },
+          {
+            "name": "orientacao_estudantil",
+            "weight": 5,
+            "confidence": 0.93
+          },
+          {
+            "name": "conteudo_didactico",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "recursos_de_estudo",
+            "weight": 5,
+            "confidence": 0.91
+          },
+          {
+            "name": "estrutura_do_conhecimento",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "introducao_ao_estudo",
+            "weight": 8,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O Didascalion aborda a didática filosófica, as artes liberais e os fundamentos necessários para o estudo, servindo como um guia para a aprendizagem.",
+        "cdu_primary": "37.01",
+        "cdu_secondary": [
+          "101.1"
+        ],
+        "cdu_description": "Didática e Teoria da Educação; Filosofia da Educação",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Didascalion.md",
+          "file_name": "Didascalion.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:48.362617+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Prompt de Tutoria socratica aulas V3.4.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "metodologia_tutor_socratic_ai",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "filosofia_latino_americana_e_brasileira",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "ensino_construtivista",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "dialogo_socratico",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "consciencia_critica",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "analise_critica_de_vieses",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "relacoes_de_poder_no_conhecimento",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "planejamento_de_disciplina",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "material_didatico_digital",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "feedback_construtivo_no_aprendizado",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "Este documento descreve a persona e metodologia de um tutor AI especializado em Filosofia Latino-Americana e Brasileira, focado em construir conhecimento profundo e consciência crítica através do diálogo socrático e análise de vieses.",
+        "cdu_primary": "371.3",
+        "cdu_secondary": [
+          "101.1",
+          "004.9"
+        ],
+        "cdu_description": "Métodos e meios de ensino; Ensino em geral; Pedagogia. A filosofia como disciplina e a utilização de recursos digitais para o ensino.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Prompt de Tutoria socratica aulas V3.4.md",
+          "file_name": "Prompt de Tutoria socratica aulas V3.4.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:50.789023+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Prompts analises livro em etapas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "analise_de_conteudo_textual",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "identificacao_de_ideias_centrais",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "argumentacao_e_exemplos",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "mensagens_subjacentes_do_autor",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "citacoes_textuais_para_sustentacao",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "debate_de_ideias_concordantes_e_discordantes",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "analise_critica_de_relevancia_e_aplicabilidade",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "identificacao_de_lacunas_e_oportunidades_de_expansao",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "sugestao_de_acoes_praticas_cotidianas",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "estrategias_para_lidar_com_resistencia_a_mudancas",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota descreve um processo de análise e resumo de conteúdo textual, focando na identificação de ideias centrais, argumentação, mensagens subjacentes e citações, além de propor uma análise crítica e ações práticas para aplicação.",
+        "cdu_primary": "004.9",
+        "cdu_secondary": [],
+        "cdu_description": "Processamento de informações. Tratamento de dados. Análise de conteúdo.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Prompts analises livro em etapas.md",
+          "file_name": "Prompts analises livro em etapas.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:53.164870+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/uma TESE são só 5 coisas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "estrutura_tese_dissertacao",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "definicao_problema_pesquisa",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "orientacao_academica",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "processo_escrita_academica",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "regras_trabalho_cientifico",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "erudicao_scholarship",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "importancia_introducao_tese",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "revisoes_texto_academico",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "instituicoes_ensino_superior",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "desenvolvimento_pesquisa_cientifica",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O artigo de Silvio Meira detalha as cinco coisas essenciais para estruturar uma tese, dissertação ou TCC, enfatizando a clareza na definição do problema e a importância da escrita contínua e das revisões. Ele também discute o conceito de erudição acadêmica e a relevância da introdução para o sucesso do trabalho.",
+        "cdu_primary": "001.8",
+        "cdu_secondary": [
+          "378.4",
+          "808.0"
+        ],
+        "cdu_description": "Método e técnica de pesquisa científica; Redação científica; Ensino superior; Universidades",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/uma TESE são só 5 coisas.md",
+          "file_name": "uma TESE são só 5 coisas.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:55.786700+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Aprender é a nova aposentadoria, é como você cria o seu valor futuro todos os dias.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "aprendizado_contínuo",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "metacognição",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "resiliência_ao_caos",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "aprendizado_com_rejeição",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "aprendizado_ativo",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "processo_de_escrita_e_aprendizado",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "aprendizado_por_observação_e_imitação",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "cultura_de_aprendizagem_em_ti",
+            "weight": 7,
+            "confidence": 0.82
+          },
+          {
+            "name": "valor_futuro_através_do_aprendizado",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "aprendizado_como_nova_aposentadoria",
+            "weight": 10,
+            "confidence": 0.97
+          }
+        ],
+        "content_summary": "A nota enfatiza que o aprendizado contínuo é a chave para construir valor futuro, comparando-o a uma nova forma de aposentadoria. Aborda diversas facetas do aprendizado, como aprender a aprender, lidar com o caos, aprender com a rejeição e fomentar uma cultura de aprendizado.",
+        "cdu_primary": "374.7",
+        "cdu_secondary": [
+          "159.942",
+          "005.3",
+          "37.01"
+        ],
+        "cdu_description": "Educação de adultos. Educação continuada. Aprendizagem ao longo da vida. Psicologia do aprendizado. Gestão da mudança e adaptação ao caos. Cultura organizacional e desenvolvimento de competências.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Aprender é a nova aposentadoria, é como você cria o seu valor futuro todos os dias.md",
+          "file_name": "Aprender é a nova aposentadoria, é como você cria o seu valor futuro todos os dias.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:40:58.562589+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Pensamento crítico.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "pensamento_divergente",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "pensamento_convergente",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "padroes_elementos_tracos_pessoais",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "critica_analitica",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "processos_cognitivos",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "criatividade",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "resolucao_problemas",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "tomada_decisao",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "desenvolvimento_pessoal",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "tecnicas_pensamento",
+            "weight": 8,
+            "confidence": 0.92
+          }
+        ],
+        "content_summary": "A nota explora os conceitos de pensamento divergente e convergente, fundamentais para a análise crítica e a resolução de problemas. Aborda padrões e elementos de traços pessoais que influenciam esses processos cognitivos.",
+        "cdu_primary": "159.95",
+        "cdu_secondary": [],
+        "cdu_description": "Psicologia do pensamento. Processos cognitivos superiores. Criatividade. Pensamento divergente e convergente.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Pensamento crítico.md",
+          "file_name": "Pensamento crítico.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:41:00.649109+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/A verdade independe de mim. Posso achar que a tenho e estar longe de ser real.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "independencia_da_verdade_da_crenca_individual",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "distincao_entre_sinceridade_e_veracidade",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "existencia_objetiva_da_verdade",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "importancia_da_verdade_para_saude_mental",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "ruido_informacional_e_multiplicidade_de_vozes",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "vozes_enganosas_e_intencionais",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "vozes_sinceras_mas_equivocadas",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "consequencias_negativas_de_crencas_falsas",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "buscando_orientacao_divina_para_discernimento",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "desafios_da_sociedade_contemporanea_na_busca_da_verdade",
+            "weight": 5,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "A nota argumenta que a verdade é objetiva e independente das crenças individuais, destacando a importância de discernir entre a sinceridade e a veracidade das afirmações em um mundo ruidoso.",
+        "cdu_primary": "111.8",
+        "cdu_secondary": [],
+        "cdu_description": "Epistemologia. Teoria do conhecimento. Verdade",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/A verdade independe de mim. Posso achar que a tenho e estar longe de ser real.md",
+          "file_name": "A verdade independe de mim. Posso achar que a tenho e estar longe de ser real.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:41:03.057490+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/pensamento divergente.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "pensamento_divergente",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "criatividade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "associatividade_cognitiva",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "flexibilidade_cognitiva",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "abertura_a_novos_inputs",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "geracao_de_ideias",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "resolucao_de_problemas",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "pensamento_convergente",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "processos_cognitivos",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "caracteristicas_da_criatividade",
+            "weight": 7,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "O pensamento divergente é uma característica chave da criatividade, sendo associativo, flexível e aberto a novas ideias para aumentar as possibilidades na resolução de problemas. Ele contrasta com o pensamento convergente.",
+        "cdu_primary": "159.951",
+        "cdu_secondary": [],
+        "cdu_description": "Psicologia da criatividade e do pensamento criativo",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/pensamento divergente.md",
+          "file_name": "pensamento divergente.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:41:05.247360+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Mindshift - Mude seu padrão mental e descubra do que você é capaz.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "mudanca_mental",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "aprendizado_continuo",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "neuroplasticidade",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "exercicios_fisicos_cerebro",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "pratica_deliberada",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "mudanca_de_carreira",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "metodo_pomodoro",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "tecnicas_de_memorizacao",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "especializacao_dupla",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "reformulação_cognitiva",
+            "weight": 8,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O livro 'Mindshift' explora como a mudança de padrão mental, impulsionada por aprendizado contínuo, neuroplasticidade e práticas como exercícios físicos e prática deliberada, pode levar a transformações significativas na vida e carreira. Aborda técnicas para otimizar o aprendizado e a reformulação cognitiva para superar desafios.",
+        "cdu_primary": "159.9",
+        "cdu_secondary": [
+          "37.01",
+          "613.8",
+          "159.947"
+        ],
+        "cdu_description": "Psicologia da mudança e do aprendizado, com ênfase em desenvolvimento pessoal, técnicas de estudo e bem-estar mental.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Mindshift - Mude seu padrão mental e descubra do que você é capaz.md",
+          "file_name": "Mindshift - Mude seu padrão mental e descubra do que você é capaz.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:41:07.807569+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/The Physics of Learning.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "fisica_do_aprendizado",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "estrategias_de_aprendizagem_ativa",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "curva_de_esquecimento",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "efeito_de_espacamento",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "repeticao_espacada",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "efeito_de_recuperacao",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "pratica_espacada_de_recuperacao",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "pratica_intercalada",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "automaticidade_no_aprendizado",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "pratica_deliberada",
+            "weight": 8,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota explora os princípios científicos do aprendizado, comparando-os a leis da física, e discute por que essas estratégias eficazes, como aprendizado ativo, repetição espaçada e prática intercalada, são subutilizadas na educação. Detalha técnicas para otimizar a retenção de conhecimento e aprimorar o desempenho cognitivo.",
+        "cdu_primary": "37.015",
+        "cdu_secondary": [
+          "159.942",
+          "004.9"
+        ],
+        "cdu_description": "Psicologia da educação. Teorias e métodos de ensino. Processos de aprendizagem e memória. Uso de tecnologia para educação.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/The Physics of Learning.md",
+          "file_name": "The Physics of Learning.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:41:10.470167+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Livros e outros arquivos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "teologia_calvinista",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "missiologia",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "teologia_sacramental",
+            "weight": 7,
+            "confidence": 0.75
+          },
+          {
+            "name": "heresiologia",
+            "weight": 7,
+            "confidence": 0.7
+          },
+          {
+            "name": "teologia_biblica",
+            "weight": 8,
+            "confidence": 0.8
+          },
+          {
+            "name": "teologia_crista",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "teologia_do_trabalho",
+            "weight": 6,
+            "confidence": 0.65
+          },
+          {
+            "name": "tecnologia_de_orquestracao",
+            "weight": 7,
+            "confidence": 0.7
+          },
+          {
+            "name": "linguagens_de_programacao",
+            "weight": 6,
+            "confidence": 0.6
+          },
+          {
+            "name": "estudo_de_textos_biblicos",
+            "weight": 5,
+            "confidence": 0.55
+          }
+        ],
+        "content_summary": "A nota lista diversos livros e recursos sobre teologia cristã, com ênfase em teologia calvinista, missiologia e estudos bíblicos, além de materiais sobre tecnologia como Kubernetes e Kotlin.",
+        "cdu_primary": "230",
+        "cdu_secondary": [
+          "266",
+          "234.2",
+          "273.6",
+          "220.6",
+          "004.7",
+          "005.133"
+        ],
+        "cdu_description": "Teologia Cristã e Doutrinas",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/40 COMO CONHECEMOS/Livros e outros arquivos.md",
+          "file_name": "Livros e outros arquivos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-04T23:41:13.133084+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    }
+  ]
+}

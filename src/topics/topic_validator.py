@@ -4,7 +4,7 @@ import re
 import unicodedata
 from typing import Any, Dict, List, Optional
 
-from src.topics.config import TopicsConfig
+from src.topics.config import TopicConfig
 
 
 def remove_accents(text: str) -> str:
@@ -32,8 +32,8 @@ class TopicValidationError(Exception):
 class TopicValidator:
     """Validator for topic extraction results."""
 
-    def __init__(self, config: TopicsConfig = None):
-        self.config = config or TopicsConfig()
+    def __init__(self, config: TopicConfig = None):
+        self.config = config or TopicConfig()
 
     def validate_topics(self, topics: List[Dict[str, Any]]) -> bool:
         """Validate topics list format.

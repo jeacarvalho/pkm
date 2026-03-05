@@ -1,0 +1,5500 @@
+{
+  "timestamp": "2026-03-05T00:58:55.564652+00:00",
+  "target_dir": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE",
+  "dry_run": false,
+  "results": [
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Dos objetivos da contabilidade à aplicação prática.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "objetivos_contabilidade",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "aplicacao_pratica_contabilidade",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "teoria_contabil",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "esquema_contabilidade",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "livro_teoria_contabilidade",
+            "weight": 6,
+            "confidence": 0.94
+          },
+          {
+            "name": "hendriksen_contabilidade",
+            "weight": 5,
+            "confidence": 0.93
+          },
+          {
+            "name": "processo_contabil",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "relacao_objetivos_pratica",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "diagrama_contabilidade",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "fundamentos_contabilidade",
+            "weight": 9,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota descreve um esquema que ilustra a transição dos objetivos da contabilidade para sua aplicação prática, com base em um livro de teoria contábil.",
+        "cdu_primary": "657",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Organização comercial e administrativa",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Dos objetivos da contabilidade à aplicação prática.md",
+          "file_name": "Dos objetivos da contabilidade à aplicação prática.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:33:34.609142+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Miss Futurix - vídeo disciplina empreendedorismo.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "definicao_mercado",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "pesquisa_mercado",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "analise_concorrentes",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "analise_preco_concorrente",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "importancia_informacao",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "estrategia_negocios",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "planejamento_estrategico",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "coleta_dados_mercado",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "vantagem_competitiva",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "tomada_decisao_informada",
+            "weight": 9,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "A nota enfatiza a necessidade de definir e pesquisar o mercado, analisar concorrentes (especialmente preços) e a importância crucial da informação para a formulação de estratégias de negócios.",
+        "cdu_primary": "339.1",
+        "cdu_secondary": [],
+        "cdu_description": "Comércio. Mercado. Circulação de mercadorias. Preços.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Miss Futurix - vídeo disciplina empreendedorismo.md",
+          "file_name": "Miss Futurix - vídeo disciplina empreendedorismo.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:33:36.549855+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Contabilidade.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_geral",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "economia",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "auditoria_independente",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "demonstracoes_contabeis",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "teoria_da_contabilidade",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "contabilidade_internacional",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "gestao_executiva",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "treinamento_continuado",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "revisao_por_pares",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "tcc_contabilidade",
+            "weight": 8,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A nota aborda a intersecção entre contabilidade e economia, com foco em auditoria, demonstrações contábeis e teoria contábil. Inclui referências a materiais de estudo, como aulas e livros, e menções a TCC e rematrículas.",
+        "cdu_primary": "657.1",
+        "cdu_secondary": [
+          "330",
+          "657.6"
+        ],
+        "cdu_description": "Contabilidade em geral, com ênfase em auditoria e teoria contábil.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Contabilidade.md",
+          "file_name": "Contabilidade.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:33:38.801993+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Módulo 2 - CUSTOS PARA FINS DECISÓRIOS.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "classificacao_de_custos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "custos_crcsp",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "custeio_por_absorcao",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "impairment_estoques",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "desvalorizacao_estoques",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "conta_redutora_ativo",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "perda_conta_resultado",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "lancamento_contabil_estoque",
+            "weight": 5,
+            "confidence": 0.91
+          },
+          {
+            "name": "gestao_estoques",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "contabilidade_custos",
+            "weight": 8,
+            "confidence": 0.99
+          }
+        ],
+        "content_summary": "A nota aborda a classificação de custos, especificamente o custeio por absorção e o conceito de impairment em estoques, detalhando seu tratamento contábil como conta redutora do ativo.",
+        "cdu_primary": "657.42",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade de custos. Custeio por absorção. Avaliação de estoques.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Módulo 2 - CUSTOS PARA FINS DECISÓRIOS.md",
+          "file_name": "Módulo 2 - CUSTOS PARA FINS DECISÓRIOS.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:33:41.157742+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Capital de giro.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "capital_de_giro",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "recursos_operacionais",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "custos_operacionais",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "vendas_a_prazo",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "compra_de_materias_primas",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "gestao_de_estoques",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "pagamento_de_salarios",
+            "weight": 6,
+            "confidence": 0.84
+          },
+          {
+            "name": "despesas_operacionais",
+            "weight": 6,
+            "confidence": 0.83
+          },
+          {
+            "name": "empreendedorismo",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "fontes_de_recursos",
+            "weight": 5,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "O capital de giro é a fonte de recursos essenciais para as operações empresariais, cobrindo custos como vendas a prazo, aquisição de matérias-primas, gestão de estoques e pagamento de salários e despesas operacionais.",
+        "cdu_primary": "658.15",
+        "cdu_secondary": [],
+        "cdu_description": "Gestão financeira. Capital de giro",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Capital de giro.md",
+          "file_name": "Capital de giro.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:33:43.411599+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/ADMINISTRAÇÃO.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "fundamentos_gestao_empresarial",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "organizacoes_administracao",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "funcoes_administrador",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "administracao_organizacoes_brasileiras",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "administracao_publica",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "estrutura_organizacional",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "papel_do_gestor",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "contexto_administrativo_brasil",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "teorias_administracao",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "desafios_gestao",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A nota aborda os fundamentos da gestão empresarial, focando nas organizações, nas funções do administrador e na administração no contexto brasileiro, incluindo a administração pública.",
+        "cdu_primary": "658",
+        "cdu_secondary": [
+          "35",
+          "005.32"
+        ],
+        "cdu_description": "Gestão e organização de empresas. Administração pública. Funções e papéis do administrador.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/ADMINISTRAÇÃO.md",
+          "file_name": "ADMINISTRAÇÃO.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:33:45.869327+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/CUSTOS PARA FINS DECISÓRIOS.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "curso_online_crcsp",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "custos_decisorios",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "modulo_2_custos",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "modulo_3_custos",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "educacao_continuada_crcsp",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "gestao_de_custos",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "tomada_de_decisao_empresarial",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "contabilidade_gerencial",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "analise_de_custos",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "plataforma_online_crcsp",
+            "weight": 7,
+            "confidence": 0.92
+          }
+        ],
+        "content_summary": "O conteúdo descreve um curso online oferecido pelo CRC/SP focado em custos para fins decisórios, abordando módulos específicos sobre o tema.",
+        "cdu_primary": "657.4",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade de custos. Custos para fins de gestão e decisão.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/CUSTOS PARA FINS DECISÓRIOS.md",
+          "file_name": "CUSTOS PARA FINS DECISÓRIOS.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:33:48.132961+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/TCC contabilidade chatgpt.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_critica",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "estudos_decoloniais_contabilidade",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "dominio_economico_contabilidade",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "resistencia_social_contabilidade",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "justica_social_contabilidade",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "epistemologias_sul_global",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "desigualdades_estruturais_contabilidade",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "abordagens_historicas_contabilidade",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "diversidade_pesquisa_contabil",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "colonialismo_financeiro",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "Este pré-projeto de TCC investiga a contabilidade sob uma ótica crítica e decolonial, questionando sua neutralidade e explorando seu papel como ferramenta de domínio econômico e político, bem como seu potencial para resistência e emancipação social.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [
+          "327.3",
+          "305.8"
+        ],
+        "cdu_description": "Contabilidade. Teoria e crítica da contabilidade. Contabilidade e relações de poder. Estudos decoloniais e contabilidade. Contabilidade e justiça social.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/TCC contabilidade chatgpt.md",
+          "file_name": "TCC contabilidade chatgpt.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:33:50.581027+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/TCC contabilidade v2.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422c9fb20 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Pensar contabilidade 2022 - ITG 2000 (R1) - Escrituração Contábil.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "interpretacao_contabil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "normas_contabeis",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "critérios_contabeis",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "procedimentos_contabeis",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "entidades_contabeis",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "natureza_entidade",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "porte_entidade",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "necessidade_informacao",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "usuario_informacao",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "plano_de_contas",
+            "weight": 5,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "A nota explica que as Interpretações Técnicas de Grandezas (ITG) não são normas, mas sim interpretações que estabelecem critérios e procedimentos contábeis para todas as entidades, independentemente de sua natureza ou porte, sem detalhar planos de contas.",
+        "cdu_primary": "657.1",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade em geral",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Pensar contabilidade 2022 - ITG 2000 (R1) - Escrituração Contábil.md",
+          "file_name": "Pensar contabilidade 2022 - ITG 2000 (R1) - Escrituração Contábil.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:34:03.891332+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Amortização.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "depreciacao_perda_valor_bem",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "amortizacao_reducao_tempo_contrato",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "impacto_calculo_impostos_amortizacao",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "registro_contabil_amortizacao",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "lucro_empresa_amortizacao",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "patrimonio_contabil_amortizacao",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "regras_legais_amortizacao",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "uso_desgaste_natural_depreciacao",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "obsolescencia_depreciacao",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "reducao_valor_bem_direito",
+            "weight": 8,
+            "confidence": 0.9
+          }
+        ],
+        "content_summary": "A nota diferencia depreciação (perda de valor por uso, desgaste ou obsolescência) de amortização (perda de valor pela redução do tempo de contrato de um bem ou direito). A amortização, quando feita legalmente, impacta o cálculo de impostos ao afetar o lucro e o patrimônio contábil da empresa.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Contabilidade de custos. Contabilidade de depreciação, amortização e exaustão",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Amortização.md",
+          "file_name": "Amortização.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:34:06.301073+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/We Need Universal ESG Accounting Standards.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422c9e7d0 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/ESG.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422e53d90 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/fluxo de caixa.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422e53e80 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/O poder e a justiça - Niteroi não faz obra em encosta e tem aval da justiça.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "ações_judiciais_obras_encostas_niteroi",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "responsabilidade_prefeitura_deslizamentos",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "ministério_público_obras_risco",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "decisão_tj_rj_suspensão_ações",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "obras_contenção_áreas_risco",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "mapeamento_áreas_risco_niteroi",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "tragédia_morro_boa_esperança",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "custo_obras_engenharia_geotecnia",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "construções_irregulares_encostas",
+            "weight": 6,
+            "confidence": 0.84
+          },
+          {
+            "name": "negociação_extrajudicial_mp_prefeitura",
+            "weight": 5,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "A Prefeitura de Niterói obteve vitórias judiciais que derrubaram 48 ações do Ministério Público que exigiam obras em encostas de áreas de risco. Apesar de tragédias terem ocorrido, o município argumenta que as obras são complexas e caras, enquanto o MP busca soluções e o mapeamento das áreas de risco.",
+        "cdu_primary": "342.9",
+        "cdu_secondary": [
+          "351.777",
+          "304.2"
+        ],
+        "cdu_description": "Direito administrativo; Poder executivo; Responsabilidade do Estado; Segurança pública; Meio ambiente; Gestão de riscos ambientais",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/O poder e a justiça - Niteroi não faz obra em encosta e tem aval da justiça.md",
+          "file_name": "O poder e a justiça - Niteroi não faz obra em encosta e tem aval da justiça.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:41:47.666166+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/IFRS.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "fundacao_ifrs",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "organizacao_sem_fins_lucrativos",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "interesse_publico",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "desenvolvimento_padroes_contabeis",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "padroes_ifrs",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "padroes_divulgacao_sustentabilidade",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "padroes_contabeis_alta_qualidade",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "padroes_contabeis_compreensiveis",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "padroes_contabeis_aplicaveis",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "adopcao_padroes_globais",
+            "weight": 8,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A Fundação IFRS é uma organização sem fins lucrativos de interesse público dedicada ao desenvolvimento e adoção global de um conjunto único de padrões contábeis e de divulgação de sustentabilidade de alta qualidade, conhecidos como Padrões IFRS.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Normas e regulamentos. Normas internacionais de contabilidade.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/IFRS.md",
+          "file_name": "IFRS.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:41:49.847045+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Artigos contabilidade.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "formacao_qualificacao_profissionais_contabilidade",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "redacao_artigos_contabilidade",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "interesses_estudantes_contabilidade_dark_triad",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "influencia_personalidade_ceticismo_auditores",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "desenvolvimento_habilidades_competencias_contabilidade",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "revolucao_tecnologica_area_contabil",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "desonestidade_academica_ciencias_contabeis",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "penalizacao_auditores_independentes_brasil",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "expectation_gap_auditoria_independente",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "pesquisas_experimentais_educacao_contabil",
+            "weight": 7,
+            "confidence": 0.87
+          }
+        ],
+        "content_summary": "A nota compila artigos sobre contabilidade, abordando desde a formação e qualificação de profissionais até temas como ética, personalidade, tecnologia e auditoria. Explora também a aplicação de pesquisas experimentais e modelos de negócios disruptivos na área contábil.",
+        "cdu_primary": "657",
+        "cdu_secondary": [
+          "005.32",
+          "378.9",
+          "336.5",
+          "347.73"
+        ],
+        "cdu_description": "Contabilidade; Administração de empresas; Auditoria; Educação superior; Ética profissional",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Artigos contabilidade.md",
+          "file_name": "Artigos contabilidade.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:41:52.481444+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Risco.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422c9fd00 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Perito Contábil - Responsabilidades e Compromissos com a Justiça e os Riscos de Penalizações.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_geral",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "normas_contabeis",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "cpcs_2015",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "artigos_cpcs_464_480",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "nbc_tp01",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "nbc_pp01_r1",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "regulamentacao_contabil",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "padroes_contabeis",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "estudo_contabilidade",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "legislacao_contabil",
+            "weight": 6,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A nota lista normas contábeis a serem estudadas, incluindo CPCs de 2015 e NBCs específicas.",
+        "cdu_primary": "657.1",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Organização e direção da empresa. Contabilidade geral.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Perito Contábil - Responsabilidades e Compromissos com a Justiça e os Riscos de Penalizações.md",
+          "file_name": "Perito Contábil - Responsabilidades e Compromissos com a Justiça e os Riscos de Penalizações.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:04.358645+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Contabilidade Social.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_social",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "prestacao_de_contas_social",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "prestacao_de_contas_ambiental",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "ensaio_teorico",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "postalgia",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "novo_absurdismo",
+            "weight": 7,
+            "confidence": 0.83
+          },
+          {
+            "name": "critica_social",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "pesquisa_academica",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "journal_social_environmental_accountability",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "contabilidade_universidade_uva",
+            "weight": 5,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "Este documento é um ensaio sobre contabilidade social, explorando conceitos como 'postalgia' e 'novo absurdismo' no contexto da prestação de contas social e ambiental. A pesquisa se insere no âmbito do Social and Environmental Accountability Journal.",
+        "cdu_primary": "657.42",
+        "cdu_secondary": [
+          "305.8",
+          "111.1"
+        ],
+        "cdu_description": "Contabilidade social e ambiental, com ênfase em aspectos teóricos e filosóficos (postalgia, absurdismo).",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Contabilidade Social.md",
+          "file_name": "Contabilidade Social.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:06.611690+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Como fazer uma pesquisa de mercado.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "pesquisa_de_mercado",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "roupas_femininas",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "copacabana",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "publico_alvo",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "faixa_etaria_15_a_39_anos",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "populacao_feminina",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "estimativa_faturamento",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "estimativa_custos_mensais",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "empreendimentos",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "analise_demografica",
+            "weight": 8,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "A nota descreve a importância da pesquisa de mercado para definir o público-alvo de empreendimentos, focando em roupas femininas em Copacabana para a faixa etária de 15 a 39 anos, e como isso impacta a estimativa de faturamento e custos.",
+        "cdu_primary": "339.1",
+        "cdu_secondary": [
+          "316.33",
+          "338.47"
+        ],
+        "cdu_description": "Comércio e consumo; Pesquisa de mercado e análise de mercado; Sociologia da população; Indústria de vestuário",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Como fazer uma pesquisa de mercado.md",
+          "file_name": "Como fazer uma pesquisa de mercado.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:08.760819+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Metodologias e ferramentas para prover soluções de problemas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "analise_swot",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "ambiente_interno_externo",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "fatores_influenciadores_negocio",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "design_thinking",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "empatia_no_design",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "fases_design_thinking",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "inspiracao_design_thinking",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "mapa_de_empatia",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "ideacao_design_thinking",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "implementacao_design_thinking",
+            "weight": 7,
+            "confidence": 0.87
+          }
+        ],
+        "content_summary": "A nota descreve metodologias para solução de problemas, incluindo Análise SWOT para avaliar fatores internos e externos de um negócio, e Design Thinking, com foco em empatia, inspiração, ideação e implementação através de ferramentas como mapa de empatia e prototipagem.",
+        "cdu_primary": "005.3",
+        "cdu_secondary": [
+          "658.012"
+        ],
+        "cdu_description": "Gestão e organização. Métodos de gestão. Planejamento estratégico e análise de negócios.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Metodologias e ferramentas para prover soluções de problemas.md",
+          "file_name": "Metodologias e ferramentas para prover soluções de problemas.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:11.219688+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Módulo 3 - CUSTOS PARA FINS DECISÓRIOS.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "margem_de_seguranca",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "ponto_de_equilibrio",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "custos_fixos",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "custos_variaveis",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "precificacao_de_produtos",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "analise_de_custos",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "lucratividade",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "gestao_financeira",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "grau_de_alavancagem",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "analise_de_resultados",
+            "weight": 7,
+            "confidence": 0.87
+          }
+        ],
+        "content_summary": "A nota aborda conceitos de gestão de custos, focando no ponto de equilíbrio, margem de segurança e grau de alavancagem para análise de resultados e lucratividade.",
+        "cdu_primary": "657.47",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade de custos. Análise de custos. Ponto de equilíbrio. Margem de segurança. Alavancagem operacional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/Módulo 3 - CUSTOS PARA FINS DECISÓRIOS.md",
+          "file_name": "Módulo 3 - CUSTOS PARA FINS DECISÓRIOS.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:13.267732+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Mercado Contábil - Oportunidades e Dificuldades no cenário atual - 59a CONCERJ.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "terceirizacao_contabil",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "bpo_departamento_pessoal",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "bpo_fiscal",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "analise_contabil",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "burocracia_governamental_contabilidade",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "escassez_mao_obra_qualificada_contabilidade",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "compliance_contabil",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "due_diligence_contabil",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "auditoria_contabil",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "relato_integrado_contabil",
+            "weight": 7,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "A nota discute a terceirização de serviços contábeis, incluindo BPO de DP e fiscal, com foco em análise e desafios como burocracia e escassez de mão de obra qualificada. Aborda também temas como compliance, due diligence e auditoria.",
+        "cdu_primary": "657.1",
+        "cdu_secondary": [
+          "331.5",
+          "351.74",
+          "005.32"
+        ],
+        "cdu_description": "Contabilidade; Gestão de Pessoal; Administração Pública; Gestão da Informação",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Mercado Contábil - Oportunidades e Dificuldades no cenário atual - 59a CONCERJ.md",
+          "file_name": "Mercado Contábil - Oportunidades e Dificuldades no cenário atual - 59a CONCERJ.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:15.377788+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Quais são as competências do contador - 59a CONCERJ.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "funcoes_do_contador",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "gestao_patrimonial",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "controle_financeiro",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "legislacao_tributaria",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "tomada_de_decisao_empresarial",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "auditoria_contratos",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "servicos_contabeis_especializados",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "competencias_profissionais_contabilidade",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "etica_profissional_contabil",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "inovacao_tecnologica_contabilidade",
+            "weight": 8,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "A nota descreve as diversas funções e responsabilidades de um contador, abrangendo desde a gestão patrimonial e controle financeiro até a auditoria e tomada de decisão. Enfatiza a importância das competências profissionais, ética e atualização contínua na área contábil.",
+        "cdu_primary": "657",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Quais são as competências do contador - 59a CONCERJ.md",
+          "file_name": "Quais são as competências do contador - 59a CONCERJ.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:17.495843+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/59a Concerj - ITG 2002 terceiro setor entidades sem finalidade de lucro.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_entidades_sem_fins_lucrativos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "resolucao_cfc_1409_2012",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "recebimento_assistencia_governamental",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "contabilizacao_recursos_governamentais",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "ativo_passivo_recursos_governamentais",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "contabilizacao_ativo_imobilizado_convenios",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "segregacao_contabil_areas_atuacao",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "reconhecimento_trabalho_voluntario",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "lei_voluntariado_9608",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "resolucao_cnas_109_projetos_assistenciais",
+            "weight": 6,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "A nota detalha a aplicação da Resolução CFC 1409/2012 para entidades sem fins lucrativos, abordando o tratamento contábil de recebimentos governamentais, ativos imobilizados e trabalho voluntário, com ênfase na segregação contábil e notas explicativas.",
+        "cdu_primary": "657.8",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade de empresas e organizações sem fins lucrativos",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/59a Concerj - ITG 2002 terceiro setor entidades sem finalidade de lucro.md",
+          "file_name": "59a Concerj - ITG 2002 terceiro setor entidades sem finalidade de lucro.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:20.129217+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Compliance Regulatório nas Empresas Brasileiras - 59a CONCERJ.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "governança_corporativa",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "gestão_de_risco",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "compliance",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "ética_empresarial",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "auditoria_interna",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "auditoria_independente",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "atração_de_investidores",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "eficiência_operacional",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "proteção_de_dados_lgpd",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "regulamentação_financeira",
+            "weight": 7,
+            "confidence": 0.86
+          }
+        ],
+        "content_summary": "A nota aborda a interconexão entre governança corporativa, gestão de riscos e compliance, destacando a importância da ética e do papel da auditoria interna e independente no processo. São mencionados aspectos regulatórios e a atração de investidores.",
+        "cdu_primary": "658.1",
+        "cdu_secondary": [
+          "347.73",
+          "005.32"
+        ],
+        "cdu_description": "Gestão empresarial e organização. Governança corporativa, gestão de riscos, compliance, auditoria e ética empresarial.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Compliance Regulatório nas Empresas Brasileiras - 59a CONCERJ.md",
+          "file_name": "Compliance Regulatório nas Empresas Brasileiras - 59a CONCERJ.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:22.222960+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Os desafios das Instituições Religiosos nos tempos atuais 59a CONCERJ.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "estatuto_osc",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "codigo_civil",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "atividades_secundarias_osc",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "assembleias_osc",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "categorias_membros_osc",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "mandatos_diretoria",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "registro_atas",
+            "weight": 5,
+            "confidence": 0.88
+          },
+          {
+            "name": "ir_pastor",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "retencao_fonte",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "convencao_contabilidade",
+            "weight": 10,
+            "confidence": 0.99
+          }
+        ],
+        "content_summary": "A nota detalha as atualizações necessárias no estatuto de uma OSC (Organização da Sociedade Civil) para alinhá-lo ao novo Código Civil, incluindo a inserção de atividades secundárias, flexibilização de assembleias e categorias de membros, além de discutir questões de mandatos e imposto de renda para pastores.",
+        "cdu_primary": "366.1",
+        "cdu_secondary": [
+          "347.1",
+          "331.1",
+          "262.9"
+        ],
+        "cdu_description": "Organização da sociedade civil (OSC) e suas alterações estatutárias, com referências ao direito civil, direito do trabalho e direito eclesiástico/religioso.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Os desafios das Instituições Religiosos nos tempos atuais 59a CONCERJ.md",
+          "file_name": "Os desafios das Instituições Religiosos nos tempos atuais 59a CONCERJ.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:42:24.530524+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/O desafio das normas internacionais de contabilidade - 59a CONCERJ.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422e53af0 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Relatórios Sociais e a Global Reporting Initiative (GRI) - 59a CONCERJ.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422e53040 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Educação Continuada Vertical e Horizontal - 59a CONCERJ.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_geral",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "estrutura_academica_contabil",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "progressao_academica_contabil",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "formacao_continuada_contabil",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "pos_graduacao_lato_sensu_contabil",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "mestrado_contabil",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "doutorado_contabil",
+            "weight": 6,
+            "confidence": 0.86
+          },
+          {
+            "name": "academia_ciencias_contabeis_rj",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "associacao_contabil_rj",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "contato_crc_rj",
+            "weight": 5,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "A nota descreve a estrutura de progressão acadêmica em contabilidade, desde graduação até doutorado, e menciona a ACCERJ, a Academia de Ciências Contábeis do Estado do Rio de Janeiro, com um contato de e-mail.",
+        "cdu_primary": "657",
+        "cdu_secondary": [
+          "378.1"
+        ],
+        "cdu_description": "Contabilidade e Ensino Superior",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Educação Continuada Vertical e Horizontal - 59a CONCERJ.md",
+          "file_name": "Educação Continuada Vertical e Horizontal - 59a CONCERJ.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:09.779617+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/SPED nas Organizações da Sociedade Civil - 59a CONCERJ.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_terceiro_setor",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "obrigatoriedade_ecd",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "obrigatoriedade_ecf",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "obrigatoriedade_efd_reinf",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "obrigatoriedade_dctfweb",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "obrigatoriedade_esocial",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "plano_contas_terceiro_setor",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "concordancia_plano_contas_estatuto",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "plano_contas_referencial_rfb",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "legislacao_tributaria_terceiro_setor",
+            "weight": 6,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "A nota detalha as obrigações contábeis e acessórias digitais para o terceiro setor, incluindo ECD, ECF, EFD REINF, DCTFWeb e eSocial. Enfatiza a necessidade de o plano de contas estar alinhado ao estatuto e à atividade da organização, além de seguir o plano referencial da Receita Federal.",
+        "cdu_primary": "336.22",
+        "cdu_secondary": [
+          "005.33",
+          "336.1"
+        ],
+        "cdu_description": "Contabilidade e tributação de entidades sem fins lucrativos e do terceiro setor, com foco em obrigações acessórias digitais e plano de contas.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/SPED nas Organizações da Sociedade Civil - 59a CONCERJ.md",
+          "file_name": "SPED nas Organizações da Sociedade Civil - 59a CONCERJ.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:12.029113+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Marketing contábil - 59a CONCERJ.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422cc1270 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Contador multipotencial - 59a CONCERJ.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "multipotencialidade",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "carreiras_multiplas",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "ansiedade_carreira",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "aptidao_vocacao_talento",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "proposito_vida",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "autoconhecimento_carreira",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "inovacao_carreira",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "adaptabilidade_profissional",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "aprendizado_rapido",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "combinacao_areas_atuacao",
+            "weight": 9,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A nota explora o conceito de multipotencialidade, definindo-o como a capacidade de ter múltiplas carreiras ou ramos de atuação, e discute os desafios e superpoderes associados a essa característica, como inovação e adaptabilidade.",
+        "cdu_primary": "159.9",
+        "cdu_secondary": [
+          "331.1",
+          "005.32"
+        ],
+        "cdu_description": "Psicologia da vida profissional e vocacional; Orientação profissional; Gestão da carreira e desenvolvimento pessoal.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Contador multipotencial - 59a CONCERJ.md",
+          "file_name": "Contador multipotencial - 59a CONCERJ.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:24.611567+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Curso Introduction to Accounting Data Analytics and Visualization - Coursera.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_financeira",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "contabilidade_gerencial",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "auditoria_contabil",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "contabilidade_tributaria",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "sistemas_contabeis",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "ciencia_de_dados_contabil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "analise_de_dados_financeiros",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "tomada_de_decisao_estrategica",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "previsao_financeira",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "classificacao_de_custos",
+            "weight": 7,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "A nota explora a interseção entre Contabilidade e Tecnologia da Informação, destacando como a ciência de dados, impulsionada por TI e Matemática, é crucial para a análise e tomada de decisão estratégica em finanças. Aborda os subdomínios da contabilidade e a importância da classificação de custos.",
+        "cdu_primary": "657.01",
+        "cdu_secondary": [
+          "004",
+          "51",
+          "658.15"
+        ],
+        "cdu_description": "Contabilidade e auditoria; Gestão e organização de empresas; Ciência da computação e organização; Finanças empresariais",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Curso Introduction to Accounting Data Analytics and Visualization - Coursera.md",
+          "file_name": "Curso Introduction to Accounting Data Analytics and Visualization - Coursera.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:26.872966+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/Mercado de trabalho - 59a CONCERJ.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422cc2e00 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/Revistas de Contabilidade - ANPCONT.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "periodicos_contabeis_nacionais",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "associacao_nacional_pesquisa_contabilidade",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "qualificacao_periodicos_contabeis",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "instituicoes_ensino_superior_contabilidade",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "publicacoes_cientificas_contabilidade",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "editorias_ppgs_contabeis",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "revistas_contabilidade_financas",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "revistas_gestao_contabilidade",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "revistas_contabilidade_organizacoes",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "revistas_contabilidade_negocios",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota lista periódicos nacionais de contabilidade associados ou parceiros da ANPCont, apresentando suas instituições de origem e classificação QUALIS. O conteúdo detalha uma variedade de publicações científicas na área contábil.",
+        "cdu_primary": "050",
+        "cdu_secondary": [
+          "336.1",
+          "336.6",
+          "657"
+        ],
+        "cdu_description": "Periódicos. Publicações em série. Revistas. Finanças públicas. Finanças empresariais. Contabilidade.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/Revistas de Contabilidade - ANPCONT.md",
+          "file_name": "Revistas de Contabilidade - ANPCONT.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:38.551113+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/2022mazzucato - Missao economia.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "privatizacao_e_eficiencia",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "terceirizacao_governamental",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "capacidade_governamental",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "interesses_publicos_vs_privados",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "gestao_de_riscos_governamentais",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "planejamento_de_saude_publica",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "pandemia_e_infraestrutura",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "contratos_governamentais",
+            "weight": 5,
+            "confidence": 0.91
+          },
+          {
+            "name": "economia_politica_reino_unido",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "economia_politica_estados_unidos",
+            "weight": 5,
+            "confidence": 0.9
+          }
+        ],
+        "content_summary": "A nota critica a panaceia da privatização e terceirização, argumentando que o excesso dessas práticas comprometeu a capacidade governamental de gerenciar riscos e atender ao interesse público, como evidenciado pela falta de ventiladores durante a pandemia.",
+        "cdu_primary": "330.14",
+        "cdu_secondary": [
+          "351.71",
+          "338.47"
+        ],
+        "cdu_description": "Economia política. Teoria econômica. Privatização e terceirização de serviços públicos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/2022mazzucato - Missao economia.md",
+          "file_name": "2022mazzucato - Missao economia.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:40.703411+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/PEUCA - demonstrações contábeis.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "balanco_patrimonial",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "demonstracao_resultado_exercicio",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "demonstracao_mutacoes_patrimonio_liquido",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "demonstracao_fluxo_caixa",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "demonstracao_valor_adicionado",
+            "weight": 6,
+            "confidence": 0.94
+          },
+          {
+            "name": "contabilidade_societaria",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "relatorios_financeiros",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "analise_financeira",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "demonstracoes_contabeis",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "interrelacao_demonstracoes",
+            "weight": 9,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "A nota apresenta as principais demonstrações financeiras utilizadas na contabilidade societária, incluindo o Balanço Patrimonial, DRE, DMPL, DFC e DVA. Destaca-se a inter-relação entre essas demonstrações.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Contabilidade de empresas. Contabilidade de sociedades. Relatórios financeiros. Balanço.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/PEUCA - demonstrações contábeis.md",
+          "file_name": "PEUCA - demonstrações contábeis.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:42.653458+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/Palestra Educação Financeira - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "educacao_financeira_comportamental",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "influencia_familiar_no_dinheiro",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "relacao_pessoal_com_dinheiro",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "planejamento_financeiro_pessoal",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "alocacao_de_salario",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "definicao_de_proposito_financeiro",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "reserva_estrategica_financeira",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "impacto_da_inflacao_em_investimentos",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "rendimento_de_renda_fixa",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "conceito_de_liberdade_financeira",
+            "weight": 9,
+            "confidence": 0.97
+          }
+        ],
+        "content_summary": "A nota aborda a educação financeira sob uma perspectiva comportamental, explorando as influências passadas e a relação pessoal com o dinheiro para a construção de hábitos financeiros saudáveis e a definição de propósitos. Discute também a alocação de recursos, a reserva estratégica e o impacto da inflação nos rendimentos.",
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "336.7",
+          "330.16"
+        ],
+        "cdu_description": "Economia. Economia social e de consumo. Finanças pessoais e gestão do dinheiro.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/Palestra Educação Financeira - UVA.md",
+          "file_name": "Palestra Educação Financeira - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:44.887844+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/aulas pericia UVA.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422e52290 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Auditoria.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "auditoria_contabil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "contabilidade_societaria",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "auditoria_tributaria",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "pericia_contabil",
+            "weight": 7,
+            "confidence": 0.75
+          },
+          {
+            "name": "auditoria_recursos_humanos",
+            "weight": 6,
+            "confidence": 0.7
+          },
+          {
+            "name": "auditoria_ambiental",
+            "weight": 6,
+            "confidence": 0.65
+          },
+          {
+            "name": "fundamentos_auditoria",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "teoria_auditoria",
+            "weight": 8,
+            "confidence": 0.88
+          },
+          {
+            "name": "pratica_auditoria",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "livros_contabilidade",
+            "weight": 5,
+            "confidence": 0.6
+          }
+        ],
+        "content_summary": "A nota apresenta uma bibliografia dividida em básica e complementar sobre auditoria contábil, com foco em teoria, prática e aplicações específicas. Inclui também referências a contabilidade societária, perícia contábil e auditoria tributária.",
+        "cdu_primary": "657.6",
+        "cdu_secondary": [],
+        "cdu_description": "Auditoria e controle contábil",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Auditoria.md",
+          "file_name": "Auditoria.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:57.086213+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Metodologia científica/METODOLOGIA CIENTÍFICA UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "metodologia_cientifica_universidade",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "origem_evolucao_universidade",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "funcoes_universidade",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "estudo_universitario_estrategias",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "elaboracao_esquema",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "elaboracao_resumo",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "elaboracao_resenha",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "tipos_trabalhos_academicos",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "artigo_cientifico_estrutura",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "trabalho_conclusao_curso",
+            "weight": 6,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "A nota aborda a metodologia científica no contexto universitário, detalhando a origem e funções da universidade, estratégias de estudo como elaboração de esquemas e resumos, e os diversos tipos de trabalhos acadêmicos como artigos, TCCs, monografias, dissertações e teses.",
+        "cdu_primary": "001.8",
+        "cdu_secondary": [
+          "378",
+          "001.4"
+        ],
+        "cdu_description": "Metodologia da ciência e da pesquisa; Organização e administração da educação superior",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Metodologia científica/METODOLOGIA CIENTÍFICA UVA.md",
+          "file_name": "METODOLOGIA CIENTÍFICA UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:55:59.087509+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Auditoria/AuditoriaUVA-Aulas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "evolucao_ciencia_contabil",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "contabilidade_de_custos",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "contabilidade_tributaria",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "surgimento_auditoria",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "justificativas_auditoria",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "definicao_auditoria_crepaldi",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "definicao_auditoria_attie",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "objetivo_auditoria_resolucao_cfc",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "historia_auditoria_externa",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "evolucao_sistema_capitalista",
+            "weight": 6,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "A nota introduz a auditoria como uma ramificação da ciência contábil, surgida da necessidade de confirmação e comprovação de transações e da situação econômica das entidades. Explora suas justificativas, definições por autores renomados e seu objetivo principal de aumentar a confiança nas demonstrações contábeis.",
+        "cdu_primary": "657.6",
+        "cdu_secondary": [],
+        "cdu_description": "Auditoria e controle contábil",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Auditoria/AuditoriaUVA-Aulas.md",
+          "file_name": "AuditoriaUVA-Aulas.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:01.170848+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade de Instituições Específicas/Contabilidade de Instituições Específicas.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422cc37c0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade societária/CONTABILIDADE SOCIETÁRIA - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_societaria",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "estrutura_de_capital",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "formas_societarias",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "empresa_individual_responsabilidade_limitada",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "sociedade_em_comum",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "sociedade_em_conta_participacao",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "sociedade_simples",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "sociedade_limitada",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "sociedade_anonima",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "sociedade_cooperativa",
+            "weight": 8,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota aborda a formação e estrutura de capital das empresas, detalhando as diversas formas societárias existentes no Brasil, desde a empresa individual de responsabilidade limitada até as sociedades anônimas e cooperativas. São apresentadas as características e responsabilidades de cada tipo societário.",
+        "cdu_primary": "334.7",
+        "cdu_secondary": [
+          "657.1",
+          "347.7"
+        ],
+        "cdu_description": "Organizações econômicas. Sociedades. Cooperativas. Contabilidade. Direito comercial.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade societária/CONTABILIDADE SOCIETÁRIA - UVA.md",
+          "file_name": "CONTABILIDADE SOCIETÁRIA - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:13.265357+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/AVA 1 - Empreendedorismo.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "empreendedorismo_por_necessidade",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "empreendedorismo_por_oportunidade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "cenario_economico_brasil",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "desemprego_no_brasil",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "motoristas_de_aplicativo",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "microempreendedor_individual_mei",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "mudanca_perfil_empreendedor",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "empreendedorismo_jovens",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "empreendedorismo_universitarios",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "motivacao_empreender",
+            "weight": 8,
+            "confidence": 0.95
+          }
+        ],
+        "content_summary": "A nota analisa a mudança no perfil do empreendedorismo no Brasil, com um crescimento notável do empreendedorismo por necessidade, impulsionado pela crise econômica e alta taxa de desemprego. Observa-se também um aumento de jovens e universitários empreendendo.",
+        "cdu_primary": "334.7",
+        "cdu_secondary": [
+          "316.46",
+          "330.5"
+        ],
+        "cdu_description": "Organizações cooperativas e de fomento à atividade empresarial; Empreendedorismo; Desenvolvimento econômico e social",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/AVA 1 - Empreendedorismo.md",
+          "file_name": "AVA 1 - Empreendedorismo.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:15.929701+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Empreendedorismo.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422cc3460 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Empreendedorismo - conceitos e definições.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422c9db70 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Rádio Empreender.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "estrutura_organizacional_empresarial",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "definicao_visao_missao_empresarial",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "estrategias_producao_empresarial",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "gestao_empresarial_estrategica",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "planejamento_empresarial",
+            "weight": 8,
+            "confidence": 0.88
+          },
+          {
+            "name": "organizacao_empresarial",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "gestao_recursos_humanos_empresarial",
+            "weight": 7,
+            "confidence": 0.82
+          },
+          {
+            "name": "lideranca_empresarial",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "direcao_empresarial",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "controle_gerencial_empresarial",
+            "weight": 7,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "A nota aborda os elementos fundamentais para a estruturação e gestão de um empreendimento, incluindo a definição de visão e missão, estratégias de produção e precificação, e os pilares da gestão empresarial como planejamento, organização, RH, liderança e controle.",
+        "cdu_primary": "658",
+        "cdu_secondary": [],
+        "cdu_description": "Administração de empresas. Organização e gestão de empresas",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Rádio Empreender.md",
+          "file_name": "Rádio Empreender.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:37.024149+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Gestão do quê E por quê.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "gestao_recursos_humanos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "organizacao_empresarial",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "alocacao_recursos",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "desenvolvimento_lideranca",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "recrutamento_selecao",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "capacitacao_treinamento",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "gestao_desempenho",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "recursos_materiais_industria",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "recursos_tecnologicos",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "recursos_financeiros",
+            "weight": 5,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "A nota discute a necessidade de gestão de recursos escassos, com foco especial na gestão de recursos humanos, incluindo recrutamento, desenvolvimento, avaliação de desempenho e suporte psicológico. Aborda também a gestão de recursos materiais, tecnológicos e financeiros.",
+        "cdu_primary": "658.3",
+        "cdu_secondary": [
+          "658.1",
+          "658.5"
+        ],
+        "cdu_description": "Administração de pessoal. Gestão de recursos humanos. Gestão de recursos materiais e financeiros. Gestão da produção.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Gestão do quê E por quê.md",
+          "file_name": "Gestão do quê E por quê.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:39.083187+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Empreendedorismo - Empreendomon.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "empreendedorismo_gamificado",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "apresentacao_empresarial_interativa",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "desenvolvimento_de_novos_produtos",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "gestao_de_vendas",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "simulacao_empresarial",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "desafios_empreendedores",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "gameficacao_educacional",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "estrategias_de_negocios",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "criacao_de_conteudo_digital",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "inovacao_empresarial",
+            "weight": 6,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A nota descreve uma apresentação gamificada sobre empreendedorismo, onde um empreendedor enfrenta desafios de negócios simulados em um ambiente de jogo. O conteúdo foca em desenvolvimento de produtos e gestão de vendas.",
+        "cdu_primary": "658.012",
+        "cdu_secondary": [
+          "004.9",
+          "371.33"
+        ],
+        "cdu_description": "Gestão e organização empresarial. Planejamento e controle. Métodos e técnicas de gestão. Inovação e desenvolvimento de produtos. Simulação e jogos em gestão.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Empreendedorismo - Empreendomon.md",
+          "file_name": "Empreendedorismo - Empreendomon.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:41.233443+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Montando seu plano de negócios.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "planejamento_estrategico_negocios",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "elaboracao_plano_negocios",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "analise_mercado_potencial",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "premissas_negocio",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "capital_giro_empresarial",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "recursos_humanos_empresariais",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "planejamento_financeiro_operacional",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "previsao_vendas_mensal",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "analise_fluxo_caixa",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "recuperacao_investimento_inicial",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota detalha os passos essenciais para a montagem de um plano de negócios, abordando premissas, capital de giro, análise de mercado e potencial, recursos humanos, e planejamento financeiro e operacional com projeções de 36 meses.",
+        "cdu_primary": "658.012",
+        "cdu_secondary": [],
+        "cdu_description": "Planejamento e organização de empresas. Planejamento empresarial",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Montando seu plano de negócios.md",
+          "file_name": "Montando seu plano de negócios.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:43.484181+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Empreendedorismo - Planejamento de Negócios Formais no Mercado Informal.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "empreendedorismo_informal_brasil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "planejamento_estrategico_pequenos_negocios",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "crescimento_mercado_informal",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "motivacao_empreendedora_china_india",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "reducao_desigualdades_empreendedorismo",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "relatorio_global_entrepreneurship_monitor",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "identificacao_oportunidade_negocio",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "plano_negocios_estrategias",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "empreendedorismo_por_necessidade_vs_oportunidade",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "deficiencia_gestao_analise_mercado",
+            "weight": 10,
+            "confidence": 0.98
+          }
+        ],
+        "content_summary": "A nota discute o cenário do empreendedorismo informal no Brasil, destacando sua contribuição para o PIB e os desafios relacionados à gestão e planejamento. Aborda a importância da identificação de oportunidades e do plano de negócios para o sucesso, contrastando empreendedorismo por necessidade com o por oportunidade.",
+        "cdu_primary": "334.7",
+        "cdu_secondary": [
+          "330.14",
+          "338.4",
+          "316.47"
+        ],
+        "cdu_description": "Organizações de negócios de pequena escala; Pequenas e médias empresas; Empreendedorismo; Gestão de negócios; Análise de mercado",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Empreendedorismo - Planejamento de Negócios Formais no Mercado Informal.md",
+          "file_name": "Empreendedorismo - Planejamento de Negócios Formais no Mercado Informal.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:45.487161+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Inovação e empreendedorismo - video disciplina.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "diferenciacao_inovacao_invento",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "inovacao_no_esporte",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "analise_de_dados_contratacao",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "inovacao_social_saude",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "microcredito_inovacao",
+            "weight": 6,
+            "confidence": 0.7
+          },
+          {
+            "name": "comportamento_empreendedor",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "assumir_riscos_empreendedorismo",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "encarar_desafios_empreendedorismo",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "busca_por_inovacao",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "empreendedorismo_inovador",
+            "weight": 10,
+            "confidence": 0.98
+          }
+        ],
+        "content_summary": "A nota explora a diferenciação entre inovação e invenção, apresentando exemplos práticos em esportes, gestão, saúde e finanças. Destaca o comportamento empreendedor como um conjunto de atitudes voltadas para a inovação e a superação de desafios.",
+        "cdu_primary": "658.014",
+        "cdu_secondary": [
+          "005.9",
+          "334.7",
+          "364.1"
+        ],
+        "cdu_description": "Gestão da inovação e empreendedorismo",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Inovação e empreendedorismo - video disciplina.md",
+          "file_name": "Inovação e empreendedorismo - video disciplina.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:47.419275+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Empreendedorismo e Inovação — Qual é a relação.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "empreendedorismo_inovador",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "relacao_empreendedorismo_inovacao",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "competitividade_mercado",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "solucoes_diferenciadas",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "evolucao_negocios",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "perfil_empreendedor",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "criatividade_empreendedora",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "visao_mercado",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "etica_inovacao",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "flexibilidade_negocios",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O artigo explora a relação intrínseca entre empreendedorismo e inovação, destacando como a busca por soluções únicas e a capacidade de adaptação são cruciais para o sucesso em mercados competitivos. Discute o perfil do empreendedor inovador, enfatizando a importância da criatividade, visão de mercado, ética e flexibilidade.",
+        "cdu_primary": "658.11",
+        "cdu_secondary": [
+          "001.895",
+          "334.7"
+        ],
+        "cdu_description": "Gestão e administração de empresas; Empreendedorismo e Inovação; Organização e gestão de empresas",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Empreendedorismo e Inovação — Qual é a relação.md",
+          "file_name": "Empreendedorismo e Inovação — Qual é a relação.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:49.727286+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Rádio Empreendedorismo.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "etica_empreendedora",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "responsabilidade_social_empresarial",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "comportamento_individual_empreendedor",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "lideranca_etica_empresarial",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "transparencia_empresarial",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "valores_empresariais",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "relacionamento_com_colaboradores",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "etica_no_relacionamento_com_fornecedores",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "etica_no_relacionamento_com_clientes",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "etica_no_relacionamento_com_poder_publico",
+            "weight": 5,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "A nota discute a importância da ética no empreendedorismo, abordando exemplos de empreendedores e diretrizes para uma conduta empresarial responsável, incluindo transparência, valorização de colaboradores e respeito ao meio ambiente e à comunidade.",
+        "cdu_primary": "174.4",
+        "cdu_secondary": [],
+        "cdu_description": "Ética aplicada. Ética nos negócios e na economia",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Empreendedorismo/Rádio Empreendedorismo.md",
+          "file_name": "Rádio Empreendedorismo.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:51.872614+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabiliade Comercial/Contabiliade Comercial.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "classificacao_empresas_atividade",
+            "weight": 8,
+            "confidence": 0.98
+          },
+          {
+            "name": "classificacao_empresas_socios",
+            "weight": 7,
+            "confidence": 0.97
+          },
+          {
+            "name": "personalidade_juridica_empresario",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "registro_empresarial_junta_comercial",
+            "weight": 6,
+            "confidence": 0.95
+          },
+          {
+            "name": "documentos_constitutivos_sociedades",
+            "weight": 9,
+            "confidence": 0.99
+          },
+          {
+            "name": "obrigações_empresariais",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "livro_diario_contabilidade",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "nome_empresarial_firma_denominacao",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "tipos_responsabilidade_societaria",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "classificacao_sociedades_personificadas",
+            "weight": 8,
+            "confidence": 0.97
+          }
+        ],
+        "content_summary": "A nota aborda a classificação de empresas e sociedades, detalhando fatores como atividade, qualidade dos sócios e personalidade jurídica. Explica a formalização, obrigações do empresário, o uso do livro diário e os diferentes tipos de responsabilidades e sociedades.",
+        "cdu_primary": "334.7",
+        "cdu_secondary": [
+          "334.72",
+          "334.73",
+          "334.74",
+          "334.75",
+          "334.76",
+          "334.77",
+          "334.78",
+          "334.79",
+          "657.1",
+          "657.3"
+        ],
+        "cdu_description": "Organização e gestão de empresas. Sociedades comerciais e empresariais. Contabilidade.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabiliade Comercial/Contabiliade Comercial.md",
+          "file_name": "Contabiliade Comercial.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:56:54.538556+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Controladoria/Controladoria UVA.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422cc16c0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Gerencial/CONTABILIDADE GERENCIAL UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_gerencial",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "contabilidade_financeira",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "sistema_de_informacao_gerencial",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "tomada_de_decisao_gerencial",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "gestao_de_custos",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "custos_de_oportunidade",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "margem_de_contribuicao",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "ponto_de_equilibrio",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "sistemas_de_custeio",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "formacao_de_precos",
+            "weight": 8,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "A nota aborda a contabilidade gerencial, diferenciando-a da contabilidade financeira, e explora seus conceitos fundamentais, como gestão de custos, sistemas de custeio, formação de preços e tomada de decisão. Inclui referências bibliográficas e unidades temáticas.",
+        "cdu_primary": "657.4",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade de gestão. Contabilidade de custos",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Gerencial/CONTABILIDADE GERENCIAL UVA.md",
+          "file_name": "CONTABILIDADE GERENCIAL UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:06.516205+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/historia afro indigena/historia afro indigena - aulas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "origem_conceito_cultura",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "etimologia_palavra_cultura",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "cultura_antiguidade_romana",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "evolucao_significado_cultura",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "oposicao_cultura_natureza",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "pensamento_john_locke_cultura",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "iluminismo_conceito_cultura",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "pensamento_rousseau_cultura_educacao",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "filosofia_immanuel_kant_cultura",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "historicidade_conceito_cultura",
+            "weight": 10,
+            "confidence": 0.99
+          }
+        ],
+        "content_summary": "A nota explora a evolução histórica do conceito de 'cultura', desde suas origens latinas ligadas ao cultivo da terra e à educação, até a oposição entre cultura e natureza no pensamento iluminista, com destaque para Locke, Rousseau e Kant. Analisa como a historicidade moldou os múltiplos significados da palavra.",
+        "cdu_primary": "308",
+        "cdu_secondary": [
+          "1",
+          "008"
+        ],
+        "cdu_description": "Sociologia e antropologia social. A cultura. Antropologia cultural. História e desenvolvimento da cultura.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/historia afro indigena/historia afro indigena - aulas.md",
+          "file_name": "historia afro indigena - aulas.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:08.973649+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Estatistica/Estatística.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "conceitos_fundamentais_estatistica",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "estatistica_descritiva",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "estatistica_inferencial",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "tipos_de_variaveis_estatisticas",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "coleta_organizacao_dados",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "apresentacao_resultados_estatisticos",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "medidas_posicao_dispersao",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "tabelas_graficos_estatisticos",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "probabilidade_estatistica",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "indices_indicadores_estatisticos",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota introduz os conceitos fundamentais da estatística, abordando seu papel no planejamento, coleta, organização, interpretação e apresentação de dados para tomada de decisão. Detalha a estatística descritiva e inferencial, tipos de variáveis, organização de dados em tabelas e gráficos, e medidas de posição e dispersão.",
+        "cdu_primary": "519.2",
+        "cdu_secondary": [],
+        "cdu_description": "Probabilidade e Estatística",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Estatistica/Estatística.md",
+          "file_name": "Estatística.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:11.009373+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade de Custos/Contabilidade de Custos - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_de_custos",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "terminologia_contabil",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "classificacao_custos",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "custos_fixos",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "custos_variaveis",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "gasto",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "investimento",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "despesa",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "revolucao_industrial",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "capitalismo",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A nota aborda a contabilidade de custos, definindo sua terminologia essencial como gasto, investimento, custo, despesa, desembolso, perda e receita. Explora a classificação de custos em fixos e variáveis e discute a evolução histórica da contabilidade de custos com a Revolução Industrial e o capitalismo.",
+        "cdu_primary": "657.42",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade de custos",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade de Custos/Contabilidade de Custos - UVA.md",
+          "file_name": "Contabilidade de Custos - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:13.011559+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade pública e orçamento público/Contabilidade pública e orçamento público.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_publica_setor_publico",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "gestao_municipal_contabilidade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "normas_contabilidade_setor_publico_brasileiras",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "padroes_internacionais_contabilidade_setor_publico",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "contabilidade_governamental_enfoque_administrativo",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "orcamento_contabilidade_gestao_publica",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "administracao_publica_instituicoes_governamentais",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "poderes_executivo_legislativo_judiciario_relacionamento",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "administracao_direta_indireta",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "mcasp_normas_execucao",
+            "weight": 7,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "A nota compila referências bibliográficas sobre contabilidade pública, gestão municipal e governamental, com foco em normas brasileiras e internacionais. Inclui também discussões sobre a formulação de questões acadêmicas relacionadas à administração pública e seus poderes.",
+        "cdu_primary": "336.1",
+        "cdu_secondary": [
+          "351.71",
+          "352",
+          "005.32"
+        ],
+        "cdu_description": "Finanças públicas. Contabilidade pública. Orçamento público. Administração pública.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade pública e orçamento público/Contabilidade pública e orçamento público.md",
+          "file_name": "Contabilidade pública e orçamento público.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:15.424615+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade pública e orçamento público/o que deve constar nas NE MCASP.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "notas_explicativas_balanco_orcamentario",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "regime_orcamentario_orcamento_aprovado",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "detalhamento_receitas_despesas_intraorcamentarias",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "detalhamento_despesas_tipos_creditos",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "utilizacao_superavit_financeiro_reabertura_creditos",
+            "weight": 8,
+            "confidence": 0.88
+          },
+          {
+            "name": "restos_pagar_nao_processados_liquidados",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "recursos_exercicios_anteriores_financiamento_despesas",
+            "weight": 8,
+            "confidence": 0.87
+          },
+          {
+            "name": "notas_explicativas_balanco_patrimonial",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "detalhamento_contas_balanco_patrimonial",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "politicas_contabeis_relevantes_patrimonio",
+            "weight": 8,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O documento detalha os requisitos para as notas explicativas do Balanço Orçamentário e do Balanço Patrimonial, incluindo informações mínimas a serem divulgadas e recomendações de detalhamento de contas e políticas contábeis.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Auditoria. Gestão comercial. Administração. Marketing. Relações públicas. Organização e gestão de empresas. Contabilidade pública.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade pública e orçamento público/o que deve constar nas NE MCASP.md",
+          "file_name": "o que deve constar nas NE MCASP.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:17.803817+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Perícia e Arbitragem/Perícia e Arbitragem.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "pericia_contabil_judicial",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "perito_assistente_tecnico",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "codigo_de_processo_civil_cpc",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "normas_brasileiras_de_contabilidade_nbc",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "laudo_pericial_contabil",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "parecer_tecnico_contabil",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "quesitos_tecnicos",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "imparcialidade_do_perito",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "auditoria_contabil_vs_pericia_contabil",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "planejamento_de_trabalho_pericia",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O conteúdo aborda a distinção entre perito judicial e perito assistente técnico no âmbito do Código de Processo Civil e das Normas Brasileiras de Contabilidade, detalhando suas funções, responsabilidades e a elaboração de laudos e pareceres. Também compara aspectos da perícia contábil com a auditoria contábil.",
+        "cdu_primary": "347.9",
+        "cdu_secondary": [
+          "657.6",
+          "347.94"
+        ],
+        "cdu_description": "Direito processual civil; Perícia judicial e auditoria contábil",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Perícia e Arbitragem/Perícia e Arbitragem.md",
+          "file_name": "Perícia e Arbitragem.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:20.237437+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/ANÁLISE ECONÔMICA E MERCADO/AnaliseInvestimentoUVA-Aulas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "analise_investimento_projeto",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "valor_presente_liquido_vpl",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "taxa_interna_retorno_tir",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "calculo_vpl",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "fluxo_caixa_futuro",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "taxa_minima_atratividade_tma",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "custo_capital_empresa",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "viabilidade_economica_projeto",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "vantagens_metodo_vpl",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "desvantagens_metodo_vpl",
+            "weight": 6,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A nota introduz técnicas de análise de investimento para tomada de decisão em projetos, focando no Valor Presente Líquido (VPL) e na Taxa Interna de Retorno (TIR). Detalha o cálculo, vantagens e desvantagens do VPL, considerando fluxos de caixa futuros e a taxa mínima de atratividade.",
+        "cdu_primary": "336.7",
+        "cdu_secondary": [
+          "658.15"
+        ],
+        "cdu_description": "Finanças. Economia monetária. Crédito. Moeda. Bancos. Finanças públicas. Finanças empresariais. Investimento. Análise de investimento. Valor presente líquido. Taxa interna de retorno.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/ANÁLISE ECONÔMICA E MERCADO/AnaliseInvestimentoUVA-Aulas.md",
+          "file_name": "AnaliseInvestimentoUVA-Aulas.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:22.695206+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/ANÁLISE ECONÔMICA E MERCADO/ANÁLISE ECONÔMICA E MERCADO - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "princípios_básicos_ciência_econômica",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "evolução_pensamento_econômico",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "organização_sistemas_mercado",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "microeconomia_princípios_basilares",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "funcionamento_mercado_demanda_oferta",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "teoria_firma",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "estruturas_mercado",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "escassez_recursos_ilimitados",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "geração_renda_desenvolvimento_econômico",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "legislação_ambiente_negócios_áfrica",
+            "weight": 10,
+            "confidence": 0.99
+          }
+        ],
+        "content_summary": "A nota aborda os princípios fundamentais da ciência econômica, a evolução do pensamento econômico, sistemas de mercado, microeconomia (demanda, oferta, firma, estruturas) e macroeconomia, com foco na geração de renda e desenvolvimento através de empresas, exemplificado pela realidade africana e seus desafios legislativos.",
+        "cdu_primary": "330",
+        "cdu_secondary": [
+          "338.2",
+          "338.5",
+          "339.9"
+        ],
+        "cdu_description": "Economia em geral, com ênfase em política econômica e desenvolvimento, preços e mercados, e relações econômicas internacionais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/ANÁLISE ECONÔMICA E MERCADO/ANÁLISE ECONÔMICA E MERCADO - UVA.md",
+          "file_name": "ANÁLISE ECONÔMICA E MERCADO - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:25.048311+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/PROCESSOS DECISÓRIOS NAS ORGANIZAÇÕES/PROCESSOS DECISÓRIOS NAS ORGANIZAÇÕES.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "teoria_da_decisao",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "processo_decisorio",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "analise_estrategica",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "probabilidade_estatistica",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "teorema_de_bayes",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "tomada_de_decisao_organizacional",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "etica_na_decisao",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "estruturacao_de_problemas",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "influencia_emocional_na_decisao",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "historia_da_matematica_aplicada",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A nota introduz a Teoria da Decisão, abordando seus conceitos, origens históricas com ênfase em Thomas Bayes e a importância da análise de alternativas e consequências. Discute também a influência de fatores como intuição, ética e emoções no processo decisório, além de apresentar etapas para estruturar um problema.",
+        "cdu_primary": "316.3",
+        "cdu_secondary": [
+          "007",
+          "330.1",
+          "519.2"
+        ],
+        "cdu_description": "Sociologia da decisão e do processo decisório, com subtemas em cibernética e teoria da informação, economia e teoria da decisão, e probabilidade e estatística.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/PROCESSOS DECISÓRIOS NAS ORGANIZAÇÕES/PROCESSOS DECISÓRIOS NAS ORGANIZAÇÕES.md",
+          "file_name": "PROCESSOS DECISÓRIOS NAS ORGANIZAÇÕES.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:27.608797+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade geral/CONTABILIDADE GERAL - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_empresarial",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "manual_contabilidade_basica",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "contabilidade_fundamental",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "fundamentos_contabilidade_basica",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "introducao_contabilidade",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "gestao_contabil",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "contabilidade_geral_simplificada",
+            "weight": 6,
+            "confidence": 0.94
+          },
+          {
+            "name": "convergencia_padrao_internacional_contabilidade",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "contabilidade_e_financas_nao_especialistas",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "historia_contabilidade",
+            "weight": 10,
+            "confidence": 0.99
+          }
+        ],
+        "content_summary": "A nota apresenta uma bibliografia extensa sobre contabilidade, abrangendo desde fundamentos básicos e empresariais até aspectos históricos e de gestão. Inclui referências a livros e um vídeo sobre a evolução da contabilidade.",
+        "cdu_primary": "657",
+        "cdu_secondary": [
+          "008",
+          "330.1",
+          "336.7"
+        ],
+        "cdu_description": "Contabilidade; História da civilização e cultura; Economia; Finanças",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade geral/CONTABILIDADE GERAL - UVA.md",
+          "file_name": "CONTABILIDADE GERAL - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:29.964125+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Análise das Demonstrações Contábeis/Análise das Demonstrações Contábeis 1.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "objetivos_analise_contabil",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "informacoes_contabeis",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "caracteristicas_qualitativas_informacao",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "compreensibilidade_informacao",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "relevancia_informacao",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "confiabilidade_informacao",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "comparabilidade_informacao",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "limitacoes_informacao_contabil",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "tecnicas_contabilidade",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "analise_demonstracoes_contabeis",
+            "weight": 10,
+            "confidence": 0.99
+          }
+        ],
+        "content_summary": "A aula aborda os objetivos da análise contábil, a importância das informações contábeis e suas características qualitativas essenciais como compreensibilidade, relevância, confiabilidade e comparabilidade. Explora também as técnicas contábeis e as limitações na divulgação de informações.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [],
+        "cdu_description": "Análise de demonstrações financeiras",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Análise das Demonstrações Contábeis/Análise das Demonstrações Contábeis 1.md",
+          "file_name": "Análise das Demonstrações Contábeis 1.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:31.938692+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Análise das Demonstrações Contábeis/Aulas Análise das Demonstrações Contábeis.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "objetivos_analise_contabil",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "aplicabilidade_tecnicas_contabeis",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "informacoes_contabeis_tomada_decisao",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "usuarios_informacao_contabil",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "caracteristicas_qualitativas_contabilidade",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "compreensibilidade_informacao_contabil",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "relevancia_informacao_contabil",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "confiabilidade_informacao_contabil",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "comparabilidade_demonstracoes_contabeis",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "tecnicas_contabilidade",
+            "weight": 8,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "Esta aula introduz os objetivos da análise contábil, destacando a importância das informações contábeis para a tomada de decisões por usuários internos e externos. São abordadas as características qualitativas essenciais da informação contábil, como compreensibilidade, relevância, confiabilidade e comparabilidade, além das técnicas contábeis aplicadas.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [],
+        "cdu_description": "Análise de demonstrações financeiras",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Análise das Demonstrações Contábeis/Aulas Análise das Demonstrações Contábeis.md",
+          "file_name": "Aulas Análise das Demonstrações Contábeis.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:33.957568+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Análise das Demonstrações Contábeis/Análise das Demonstrações Contábeis.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "analise_demonstracoes_financeiras",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "indices_liquidez_corrente",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "indices_liquidez_geral",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "indices_grau_endividamento",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "indices_participacao_capital_terceiros",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "gestao_fluxo_caixa",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "prevencao_insolvencia",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "estrutura_capital",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "saude_financeira_empresarial",
+            "weight": 5,
+            "confidence": 0.91
+          },
+          {
+            "name": "contabilidade_gerencial",
+            "weight": 5,
+            "confidence": 0.9
+          }
+        ],
+        "content_summary": "A nota aborda a análise de demonstrações financeiras, com foco em índices de liquidez, endividamento e estrutura de capital para garantir a saúde financeira e evitar a insolvência empresarial. Inclui referências bibliográficas e discussões sobre a gestão de recursos de curto e longo prazos.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [
+          "658.15",
+          "336.7"
+        ],
+        "cdu_description": "Contabilidade. Análise de contas. Análise de balanços. Análise financeira. Gestão financeira. Financiamento.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Análise das Demonstrações Contábeis/Análise das Demonstrações Contábeis.md",
+          "file_name": "Análise das Demonstrações Contábeis.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:36.317218+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Planejamento Tributário/Planejamento Tributário.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "planejamento_tributario",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "contabilidade_tributaria",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "ipi",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "icms",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "iss",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "imposto_de_renda_pessoa_juridica",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "termos_contabilidade",
+            "weight": 6,
+            "confidence": 0.7
+          },
+          {
+            "name": "manuais_contabilidade",
+            "weight": 6,
+            "confidence": 0.7
+          },
+          {
+            "name": "referencia_bibliografica",
+            "weight": 5,
+            "confidence": 0.6
+          },
+          {
+            "name": "entrega_ava2",
+            "weight": 5,
+            "confidence": 0.5
+          }
+        ],
+        "content_summary": "A nota apresenta uma lista de referências bibliográficas básicas e complementares sobre planejamento tributário e contabilidade tributária, incluindo impostos como IPI, ICMS, ISS e imposto de renda para pessoa jurídica. Menciona também um dicionário de termos contábeis e uma entrega de AVA2 relacionada ao planejamento tributário.",
+        "cdu_primary": "336.2",
+        "cdu_secondary": [
+          "657.1"
+        ],
+        "cdu_description": "Finanças públicas. Tributação. Impostos. Contabilidade geral.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Planejamento Tributário/Planejamento Tributário.md",
+          "file_name": "Planejamento Tributário.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:38.566299+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Mercado Financeiro e de Capitais/Mercado Financeiro e de Capitais.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422cc0c40 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Fundamentos da gestão empresarial/Fundamentos de Gestão Empresarial - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "conceito_organizacao",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "funcoes_administrador",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "tipos_organizacao_formal",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "estrutura_organizacional",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "tecnologia_organizacional",
+            "weight": 5,
+            "confidence": 0.88
+          },
+          {
+            "name": "definicao_administracao",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "processo_administrativo",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "planejamento_organizacional",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "organizacao_direcao_controle",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "historia_administracao_contribuicoes",
+            "weight": 6,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "A nota aborda os conceitos fundamentais de organização e administração, detalhando suas definições, funções, tipos e processos. Explora a estrutura organizacional, a tecnologia e as contribuições históricas para o estudo da administração.",
+        "cdu_primary": "65.01",
+        "cdu_secondary": [
+          "005.3",
+          "316.46"
+        ],
+        "cdu_description": "Gestão e administração. Organização e métodos. Comportamento organizacional e social.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Fundamentos da gestão empresarial/Fundamentos de Gestão Empresarial - UVA.md",
+          "file_name": "Fundamentos de Gestão Empresarial - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:50.342004+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Elaboração das Demonstrações Contábeis/Elaboração das Demonstrações Contábeis - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "demonstracoes_contabeis",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "balanco_patrimonial",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "demonstracao_resultado_exercicio",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "informacoes_gerenciais",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "tomada_de_decisao",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "usuarios_externos",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "pronunciamento_tecnico_cpc_26",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "lei_sociedades_acoes",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "exercicio_social",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "demonstracao_fluxos_caixa",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota aborda a estrutura, apresentação e elaboração do Balanço Patrimonial (BP) e da Demonstração do Resultado (DRE/DRA), destacando seu propósito de fornecer informações gerenciais para usuários externos e a tomada de decisões. São mencionados os pronunciamentos técnicos relevantes e a legislação aplicável.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Contabilidade financeira. Relatórios financeiros. Balanço.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Elaboração das Demonstrações Contábeis/Elaboração das Demonstrações Contábeis - UVA.md",
+          "file_name": "Elaboração das Demonstrações Contábeis - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:57:52.616950+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Avançada/Contabilidade-avancada-aulas.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422e53a90 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Avançada/Contabilidade Avançada.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_avancada",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "aspectos_societarios_contabilidade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "aspectos_tributarios_contabilidade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "aquisicoes_empresariais",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "reestruturacoes_empresariais",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "contabilidade_societaria",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "contabilidade_tributaria",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "lancamentos_contabeis_debito_credito",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "goodwill_contabilidade",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "investimentos_contabilidade",
+            "weight": 6,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "A nota apresenta referências bibliográficas sobre contabilidade avançada, com foco em aspectos societários e tributários, além de exemplos práticos de lançamentos contábeis envolvendo débitos e créditos em diversas situações empresariais.",
+        "cdu_primary": "657.1",
+        "cdu_secondary": [
+          "657.3",
+          "336.2",
+          "338.5"
+        ],
+        "cdu_description": "Contabilidade. Contabilidade de custos e de empresas. Contabilidade tributária. Contabilidade de empresas",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Avançada/Contabilidade Avançada.md",
+          "file_name": "Contabilidade Avançada.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:04.985432+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/ATUÁRIA E CONTABILIDADE DE SEGUROS/ATUÁRIA E CONTABILIDADE DE SEGUROS.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "historia_do_seguro",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "mutualismo_no_seguro",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "codigo_de_hamurabi_e_seguro",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "seguro_na_grecia_antiga",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "leis_de_rodes",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "seguro_no_imperio_romano",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "lei_das_12_tabuas",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "nauticum_foenus",
+            "weight": 7,
+            "confidence": 0.89
+          },
+          {
+            "name": "sociedades_funerarias_romanas",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "primeira_seguradora_inglesa",
+            "weight": 6,
+            "confidence": 0.87
+          }
+        ],
+        "content_summary": "A nota explora as origens históricas do seguro, desde o Código de Hamurábi e práticas na Grécia e Roma antigas, até as primeiras formas de seguradoras na Inglaterra, destacando o conceito de mutualismo e a evolução das regulamentações.",
+        "cdu_primary": "368.1",
+        "cdu_secondary": [],
+        "cdu_description": "Seguros contra riscos gerais. História e desenvolvimento do seguro.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/ATUÁRIA E CONTABILIDADE DE SEGUROS/ATUÁRIA E CONTABILIDADE DE SEGUROS.md",
+          "file_name": "ATUÁRIA E CONTABILIDADE DE SEGUROS.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:07.384504+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional - Unidade 1 - Comportamento organizacional, indivíduo e trabalho.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "conceito_comportamento_organizacional",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "papel_individuo_ambiente_trabalho",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "influencia_organizacao_individuo",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "disciplinas_relacionadas_comportamento_organizacional",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "desenvolvimento_organizacional",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "talentos_potenciais_colaboradores",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "valores_atitudes_emocoes_trabalho",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "personalidade_individuo_organizacao",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "habilidades_individuo_trabalho",
+            "weight": 7,
+            "confidence": 0.89
+          },
+          {
+            "name": "inteligencia_emocional_organizacional",
+            "weight": 8,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A nota introduz o conceito de Comportamento Organizacional (CO), destacando seu estudo sobre o indivíduo e sua interação no ambiente de trabalho, bem como as disciplinas que o fundamentam e a importância de valores, atitudes, emoções e habilidades individuais para o desenvolvimento organizacional.",
+        "cdu_primary": "316.46",
+        "cdu_secondary": [
+          "159.947",
+          "331.1"
+        ],
+        "cdu_description": "Sociologia do trabalho e da organização; Psicologia social aplicada ao trabalho; Psicologia do trabalho e das organizações",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional - Unidade 1 - Comportamento organizacional, indivíduo e trabalho.md",
+          "file_name": "Comportamento Organizacional - Unidade 1 - Comportamento organizacional, indivíduo e trabalho.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:09.400841+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "comportamento_organizacional",
+            "weight": 10,
+            "confidence": 1.0
+          },
+          {
+            "name": "gestao_de_pessoas",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "papel_do_individuo_no_trabalho",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "competencias_e_talentos",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "dinamica_de_grupo",
+            "weight": 8,
+            "confidence": 0.88
+          },
+          {
+            "name": "contribuicao_coletiva_organizacional",
+            "weight": 7,
+            "confidence": 0.82
+          },
+          {
+            "name": "desenvolvimento_humano_organizacional",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "eficacia_organizacional",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "estrutura_organizacional",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "cultura_organizacional",
+            "weight": 5,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "A nota descreve os objetivos de aprendizado de uma disciplina sobre Comportamento Organizacional, focando no papel do indivíduo e do grupo na eficácia da organização, e na gestão de pessoas, competências e cultura.",
+        "cdu_primary": "331.1",
+        "cdu_secondary": [
+          "316.46",
+          "305.8"
+        ],
+        "cdu_description": "Gestão de pessoal. Comportamento organizacional. Relações humanas no trabalho. Sociologia do trabalho.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional.md",
+          "file_name": "Comportamento Organizacional.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:11.756062+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional - Unidade 3 - Grupo e equipes de trabalho.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "definicao_lideranca",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "tipos_lideranca",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "teorias_lideranca_evolucao",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "inteligencia_emocional_lideranca",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "tipos_inteligencia_gardner",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "processo_lideranca_fatores",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "definicao_grupo",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "tipos_grupos_organizacionais",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "desenvolvimento_grupos_estagios",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "grupo_vs_equipe_dinamicas",
+            "weight": 7,
+            "confidence": 0.92
+          }
+        ],
+        "content_summary": "A nota explora as definições, tipos e teorias de liderança, com ênfase na inteligência emocional e nas múltiplas inteligências. Aborda também a distinção entre grupos e equipes, seus tipos e estágios de desenvolvimento.",
+        "cdu_primary": "316.46",
+        "cdu_secondary": [
+          "305.8",
+          "331.1"
+        ],
+        "cdu_description": "Psicologia social. Dinâmica de grupos. Liderança. Comportamento organizacional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional - Unidade 3 - Grupo e equipes de trabalho.md",
+          "file_name": "Comportamento Organizacional - Unidade 3 - Grupo e equipes de trabalho.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:14.100695+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/AVA 1 - Comportamento Organizacional.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "comportamento_organizacional_gestao_equipe",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "gestao_mudanca_organizacional",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "recrutamento_selecao_novos_colaboradores",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "demissao_colaboradores_transicao",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "clima_organizacional_manutencao",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "cultura_organizacional_sentimento_pertenca",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "gestao_projetos_eventos",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "trabalho_remoto_flexibilidade_geografica",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "inteligencia_emocional_lideranca",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "relacoes_interpessoais_ambiente_trabalho",
+            "weight": 5,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A nota discute a gestão de uma equipe em uma empresa de eventos que mudou sua sede, abordando a necessidade de demissões e contratações, com foco na manutenção do comportamento e clima organizacional.",
+        "cdu_primary": "331.1",
+        "cdu_secondary": [
+          "658.3",
+          "005.32"
+        ],
+        "cdu_description": "Gestão de pessoal. Administração de pessoal. Comportamento organizacional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/AVA 1 - Comportamento Organizacional.md",
+          "file_name": "AVA 1 - Comportamento Organizacional.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:16.566473+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional - Unidade 4 Sistema Organizacional.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "estrutura_organizacional",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "departamentalizacao",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "cadeia_de_comando",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "amplitude_de_controle",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "centralizacao_descentralizacao",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "formalizacao_organizacional",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "cultura_organizacional",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "identidade_organizacional",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "etica_empresarial",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "moral_organizacional",
+            "weight": 6,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A nota aborda os sistemas organizacionais, detalhando sua estrutura, especialização, departamentalização, cadeia de comando, amplitude de controle, centralização/descentralização e formalização. Explora também a cultura organizacional, suas funções e formação, e a ética empresarial, incluindo seus elementos intrínsecos.",
+        "cdu_primary": "331.1",
+        "cdu_secondary": [
+          "316.46",
+          "174"
+        ],
+        "cdu_description": "Organização do trabalho. Gestão. Relações de trabalho. Sociologia do trabalho. Ética nos negócios.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional - Unidade 4 Sistema Organizacional.md",
+          "file_name": "Comportamento Organizacional - Unidade 4 Sistema Organizacional.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:18.708843+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Comportamento Organizacional/Comportamento Organizacional - Unidade 2 - Do indivíduo ao grupo.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422cc17b0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Direito aplicado a gestao/DIREITO APLICADO A GESTAO - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "fontes_do_direito",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "direito_constitucional",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "direito_administrativo",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "direito_tributario",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "direito_processual",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "direito_penal",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "direito_civil",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "direito_empresarial",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "direito_internacional_publico",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "direito_internacional_privado",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota aborda os principais ramos do Direito, distinguindo entre Direito Público e Privado, e suas subdivisões como Constitucional, Administrativo, Tributário, Processual, Penal, Civil e Empresarial. Explora também as fontes do direito e a distinção entre direito nacional e internacional.",
+        "cdu_primary": "34",
+        "cdu_secondary": [
+          "340.1",
+          "341",
+          "342",
+          "343",
+          "347",
+          "35",
+          "351.74",
+          "351.72"
+        ],
+        "cdu_description": "Direito. Legislação. Regulamentos. Direito comparado. Jurisprudência. Fontes do direito. Direito público. Direito privado. Direito internacional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Direito aplicado a gestao/DIREITO APLICADO A GESTAO - UVA.md",
+          "file_name": "DIREITO APLICADO A GESTAO - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:31.098812+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Internacional/Contabilidade Internacional.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "contabilidade_internacional",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "normas_ifrs",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "estrutura_conceitual_contabilidade",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "globalizacao_economica",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "mercado_de_capitais",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "legislacao_contabil_brasil",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "normas_internacionais_contabilidade",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "demonstracoes_financeiras",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "ferramentas_gestao_executivos",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "comparabilidade_relatorios_financeiros",
+            "weight": 7,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "A nota aborda a contabilidade internacional, com foco na aplicação das normas IFRS no Brasil, sua estrutura normativa e a importância para a gestão e mercados globais. Discute a evolução legislativa brasileira e a necessidade de padronização para a comparabilidade de relatórios financeiros.",
+        "cdu_primary": "657.3",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade internacional. Normas internacionais de contabilidade. Harmonização e uniformização contábil.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Internacional/Contabilidade Internacional.md",
+          "file_name": "Contabilidade Internacional.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:33.351216+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Teoria Contabilidade/Objetivos da contabilidade.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "arquivo_basico_informacao_contabil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "flexibilidade_uso_informacao_contabil",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "varios_usuarios_contabilidade",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "enfases_diferentes_informacao_contabil",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "principio_avaliacao_contabil",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "data_base_contabilidade",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "objetivo_basico_contabilidade",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "fornecimento_informacao_economica",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "tomada_decisao_economica_racional",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "objetivos_demonstrativos_financeiros",
+            "weight": 7,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "A nota discute a construção de um arquivo básico de informação contábil flexível para diversos usuários e a importância do fornecimento de informações econômicas para a tomada de decisões racionais, conforme os objetivos dos demonstrativos financeiros.",
+        "cdu_primary": "657.1",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Organização e gestão da contabilidade",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Teoria Contabilidade/Objetivos da contabilidade.md",
+          "file_name": "Objetivos da contabilidade.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:35.346556+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Teoria Contabilidade/Teoria da Contabilidade UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "historia_contabilidade_partidas_dobradas",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "evolucao_pensamento_contabil",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "lucas_pacioli_divulgador_contabilidade",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "influencia_economica_contabilidade",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "escolas_doutrinas_contabilidade",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "contabilidade_brasil_historico",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "mercado_trabalho_contador",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "teoria_contabilidade_origens_recursos",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "aspectos_cientificos_contabilidade",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "globalizacao_economia_contabilidade",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota aborda a evolução histórica do pensamento contábil, desde a gênese das partidas dobradas na Itália renascentista até o desenvolvimento da profissão contábil no Brasil, influenciada pela globalização e pelas escolas de pensamento contábil.",
+        "cdu_primary": "657.09",
+        "cdu_secondary": [
+          "008",
+          "330.5",
+          "338.2"
+        ],
+        "cdu_description": "História e evolução da contabilidade, incluindo teorias, escolas e o contexto brasileiro, com ênfase no desenvolvimento econômico e profissional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Teoria Contabilidade/Teoria da Contabilidade UVA.md",
+          "file_name": "Teoria da Contabilidade UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:37.765810+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Teoria Contabilidade/Teoria da Contabilidade.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "teoria_contabil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "princípios_contabeis",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "evolução_contabilidade",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "normas_contabeis",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "pesquisa_contabil",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "modelos_contabeis",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "relatórios_financeiros",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "contabilidade_gerencial",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "contabilidade_financeira",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "história_contabilidade",
+            "weight": 5,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "A nota aborda a teoria da contabilidade, explorando sua evolução, princípios, normas e modelos. Discute a pesquisa contábil e a aplicação em relatórios financeiros, gerenciais e financeiros.",
+        "cdu_primary": "657.1",
+        "cdu_secondary": [],
+        "cdu_description": "Contabilidade. Teoria e prática geral da contabilidade.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Teoria Contabilidade/Teoria da Contabilidade.md",
+          "file_name": "Teoria da Contabilidade.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:39.906639+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Teoria das organizações/Teoria das Organizações  - UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "administracao_cientifica_taylor",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "principio_homo_economicus",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "organizacao_racional_do_trabalho",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "estudo_tempo_padrao",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "selecao_treinamento_trabalhador",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "cooperacao_remuneracao_trabalhador",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "divisao_trabalho_responsabilidade",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "teoria_classica_fayol",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "funcoes_administrativas_fayol",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "reducao_fadiga_gilbreth",
+            "weight": 6,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A nota explora os princípios da Administração Científica de Taylor, focando na eficiência, remuneração e organização racional do trabalho, e introduz a Teoria Clássica de Fayol com suas funções e princípios administrativos.",
+        "cdu_primary": "658.01",
+        "cdu_secondary": [],
+        "cdu_description": "Teoria e prática da administração",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Teoria das organizações/Teoria das Organizações  - UVA.md",
+          "file_name": "Teoria das Organizações  - UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:41.983044+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/CIÊNCIA TECNOLOGIA E SOCIEDADE/CIÊNCIA TECNOLOGIA E SOCIEDADE.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7f0422cc31c0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Tributária/Contabilidade Tributária UVA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "principio_legalidade_tributaria",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "principio_irretroatividade_tributaria",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "principio_anterioridade_tributaria",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "principio_isonomia_tributaria",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "principio_competencia_tributaria",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "principio_capacidade_contributiva",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "reserva_lei_complementar_tributaria",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "conceito_especies_tributos",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "tributos_indiretos_icms_ipi",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "tributos_diretos_lucro_presumido",
+            "weight": 8,
+            "confidence": 0.96
+          }
+        ],
+        "content_summary": "A nota introduz a contabilidade tributária, detalhando princípios constitucionais brasileiros como legalidade, irretroatividade, anterioridade, isonomia, competência e capacidade contributiva. Aborda também conceitos e espécies de tributos, com foco em tributos indiretos (ISS, ICMS, IPI) e diretos (Lucro Presumido, Lucro Arbitrado, Simples Nacional, Lucro Real).",
+        "cdu_primary": "336.2",
+        "cdu_secondary": [],
+        "cdu_description": "Finanças públicas. Finanças fiscais. Tributação. Impostos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/60 CONTABILIDADE/61 TREINAMENTOS/UVA/Contabilidade/UVA/Contabilidade Tributária/Contabilidade Tributária UVA.md",
+          "file_name": "Contabilidade Tributária UVA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T00:58:55.062216+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    }
+  ]
+}

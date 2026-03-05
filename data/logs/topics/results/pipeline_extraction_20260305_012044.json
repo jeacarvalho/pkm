@@ -1,0 +1,4300 @@
+{
+  "timestamp": "2026-03-05T01:20:44.151487+00:00",
+  "target_dir": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE",
+  "dry_run": false,
+  "results": [
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/E possivel uma transformacao de vida.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "superacao_pessoal_e_mudanca_de_vida",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "historia_de_sucesso_empreendedor",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "transformacao_social_atraves_da_educacao",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "superacao_de_vicios_e_dependencia_quimica",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "recomeco_de_vida_apos_situacao_de_vulnerabilidade",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "empreendedorismo_social_e_inclusao",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "historia_de_superacao_de_ex-presidiarios",
+            "weight": 6,
+            "confidence": 0.83
+          },
+          {
+            "name": "migracao_e_reconstrucao_de_vida",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "impacto_da_educacao_na_mobilidade_social",
+            "weight": 5,
+            "confidence": 0.78
+          },
+          {
+            "name": "superacao_de_preconceito_e_discriminacao",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A nota apresenta diversas histórias inspiradoras de indivíduos que superaram adversidades extremas, como pobreza, vícios e exclusão social, para alcançar sucesso pessoal e profissional através da educação e do empreendedorismo.",
+        "cdu_primary": "331.54",
+        "cdu_secondary": [
+          "37.01",
+          "364.6",
+          "316.6"
+        ],
+        "cdu_description": "Emprego e desemprego. Mobilidade social. Educação e formação profissional. Reabilitação de ex-presidiários. Superação de barreiras sociais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/E possivel uma transformacao de vida.md",
+          "file_name": "E possivel uma transformacao de vida.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:08.636725+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/acessibilidade.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "acessibilidade_web",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "design_inclusivo",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "acessibilidade_digital",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "leis_acessibilidade",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "tecnologia_assistiva",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "acessibilidade_arquitetonica",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "auditoria_acessibilidade",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "padroes_acessibilidade_wcag",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "acessibilidade_conteudo",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "treinamento_acessibilidade",
+            "weight": 5,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "Nota de índice sobre acessibilidade. Serve como referência/link para conteúdos relacionados a design inclusivo, acessibilidade digital e web, tecnologias assistivas, leis e padrões de acessibilidade, e auditorias de acessibilidade.",
+        "cdu_primary": "004.9",
+        "cdu_secondary": [
+          "340.13",
+          "72.01"
+        ],
+        "cdu_description": "004.9 - Tratamento da informação. Processamento de dados. Organização e gestão da informação. 340.13 - Legislação. 72.01 - Arquitetura e urbanismo. Princípios gerais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/acessibilidade.md",
+          "file_name": "acessibilidade.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-05T01:11:10.826834+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "acessibilidade"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Brasil tem mais homicidios do que quase todo hemisferio norte somado em 2015.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "taxa_homicidios_brasil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "comparativo_homicidios_mundial",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "violencia_urbana_brasil",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "estatisticas_criminais_2015",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "mapa_homicidios_global",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "dados_criminais_internacionais",
+            "weight": 5,
+            "confidence": 0.88
+          },
+          {
+            "name": "perspectiva_taxa_morte_brasil",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "disparidade_violencia_paises",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "visualizacao_dados_homicidios",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "fontes_estatisticas_crime",
+            "weight": 5,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "O artigo compara a alta taxa de homicídios no Brasil em 2015 com outros países e continentes, utilizando mapas e visualizações de dados para ilustrar a disparidade. Apresenta estatísticas criminais e fontes de dados para análise.",
+        "cdu_primary": "343.61",
+        "cdu_secondary": [
+          "316.48",
+          "308.2"
+        ],
+        "cdu_description": "Direito penal. Crimes contra a pessoa. Homicídio. Sociologia. Desvio social. Estudos regionais. América do Sul. Brasil.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Brasil tem mais homicidios do que quase todo hemisferio norte somado em 2015.md",
+          "file_name": "Brasil tem mais homicidios do que quase todo hemisferio norte somado em 2015.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:13.644769+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Justiça Social - Perfil de pobreza muda em dez anos do programa Bolsa Familia.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "bolsa_familia_impacto_social",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "mudanca_perfil_pobreza_brasil",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "melhoria_condicoes_moradia_beneficiarios",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "acesso_tecnologia_beneficiarios",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "evolucao_educacional_geracional",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "consumo_eletrodomesticos_familias_baixa_renda",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "inclusao_digital_comunidades_carentes",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "programas_transferencia_renda_efeitos",
+            "weight": 5,
+            "confidence": 0.91
+          },
+          {
+            "name": "desigualdade_social_brasil_atual",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "empreendedorismo_familiar_baixa_renda",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O programa Bolsa Família, ao longo de dez anos, contribuiu para a mudança no perfil da pobreza no Brasil, com beneficiários apresentando melhorias em moradia, acesso a bens de consumo e tecnologia, e avanços educacionais intergeracionais.",
+        "cdu_primary": "338.46",
+        "cdu_secondary": [
+          "305.8",
+          "364.1"
+        ],
+        "cdu_description": "Economia social. Serviços sociais. Programas de bem-estar social. Transferência de renda. Pobreza. Desigualdade social. Impacto social de programas governamentais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Justiça Social - Perfil de pobreza muda em dez anos do programa Bolsa Familia.md",
+          "file_name": "Justiça Social - Perfil de pobreza muda em dez anos do programa Bolsa Familia.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:16.345381+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/5 atos de bondade que mudaram a hist__ria.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7efce6546fb0 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O ser humano no mundo.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "teologia_criacao_divina",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "propósito_existencial_humano",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "livre_arbítrio_e_predestinação",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "natureza_da_ação_divina",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "valor_intrínseco_do_ser",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "papel_social_do_indivíduo",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "influência_do_pecado_na_sociedade",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "realidade_mundana_e_fé",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "reflexão_filosófica_sobre_existência",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "educação_teológica_e_prática",
+            "weight": 6,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A nota explora a natureza da criação divina e o propósito humano, questionando se o Criador destina todos a serem agentes sociais ativos ou se a existência por si só é um propósito válido, considerando a influência do pecado e a percepção de valor no mundo.",
+        "cdu_primary": "200",
+        "cdu_secondary": [
+          "128",
+          "230",
+          "305.8"
+        ],
+        "cdu_description": "Religião. Teologia. Filosofia da religião. Antropologia filosófica. Teologia sistemática. Sociologia da religião.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O ser humano no mundo.md",
+          "file_name": "O ser humano no mundo.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:29.863938+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O que e necessario ao estudo.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "capacidade_natural_engenho",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "facilidade_de_retencao",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "exercicio_no_estudo",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "esforco_e_forca_de_vontade",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "assiduidade_no_estudo",
+            "weight": 8,
+            "confidence": 0.88
+          },
+          {
+            "name": "busca_silenciosa_e_meditacao",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "disciplina_no_aprendizado",
+            "weight": 8,
+            "confidence": 0.89
+          },
+          {
+            "name": "mente_humilde_e_aprendizado",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "aprender_com_todos",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "vida_recolhida_e_pobreza",
+            "weight": 6,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "O estudo eficaz requer uma combinação de capacidade natural (engenho), exercício diligente (esforço, assiduidade, meditação) e disciplina (humildade, vida recolhida).",
+        "cdu_primary": "37.01",
+        "cdu_secondary": [],
+        "cdu_description": "Teoria e filosofia da educação; objetivos da educação; princípios gerais da educação",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O que e necessario ao estudo.md",
+          "file_name": "O que e necessario ao estudo.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:31.910218+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/futuro do trabalho.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "futuro_do_trabalho",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "trabalho_temporario",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "contratos_multiplos",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "automacao_no_trabalho",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "despedimento_por_maquinas",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "educacao_para_o_futuro",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "pensamento_critico_na_educacao",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "colaboracao_no_trabalho",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "microtrabalho",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "trabalho_com_ia",
+            "weight": 8,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A nota discute as transformações no futuro do trabalho, impulsionadas pela automação, contratos múltiplos e microtrabalho, e a necessidade de adaptar a educação para habilidades como pensamento crítico e colaboração.",
+        "cdu_primary": "331.5",
+        "cdu_secondary": [
+          "37.01",
+          "004.77",
+          "331.104"
+        ],
+        "cdu_description": "Trabalho e emprego; Educação e formação; Sistemas de informação e computação; Relações de trabalho",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/futuro do trabalho.md",
+          "file_name": "futuro do trabalho.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:34.266166+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Vida comunitária.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "relacionamentos_interpessoais",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "amizade_profunda",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "isolamento_social",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "conexao_emocional",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "intimidade_social",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "reflexoes_sobre_amizade",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "influencia_amigos",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "perda_amigos_proximos",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "valor_amizade",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "citações_cs_lewis",
+            "weight": 5,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "A nota discute a perda de amigos íntimos e a reflexão sobre o valor e a natureza da amizade profunda, citando C.S. Lewis.",
+        "cdu_primary": "316.3",
+        "cdu_secondary": [
+          "305.8"
+        ],
+        "cdu_description": "Sociologia. Relações sociais. Grupos sociais. Amizade.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Vida comunitária.md",
+          "file_name": "Vida comunitária.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:36.416469+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/clientes se unem e compram mercadoria de ambulante que seria apreendida.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "comercio_ambulante_fiscalizacao",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "solidariedade_consumidores",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "apreensao_mercadoria",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "acao_fiscal_prefeitura",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "direitos_trabalhador_informal",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "viralizacao_redes_sociais",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "apoio_comunitario",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "venda_irregular_produtos",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "desemprego_alternativa_renda",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "relato_emocional_vendedor",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "Clientes se uniram e compraram toda a mercadoria de um vendedor ambulante que estava prestes a ter seus produtos apreendidos por fiscais da prefeitura em Montes Claros (MG). O ato de solidariedade viralizou nas redes sociais, destacando a situação de trabalhadores informais.",
+        "cdu_primary": "331.5",
+        "cdu_secondary": [
+          "364.1",
+          "305.8"
+        ],
+        "cdu_description": "Trabalho e emprego; Condições de trabalho; Emprego informal; Vendedores ambulantes; Fiscalização de atividades econômicas; Solidariedade social; Direitos do consumidor.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/clientes se unem e compram mercadoria de ambulante que seria apreendida.md",
+          "file_name": "clientes se unem e compram mercadoria de ambulante que seria apreendida.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:39.244045+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/HORTA GIGANTE COMPLEMENTA REFEICAO DE 800 FAMILIAS EM FAVELA DO RIO NA PANDEMIA.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "horta_comunitaria_manguinhos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "seguranca_alimentar_pandemia",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "hortas_cariocas",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "impacto_social_hortas",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "resgate_de_vidas_horta",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "empregabilidade_horta_comunitaria",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "transformacao_espacos_urbanos",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "desafios_seguranca_favela",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "objetivos_desenvolvimento_sustentavel_onu",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "autossustentabilidade_projetos_sociais",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "Uma horta comunitária em Manguinhos, Rio de Janeiro, complementa a alimentação de 800 famílias durante a pandemia, transformando um antigo espaço de cracolândia em fonte de segurança alimentar e resgate social. O projeto Hortas Cariocas, parte de uma iniciativa municipal, visa a empregabilidade e a autossustentabilidade.",
+        "cdu_primary": "308.2",
+        "cdu_secondary": [
+          "331.5",
+          "364.1",
+          "631.5"
+        ],
+        "cdu_description": "Sociologia urbana e regional; Desenvolvimento social e econômico; Segurança alimentar; Emprego e trabalho; Agricultura urbana e comunitária",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/HORTA GIGANTE COMPLEMENTA REFEICAO DE 800 FAMILIAS EM FAVELA DO RIO NA PANDEMIA.md",
+          "file_name": "HORTA GIGANTE COMPLEMENTA REFEICAO DE 800 FAMILIAS EM FAVELA DO RIO NA PANDEMIA.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:41.574504+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Renda media de metade dos trabalhadores brasileiros e inferior a um salario minimo.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "renda_media_trabalhadores_inferior_salario_minimo",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "desigualdade_salarial_brasil",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "rendimento_trabalhadores_informais",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "concentracao_renda_1_por_cento",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "rendimento_medio_por_regiao_brasil",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "impacto_perda_emprego_renda",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "dados_pnad_continua_ibge",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "rendimento_trabalhadores_sul_nordeste",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "distribuicao_renda_populacao_brasileira",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "salario_minimo_brasil_2016",
+            "weight": 5,
+            "confidence": 0.9
+          }
+        ],
+        "content_summary": "Metade dos trabalhadores brasileiros em 2016 recebia em média R$ 747 mensais, valor inferior a um salário mínimo, evidenciando profunda desigualdade salarial e concentração de renda no país. A disparidade é acentuada pela alta remuneração do 1% mais rico e pelas diferenças regionais de rendimento.",
+        "cdu_primary": "331.2",
+        "cdu_secondary": [
+          "316.42",
+          "330.5"
+        ],
+        "cdu_description": "Salários e remunerações; Desigualdade social; Economia. Distribuição de riqueza.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Renda media de metade dos trabalhadores brasileiros e inferior a um salario minimo.md",
+          "file_name": "Renda media de metade dos trabalhadores brasileiros e inferior a um salario minimo.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:44.710369+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O Brasil perdeu cinco posicoes no ranking mundial do IDH.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "indice_desenvolvimento_humano_brasil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "ranking_onu_qualidade_vida",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "queda_posicoes_idh_brasil",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "pnud_relatorio_desenvolvimento",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "comparacao_idh_america_sul",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "fatores_componentes_idh",
+            "weight": 6,
+            "confidence": 0.93
+          },
+          {
+            "name": "crescimento_lento_idh_brasil",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "impacto_pandemia_idh",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "idh_ajustado_pressao_ambiental",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "desenvolvimento_humano_global",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O Brasil caiu cinco posições no ranking mundial do Índice de Desenvolvimento Humano (IDH), passando para a 84ª colocação entre 189 países, apesar de um leve aumento no índice nacional. O relatório do Pnud destaca o avanço lento do país e o impacto futuro da pandemia na qualidade de vida.",
+        "cdu_primary": "316.47",
+        "cdu_secondary": [
+          "330.5",
+          "305.8"
+        ],
+        "cdu_description": "Sociologia do desenvolvimento. Indicadores sociais. Desenvolvimento humano. Indicadores de qualidade de vida. Comparação internacional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O Brasil perdeu cinco posicoes no ranking mundial do IDH.md",
+          "file_name": "O Brasil perdeu cinco posicoes no ranking mundial do IDH.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:47.168066+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Familia de venezuelanos surdos reconstroi a vida vendendo arepas na zona norte do Rio.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "imigracao_venezuelana_brasil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "familia_surda_refugiada",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "empreendedorismo_imigrante",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "culinaria_venezuelana_arepas",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "superacao_deficiencia_auditiva",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "recomeco_vida_exterior",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "crise_venezuelana",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "integracao_social_imigrantes",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "rotas_migratorias_brasil",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "dificuldades_comunicacao_imigrantes",
+            "weight": 8,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "Uma família venezuelana surda reconstruiu sua vida no Rio de Janeiro vendendo arepas, superando a crise em seu país e as barreiras da comunicação e imigração. Eles sonham em expandir o negócio e trazer mais familiares para o Brasil.",
+        "cdu_primary": "325.1",
+        "cdu_secondary": [
+          "364.6",
+          "394.1",
+          "641.5"
+        ],
+        "cdu_description": "Imigração e colonização. Imigração para o Brasil. Imigração de venezuelanos. Aspectos sociais e econômicos da imigração. Integração social. Culinária.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Familia de venezuelanos surdos reconstroi a vida vendendo arepas na zona norte do Rio.md",
+          "file_name": "Familia de venezuelanos surdos reconstroi a vida vendendo arepas na zona norte do Rio.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:49.831077+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Não há mais emprego, há projetos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "futuro_do_trabalho_humanizado",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "impacto_dos_projetos_no_emprego",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "perda_da_realidade_do_emprego",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "construcao_de_carreira_longitudinal",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "habitos_profissionais_e_estabilidade",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "narrativa_pessoal_no_trabalho",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "identidade_profissional_e_estabilizadora",
+            "weight": 8,
+            "confidence": 0.87
+          },
+          {
+            "name": "corrosao_do_carater_no_trabalho",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "viabilidade_humana_do_trabalho",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "transformacao_do_conceito_de_emprego",
+            "weight": 8,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "A nota discute o futuro do trabalho sob uma perspectiva humanizada, contrastando a instabilidade dos projetos com a construção de uma carreira tradicional, que oferece narrativa pessoal, hábitos e estabilidade, impactando a identidade e o caráter.",
+        "cdu_primary": "331.5",
+        "cdu_secondary": [
+          "305.8",
+          "159.9"
+        ],
+        "cdu_description": "331.5 - Emprego e desemprego. Condições de emprego. 305.8 - Sociologia da identidade. 159.9 - Psicologia.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Não há mais emprego, há projetos.md",
+          "file_name": "Não há mais emprego, há projetos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:52.491614+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Atos que mudam o mundo.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Competi____o humana.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "competicao_entre_pessoas",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "inveja_no_trabalho",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "vaidade_e_ilusao",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "corrida_atras_do_vento",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "motivacao_para_o_sucesso",
+            "weight": 6,
+            "confidence": 0.94
+          },
+          {
+            "name": "realizacao_profissional",
+            "weight": 5,
+            "confidence": 0.93
+          },
+          {
+            "name": "transformacao_do_mundo",
+            "weight": 5,
+            "confidence": 0.92
+          },
+          {
+            "name": "reflexao_biblica",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "textos_religiosos",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "sentido_da_vida",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota explora a ideia bíblica de que a competição e a inveja impulsionam o trabalho humano, mas que isso é uma busca fútil e ilusória, comparada a correr atrás do vento.",
+        "cdu_primary": "223.9",
+        "cdu_secondary": [],
+        "cdu_description": "Livros de Salmos e outros livros poéticos e didáticos. Eclesiastes é um livro sapiencial.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Competi____o humana.md",
+          "file_name": "Competi____o humana.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:55.258769+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Ajudar alguém a passar pela dificuldade é o ponto de partida da civilização.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "primeiro_sinal_civilizacao",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "antropologia_margaret_mead",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "ajuda_comunitaria",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "superacao_dificuldades",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "cura_fraturas_antigas",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "sobrevivencia_animal_vs_humana",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "importancia_cuidado_ao_proximo",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "origem_civilizacao",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "evidencia_femeur_curado",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "conceito_civilizacao_mead",
+            "weight": 8,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "Margaret Mead define o primeiro sinal de civilização como a cura de um fêmur quebrado, indicando que a sociedade se desenvolveu a partir da ajuda mútua e do cuidado comunitário em face das dificuldades.",
+        "cdu_primary": "308",
+        "cdu_secondary": [
+          "305.8",
+          "17"
+        ],
+        "cdu_description": "Sociologia da civilização e cultura; Antropologia social; Ética",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Ajudar alguém a passar pela dificuldade é o ponto de partida da civilização.md",
+          "file_name": "Ajudar alguém a passar pela dificuldade é o ponto de partida da civilização.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:11:57.613610+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/De usuaria de crack a dona de confeitaria.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "superacao_dependencia_quimica",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "empreendedorismo_feminino",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "reintegracao_social_ex_detentos",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "tratamento_dependencia_crack",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "historia_vida_transformacao",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "gastronomia_confeitaria",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "reducao_danos_drogas",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "cracolandia_contexto_social",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "relacionamento_interpessoal_apoio",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "preconceito_social_ex_dependentes",
+            "weight": 5,
+            "confidence": 0.7
+          }
+        ],
+        "content_summary": "A nota narra a inspiradora trajetória de Desirée Mendes, que superou a dependência química do crack e a prisão para se tornar uma empresária de sucesso no ramo da confeitaria, atuando também como arte-educadora para ajudar outros dependentes. Sua história é marcada por superação, resiliência e a busca por uma nova vida, enfrentando preconceitos e construindo relações de apoio.",
+        "cdu_primary": "364.6",
+        "cdu_secondary": [
+          "305.8",
+          "396",
+          "641.5"
+        ],
+        "cdu_description": "Assistência social a toxicômanos; Reintegração social de ex-detentos; Mulheres e a sociedade; Gastronomia",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/De usuaria de crack a dona de confeitaria.md",
+          "file_name": "De usuaria de crack a dona de confeitaria.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:00.285859+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Pastor oferece ora____es em cafeteria toda quinta-fe.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "ministerio_pastoral_em_espacos_publicos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "oracao_em_cafeterias",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "evangelismo_nao_tradicional",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "vocacao_pastoral",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "acolhimento_comunitario",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "relatos_de_transformacao_pessoal",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "superacao_de_medos_ministeriais",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "missao_urbana",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "inspiracao_crista_cotidiana",
+            "weight": 5,
+            "confidence": 0.83
+          },
+          {
+            "name": "impacto_social_da_fe",
+            "weight": 5,
+            "confidence": 0.8
+          }
+        ],
+        "content_summary": "Um pastor luterano nos EUA oferece orações gratuitas em cafeterias todas as quintas-feiras, buscando alcançar pessoas em espaços públicos e compartilhar a fé de maneira não tradicional. A iniciativa, inspirada por conselhos e relatos de transformação, visa oferecer conforto e esperança a quem busca respostas.",
+        "cdu_primary": "284.1",
+        "cdu_secondary": [
+          "264.1",
+          "254.5",
+          "230.2"
+        ],
+        "cdu_description": "Igreja Luterana; Culto e vida religiosa; Pregação e homilética",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Pastor oferece ora____es em cafeteria toda quinta-fe.md",
+          "file_name": "Pastor oferece ora____es em cafeteria toda quinta-fe.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:03.244649+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/40% of all the internet users are fake.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "trafego_bot_internet",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "fraude_online",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "estatisticas_confiaveis",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "manipulacao_informacao",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "bots_na_web",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "conteudo_falso_internet",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "autenticidade_trafego_web",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "percepcao_importancia_sites",
+            "weight": 6,
+            "confidence": 0.75
+          },
+          {
+            "name": "desinformacao_digital",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "analise_trafego_internet",
+            "weight": 5,
+            "confidence": 0.65
+          }
+        ],
+        "content_summary": "A nota discute a predominância de tráfego de bots na internet, sugerindo que menos de 60% do tráfego é humano. Isso levanta preocupações sobre a confiabilidade das estatísticas e a manipulação da percepção de importância de sites e conteúdos.",
+        "cdu_primary": "004.77",
+        "cdu_secondary": [
+          "007",
+          "311.1"
+        ],
+        "cdu_description": "Redes de computadores. Internet. Tráfego de dados. Automação e robótica. Métodos estatísticos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/40% of all the internet users are fake.md",
+          "file_name": "40% of all the internet users are fake.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:05.342725+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Ser profeta, pelo desamparado.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "profetismo_social",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "defesa_dos_desamparados",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "justica_social",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "voz_aos_silenciados",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "etica_religiosa",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "provérbios_31",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "responsabilidade_social",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "advocacia_social",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "direitos_humanos",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "solidariedade",
+            "weight": 6,
+            "confidence": 0.92
+          }
+        ],
+        "content_summary": "A nota enfatiza a importância de ser um profeta para os desamparados, abrindo a boca em favor dos necessitados e defendendo o direito de todos os que se encontram em situação de vulnerabilidade.",
+        "cdu_primary": "241.4",
+        "cdu_secondary": [
+          "305.8",
+          "364.1"
+        ],
+        "cdu_description": "Ética cristã e vida social; Ação social e defesa dos oprimidos; Assistência social e caridade",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Ser profeta, pelo desamparado.md",
+          "file_name": "Ser profeta, pelo desamparado.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:07.341242+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O poder dos robos.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Instituicoes definem a diferenca entre paises.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "instituicoes_economicas_inclusivas",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "instituicoes_economicas_extrativistas",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "diferenciacao_nacional_prosperidade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "estudo_de_caso_nogales",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "influencia_institucional_riqueza",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "papel_do_estado_economia",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "comparacao_bill_gates_carlos_slim",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "transformacao_institucional",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "direitos_propriedade_competicao",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "pesquisa_james_robinson",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "A prosperidade das nações é determinada por instituições inclusivas que promovem a competição e direitos de propriedade, em contraste com instituições extrativistas que criam monopólios. O estudo de caso de Nogales e a comparação entre Bill Gates e Carlos Slim ilustram essa tese.",
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "321.02",
+          "338.2"
+        ],
+        "cdu_description": "Economia. Riqueza e pobreza. Fatores de produção. Instituições econômicas e seu papel no desenvolvimento e prosperidade nacional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Instituicoes definem a diferenca entre paises.md",
+          "file_name": "Instituicoes definem a diferenca entre paises.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:10.213128+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/como um ex-camelo abriu quase 50 franquias de hot dog no metro de SP.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "empreendedorismo_de_sucesso",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "historia_de_camelô_para_franquia",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "rede_de_hot_dog_monster_dog",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "franquias_em_transporte_publico",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "negocios_alimenticios",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "estrategia_de_expansao_de_negocios",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "adaptacao_de_cardapio",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "gestao_de_quiosques",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "planejamento_de_negocios",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "comida_de_rua_formalizada",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota narra a trajetória de José Ricardo da Silva, que de camelô de frutas em São Paulo, construiu a rede de franquias de hot dog Monster Dog, com quase 50 unidades em locais estratégicos como estações de metrô e terminais de ônibus. A história destaca o empreendedorismo, a adaptação de modelo de negócio e a expansão através de franquias.",
+        "cdu_primary": "334.7",
+        "cdu_secondary": [
+          "664.7",
+          "338.45"
+        ],
+        "cdu_description": "Empreendedorismo e gestão de pequenas e médias empresas, com foco em franquias no setor de alimentação e comércio em locais de grande circulação.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/como um ex-camelo abriu quase 50 franquias de hot dog no metro de SP.md",
+          "file_name": "como um ex-camelo abriu quase 50 franquias de hot dog no metro de SP.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:12.768788+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O estudante que transformou sua vida batendo em portas de casas ricas de Londres.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "superacao_pessoal_jovem_londres",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "mentorias_carreira_financeira",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "oportunidades_mercado_trabalho",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "iniciativa_proativa_jovem",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "diversidade_setor_corporativo",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "educacao_superior_reino_unido",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "desenvolvimento_habilidades_carreira",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "mudanca_perspectiva_vida",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "networking_estrategico",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "superacao_barreiras_socioeconomicas",
+            "weight": 9,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A história de Reggie Nelson, um jovem de Londres que, através de uma iniciativa ousada de bater em portas de residências ricas, conseguiu um mentor e uma oportunidade no mercado financeiro, transformando sua vida e carreira. Ele agora inspira outros jovens, especialmente negros, a buscarem seus objetivos e a saírem da zona de conforto.",
+        "cdu_primary": "331.54",
+        "cdu_secondary": [
+          "378.2",
+          "305.8"
+        ],
+        "cdu_description": "Emprego e trabalho. Condições de trabalho. Oportunidades de emprego e carreira. Educação superior. Minorias étnicas e raciais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O estudante que transformou sua vida batendo em portas de casas ricas de Londres.md",
+          "file_name": "O estudante que transformou sua vida batendo em portas de casas ricas de Londres.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:15.328666+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Os impostos sobre autom__veis n__o cobrem seus custos sociais.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "tributacao_automoveis",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "custos_sociais_automoveis",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "infraestrutura_viaria",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "externalidades_negativas",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "impostos_combustiveis",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "ipva",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "icms_automoveis",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "mobilidade_urbana",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "politicas_tributarias",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "debate_publico_tributacao",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota discute se os impostos sobre automóveis cobrem seus custos sociais, argumentando que os motoristas frequentemente subestimam as externalidades negativas geradas pelos veículos e superestimam a arrecadação tributária efetivamente destinada à infraestrutura viária.",
+        "cdu_primary": "336.2",
+        "cdu_secondary": [
+          "388.4",
+          "330.1"
+        ],
+        "cdu_description": "Finanças públicas. Tributação. Impostos sobre veículos e combustíveis, custos sociais e infraestrutura viária urbana.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Os impostos sobre autom__veis n__o cobrem seus custos sociais.md",
+          "file_name": "Os impostos sobre autom__veis n__o cobrem seus custos sociais.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:17.581837+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/trabalho temporário é o que mais cresce e com isso a ansiedade da vulnerabilidade.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "corrosao_do_carater",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "realidade_americana",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "futuro_do_trabalho",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "analise_sociologica",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "impacto_social_do_trabalho",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "transformacoes_sociais",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "reflexao_critica",
+            "weight": 6,
+            "confidence": 0.78
+          },
+          {
+            "name": "condicoes_de_trabalho",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "cultura_americana",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "perspectivas_futuras",
+            "weight": 5,
+            "confidence": 0.65
+          }
+        ],
+        "content_summary": "A nota discute a realidade americana descrita por Richard Sennett em 'A corrosão do caráter' e como essa realidade molda o pensamento sobre o futuro do trabalho.",
+        "cdu_primary": "331.5",
+        "cdu_secondary": [
+          "304",
+          "316.3"
+        ],
+        "cdu_description": "Condições de trabalho e emprego; Sociologia do trabalho; Sociologia geral. Relações sociais. Influências sociais",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/trabalho temporário é o que mais cresce e com isso a ansiedade da vulnerabilidade.md",
+          "file_name": "trabalho temporário é o que mais cresce e com isso a ansiedade da vulnerabilidade.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:19.936289+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/o Brasil cobra mais impostos de pobres do que dos mais ricos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "carga_tributaria_desigual",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "impostos_progressivos",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "impostos_regressivos",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "desigualdade_social_brasil",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "politica_tributaria_brasil",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "renda_familiar_baixa",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "renda_familiar_alta",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "estudo_economico_brasil",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "justica_fiscal",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "sistema_tributario_nacional",
+            "weight": 5,
+            "confidence": 0.75
+          }
+        ],
+        "content_summary": "Um estudo aponta que o sistema tributário brasileiro onera desproporcionalmente as populações de baixa renda em comparação com os mais ricos. Isso indica uma regressividade na carga tributária nacional.",
+        "cdu_primary": "336.2",
+        "cdu_secondary": [
+          "330.5",
+          "316.4"
+        ],
+        "cdu_description": "Finanças públicas. Tributação. Impostos. Economia do bem-estar. Sociologia da desigualdade.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/o Brasil cobra mais impostos de pobres do que dos mais ricos.md",
+          "file_name": "o Brasil cobra mais impostos de pobres do que dos mais ricos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:22.367161+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Em um pais de injustiça se a igreja não é perseguida é porque é conivente com a injustiça.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "injustiça_social",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "papel_da_igreja",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "conivência_com_injustiça",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "perseguição_religiosa",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "ética_religiosa",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "crítica_social",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "moralidade_religiosa",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "responsabilidade_social_da_igreja",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "relações_igreja_estado",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "justiça_e_religião",
+            "weight": 9,
+            "confidence": 0.96
+          }
+        ],
+        "content_summary": "A nota argumenta que a ausência de perseguição à igreja em um país injusto indica sua cumplicidade com essa injustiça.",
+        "cdu_primary": "27",
+        "cdu_secondary": [
+          "323.2",
+          "305.8"
+        ],
+        "cdu_description": "História geral da igreja cristã; Relações entre igreja e sociedade; Movimentos sociais e religiosos",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Em um pais de injustiça se a igreja não é perseguida é porque é conivente com a injustiça.md",
+          "file_name": "Em um pais de injustiça se a igreja não é perseguida é porque é conivente com a injustiça.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:24.261238+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Jovem da periferia de SP que chegou a Harvard sonha em mudar educacao brasileira e entrar para a politica.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "trajetoria_educacional_tabata_amaral",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "origem_periferia_sao_paulo",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "acesso_oportunidades_educacao",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "sonho_harvard_universidades_internacionais",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "critica_meritocracia_desigualdade",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "politica_educacao_brasil",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "qualidade_ensino_medio_brasil",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "renovacao_politica_jovens",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "movimentos_sociais_educacao",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "inspiracao_jovens_periferia",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota narra a trajetória de Tabata Amaral, jovem da periferia de São Paulo que, após ingressar em Harvard, sonha em transformar a educação brasileira e atuar na política, criticando a desigualdade de oportunidades e a politização do setor educacional.",
+        "cdu_primary": "37.0",
+        "cdu_secondary": [
+          "32",
+          "305.8"
+        ],
+        "cdu_description": "Educação; Política; Sociologia da juventude",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Jovem da periferia de SP que chegou a Harvard sonha em mudar educacao brasileira e entrar para a politica.md",
+          "file_name": "Jovem da periferia de SP que chegou a Harvard sonha em mudar educacao brasileira e entrar para a politica.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:26.590416+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Projetos sociais Niteroi.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "bolsas_estudo_enem",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "cursos_online_gratuitos",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "jovens_niteroienses",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "prefeitura_niteroi",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "acesso_universidade",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "plataforma_urbana_digital",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "cursos_informatica",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "cursos_programacao",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "cursos_robotica",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "ensino_superior_zona_norte",
+            "weight": 8,
+            "confidence": 0.95
+          }
+        ],
+        "content_summary": "A nota descreve duas iniciativas sociais em Niterói: o Aprova Jovem, que oferece bolsas de estudo online para o Enem, e a Plataforma Urbana Digital da Engenhoca, com cursos gratuitos de tecnologia e outras áreas. Ambas visam auxiliar jovens niteroienses no acesso à educação e ao ensino superior.",
+        "cdu_primary": "374.7",
+        "cdu_secondary": [
+          "378.1",
+          "305.8"
+        ],
+        "cdu_description": "Educação de adultos e formação profissional contínua. Acesso ao ensino superior e grupos sociais específicos (jovens).",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Projetos sociais Niteroi.md",
+          "file_name": "Projetos sociais Niteroi.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:28.843971+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Justiça Social.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7efce639a200 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/futuro do trabalho s__o contratos m__ltiplos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "futuro_do_trabalho",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "trabalho_remoto",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "pandemia_impacto_trabalho",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "desemprego_tecnologico",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "transformacao_digital",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "mudanca_local_trabalho",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "execucao_trabalho",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "performance_trabalho",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "tendencias_irreversiveis_trabalho",
+            "weight": 5,
+            "confidence": 0.82
+          },
+          {
+            "name": "geografia_trabalho",
+            "weight": 5,
+            "confidence": 0.78
+          }
+        ],
+        "content_summary": "A nota discute como o futuro do trabalho será marcado pela ausência de empregos tradicionais, acelerada pela pandemia que permitiu o trabalho remoto e a desvinculação geográfica. A execução e performance do trabalho serão mais modificadas do que o local onde ele é realizado.",
+        "cdu_primary": "331.5",
+        "cdu_secondary": [
+          "303.7",
+          "004"
+        ],
+        "cdu_description": "Trabalho e emprego; Condições de trabalho; Tecnologia da informação e computação",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/futuro do trabalho s__o contratos m__ltiplos.md",
+          "file_name": "futuro do trabalho s__o contratos m__ltiplos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:42.874183+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/por um mundo melhor.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "reducao_moradores_rua_utah",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "cadeirante_entregador_aplicativo",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "avenida_paulista_logistica_urbana",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "ciclista_olimpico_historia",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "cocuzzi_trajetoria_esportiva",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "orfanato_gestao_familiar",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "inclusao_social_pessoas_com_deficiencia",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "politicas_publicas_populacao_em_situacao_de_rua",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "empreendedorismo_social_inclusivo",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "superacao_desafios_pessoais",
+            "weight": 9,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A nota apresenta histórias de superação e inclusão social, destacando a redução de moradores de rua em Utah, um cadeirante entregador de aplicativos na Avenida Paulista e a trajetória de um ciclista olímpico criado em orfanato.",
+        "cdu_primary": "305.8",
+        "cdu_secondary": [
+          "364.1",
+          "796.6"
+        ],
+        "cdu_description": "Grupos sociais específicos; Minorias; Pessoas em situação de rua; Atividades desportivas; Ciclismo",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/por um mundo melhor.md",
+          "file_name": "por um mundo melhor.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:45.332213+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Fui despedido por um rob__ - como a Amazon deixa m__quinas decidirem o destino dos trabalhadores - Futuro do Trabalho.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "demissao_automatizada_amazon",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "algoritmos_gestao_trabalhadores",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "impacto_tecnologia_mercado_trabalho",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "supervisao_humana_reduzida",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "rastreamento_desempenho_motoristas",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "criticas_algoritmos_amazon",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "terceirizacao_operacoes_amazon",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "automação_recursos_humanos",
+            "weight": 9,
+            "confidence": 0.91
+          },
+          {
+            "name": "desligamento_sem_intermediacao",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "etica_inteligencia_artificial_trabalho",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A Amazon utiliza algoritmos para gerenciar e demitir trabalhadores, incluindo motoristas de entrega, com pouca ou nenhuma supervisão humana. Essa prática levanta questões sobre a ética da automação e o impacto na vida dos trabalhadores.",
+        "cdu_primary": "331.1",
+        "cdu_secondary": [
+          "004.77",
+          "303.446"
+        ],
+        "cdu_description": "Trabalho e emprego; Relações de trabalho; Gestão de pessoal; Automação e tecnologia",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Fui despedido por um rob__ - como a Amazon deixa m__quinas decidirem o destino dos trabalhadores - Futuro do Trabalho.md",
+          "file_name": "Fui despedido por um rob__ - como a Amazon deixa m__quinas decidirem o destino dos trabalhadores - Futuro do Trabalho.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:48.107914+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Escassez.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "escassez_como_mentira",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "mensagem_de_separacao",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "fartura_em_jesus",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "evangelho_de_esperanca",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "abundancia_versus_escassez",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "perspectiva_teologica_sobre_escassez",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "disseminacao_de_mensagens",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "lembrete_constante",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "conceito_de_fartura",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "critica_a_narrativa_de_escassez",
+            "weight": 9,
+            "confidence": 0.97
+          }
+        ],
+        "content_summary": "A nota argumenta que a escassez é uma narrativa falsa usada para promover a separação, contrastando-a com a mensagem de fartura encontrada em Jesus, conforme apresentado em 'Um evangelho de esperança'.",
+        "cdu_primary": "230.1",
+        "cdu_secondary": [
+          "261.8",
+          "305.8"
+        ],
+        "cdu_description": "Teologia cristã; Doutrina cristã sobre a salvação; Relações sociais e a religião; Escatologia",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Escassez.md",
+          "file_name": "Escassez.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:12:50.656859+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Futuro.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7efce6547a90 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/5 alertas sobre mudan__as tecnol__gicas de Neil Post.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "mudancas_tecnologicas_e_fe",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "alerta_neil_postman",
+            "weight": 10,
+            "confidence": 0.99
+          },
+          {
+            "name": "tradeoff_tecnologico",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "sabedoria_antiga_vs_tecnologia",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "impacto_dos_computadores",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "desvantagens_tecnologicas",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "critica_a_inovacao_tecnologica",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "perspectiva_historica_tecnologia",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "equilibrio_cultural_e_tecnologia",
+            "weight": 7,
+            "confidence": 0.89
+          },
+          {
+            "name": "consequencias_negativas_tecnologia",
+            "weight": 8,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "Neil Postman apresenta cinco alertas sobre mudanças tecnológicas, enfatizando que toda inovação traz consigo desvantagens inerentes (tradeoffs) e que a sabedoria antiga permanece relevante diante dos desafios tecnológicos. Ele critica a visão unilateralmente positiva sobre novas tecnologias, como os computadores, alertando para suas consequências negativas.",
+        "cdu_primary": "303.4",
+        "cdu_secondary": [
+          "004",
+          "316.7"
+        ],
+        "cdu_description": "Metodologia e técnica de investigação em ciências sociais; Sociologia da tecnologia; Informática e sociedade",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/5 alertas sobre mudan__as tecnol__gicas de Neil Post.md",
+          "file_name": "5 alertas sobre mudan__as tecnol__gicas de Neil Post.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:03.150525+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/De flanelinha a pos-doutor em fisica.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "trajetoria_academica_fisica",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "superacao_pessoal_desafios",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "historia_de_vida_marcelo_ferreira_silva",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "influencia_educacao_mudanca_vida",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "direcao_utfpr_apuracana",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "experiencia_flanelinha",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "incentivo_estudos_palavras_positivas",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "superacao_alcoolismo_familiar",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "importancia_valores_familiares",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "perspectiva_humildade_realizacao",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota narra a inspiradora trajetória de Marcelo Ferreira da Silva, que de flanelinha superou adversidades familiares e financeiras para se tornar pós-doutor em física e diretor da UTFPR em Apucarana, destacando a importância da educação e do incentivo.",
+        "cdu_primary": "378.4",
+        "cdu_secondary": [
+          "305.8",
+          "170"
+        ],
+        "cdu_description": "Ensino superior, Universidades. Educação superior. Ensino universitário. Carreira acadêmica. Biografias de acadêmicos. Ética e moral.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/De flanelinha a pos-doutor em fisica.md",
+          "file_name": "De flanelinha a pos-doutor em fisica.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:06.119868+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O perigo da tecnologia.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "impacto_social_tecnologia",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "critica_mudanca_tecnologica",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "desigualdade_tecnologica",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "ideologia_era_digital",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "consequencias_ecologicas_tecnologia",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "percepcao_mitica_tecnologia",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "relacao_tecnologia_sabedoria",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "compensacao_tecnologica",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "historia_invenoes_biblicas",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "questionamento_tecnologico",
+            "weight": 8,
+            "confidence": 0.94
+          }
+        ],
+        "content_summary": "A nota explora os perigos e impactos da tecnologia, destacando que toda inovação traz vantagens e desvantagens desiguais, altera a forma de pensar e o meio ambiente, e pode levar a uma aceitação mítica e acrítica.",
+        "cdu_primary": "303.1",
+        "cdu_secondary": [
+          "004",
+          "316.3"
+        ],
+        "cdu_description": "Métodos e técnicas de investigação social. Sociologia da tecnologia e da informação. Mudanças sociais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O perigo da tecnologia.md",
+          "file_name": "O perigo da tecnologia.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:08.577321+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/De catador a presidente de empresa.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "trajetoria_profissional_ascendente",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "empreendedorismo_e_superacao",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "importancia_da_educacao_tecnica",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "etica_no_trabalho_e_dedicacao",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "busca_por_orientacao_e_conselhos",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "tecnologia_para_impacto_social",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "oportunidades_e_desenvolvimento_de_talentos",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "inclusao_social_via_tecnologia",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "legado_e_motivacao_pessoal",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "patriotismo_e_desenvolvimento_nacional",
+            "weight": 8,
+            "confidence": 0.96
+          }
+        ],
+        "content_summary": "A nota narra a trajetória de um ex-catador de papelão que se tornou presidente de uma grande empresa, destacando a importância da dedicação, busca por aprendizado, conselhos e o uso da tecnologia para gerar impacto social e oportunidades. O autor expressa forte apego ao Brasil e desejo de contribuir para o desenvolvimento do país.",
+        "cdu_primary": "331.1",
+        "cdu_secondary": [
+          "004.9",
+          "37.01",
+          "305.8"
+        ],
+        "cdu_description": "Gestão e administração de empresas; relações de trabalho; desenvolvimento profissional e pessoal; uso da tecnologia para fins sociais e educacionais; inclusão social e desenvolvimento nacional.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/De catador a presidente de empresa.md",
+          "file_name": "De catador a presidente de empresa.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:10.830053+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Os milhares de trabalhadores mal pagos que permitem que voc__ se divirta e consuma na internet.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "microtrabalho_digital",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "trabalhadores_mal_pagos",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "inteligencia_artificial_e_dados",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "aprendizagem_automatica",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "plataformas_de_microtrabalho",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "amazon_mechanical_turk",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "economia_digital",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "trabalhadores_globais",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "condicoes_de_trabalho",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "impacto_economico_em_paises_em_desenvolvimento",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota explora o mundo do 'microtrabalho', onde milhares de trabalhadores globalmente realizam tarefas digitais para alimentar a inteligência artificial e os serviços online, muitas vezes em troca de baixos salários. Discute as plataformas, quem são esses trabalhadores e as implicações de suas condições de trabalho.",
+        "cdu_primary": "331.5",
+        "cdu_secondary": [
+          "004.8",
+          "331.1"
+        ],
+        "cdu_description": "Trabalho e emprego; Condições de trabalho; Trabalho em plataformas digitais; Inteligência artificial",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Os milhares de trabalhadores mal pagos que permitem que voc__ se divirta e consuma na internet.md",
+          "file_name": "Os milhares de trabalhadores mal pagos que permitem que voc__ se divirta e consuma na internet.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:13.349573+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Comece dando um A.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "pratica_de_dar_a",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "relacionamentos_transformados",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "mundo_da_medicao",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "universo_da_possibilidade",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "respeito_nas_interacoes",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "realizacao_pessoal",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "superacao_padroes",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "comunicacao_respeitosa",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "perspectiva_positiva",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "mudanca_de_paradigma",
+            "weight": 5,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A prática de dar um 'A' transforma relacionamentos ao mover a interação do mundo da medição para o universo da possibilidade, promovendo respeito e permitindo a autorrealização.",
+        "cdu_primary": "159.947",
+        "cdu_secondary": [
+          "305.8"
+        ],
+        "cdu_description": "Psicologia da motivação e emoção; Psicologia social e das relações interpessoais",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Comece dando um A.md",
+          "file_name": "Comece dando um A.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:16.871874+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Transformar o mundo.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Como podemos mudar o mundo_.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7efce6398100 state=finished raised TopicValidationError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/América Latina é uma sociedade com tanta desigualdade porque foi criada por um pequeno grupo de elites coloniais para explorar a vasta maioria das pessoas.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "teoria_estado_sociedade",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "corredor_estreito_liberdade",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "desenvolvimento_politico_economico",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "relacao_estado_cidadania",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "historia_instituicoes_politicas",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "violencia_estado_controle_social",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "democracia_autoritarismo",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "mobilizacao_social_politica",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "desigualdade_social_economica",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "perspectivas_futuras_governança",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O livro 'The Narrow Corridor' explora a complexa relação entre Estado e sociedade, argumentando que a liberdade e a prosperidade surgem de um equilíbrio delicado entre o poder estatal e a agência social. A obra analisa como diferentes sociedades navegaram por esse 'corredor estreito' ao longo da história, com implicações para o desenvolvimento político e econômico.",
+        "cdu_primary": "321.01",
+        "cdu_secondary": [
+          "303.4",
+          "316.4"
+        ],
+        "cdu_description": "Teoria geral do Estado e da política; Relações entre Estado e sociedade; Desenvolvimento social e político.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/América Latina é uma sociedade com tanta desigualdade porque foi criada por um pequeno grupo de elites coloniais para explorar a vasta maioria das pessoas.md",
+          "file_name": "América Latina é uma sociedade com tanta desigualdade porque foi criada por um pequeno grupo de elites coloniais para explorar a vasta maioria das pessoas.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:29.382860+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Fazer bem ao outro __ nossa voca____o.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "impacto_pandemia_idosos",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "isolamento_social_idosos",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "saude_mental_idosos",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "doacao_afeto_idosos",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "importancia_contato_humano",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "motivacao_pandemia",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "altruismo_bem_estar",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "solidariedade_comunitaria",
+            "weight": 7,
+            "confidence": 0.89
+          },
+          {
+            "name": "acoes_apoio_idosos",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "resiliencia_idosos",
+            "weight": 6,
+            "confidence": 0.87
+          }
+        ],
+        "content_summary": "O artigo destaca o impacto do isolamento social em idosos durante a pandemia de 2020, enfatizando como atos simples de afeto, como telefonemas, foram cruciais para o bem-estar e motivação. A nota sugere que focar nos outros é uma chave para a motivação, não apenas em tempos de crise.",
+        "cdu_primary": "364.154",
+        "cdu_secondary": [
+          "177.8",
+          "305.8"
+        ],
+        "cdu_description": "Assistência social a grupos específicos (idosos); Ética social; Grupos sociais",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Fazer bem ao outro __ nossa voca____o.md",
+          "file_name": "Fazer bem ao outro __ nossa voca____o.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:31.821967+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/moral.md",
+      "status": "error",
+      "error": "Note too short (< 50 chars)"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Diversidade.md",
+      "status": "success",
+      "data": {
+        "is_index_note": true,
+        "topics": [
+          {
+            "name": "diversidade_cultural",
+            "weight": 9,
+            "confidence": 0.9
+          },
+          {
+            "name": "diversidade_biologica",
+            "weight": 8,
+            "confidence": 0.85
+          },
+          {
+            "name": "diversidade_genero",
+            "weight": 7,
+            "confidence": 0.8
+          },
+          {
+            "name": "diversidade_inclusao",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "diversidade_social",
+            "weight": 7,
+            "confidence": 0.75
+          },
+          {
+            "name": "diversidade_cognitiva",
+            "weight": 6,
+            "confidence": 0.7
+          },
+          {
+            "name": "diversidade_etnica",
+            "weight": 8,
+            "confidence": 0.88
+          },
+          {
+            "name": "diversidade_organizacional",
+            "weight": 7,
+            "confidence": 0.78
+          },
+          {
+            "name": "diversidade_linguistica",
+            "weight": 6,
+            "confidence": 0.72
+          },
+          {
+            "name": "gestao_diversidade",
+            "weight": 8,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "Nota de índice sobre Diversidade. Serve como referência/link para conteúdos relacionados a diferentes facetas da diversidade, como cultural, biológica, de gênero, social, cognitiva, étnica, linguística e organizacional, abordando também a gestão e a inclusão.",
+        "cdu_primary": "316.3",
+        "cdu_secondary": [
+          "577.2",
+          "39",
+          "305.4"
+        ],
+        "cdu_description": "316.3 - Diversidade social e cultural. 577.2 - Diversidade genética. 39 - Costumes, civilização, etnologia. 305.4 - Mulheres e a sociedade.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Diversidade.md",
+          "file_name": "Diversidade.md",
+          "is_index_note": true,
+          "processed_at": "2026-03-05T01:13:36.227584+00:00",
+          "model": "gemini-2.5-flash-lite",
+          "title_extracted": "Diversidade"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O problema do Rio nao sao os bandidos, sao os mocinhos.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "crise_seguranca_publica_rio_janeiro",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "intervencao_federal_seguranca",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "corrupcao_policial",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "desigualdade_social_crime",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "critica_operacoes_policiais_favelas",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "diagnostico_ex_chefe_policia_civil",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "reforma_estrutural_policia",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "papel_forcas_armadas_seguranca",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "relacao_elite_inseguranca",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "crime_organizado_vs_trafico_local",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "O ex-chefe da Polícia Civil do Rio, Hélio Luz, critica a abordagem de segurança pública focada nas favelas, argumentando que o problema real reside na corrupção e ineficiência dentro das próprias forças de segurança (\"mocinhos\"). Ele sugere que a intervenção federal deve focar na recuperação estrutural da polícia, em vez de operações ostensivas.",
+        "cdu_primary": "351.74",
+        "cdu_secondary": [
+          "305.8",
+          "323.3"
+        ],
+        "cdu_description": "Administração pública. Segurança pública. Polícia. Polícia civil. Polícia militar. Corrupção. Desigualdade social. Elites.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O problema do Rio nao sao os bandidos, sao os mocinhos.md",
+          "file_name": "O problema do Rio nao sao os bandidos, sao os mocinhos.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:38.683648+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/A cidade.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "mercantilização_da_vida_urbana",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "direito_à_cidade",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "interesses_privados_vs_bem_comum",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "políticas_públicas_urbanas",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "planejamento_urbano_brasileiro",
+            "weight": 9,
+            "confidence": 0.94
+          },
+          {
+            "name": "capital_imobiliário_urbano",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "mobilidade_urbana_como_mercadoria",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "acesso_desigual_a_serviços_urbanos",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "construção_de_significado_na_cidade",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "redes_sociais_e_vida_urbana",
+            "weight": 5,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "A nota discute a mercantilização da vida urbana no Brasil, onde interesses privados moldam o desenvolvimento da cidade em detrimento do direito universal à cidade. A acumulação de capital precede as necessidades da população, resultando em acesso desigual a serviços essenciais como saúde e educação.",
+        "cdu_primary": "308",
+        "cdu_secondary": [
+          "330.5",
+          "316.4",
+          "321.1"
+        ],
+        "cdu_description": "Sociologia urbana, com ênfase na economia urbana, desenvolvimento social e políticas públicas.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/A cidade.md",
+          "file_name": "A cidade.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:41.039535+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Fazer o bem.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "altruismo",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "solidariedade",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "empatia",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "caridade",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "vocacao_humana",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "exemplo_cristao",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "ajuda_ao_proximo",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "heroísmo_cotidiano",
+            "weight": 9,
+            "confidence": 0.93
+          },
+          {
+            "name": "narracao_para_cegos",
+            "weight": 8,
+            "confidence": 0.8
+          },
+          {
+            "name": "bondade",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota enfatiza a importância de fazer o bem ao próximo como uma vocação humana e um exemplo a ser seguido, inspirado em figuras como Jesus. Destaca-se a ideia de heroísmo em atos de bondade, mesmo que desconhecidos, e a narrativa como forma de auxílio.",
+        "cdu_primary": "261.8",
+        "cdu_secondary": [
+          "177.7",
+          "364.1"
+        ],
+        "cdu_description": "Ações sociais e éticas no cristianismo; Ética social; Assistência social",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Fazer o bem.md",
+          "file_name": "Fazer o bem.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:43.029485+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O deus mercado espera tudo para agora.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "lucro_imediato",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "desconsideracao_custos_futuros",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "visao_curto_prazo",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "egoísmo_financeiro",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "falta_responsabilidade_futura",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "mentalidade_instantanea",
+            "weight": 5,
+            "confidence": 0.88
+          },
+          {
+            "name": "impacto_social_negativo",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "corrosao_carater",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "pensamento_futuro_distante",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "etica_empresarial_questionavel",
+            "weight": 6,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota discute a busca por lucro imediato sem considerar os custos futuros, refletindo uma mentalidade de curto prazo e a desconsideração pela responsabilidade futura, conforme sugerido por autores como Diamandis e Sennett.",
+        "cdu_primary": "330.13",
+        "cdu_secondary": [
+          "174.4",
+          "305.8"
+        ],
+        "cdu_description": "Economia. Teoria econômica. Conceitos econômicos. Lucro. Custos. Comportamento econômico. Ética nos negócios. Sociologia. Caráter.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/O deus mercado espera tudo para agora.md",
+          "file_name": "O deus mercado espera tudo para agora.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:45.237261+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/A FALACIA DA DEMOCRACIA OU QUANDO A MAIORIA - Bobbio.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "crítica_democracia_representativa",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "legitimidade_democrática",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "participação_popular",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "autonomia_individual_vs_coletiva",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "declínio_ideal_democrático",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "maioria_como_minoria",
+            "weight": 10,
+            "confidence": 0.97
+          },
+          {
+            "name": "democracia_direta_vs_representativa",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "influência_de_bobbio",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "complexidade_urbana_e_democracia",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "renúncia_à_liberdade_em_democracia",
+            "weight": 8,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "O ensaio argumenta que a democracia representativa, embora necessária pelas complexidades urbanas, se distancia do ideal democrático de participação e aprovação majoritária, levando a uma perda de legitimidade e à renúncia da autonomia individual. A obra critica a noção de que a maioria em sistemas representativos reflete verdadeiramente a vontade coletiva.",
+        "cdu_primary": "321.1",
+        "cdu_secondary": [
+          "321.01",
+          "323.3"
+        ],
+        "cdu_description": "Formas de governo. Democracia. Teoria da democracia. Participação política. Grupos sociais e classes.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/A FALACIA DA DEMOCRACIA OU QUANDO A MAIORIA - Bobbio.md",
+          "file_name": "A FALACIA DA DEMOCRACIA OU QUANDO A MAIORIA - Bobbio.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:47.488049+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Inflacao para famiias mais pobres e 10 vezes maior que para mais ricas em 2020.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "inflacao_familias_pobres",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "inflacao_familias_ricas",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "diferenca_inflacao_renda",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "aumento_precos_alimentos",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "impacto_arroz_inflacao",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "ipea_indicador_inflacao_renda",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "desvalorizacao_real_exportacoes",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "peso_alimentos_orcamento_familiar",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "consumo_domiciliar_alimentos",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "pandemia_efeitos_economia",
+            "weight": 5,
+            "confidence": 0.85
+          }
+        ],
+        "content_summary": "A inflação para famílias mais pobres no Brasil em 2020 foi significativamente maior (10 vezes) do que para as mais ricas, impulsionada principalmente pelo aumento expressivo nos preços dos alimentos e pelo peso desses gastos no orçamento das famílias de menor renda.",
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "338.5",
+          "316.4"
+        ],
+        "cdu_description": "Economia. Finanças. Preços. Inflação. Distribuição de renda. Sociologia da pobreza.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Inflacao para famiias mais pobres e 10 vezes maior que para mais ricas em 2020.md",
+          "file_name": "Inflacao para famiias mais pobres e 10 vezes maior que para mais ricas em 2020.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:49.844888+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Este homem reduziu o numero de moradores de rua de Utah.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "reducao_moradores_rua_utah",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "housing_first_utah",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "lloyd_pendleton_estrategia",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "custo_moradia_vs_emergencia",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "habitação_apoio_permanente",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "saude_mental_moradores_rua",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "reintegracao_familiar_desabrigados",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "politicas_publicas_moradia",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "comparativo_brasil_eua_moradores_rua",
+            "weight": 5,
+            "confidence": 0.85
+          },
+          {
+            "name": "desmistificacao_mito_emprego_moradia",
+            "weight": 5,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "O artigo detalha como Lloyd Pendleton reduziu drasticamente o número de moradores de rua em Utah através do programa 'housing first', que prioriza a habitação com apoio, demonstrando ser economicamente mais viável que os custos de emergência.",
+        "cdu_primary": "364.154",
+        "cdu_secondary": [
+          "332.8",
+          "305.8"
+        ],
+        "cdu_description": "Assistência social para desabrigados e sem-teto, com foco em habitação e programas de apoio, comparando custos e eficácia com abordagens anteriores.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Este homem reduziu o numero de moradores de rua de Utah.md",
+          "file_name": "Este homem reduziu o numero de moradores de rua de Utah.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:52.562052+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Ele viveu 8 anos na rua. Hoje, tem um negocio de jardinagem.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "empreendedorismo_social",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "recuperacao_alcoolismo",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "negocio_jardinagem_paisagismo",
+            "weight": 8,
+            "confidence": 0.96
+          },
+          {
+            "name": "superacao_pobreza_extrema",
+            "weight": 7,
+            "confidence": 0.94
+          },
+          {
+            "name": "reinsercao_social",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "saude_mental_reabilitacao",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "historia_pessoal_inspiradora",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "gestao_pequena_empresa",
+            "weight": 5,
+            "confidence": 0.9
+          },
+          {
+            "name": "servicos_condominios",
+            "weight": 5,
+            "confidence": 0.88
+          },
+          {
+            "name": "apoio_institucional_sebrae",
+            "weight": 5,
+            "confidence": 0.87
+          }
+        ],
+        "content_summary": "A nota narra a inspiradora jornada de um indivíduo que superou oito anos de alcoolismo e vida nas ruas para fundar um próspero negócio de jardinagem e paisagismo, com apoio do Sebrae. Sua história é um testemunho de resiliência, empreendedorismo e reinserção social.",
+        "cdu_primary": "334.7",
+        "cdu_secondary": [
+          "364.6",
+          "305.8",
+          "635"
+        ],
+        "cdu_description": "Cooperativismo e outras formas de associação econômica; Pequenas e médias empresas; Reabilitação social; Grupos sociais desfavorecidos; Horticultura e jardinagem",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Ele viveu 8 anos na rua. Hoje, tem um negocio de jardinagem.md",
+          "file_name": "Ele viveu 8 anos na rua. Hoje, tem um negocio de jardinagem.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:55.170264+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Vivendo o trabalho subalterno - livro TRT.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "trabalho_subalterno",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "livro_eletronico",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "lançamento_de_livro",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "tribunal_regional_do_trabalho",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "escola_judicial",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "justiça_do_trabalho",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "combate_ao_trabalho_infantil",
+            "weight": 8,
+            "confidence": 0.8
+          },
+          {
+            "name": "documento_eletrônico",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "correspondência_eletrônica",
+            "weight": 5,
+            "confidence": 0.7
+          },
+          {
+            "name": "pesquisa_e_estudo",
+            "weight": 6,
+            "confidence": 0.65
+          }
+        ],
+        "content_summary": "A nota informa sobre o envio da versão final do livro eletrônico \"Vivendo o trabalho subalterno\" e anuncia seu lançamento oficial em 16 de abril de 2018, no TRT/RJ. Inclui também uma mensagem sobre o combate ao trabalho infantil.",
+        "cdu_primary": "331.5",
+        "cdu_secondary": [
+          "347.9",
+          "004.77"
+        ],
+        "cdu_description": "Trabalho subalterno e condições de trabalho, com referências à justiça do trabalho e documentos eletrônicos.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Vivendo o trabalho subalterno - livro TRT.md",
+          "file_name": "Vivendo o trabalho subalterno - livro TRT.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:13:57.730094+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/4 bilhoes de pessoas enfrentam grave escassez de agua pelo menos um mes por ano.md",
+      "status": "error",
+      "error": "RetryError[<Future at 0x7efce6545930 state=finished raised JSONDecodeError>]"
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/A concentracao urbana pode ser um risco.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "skid_row_los_angeles",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "politicas_urbanisticas_assistencia_social",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "concentracao_populacao_marginalizada",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "ciclo_vicioso_pobreza_vicio",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "impacto_trafico_drogas",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "ong_reabilitacao",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "deslocamento_populacional",
+            "weight": 6,
+            "confidence": 0.83
+          },
+          {
+            "name": "industria_entretenimento_los_angeles",
+            "weight": 5,
+            "confidence": 0.8
+          },
+          {
+            "name": "contraste_riqueza_pobreza",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "servicos_assistencia_social_publica",
+            "weight": 7,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A nota descreve como um plano urbanístico de 1976 em Los Angeles concentrou serviços de assistência social em uma área específica, resultando na formação da 'skid row' com alta concentração de viciados e marginalizados. Isso criou um ciclo vicioso de pobreza e tráfico, contrastando com a riqueza da indústria do entretenimento da cidade.",
+        "cdu_primary": "308.1",
+        "cdu_secondary": [
+          "364.12",
+          "332.04",
+          "305.8"
+        ],
+        "cdu_description": "Sociologia urbana e regional; problemas sociais específicos de áreas urbanas; desenvolvimento social e econômico; marginalidade e criminalidade; políticas sociais.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/A concentracao urbana pode ser um risco.md",
+          "file_name": "A concentracao urbana pode ser um risco.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:20:27.063082+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Vendendo amendoim, ambulante muda de vida e ganha bolsa para cursar direito.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "superacao_pessoal",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "empreendedorismo_ambulante",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "acesso_educacao_superior",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "mudanca_de_vida",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "historia_inspiradora",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "motivacao_familiar",
+            "weight": 7,
+            "confidence": 0.93
+          },
+          {
+            "name": "estudo_de_direito",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "juventude_dificil",
+            "weight": 6,
+            "confidence": 0.91
+          },
+          {
+            "name": "vida_em_maceio",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "venda_de_amendoim",
+            "weight": 5,
+            "confidence": 0.89
+          }
+        ],
+        "content_summary": "A história de Jhone Vicente dos Santos, um vendedor ambulante de amendoim em Maceió, que superou dificuldades pessoais e familiares para conquistar uma bolsa integral para cursar Direito, inspirando outros com sua trajetória de superação e determinação.",
+        "cdu_primary": "378.1",
+        "cdu_secondary": [
+          "331.5",
+          "305.8"
+        ],
+        "cdu_description": "Acesso ao ensino superior, bolsas de estudo, educação para adultos, trabalho informal, histórias de vida inspiradoras.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Vendendo amendoim, ambulante muda de vida e ganha bolsa para cursar direito.md",
+          "file_name": "Vendendo amendoim, ambulante muda de vida e ganha bolsa para cursar direito.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:20:29.416577+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Imagem de fam__lia cozinhando vencedora de pr__mio.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "fotografia_gastronomica_internacional",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "premio_pink_lady_food_photographer_of_the_year",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "fotografia_de_familia_na_china",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "tecnica_fotografica_luz_composicao",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "narrativa_emocional_fotografia",
+            "weight": 8,
+            "confidence": 0.93
+          },
+          {
+            "name": "fotografia_isolamento_pandemia",
+            "weight": 7,
+            "confidence": 0.9
+          },
+          {
+            "name": "fotografia_colheita_turquia",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "fotografia_casamento_momentos_inesperados",
+            "weight": 6,
+            "confidence": 0.88
+          },
+          {
+            "name": "fotografia_natureza_morta_inverno",
+            "weight": 6,
+            "confidence": 0.87
+          },
+          {
+            "name": "fotografia_producao_alimentos_macarrao_arroz",
+            "weight": 7,
+            "confidence": 0.91
+          }
+        ],
+        "content_summary": "A foto 'Taste' de Li Huaifeng, que retrata uma família cozinhando na China, venceu o prêmio internacional Pink Lady Food Photographer of the Year 2021, destacando a técnica, narrativa e emoção da imagem. O artigo também apresenta outros vencedores em diversas categorias.",
+        "cdu_primary": "77.04",
+        "cdu_secondary": [
+          "061.7",
+          "394.1"
+        ],
+        "cdu_description": "Fotografia artística e de eventos, com menção a exposições e eventos culturais e culinária.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Imagem de fam__lia cozinhando vencedora de pr__mio.md",
+          "file_name": "Imagem de fam__lia cozinhando vencedora de pr__mio.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:20:32.079248+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/raciocínio da comodidade.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "raciocinio_comodidade",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "compartilhamento_proximo",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "raciocinio_alianca",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "convivencia_conjunta",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "abundancia",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "escassez",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "etica_compartilhamento",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "relacoes_sociais",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "filosofia_pratica",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "teologia_esperanca",
+            "weight": 6,
+            "confidence": 0.82
+          }
+        ],
+        "content_summary": "A nota contrasta o raciocínio da comodidade, que incentiva o compartilhamento do que se tem, com o raciocínio da aliança, que prioriza o compartilhamento para a convivência conjunta, abordando os conceitos de abundância e escassez.",
+        "cdu_primary": "303.3",
+        "cdu_secondary": [],
+        "cdu_description": "Métodos e técnicas de investigação social. Métodos de investigação social. Sociologia da abundância e da escassez.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/raciocínio da comodidade.md",
+          "file_name": "raciocínio da comodidade.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:20:34.228307+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/10% MAIS RICOS GANHAM 50 VEZES MAIS QUE 10% MAIS POBRES!.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "desigualdade_renda_brasil",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "indice_gini_brasil",
+            "weight": 9,
+            "confidence": 0.95
+          },
+          {
+            "name": "comparativo_desigualdade_bric",
+            "weight": 8,
+            "confidence": 0.92
+          },
+          {
+            "name": "concentracao_riqueza_topo_10_porcento",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "abismo_social_mundial",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "desigualdade_renda_chile",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "desigualdade_renda_mexico",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "desigualdade_renda_turquia",
+            "weight": 6,
+            "confidence": 0.85
+          },
+          {
+            "name": "desigualdade_renda_eua",
+            "weight": 7,
+            "confidence": 0.87
+          },
+          {
+            "name": "relatorio_ocde_desigualdade",
+            "weight": 8,
+            "confidence": 0.9
+          }
+        ],
+        "content_summary": "O Brasil apresenta um dos maiores abismos de desigualdade de renda do mundo, com os 10% mais ricos ganhando 50 vezes mais que os 10% mais pobres, segundo relatório da OCDE. O índice Gini do país é superior aos demais BRICs e o dobro da média dos países ricos.",
+        "cdu_primary": "330.5",
+        "cdu_secondary": [
+          "316.4",
+          "321.1"
+        ],
+        "cdu_description": "Economia. Riqueza. Distribuição de riqueza. Desigualdade social. Sociologia. Estratificação social. Classes sociais. Política. Justiça social.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/10% MAIS RICOS GANHAM 50 VEZES MAIS QUE 10% MAIS POBRES!.md",
+          "file_name": "10% MAIS RICOS GANHAM 50 VEZES MAIS QUE 10% MAIS POBRES!.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:20:36.584069+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/raciocínio da aliança.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "etica_compartilhamento",
+            "weight": 8,
+            "confidence": 0.9
+          },
+          {
+            "name": "filosofia_alianca",
+            "weight": 7,
+            "confidence": 0.85
+          },
+          {
+            "name": "conceito_comodidade",
+            "weight": 6,
+            "confidence": 0.8
+          },
+          {
+            "name": "perspectiva_escassez",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "perspectiva_abundancia",
+            "weight": 5,
+            "confidence": 0.75
+          },
+          {
+            "name": "relacao_proximo_compartilhar",
+            "weight": 9,
+            "confidence": 0.92
+          },
+          {
+            "name": "principio_coexistencia",
+            "weight": 7,
+            "confidence": 0.88
+          },
+          {
+            "name": "fundamentos_eticos_sociais",
+            "weight": 6,
+            "confidence": 0.82
+          },
+          {
+            "name": "teoria_compartilhamento",
+            "weight": 8,
+            "confidence": 0.91
+          },
+          {
+            "name": "implicacoes_recursos",
+            "weight": 5,
+            "confidence": 0.78
+          }
+        ],
+        "content_summary": "A nota contrasta o raciocínio da comodidade, que sugere compartilhar o que se pode, com o raciocínio da aliança, que prioriza o compartilhamento mútuo para a coexistência. Aborda a dicotomia entre abundância e escassez.",
+        "cdu_primary": "303.3",
+        "cdu_secondary": [],
+        "cdu_description": "Sociologia. Processos sociais. Interação social. Cooperação e conflito. Compartilhamento e aliança.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/raciocínio da aliança.md",
+          "file_name": "raciocínio da aliança.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:20:38.837030+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Futuro da educação.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "liberdade_aprendizagem",
+            "weight": 9,
+            "confidence": 0.98
+          },
+          {
+            "name": "ensino_escolar",
+            "weight": 8,
+            "confidence": 0.97
+          },
+          {
+            "name": "autonomia_estudantil",
+            "weight": 7,
+            "confidence": 0.96
+          },
+          {
+            "name": "metodologias_ativas",
+            "weight": 6,
+            "confidence": 0.94
+          },
+          {
+            "name": "desenvolvimento_cognitivo",
+            "weight": 5,
+            "confidence": 0.93
+          },
+          {
+            "name": "processo_educacional",
+            "weight": 7,
+            "confidence": 0.95
+          },
+          {
+            "name": "criatividade_educacao",
+            "weight": 6,
+            "confidence": 0.92
+          },
+          {
+            "name": "papel_professor",
+            "weight": 5,
+            "confidence": 0.91
+          },
+          {
+            "name": "inovacao_pedagogica",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "educacao_progressista",
+            "weight": 7,
+            "confidence": 0.93
+          }
+        ],
+        "content_summary": "A nota enfatiza a necessidade de conceder liberdade para o aprendizado escolar, promovendo a autonomia e a criatividade dos estudantes no processo educacional.",
+        "cdu_primary": "37.01",
+        "cdu_secondary": [],
+        "cdu_description": "Teoria e filosofia da educação",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Futuro da educação.md",
+          "file_name": "Futuro da educação.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:20:40.885249+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Abismo social marca diferen__as entre 21 cidades do Grande Rio.md",
+      "status": "success",
+      "data": {
+        "topics": [
+          {
+            "name": "desigualdade_social_grande_rio",
+            "weight": 10,
+            "confidence": 0.98
+          },
+          {
+            "name": "renda_per_capita_municipios",
+            "weight": 9,
+            "confidence": 0.97
+          },
+          {
+            "name": "expectativa_vida_regiao_metropolitana",
+            "weight": 9,
+            "confidence": 0.96
+          },
+          {
+            "name": "diferencas_socioeconomicas_niteroi_japeri",
+            "weight": 8,
+            "confidence": 0.95
+          },
+          {
+            "name": "periferia_metropolitana_indicadores_ruins",
+            "weight": 8,
+            "confidence": 0.94
+          },
+          {
+            "name": "infraestrutura_urbana_precarias",
+            "weight": 7,
+            "confidence": 0.92
+          },
+          {
+            "name": "politicas_publicas_ausencia_historica",
+            "weight": 7,
+            "confidence": 0.91
+          },
+          {
+            "name": "pesquisa_ong_casa_fluminense",
+            "weight": 6,
+            "confidence": 0.9
+          },
+          {
+            "name": "relacao_renda_saude",
+            "weight": 6,
+            "confidence": 0.89
+          },
+          {
+            "name": "propostas_reducao_pobreza",
+            "weight": 5,
+            "confidence": 0.88
+          }
+        ],
+        "content_summary": "A nota expõe o abismo social entre municípios do Grande Rio, evidenciando a disparidade de renda e expectativa de vida entre cidades como Niterói e Japeri. A pesquisa da ONG Casa Fluminense aponta a falta de infraestrutura e políticas públicas como causas históricas da desigualdade.",
+        "cdu_primary": "316.4",
+        "cdu_secondary": [
+          "330.5",
+          "308.2",
+          "305.8"
+        ],
+        "cdu_description": "Sociologia da desigualdade social e econômica, com foco em aspectos regionais e urbanos no Brasil.",
+        "metadata": {
+          "file_path": "/home/s015533607/MEGAsync/Minhas_notas/80 COMUNIDADE/Abismo social marca diferen__as entre 21 cidades do Grande Rio.md",
+          "file_name": "Abismo social marca diferen__as entre 21 cidades do Grande Rio.md",
+          "is_index_note": false,
+          "processed_at": "2026-03-05T01:20:43.650055+00:00",
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    }
+  ]
+}

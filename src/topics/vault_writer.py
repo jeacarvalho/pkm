@@ -13,7 +13,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import yaml
 
-from src.topics.config import TopicsConfig
+from src.topics.config import TopicConfig
 from src.topics.cdu_resolver import infer_cdu_fallback, get_cdu_description
 from src.utils.logging import get_logger
 
@@ -23,7 +23,7 @@ logger = get_logger(__name__)
 class VaultWriter:
     """Escreve properties de tópicos no frontmatter das notas."""
 
-    def __init__(self, config: TopicsConfig):
+    def __init__(self, config: TopicConfig):
         self.config = config
         self._setup_logger()
 
@@ -424,7 +424,7 @@ Examples:
     args = parser.parse_args()
 
     # Configura
-    config = TopicsConfig()
+    config = TopicConfig()
     config.dry_run = args.dry_run
     config.limit = args.limit
 

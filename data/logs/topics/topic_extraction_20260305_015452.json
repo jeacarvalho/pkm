@@ -1,0 +1,521 @@
+{
+  "timestamp": "2026-03-05T01:54:52.029302+00:00",
+  "config": {
+    "dry_run": true,
+    "target_dir": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA",
+    "model": "gemini-2.5-flash-lite"
+  },
+  "results": [
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/empatia.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Lacuna de alinhamento.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/coordenar significa fazer com que as pessoas certas estejam nos lugares certos para executar a função correta.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/O poder real para mudar a direção de algo está naqueles que estão colocando a mão na massa.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/10 grandes TED Talks para líderes.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Contra cultura.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/lacunas que devemos lidar no dia a dia do trabalho corporativo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Feedback.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Influência é mais duradoura que o poder.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Lacuna de conhecimento.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/complexidade.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/coordenar.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Lacuna dos efeitos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Pra entender o valor.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/teoria do caos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Intenção.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/The  Basecamp MBA Reading List – Signal v. Noise.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Coesão.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Gestão de Projetos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Como melhorar a cultura organizacional.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/No mundo da medição, objetivos. No mundo da possibilidade, contexto.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Pare de pedir feedback. Peça conselhos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/formas de lidar com a lacuna de alinhamento.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/formas de lidar com a lacuna de conhecimento.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Propósito em vez de lucro - como tornar empresa em ambiente de pessoas felizes e produtivas.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/o trabalho gerencial.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/cultura.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/informações.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Build career resilience with Skills.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/3 Ways Leaders Undermine Coesao by Trying to Create It.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Estratégia x liderança.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/relevância da tarefa.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/administração pública.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Organização simplesmente irresistível.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/formas de lidar com a lacuna de efeito.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/As melhores práticas da gestão de pessoas - lições da OCDE.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Assertividade.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Sexto sentido.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/The 30 Elements of Consumer Value_ A Hierarchy.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Os homens da história na visão de Philip Rieff.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/liderança.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Princípios de liderança Mission Command.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Músicos, compositores, escritores, artistas em geral também lideram.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/gerentes devem ficar alertas para as diferenças de estilos de motivação.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/problemas são complexos porque se autoalimentam.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/informação é aquilo que reduz a incerteza.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Construir algo juntos forma um coletivo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Entropia na organização.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Mudança de cultura.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Myers-Briggs - 16 tipos possíveis a partir da combinação das seguintes classificações.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Burocracia.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/o trabalho em equipe começa pela construção da confiança.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/informação disponível é imperfeita.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Estratégia.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Mudança de cultura - Empoderar o time!.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/5 TED Talks em liderança transformadora.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Engajamento ativo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Silvio Meira - Um Passeio Pelo Tempo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Comunicação Não Violenta.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Times.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Ecossistema de problemas difíceis ou perversos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/comportamento das pessoas.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/Lean.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/cultura organizacional.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/segurança psicológica.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Texto Paes de Paula.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Texto_ PARTE II - REVISITANDO A CIVILIZAÇÃO GREGA .md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Ética x moral texto 2 inicial.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/O que é burocracia - Motta Prestes.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Forum Semana II - Vídeo 1 - Para Começar_ Max Webe.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Diretrizes para inovação em uma organização públic.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Introdução - Aprendendo a aprender.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/POLÍTICAS PÚBLICAS -Rua.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/FORMAÇÃO DA AGENDA DE POLÍTICAS PÚBLICAS - RUA - Segunda Parte pg 65-122.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Mintzberg - Safaria cap 1 a 3.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Primeiros textos ética DROIT e VAZQUEZ.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Manual de Oslo pg 121 a 132.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/principais medidas tomadas pelo Governo Civil-Militar para a implantação da Reforma Administrativa de 1967.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Coltro Santos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Texto I - Administração pública no Brasil_ breve h.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Compreendendo as iniciativas de educação a distância via internet - estudo de caso em duas grandes empresas no Brasil.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/DASP -  entre a norma e o fato.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Manual de Oslo pg 153 a 168 - PESQUISAS SOBRE INOVAÇÃO.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Monteiro - Os níveis de análise das políticas públicas.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/_      Bryan C. Mezueundefined Clayton M. Christen.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Estudo [INO] Tiddundefined Bessant e Pavitt - Apre.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/POLÍTICAS PÚBLICAS -  ENTRE FALHAS LEGADOS E OUTRAS LIMITAÇÕES ÀS AVALIAÇÕES CONCLUSIVAS..md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/BERGUE - Gestão Estratégica de Pessoas no setor público.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Coelho - Intraempreendedorismo e a inovação na ges.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Forum semana II Vídeo 2 - Neoliberalismo e Gerenci.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Cultura de inovação no setor público_ o caso da Pr.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Forum semana II Vídeo 3 – No Brasil_ a administraç.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/OLIVEIRA - Governo Eletronico - Uma Visão Sobre a .md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Manual de Oslo pg 34 a 74.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Bacelar (semana 3) - As Políticas Públicas no Br.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/INTRODUÇÃO À TEORIA DA POLÍTICA PÚBLICA Enrique Saravia.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/ELEMENTOS DA IDADE MÉDIA - DA MODERNIDADE E DA CONTEMPORANEIDADE.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/Monografia Pós UFRGS.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/GestaoPublica-Ufrgs/BRESSER - DA ADMINISTRAÇÃO PÚBLICA BUROCRÁTICA À G.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/31 TREINAMENTOS/Coaching Managers Through Change.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/30 LIDERANCA/31 TREINAMENTOS/5 coisas importantes se quisermos realmente mudar.md",
+      "status": "dry-run",
+      "topics": []
+    }
+  ],
+  "summary": {
+    "total": 101,
+    "success": 0,
+    "error": 0,
+    "dry_run": 101
+  }
+}

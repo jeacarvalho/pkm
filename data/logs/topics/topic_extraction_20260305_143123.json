@@ -1,0 +1,421 @@
+{
+  "timestamp": "2026-03-05T14:31:23.515867+00:00",
+  "config": {
+    "dry_run": true,
+    "target_dir": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA",
+    "model": "gemini-2.5-flash-lite"
+  },
+  "results": [
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/monopólios modificam as relações oferta x demanda.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/PIB.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/AVA1 Mercado Financeiro.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/TCC economia.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/capitalismo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/para o guanzi chinês o alimento é a medida de todas as coisas.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Uma balela o mantra do aumento de eficiência com privatizações.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/a tarefa do governante não é a melhor versão desejada mas sim a melhor versão possível no estado atual das coisas.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Mercados se tornando o novo governo e a nova religião.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/o que seria uma vida boa e digna.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Estado.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Mesmo tendo começado em 2007 um plano para mais ventiladores mecânicos os EUA foram pegos sem capacidade pela covid em 2020.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/neoliberalismo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Quem nos governa.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Feudalismo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Elite brasileira está entre as que menos geram valor no mundo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Manifesto em defesa da Reconstrução Revolucionária do PCB.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/inovação.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/A questão não está em dividir as coisas igualmente mas em administrar a força de uns contra os outros.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Economia.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/revolução industrial.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/elite brasileira.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/CORSI - CAP5.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Crise de 1929.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Panaceia da privatização deixou EUA e Reino Unido presos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Piores Elites do mundo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Bibliografia Economia.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/inflação.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Para a china a discussão não é sobre a existência ou não de monopólios mas sim quem os controla.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Clientelismo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/homo economicus.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Diferença entre a China e a Russia quando da abertura econômica na década de 1980.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/patrimonialismo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/CORSI - CAP3 - A criação das bases da industrialização (1930-1945).md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Como conseguiram dar valor ao diamante.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/burguesia.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/tecnofeudalismo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Prioridade na china parece ser o povo e o pobre.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/Nós perdemos. Nós somos derrotados.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/UVA pólo RO.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria dos rendimentos decrescentes.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Analise de Investimento.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria do valor do trabalho.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria das Vantagens comparativas.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Para o chinês a tarefa do governante não é apelar para a moralidade do povo mas usar os interesses predominantes e regular os lucros do povo.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia brasileira.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia do setor publico.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FORMAÇÃO ECONÔMICA BRASILEIRA/FORMAÇÃO ECONÔMICA BRASILEIRA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FORMAÇÃO ECONÔMICA BRASILEIRA/texto livro formacao economica.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FORMAÇÃO ECONÔMICA BRASILEIRA/Aula 1 formação econômica.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/FILOSOFIA/FILOSOFIA - Economia UVA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Contabilidade Social/CONTABILIDADE SOCIAL - UVA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/História do pensamento econômico/HISTÓRIA DO PENSAMENTO ECONÔMICO - UVA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Orcamento e Custos/Orçamento e Custos - UVA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/DESENVOLVIMENTO ECONÔMICO/DESENVOLVIMENTO ECONÔMICO.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Microeconomia - Teoria do Produtor/Microeconomia - Teoria do Produtor.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/MICROECONOMIA - TEORIA DO CONSUMIDOR/MICROECONOMIA - TEORIA DO CONSUMIDOR.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ÉTICA E RESPONSABILIDADE SOCIAL/ÉTICA E RESPONSABILIDADE SOCIOAMBIENTAL.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Convenção nº 182.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Recomendação nº 190 da OIT.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Debate com chatpdf sobre o conteudo das aulas de educacao em direitos humanos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Educação em Direitos Humanos.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Educação em Direitos Humanos/Aulas-Educacao-Direitos-Humanos-PDF.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/GESTÃO FINANCEIRA/GESTÃO FINANCEIRA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/GESTÃO FINANCEIRA/aulas-gestao-financeira.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ECONOMIA MONETÁRIA/ECONOMIA MONETÁRIA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/MACROECONOMIA ABERTA/MACROECONOMIA ABERTA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Matemática Financeira/Matemática Financeira.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Macroeconomia/Macroeconomia - UVA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia do Meio Ambiente e Valoração Ambiental/Economia do Meio Ambiente e Valoração Ambiental - UVA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Teoria dos Jogos/Teoria dos Jogos - UVA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Cultura e contemporaneidade/Cultura e contemporaneidade.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Econometria/Econometria UVA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia Internacional e Comércio Exterior/Economia Internacional e Comércio Exterior.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Oficina de leitura/Oficina de Leitura e Interpretação.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia Política/Segunda revolução industrial.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Economia Política/Economia Política.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/Matemática Aplicada/MATEMÁTICA APLICADA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ECONOMIA BRASILEIRA CONTEMPORANEA/O crescimento econômico estagnou. Vamos resolver isso.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/ECONOMIA BRASILEIRA CONTEMPORANEA/ECONOMIA BRASILEIRA CONTEMPORANEA.md",
+      "status": "dry-run",
+      "topics": []
+    },
+    {
+      "file": "/home/s015533607/MEGAsync/Minhas_notas/70 ECONOMIA/71 TREINAMENTOS/UVA/Economia/História Econômica Geral/História Econômica Geral - UVA.md",
+      "status": "dry-run",
+      "topics": []
+    }
+  ],
+  "summary": {
+    "total": 81,
+    "success": 0,
+    "error": 0,
+    "dry_run": 81
+  }
+}

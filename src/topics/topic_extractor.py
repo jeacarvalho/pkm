@@ -13,7 +13,7 @@ from google import genai
 from google.genai import types
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from src.topics.config import TopicsConfig
+from src.topics.config import TopicConfig
 from src.topics.cdu_resolver import (
     infer_cdu_fallback,
     infer_cdu_from_keywords,
@@ -56,17 +56,47 @@ Responda em JSON estrito:
   "cdu_description": "Descrição da CDU" | null
 }}"""
 
+CHAPTER_TOPIC_EXTRACTION_PROMPT = """Você é um curador de conhecimento pessoal especializado em classificação bibliográfica CDU.
+Extraia os 10 tópicos principais deste capítulo de livro E sugira classificação CDU.
+
+REGRAS OBRIGATÓRIAS:
+1. Retorne APENAS JSON válido (sem markdown, sem texto extra)
+2. Tópicos: name (str), weight (inteiro OBRIGATORIAMENTE entre 5 e 10), confidence (float 0.0-1.0)
+3. Tópicos em português, snake_case, GENÉRICOS (para facilitar conexões com outras notas)
+4. CDU: formato "XXX.X" (ex: "321.1", "305.8")
+5. Se não houver CDU óbvio, use null para cdu_primary
+6. Exatamente 10 tópicos, não mais, não menos
+7. IMPORTANTE: weight deve ser 5, 6, 7, 8, 9 ou 10 (nunca abaixo de 5)
+8. PRIORIDADE: Gerar tópicos genéricos que facilitem conexões temáticas (ex: "lideranca", "historia", "estrategia", "comunicacao", "politica", "governanca")
+
+CONTEÚDO DO CAPÍTULO:
+{note_content}
+
+Responda em JSON estrito:
+{{
+  "topics": [
+    {{"name": "exemplo_topico", "weight": 10, "confidence": 0.95}},
+    ... (10 tópicos total)
+  ],
+  "cdu_primary": "321.1" | null,
+  "cdu_secondary": ["305.8"] | [],
+  "cdu_description": "Descrição da CDU" | null
+}}"""
+
 
 class TopicExtractor:
     """Extract topics from Obsidian notes using Gemini."""
 
-    def __init__(self, config: TopicsConfig = None):
+    def __init__(self, config: Optional[TopicConfig] = None):
         """Initialize topic extractor.
 
         Args:
             config: Topic extraction configuration
         """
-        self.config = config or TopicsConfig()
+        if config is None:
+            self.config = TopicConfig()
+        else:
+            self.config = config
         self.validator = TopicValidator(self.config)
 
         # Get API key - try from config first, then from main settings
@@ -95,11 +125,14 @@ class TopicExtractor:
     @retry(
         stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10)
     )
-    def extract_topics(self, note_content: str) -> Dict[str, Any]:
+    def extract_topics(
+        self, note_content: str, is_chapter: bool = False
+    ) -> Dict[str, Any]:
         """Extract topics from note content.
 
         Args:
             note_content: Content of the note
+            is_chapter: If True, use chapter-specific prompt for generic topics
 
         Returns:
             Dictionary with topics and CDU classification
@@ -107,7 +140,11 @@ class TopicExtractor:
         # Truncate if too long
         truncated = note_content[: self.config.max_note_length]
 
-        prompt = TOPIC_EXTRACTION_PROMPT.format(note_content=truncated)
+        # Use different prompt for chapters vs. notes
+        if is_chapter:
+            prompt = CHAPTER_TOPIC_EXTRACTION_PROMPT.format(note_content=truncated)
+        else:
+            prompt = TOPIC_EXTRACTION_PROMPT.format(note_content=truncated)
 
         try:
             response = self.client.models.generate_content(
@@ -119,7 +156,10 @@ class TopicExtractor:
             )
 
             # Parse JSON response
-            result = json.loads(response.text)
+            response_text = response.text
+            if response_text is None:
+                raise ValueError("Empty response from Gemini API")
+            result = json.loads(response_text)
 
             # Validate result
             self.validator.validate_full_result(result)
@@ -381,7 +421,7 @@ def main():
 
     try:
         # Initialize extractor
-        config = TopicsConfig(log_dir=output_dir)
+        config = TopicConfig(log_dir=output_dir)
         extractor = TopicExtractor(config)
 
         # Process notes
