@@ -53,36 +53,36 @@ class CDUManager:
 
     @classmethod
     def validate_cdu_format(cls, cdu: str) -> bool:
-        """Validate CDU format (XXX.X, XX.X, X.X, or XXX.XX, etc.)."""
+        """Validate CDU format (supports multiple levels: XXX.X, XXX.XX.XX, etc.)."""
         if not cdu:
             return False
 
         # Remove any whitespace
         cdu = cdu.strip()
 
-        # Check format: should be like "321.1", "305.8", "658.012"
+        # Check format: should be like "321.1", "305.8", "330.341.5"
         parts = cdu.split(".")
-        if len(parts) != 2:
+        if len(parts) < 2:  # Must have at least 2 parts (main class + subclass)
             return False
 
-        # First part should be 1-3 digits
+        # First part should be 1-3 digits (main class)
         if not parts[0].isdigit() or len(parts[0]) > 3 or len(parts[0]) < 1:
             return False
 
-        # Second part should be 1-4 digits (accepting more precision)
-        if not parts[1].isdigit() or len(parts[1]) > 4 or len(parts[1]) < 1:
-            return False
+        # All subsequent parts should be 1-4 digits (subclasses)
+        for part in parts[1:]:
+            if not part.isdigit() or len(part) > 4 or len(part) < 1:
+                return False
 
         return True
 
     @classmethod
     def normalize_cdu(cls, cdu: str) -> Optional[str]:
-        """Normalize CDU format to valid XXX.X format.
+        """Normalize CDU format while preserving depth.
 
         Fixes common issues:
-        - 330.341.5 → 330.34 (truncates to 2 levels)
-        - 32 → 32.0 (adds missing decimal)
-        - 330.342.2 → 330.34 (truncates to 2 levels)
+        - "32" becomes "32.0" (adds missing decimal for single numbers)
+        - Preserves existing multi-level classifications (e.g., 330.341.5 stays as is)
 
         Args:
             cdu: Raw CDU string from API
@@ -95,26 +95,20 @@ class CDUManager:
 
         cdu = cdu.strip()
 
-        # Check if already valid
+        # Check if already valid (supports multi-level)
         if cls.validate_cdu_format(cdu):
             return cdu
 
         parts = cdu.split(".")
 
-        # Case 1: No decimal point (e.g., "32")
+        # Case 1: No decimal point (e.g., "32") - add .0
         if len(parts) == 1:
             if parts[0].isdigit() and 1 <= len(parts[0]) <= 3:
                 return f"{parts[0]}.0"
             return None
 
-        # Case 2: More than 2 levels (e.g., "330.341.5")
-        if len(parts) > 2:
-            # Truncate to first decimal only, max 2 digits
-            if parts[0].isdigit() and parts[1].isdigit():
-                decimal = parts[1][:2]  # Take max 2 digits from first decimal
-                return f"{parts[0]}.{decimal}"
-            return None
-
+        # Case 2: Has decimals but invalid format - don't truncate
+        # Multi-level CDUs are now valid (e.g., 330.341.5)
         return None
 
     @classmethod
