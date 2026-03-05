@@ -39,11 +39,11 @@ Evoluir o sistema RAG de **embedding-based** para **topic-based classification**
 | Sprint | Descrição | Dependência | Tempo Est. | Status |
 |--------|-----------|-------------|------------|--------|
 | **Sprint 08** | Topic Extractor (Gemini) | Sprint 07 | 4-6 horas | ✅ COMPLETE |
-| **Sprint 09** | Vault Properties Writer | Sprint 08 | 3-4 horas | ✅ COMPLETE |
-| **Sprint 10** | Topic Matching Engine | Sprint 09 | 4-6 horas | ⏭️ READY |
-| **Sprint 11** | Translation Cache System | Sprint 08 | 2-3 horas | ⏭️ BLOCKED |
-| **Sprint 12** | Hybrid Retrieval (v1+v2) | Sprint 10+11 | 4-6 horas | ⏭️ BLOCKED |
-| **Sprint 13** | Dataview Integration | Sprint 09 | 2-3 horas | ⏭️ BLOCKED |
+| **Sprint 09** | Vault Properties Writer | Sprint 08 | 3-4 horas | ✅ COMPLETE (2026-03-04 + fixes 2026-03-05) |
+| **Sprint 10** | Topic Matching Engine | Sprint 09 | 4-6 horas | ⏭️ READY (dependências satisfeitas) |
+| **Sprint 11** | Translation Cache System | Sprint 08 | 2-3 horas | ⏭️ READY |
+| **Sprint 12** | Hybrid Retrieval (v1+v2) | Sprint 10+11 | 4-6 horas | ⏭️ BLOCKED (aguardando Sprints 10+11) |
+| **Sprint 13** | Dataview Integration | Sprint 09 | 2-3 horas | ⏭️ READY (dependência Sprint 09 satisfeita) |
 
 **Total Estimado:** ~18-25 horas de desenvolvimento
 
@@ -201,6 +201,11 @@ Custo Total:
 - [x] Estatísticas salvas em `writer_stats.json`
 - [x] Testado com 5 notas de "30 LIDERANCA"
 
+### 🐛 Correções (2026-03-05)
+- [x] **Fix:** Busca JSONs em `data/logs/topics/` (além de `results/`)
+- [x] **Feature:** Fallback de CDU para notas sem classificação
+- [x] **Feature:** Suporte a CDU multi-nível (330.341.5 preservado)
+
 ### Estrutura do Frontmatter (Exemplo)
 ```yaml
 ---
@@ -273,7 +278,10 @@ data/
 
 ---
 
-### Objetivo
+### Próximo Passo
+**Sprint 09 COMPLETE** ✅ - Todas as notas do vault possuem properties classificadas.
+
+**Próximo:** Sprint 10 - Topic Matching Engine (dependência satisfeita ✅)
 
 ---
 
