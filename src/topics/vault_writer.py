@@ -14,6 +14,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import yaml
 
 from src.topics.config import TopicsConfig
+from src.topics.cdu_resolver import infer_cdu_fallback, get_cdu_description
 from src.utils.logging import get_logger
 
 logger = get_logger(__name__)
@@ -65,28 +66,56 @@ class VaultWriter:
         """Carrega JSON de tópicos para uma nota."""
         json_path = self.config.log_dir / "results" / f"{note_name}_topics.json"
 
-        # Também tenta buscar no arquivo de teste
-        if not json_path.exists():
-            test_file = self.config.log_dir / "test_extraction_5_notes.json"
-            if test_file.exists():
-                try:
-                    with open(test_file, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                        for note in data.get("results", {}).get("notes", []):
-                            if note.get("file") == note_name or note.get(
-                                "file", ""
-                            ).startswith(note_name):
-                                return note
-                except Exception as e:
-                    logger.error(f"Error loading from test file: {e}")
-            return None
+        # Try loading from individual JSON file
+        if json_path.exists():
+            try:
+                with open(json_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception as e:
+                logger.error(f"Error loading JSON for {note_name}: {e}")
+                return None
 
-        try:
-            with open(json_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            logger.error(f"Error loading JSON for {note_name}: {e}")
-            return None
+        # Try loading from pipeline_extraction files
+        # Note: we need to find the latest/most complete data
+        results_dir = self.config.log_dir / "results"
+        result_data = None
+
+        if results_dir.exists():
+            for json_file in sorted(results_dir.glob("pipeline_extraction_*.json")):
+                try:
+                    with open(json_file, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        for result in data.get("results", []):
+                            file_path = result.get("file", "")
+                            if file_path and Path(file_path).stem == note_name:
+                                # Keep searching - we want the latest (most complete) data
+                                result_data = result.get("data", {})
+                                if (
+                                    result_data
+                                ):  # If we found data, continue to find later entries
+                                    break
+                except Exception as e:
+                    logger.debug(f"Error reading {json_file}: {e}")
+                    continue
+
+        if result_data:
+            return result_data
+
+        # Also try the test file
+        test_file = self.config.log_dir / "test_extraction_5_notes.json"
+        if test_file.exists():
+            try:
+                with open(test_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    for note in data.get("results", {}).get("notes", []):
+                        if note.get("file") == note_name or note.get(
+                            "file", ""
+                        ).startswith(note_name):
+                            return note
+            except Exception as e:
+                logger.error(f"Error loading from test file: {e}")
+
+        return None
 
     def _read_note(self, note_path: Path) -> Tuple[Dict, str, str]:
         """Lê nota e separa frontmatter do conteúdo."""
@@ -132,16 +161,34 @@ class VaultWriter:
         with open(note_path, "w", encoding="utf-8") as f:
             f.write(new_content)
 
-    def _build_topic_classification(self, topic_json: Dict) -> Dict[str, Any]:
-        """Constrói estrutura topic_classification para o frontmatter."""
+    def _build_topic_classification(
+        self, topic_json: Dict, note_path: Optional[Path] = None
+    ) -> Dict[str, Any]:
+        """Constrói estrutura topic_classification para o frontmatter.
+
+        Args:
+            topic_json: The extracted topic data from Gemini
+            note_path: Path to the note file for fallback CDU inference
+        """
+        cdu_primary = topic_json.get("cdu_primary")
+        cdu_description = topic_json.get("cdu_description")
+
+        # Fallback: infer CDU from folder/keywords if null
+        if not cdu_primary and note_path:
+            inferred_cdu = infer_cdu_fallback(str(note_path))
+            if inferred_cdu:
+                cdu_primary = inferred_cdu
+                cdu_description = get_cdu_description(inferred_cdu)
+                logger.debug(f"   🔄 Fallback CDU for {note_path.name}: {inferred_cdu}")
+
         return {
             "version": "2.0",
             "classified_at": datetime.now(timezone.utc).isoformat(),
             "model": topic_json.get("model", "gemini-2.5-flash-lite"),
             "topics": topic_json.get("topics", []),
-            "cdu_primary": topic_json.get("cdu_primary"),
+            "cdu_primary": cdu_primary,
             "cdu_secondary": topic_json.get("cdu_secondary", []),
-            "cdu_description": topic_json.get("cdu_description"),
+            "cdu_description": cdu_description,
         }
 
     def write_properties(self, note_path: Path) -> bool:
@@ -160,7 +207,9 @@ class VaultWriter:
             frontmatter, content_body, _ = self._read_note(note_path)
 
             # Constrói topic_classification
-            topic_classification = self._build_topic_classification(topic_json)
+            topic_classification = self._build_topic_classification(
+                topic_json, note_path
+            )
 
             # Atualiza ou adiciona frontmatter
             frontmatter["topic_classification"] = topic_classification
@@ -192,8 +241,21 @@ class VaultWriter:
         # Coleta nomes de arquivos JSON disponíveis
         json_names = set()
         if results_dir.exists():
+            # Look for *_topics.json files
             for json_file in results_dir.glob("*_topics.json"):
                 json_names.add(json_file.stem.replace("_topics", ""))
+
+            # Also look for pipeline_extraction_*.json files
+            for json_file in results_dir.glob("pipeline_extraction_*.json"):
+                try:
+                    with open(json_file, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        for result in data.get("results", []):
+                            file_path = result.get("file", "")
+                            if file_path:
+                                json_names.add(Path(file_path).stem)
+                except Exception:
+                    pass
 
         # Também verifica no arquivo de teste
         test_file = self.config.log_dir / "test_extraction_5_notes.json"
