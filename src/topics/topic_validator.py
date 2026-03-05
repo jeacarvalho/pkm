@@ -1,9 +1,26 @@
 """Topic validation for schema and format checking."""
 
 import re
+import unicodedata
 from typing import Any, Dict, List, Optional
 
 from src.topics.config import TopicsConfig
+
+
+def remove_accents(text: str) -> str:
+    """Remove accents from text while preserving base characters.
+
+    Args:
+        text: Input text with possible accents
+
+    Returns:
+        Text without accents
+    """
+    # Normalize to NFD (decomposed form), then remove combining characters
+    normalized = unicodedata.normalize("NFD", text)
+    # Filter out combining characters (Mn category)
+    result = "".join(c for c in normalized if unicodedata.category(c) != "Mn")
+    return result
 
 
 class TopicValidationError(Exception):
@@ -50,16 +67,22 @@ class TopicValidator:
             if not name:
                 raise TopicValidationError(f"Topic {i}: name cannot be empty")
 
-            # Check for snake_case
-            if not re.match(r"^[a-z][a-z0-9_]*$", name):
+            # Normalize name: remove accents for validation
+            normalized_name = remove_accents(name)
+
+            # Check for snake_case (using normalized name)
+            if not re.match(r"^[a-z][a-z0-9_]*$", normalized_name):
                 raise TopicValidationError(
                     f"Topic {i}: name '{name}' must be snake_case"
                 )
 
+            # Update topic name to normalized version
+            topic["name"] = normalized_name
+
             # Check for duplicates
-            if name in seen_names:
+            if normalized_name in seen_names:
                 raise TopicValidationError(f"Topic {i}: Duplicate name '{name}'")
-            seen_names.add(name)
+            seen_names.add(normalized_name)
 
             # Validate weight
             weight = topic["weight"]
