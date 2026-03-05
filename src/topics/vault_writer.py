@@ -64,9 +64,8 @@ class VaultWriter:
 
     def _load_topic_json(self, note_name: str) -> Optional[Dict]:
         """Carrega JSON de tópicos para uma nota."""
+        # 1. Try loading from individual JSON file in results/
         json_path = self.config.log_dir / "results" / f"{note_name}_topics.json"
-
-        # Try loading from individual JSON file
         if json_path.exists():
             try:
                 with open(json_path, "r", encoding="utf-8") as f:
@@ -75,10 +74,47 @@ class VaultWriter:
                 logger.error(f"Error loading JSON for {note_name}: {e}")
                 return None
 
-        # Try loading from pipeline_extraction files
-        # Note: we need to find the latest/most complete data
-        results_dir = self.config.log_dir / "results"
+        # 2. Try loading from topic_extractor files (topic_extraction_*.json)
+        topics_dir = self.config.log_dir
         result_data = None
+
+        if topics_dir.exists():
+            for json_file in sorted(topics_dir.glob("topic_extraction_*.json")):
+                try:
+                    with open(json_file, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        for result in data.get("results", []):
+                            file_path = result.get("file", "")
+                            if file_path and Path(file_path).stem == note_name:
+                                # Check if this result has actual data
+                                if result.get("status") == "success" and result.get(
+                                    "topics"
+                                ):
+                                    return {
+                                        "topics": result.get("topics", []),
+                                        "cdu_primary": result.get("cdu_primary"),
+                                        "cdu_secondary": result.get(
+                                            "cdu_secondary", []
+                                        ),
+                                        "cdu_description": result.get(
+                                            "cdu_description"
+                                        ),
+                                        "content_summary": result.get(
+                                            "content_summary"
+                                        ),
+                                    }
+                                elif result.get("status") == "dry-run":
+                                    # Skip dry-run entries, keep searching
+                                    continue
+                except Exception as e:
+                    logger.debug(f"Error reading {json_file}: {e}")
+                    continue
+
+        if result_data:
+            return result_data
+
+        # 3. Try loading from pipeline_extraction files
+        results_dir = self.config.log_dir / "results"
 
         if results_dir.exists():
             for json_file in sorted(results_dir.glob("pipeline_extraction_*.json")):
@@ -101,7 +137,7 @@ class VaultWriter:
         if result_data:
             return result_data
 
-        # Also try the test file
+        # 4. Also try the test file
         test_file = self.config.log_dir / "test_extraction_5_notes.json"
         if test_file.exists():
             try:
@@ -240,6 +276,22 @@ class VaultWriter:
 
         # Coleta nomes de arquivos JSON disponíveis
         json_names = set()
+
+        # 1. Procura em data/logs/topics/ (arquivos do topic_extractor)
+        topics_dir = self.config.log_dir
+        if topics_dir.exists():
+            for json_file in topics_dir.glob("topic_extraction_*.json"):
+                try:
+                    with open(json_file, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        for result in data.get("results", []):
+                            file_path = result.get("file", "")
+                            if file_path:
+                                json_names.add(Path(file_path).stem)
+                except Exception:
+                    pass
+
+        # 2. Procura em data/logs/topics/results/ (arquivos do pipeline)
         if results_dir.exists():
             # Look for *_topics.json files
             for json_file in results_dir.glob("*_topics.json"):
