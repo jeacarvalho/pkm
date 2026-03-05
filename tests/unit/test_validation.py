@@ -111,6 +111,11 @@ class TestOllamaValidator:
 class TestOllamaValidatorEdgeCases:
     """Test edge cases for OllamaValidator."""
 
+    @pytest.fixture
+    def validator(self):
+        """Create validator instance."""
+        return OllamaValidator()
+
     @patch("src.validation.ollama_validator.ollama.chat")
     def test_validate_match_json_error(self, mock_chat, validator):
         """Test handling of invalid JSON response."""
@@ -199,6 +204,16 @@ class TestValidationPipeline:
 
         # Create pipeline with mocked components
         pipeline = ValidationPipeline.__new__(ValidationPipeline)
+
+        # Mock config
+        mock_config = Mock()
+        mock_config.vector_search_top_k = 20
+        mock_config.rerank_top_k = 10
+        mock_config.chapter_validation_top_k = 5
+        mock_config.rerank_threshold = 0.75
+        mock_config.embedding_model = "bge-m3"
+        mock_config.validation_model = "gemini-2.5-flash-lite"
+        pipeline.config = mock_config
 
         # Mock retrieval
         pipeline.retrieval = Mock()

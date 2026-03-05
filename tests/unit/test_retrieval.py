@@ -13,14 +13,17 @@ class TestVectorSearch:
     def mock_collection(self):
         """Create mock ChromaDB collection."""
         collection = Mock()
-        collection.query.return_value = {
-            "ids": [["doc1", "doc2", "doc3"]],
-            "documents": [["text1", "text2", "text3"]],
-            "metadatas": [
-                [{"title": "Note 1"}, {"title": "Note 2"}, {"title": "Note 3"}]
-            ],
-            "distances": [[0.1, 0.3, 0.5]],
-        }
+
+        def query_side_effect(query_embeddings, n_results, where=None, include=None):
+            n = n_results or 3
+            return {
+                "ids": [[f"doc{i + 1}" for i in range(n)]],
+                "documents": [[f"text{i + 1}" for i in range(n)]],
+                "metadatas": [[{"title": f"Note {i + 1}"} for i in range(n)]],
+                "distances": [[0.1 * (i + 1) for i in range(n)]],
+            }
+
+        collection.query.side_effect = query_side_effect
         return collection
 
     @pytest.fixture
@@ -168,6 +171,11 @@ class TestRetrievalPipeline:
         pipeline.vector_search = mock_vector_search
         pipeline.reranker = mock_reranker
 
+        mock_config = Mock()
+        mock_config.rerank_threshold = 0.5
+        mock_config.embedding_model = "bge-m3"
+        pipeline.config = mock_config
+
         results = pipeline.retrieve(
             query_text="test query",
             query_embedding=[0.1] * 1024,
@@ -220,6 +228,11 @@ class TestPerformanceMetrics:
         pipeline = RetrievalPipeline.__new__(RetrievalPipeline)
         pipeline.vector_search = mock_vector_search
         pipeline.reranker = mock_reranker
+
+        mock_config = Mock()
+        mock_config.rerank_threshold = 0.5
+        mock_config.embedding_model = "bge-m3"
+        pipeline.config = mock_config
 
         results = pipeline.retrieve(
             query_text="test",

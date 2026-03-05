@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 import sys
 import time
 from datetime import datetime, timezone
@@ -59,11 +60,20 @@ class TopicExtractor:
         self.config = config or TopicsConfig()
         self.validator = TopicValidator(self.config)
 
-        # Get API key from main settings
-        from src.utils.config import Settings
+        # Get API key - try from config first, then from main settings
+        self.gemini_api_key = getattr(
+            self.config, "gemini_api_key", None
+        ) or os.environ.get("GEMINI_API_KEY")
 
-        settings = Settings()
-        self.gemini_api_key = settings.gemini_api_key
+        if not self.gemini_api_key:
+            # Fallback to main settings
+            try:
+                from src.utils.config import Settings
+
+                settings = Settings()
+                self.gemini_api_key = settings.gemini_api_key
+            except Exception:
+                pass
 
         if not self.gemini_api_key:
             raise ValueError("GEMINI_API_KEY not configured")

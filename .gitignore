@@ -27,6 +27,10 @@ node_modules/
 coverage/
 htmlcov/
 
+# ChromaDB
+data/vectors/chroma_db/
+data/backups/
+
 # Python cache
 .mypy_cache/
 .pytest_cache/
