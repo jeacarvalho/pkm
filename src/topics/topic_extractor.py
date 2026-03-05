@@ -14,7 +14,16 @@ from google.genai import types
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.topics.config import TopicsConfig
-from src.topics.topic_validator import TopicValidator, TopicValidationError
+from src.topics.cdu_resolver import (
+    infer_cdu_fallback,
+    infer_cdu_from_keywords,
+    get_cdu_description,
+)
+from src.topics.topic_validator import (
+    TopicValidator,
+    TopicValidationError,
+    remove_accents,
+)
 from src.utils.config import Settings
 from src.utils.logging import get_logger
 
@@ -138,10 +147,13 @@ class TopicExtractor:
         """
         try:
             content = note_path.read_text(encoding="utf-8")
+            content_stripped = content.strip()
 
-            # Skip if empty or too short
-            if len(content.strip()) < 50:
-                return None, "Note too short (< 50 chars)"
+            # Check if note is too short - process as index note
+            if len(content_stripped) < 50:
+                logger.info(f"  📄 Processing as index note: {note_path.name}")
+                result = self._extract_from_title(note_path, content_stripped)
+                return result, None
 
             result = self.extract_topics(content)
 
@@ -157,6 +169,126 @@ class TopicExtractor:
 
         except Exception as e:
             return None, str(e)
+
+    def _extract_from_title(self, note_path: Path, content: str) -> Dict:
+        """Extract topics from note title for short/index notes.
+
+        Uses folder-based CDU inference and generates topics from title keywords.
+        Does not call Gemini API - processes locally.
+
+        Args:
+            note_path: Path to the note
+            content: Note content (may be very short or empty)
+
+        Returns:
+            Result dictionary with topics and CDU
+        """
+        filename = note_path.stem
+        folder_path = str(note_path.parent)
+
+        # Infer CDU from folder and title
+        cdu_primary = infer_cdu_fallback(str(note_path))
+        cdu_description = get_cdu_description(cdu_primary) if cdu_primary else None
+
+        # Generate topics from filename keywords
+        topics = self._generate_topics_from_filename(filename)
+
+        # Build result
+        result = {
+            "topics": topics,
+            "cdu_primary": cdu_primary,
+            "cdu_secondary": [],
+            "cdu_description": cdu_description,
+            "content_summary": f"Index note: {filename}",
+            "metadata": {
+                "file_path": str(note_path),
+                "file_name": note_path.name,
+                "processed_at": datetime.now(timezone.utc).isoformat(),
+                "model": "local-inference",
+                "is_index_note": True,
+            },
+        }
+
+        return result
+
+    def _generate_topics_from_filename(self, filename: str) -> List[Dict]:
+        """Generate topics from filename keywords.
+
+        Args:
+            filename: Note filename (without extension)
+
+        Returns:
+            List of topic dictionaries
+        """
+        # Clean filename: replace separators with spaces
+        clean_name = filename.replace("_", " ").replace("-", " ").lower()
+
+        # Split into words
+        words = clean_name.split()
+
+        # Generate topics from meaningful words (skip common words)
+        skip_words = {
+            "a",
+            "o",
+            "e",
+            "de",
+            "do",
+            "da",
+            "em",
+            "no",
+            "na",
+            "para",
+            "por",
+            "com",
+            "sem",
+            "um",
+            "uma",
+            "os",
+            "as",
+            "e",
+            "ou",
+            "the",
+            "a",
+            "an",
+            "of",
+            "to",
+            "in",
+            "for",
+            "on",
+            "at",
+            "by",
+        }
+
+        topics = []
+        topic_names = set()
+
+        # Add words from filename as topics
+        for word in words:
+            if word not in skip_words and len(word) > 2:
+                # Convert to snake_case and remove accents
+                topic_name = remove_accents(word.replace(" ", "_"))
+                if topic_name not in topic_names:
+                    topics.append(
+                        {
+                            "name": topic_name,
+                            "weight": 8,  # High weight for index notes
+                            "confidence": 0.85,
+                        }
+                    )
+                    topic_names.add(topic_name)
+
+        # If no topics found, add a generic one
+        if not topics:
+            topics.append(
+                {
+                    "name": "index_note",
+                    "weight": 5,
+                    "confidence": 0.5,
+                }
+            )
+
+        # Limit to max 10 topics
+        return topics[:10]
 
     def process_directory(self, directory: Path, dry_run: bool = False) -> List[Dict]:
         """Process all markdown files in a directory.
