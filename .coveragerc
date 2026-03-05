@@ -1,0 +1,6 @@
+[run]
+source = src
+
+[report]
+precision = 2
+fail_under = 65
