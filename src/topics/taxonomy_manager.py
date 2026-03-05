@@ -76,6 +76,48 @@ class CDUManager:
         return True
 
     @classmethod
+    def normalize_cdu(cls, cdu: str) -> Optional[str]:
+        """Normalize CDU format to valid XXX.X format.
+
+        Fixes common issues:
+        - 330.341.5 → 330.34 (truncates to 2 levels)
+        - 32 → 32.0 (adds missing decimal)
+        - 330.342.2 → 330.34 (truncates to 2 levels)
+
+        Args:
+            cdu: Raw CDU string from API
+
+        Returns:
+            Normalized CDU string or None if cannot normalize
+        """
+        if not cdu:
+            return None
+
+        cdu = cdu.strip()
+
+        # Check if already valid
+        if cls.validate_cdu_format(cdu):
+            return cdu
+
+        parts = cdu.split(".")
+
+        # Case 1: No decimal point (e.g., "32")
+        if len(parts) == 1:
+            if parts[0].isdigit() and 1 <= len(parts[0]) <= 3:
+                return f"{parts[0]}.0"
+            return None
+
+        # Case 2: More than 2 levels (e.g., "330.341.5")
+        if len(parts) > 2:
+            # Truncate to first decimal only, max 2 digits
+            if parts[0].isdigit() and parts[1].isdigit():
+                decimal = parts[1][:2]  # Take max 2 digits from first decimal
+                return f"{parts[0]}.{decimal}"
+            return None
+
+        return None
+
+    @classmethod
     def get_description(cls, cdu: str) -> Optional[str]:
         """Get description for a CDU classification."""
         if not cls.validate_cdu_format(cdu):
@@ -91,19 +133,6 @@ class CDUManager:
             parent = ".".join(parts[:i])
             if parent in cls.CDU_LOOKUP:
                 return f"{cls.CDU_LOOKUP[parent]} (subclassificado)"
-
-        return None
-
-    @classmethod
-    def normalize_cdu(cls, cdu: str) -> Optional[str]:
-        """Normalize CDU format."""
-        if not cdu:
-            return None
-
-        cdu = cdu.strip()
-
-        if cls.validate_cdu_format(cdu):
-            return cdu
 
         return None
 

@@ -100,7 +100,11 @@ class TopicValidator:
 
         # Primary CDU is optional (can be null)
         if cdu_primary is not None:
-            if not CDUManager.validate_cdu_format(cdu_primary):
+            # Try to normalize first
+            normalized = CDUManager.normalize_cdu(cdu_primary)
+            if normalized:
+                cdu_primary = normalized
+            elif not CDUManager.validate_cdu_format(cdu_primary):
                 raise TopicValidationError(f"Invalid CDU primary format: {cdu_primary}")
 
         # Secondary CDUs
@@ -109,7 +113,11 @@ class TopicValidator:
                 raise TopicValidationError("cdu_secondary must be a list")
 
             for cdu in cdu_secondary:
-                if not CDUManager.validate_cdu_format(cdu):
+                # Try to normalize first
+                normalized = CDUManager.normalize_cdu(cdu)
+                if normalized:
+                    cdu = normalized
+                elif not CDUManager.validate_cdu_format(cdu):
                     raise TopicValidationError(f"Invalid CDU secondary format: {cdu}")
 
         return True
