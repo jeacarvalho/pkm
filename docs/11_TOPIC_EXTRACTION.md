@@ -102,11 +102,47 @@ O sistema valida automaticamente:
 - ✅ Exatamente 10 tópicos
 - ✅ Pesos entre 5-10
 - ✅ Confidence entre 0.0-1.0
-- ✅ Nomes em snake_case
-- ✅ Formatos CDU válidos
+- ✅ Nomes em snake_case (acentos são removidos automaticamente)
+- ✅ Formatos CDU válidos (aceita múltiplos níveis: 330.341.5)
 - ✅ JSON estrito (sem markdown)
+- ✅ Notas curtas processadas como "index notes"
 
 Se a validação falhar, o Gemini tenta novamente (até 3x).
+
+## Notas Curtas (< 50 caracteres)
+
+Notas com pouco conteúdo são processadas como **index notes**:
+- ✅ Extrai tópicos do **nome do arquivo**
+- ✅ Inferiu CDU da **pasta**
+- ✅ Não chama API Gemini (economiza tokens)
+- ✅ Marca como `is_index_note: true`
+- ✅ Model: `local-inference`
+
+**Exemplo:**
+```json
+{
+  "topics": [{"name": "pib", "weight": 8, "confidence": 0.85}],
+  "cdu_primary": "330",
+  "cdu_description": "Economia",
+  "metadata": {
+    "is_index_note": true,
+    "model": "local-inference"
+  }
+}
+```
+
+## Normalização Automática
+
+### Acentos em Nomes de Tópicos
+Nomes com acentos são normalizados automaticamente:
+- `estabilidade_macroeconômica` → `estabilidade_macroeconomica`
+- `governança_situacional` → `governanca_situacional`
+
+### CDU Multi-Nível
+CDUs profundas são preservadas:
+- `330.341.5` → válido (3 níveis)
+- `1.23.456.7890` → válido (4 níveis)
+- `32` → normalizado para `32.0`
 
 ## Custo
 
@@ -204,5 +240,5 @@ Ver `docs/10_ROADMAP_v2.md` para:
 
 ---
 
-**Última atualização:** 2026-03-04
-**Versão:** 1.2.0
+**Última atualização:** 2026-03-05
+**Versão:** 1.3.0

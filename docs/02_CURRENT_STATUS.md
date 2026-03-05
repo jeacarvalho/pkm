@@ -3,7 +3,7 @@
 ```markdown
 # Status Atual - Obsidian RAG Connector
 
-**Last Updated:** 2026-03-03  
+**Last Updated:** 2026-03-05  
 **Current Phase:** ALL SPRINTS COMPLETE ✅  
 **Index Status:** ✅ COMPLETE (10144 chunks, 3570 notas)
 
@@ -588,6 +588,62 @@ bash scripts/setup_incremental_cron.sh
 # Verificar cron instalado
 crontab -l
 ```
+
+---
+
+## 🐛 Correções Recentes (2026-03-05)
+
+### Bug Fixes #1: Processamento de Notas Curtas
+**Problema:** Notas com < 50 caracteres eram rejeitadas (erro "Note too short")
+**Solução:** Processa como "index notes" - extrai tópicos do nome do arquivo
+**Status:** ✅ Fix aplicado em `src/topics/topic_extractor.py`
+**Commit:** `a546ebe`
+
+**Detalhes:**
+- Não chama API Gemini (economiza tokens)
+- Extrai tópicos do nome do arquivo
+- Inferiu CDU da pasta
+- Marca como `is_index_note: true`
+
+---
+
+### Bug Fixes #2: Nomes de Tópicos com Acentos
+**Problema:** Tópicos como `estabilidade_macroeconômica` falhavam na validação snake_case
+**Solução:** Remove acentos automaticamente antes de validar
+**Status:** ✅ Fix aplicado em `src/topics/topic_validator.py`
+**Commit:** `0ce8af9`
+
+**Exemplos:**
+- `estabilidade_macroeconômica` → `estabilidade_macroeconomica`
+- `governança_situacional` → `governanca_situacional`
+
+---
+
+### Bug Fixes #3: CDU Multi-Nível
+**Problema:** CDUs profundas como `330.341.5` eram rejeitadas (truncadas para `330.34`)
+**Solução:** Validador aceita múltiplos níveis de classificação
+**Status:** ✅ Fix aplicado em `src/topics/taxonomy_manager.py`
+**Commit:** `3a9c318`
+
+**Mudança:** CDU preserva toda a profundidade da classificação:
+- `330.341.5` → válido (3 níveis)
+- `1.23.456.7890` → válido (4 níveis)
+
+---
+
+### Bug Fixes #4: Diretório de Busca de JSONs
+**Problema:** `vault_writer` procurava em `results/` mas `topic_extractor` salvava em `topics/`
+**Solução:** Atualiza `_find_notes_with_jsons()` para procurar em ambos os diretórios
+**Status:** ✅ Fix aplicado em `src/topics/vault_writer.py`
+**Commit:** `b7fe2e3`
+
+---
+
+### Test Fixes
+**Problema:** 7 testes falhando devido a mudanças no código
+**Solução:** Atualizados mocks e fixtures
+**Status:** ✅ Todos os 106 testes passando
+**Commit:** `91f6f01`, `e6a227a`
 
 ---
 
