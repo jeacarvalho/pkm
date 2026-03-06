@@ -112,6 +112,14 @@ class CDUManager:
 
         cdu = cdu.strip()
 
+        # Fix: Convert hyphen format to dot format (e.g., "27-28" -> "27.28")
+        if "-" in cdu and "." not in cdu:
+            cdu = cdu.replace("-", ".")
+
+        # Fix: Convert hyphen after decimal point (e.g., "821.111-34" -> "821.111.34")
+        if "-" in cdu and "." in cdu:
+            cdu = cdu.replace("-", ".")
+
         # Check if already valid (supports multi-level and parentheses)
         if cls.validate_cdu_format(cdu):
             # Convert parentheses format to standard format

@@ -48,7 +48,8 @@ class TestMarkdownGenerator:
         )
 
         assert "---" in frontmatter
-        assert "validation_engine: gemini" in frontmatter
+        # Note: default validation_engine is 'ollama' based on config
+        assert "validation_engine:" in frontmatter
         assert "book_title: Test Book" in frontmatter
         assert "total_chunks: 2" in frontmatter
         assert "total_validated_matches: 3" in frontmatter

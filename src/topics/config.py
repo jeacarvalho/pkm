@@ -46,12 +46,15 @@ class TopicConfig(BaseSettings):
     )
 
     # Sprint 10: Topic Matching Settings
+    # Nota: fuzzy_threshold=40 e match_threshold=0.0 foram ajustados para encontrar mais matches
     fuzzy_threshold: int = Field(
-        default=85, description="Threshold para fuzzy match (0-100)"
+        default=40,
+        description="Threshold para fuzzy match (0-100). Default: 40 (para encontrar mais matches)",
     )
     match_top_k: int = Field(default=20, description="Top-K matches para retornar")
     match_threshold: float = Field(
-        default=10.0, description="Score mínimo para match (0-100)"
+        default=0.0,
+        description="Score mínimo para match (0-100). Default: 0.0 (para aceitar mais resultados)",
     )
 
     # Paths

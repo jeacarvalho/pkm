@@ -86,23 +86,41 @@ class VaultWriter:
                         for result in data.get("results", []):
                             file_path = result.get("file", "")
                             if file_path and Path(file_path).stem == note_name:
-                                # Check if this result has actual data
-                                if result.get("status") == "success" and result.get(
-                                    "topics"
-                                ):
-                                    return {
-                                        "topics": result.get("topics", []),
-                                        "cdu_primary": result.get("cdu_primary"),
-                                        "cdu_secondary": result.get(
-                                            "cdu_secondary", []
-                                        ),
-                                        "cdu_description": result.get(
-                                            "cdu_description"
-                                        ),
-                                        "content_summary": result.get(
-                                            "content_summary"
-                                        ),
-                                    }
+                                # Check if this result has actual data (either direct or in 'data' field)
+                                if result.get("status") == "success":
+                                    # Try direct topics first, then check 'data' field
+                                    topics = result.get("topics", [])
+                                    cdu_primary = result.get("cdu_primary")
+                                    cdu_secondary = result.get("cdu_secondary", [])
+                                    cdu_description = result.get("cdu_description")
+                                    content_summary = result.get("content_summary")
+
+                                    # If not found directly, check inside 'data' field
+                                    if not topics and result.get("data"):
+                                        topics = result.get("data", {}).get(
+                                            "topics", []
+                                        )
+                                        cdu_primary = cdu_primary or result.get(
+                                            "data", {}
+                                        ).get("cdu_primary")
+                                        cdu_secondary = cdu_secondary or result.get(
+                                            "data", {}
+                                        ).get("cdu_secondary", [])
+                                        cdu_description = cdu_description or result.get(
+                                            "data", {}
+                                        ).get("cdu_description")
+                                        content_summary = content_summary or result.get(
+                                            "data", {}
+                                        ).get("content_summary")
+
+                                    if topics:
+                                        return {
+                                            "topics": topics,
+                                            "cdu_primary": cdu_primary,
+                                            "cdu_secondary": cdu_secondary,
+                                            "cdu_description": cdu_description,
+                                            "content_summary": content_summary,
+                                        }
                                 elif result.get("status") == "dry-run":
                                     # Skip dry-run entries, keep searching
                                     continue

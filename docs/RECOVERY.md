@@ -114,3 +114,48 @@ If recovery fails:
 2. Verify Ollama is running: `ollama list`
 3. Check disk space: `df -h`
 4. Review `docs/02_CURRENT_STATUS.md` for last known state
+
+---
+
+## 🚨 Emergency: Topic Extraction Failed
+
+### Problem
+O vault_writer não está encontrando topic_classification nas notas.
+
+### Checkpoints
+
+```bash
+# 1. Ver quantas notas têm topic_classification
+cd /home/s015533607/MEGAsync/Minhas_notas
+python3 -c "
+from pathlib import Path
+count = 0
+for f in Path('.').rglob('*.md'):
+    try:
+        with open(f, 'r', encoding='utf-8') as file:
+            if 'topic_classification:' in file.read():
+                count += 1
+    except:
+        pass
+print(f'Total: {count}')
+"
+
+# 2. Verificar se JSONs de extração existem
+ls -la /home/s015533607/Documentos/desenv/pkm/data/logs/topics/topic_extraction_*.json
+
+# 3. Ver logs do vault_writer
+tail -50 /home/s015533607/Documentos/desenv/pkm/data/logs/topics/writer.log
+```
+
+### Solução: Re-extrair tópicos
+
+```bash
+cd /home/s015533607/Documentos/desenv/pkm
+export PYTHONPATH=/home/s015533607/Documentos/desenv/pkm
+
+# 1. Extrair tópicos de um diretório
+python3 -m src.topics.topic_extractor --test-dir "/path/to/notes"
+
+# 2. Escrever no vault
+python3 -m src.topics.vault_writer --vault-dir /home/s015533607/MEGAsync/Minhas_notas
+```

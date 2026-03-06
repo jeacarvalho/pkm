@@ -1,10 +1,47 @@
 """Write chapter files to Obsidian vault."""
 
+import re
+import unicodedata
+import yaml
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List
 
 from src.utils.config import settings
+
+
+def yaml_escape(value: str) -> str:
+    """Escape a string for YAML frontmatter.
+
+    Handles special characters like :, #, etc. that would break YAML.
+    """
+    if not value:
+        return ""
+
+    # If value contains special chars that need quoting, use yaml safe dump
+    if any(c in value for c in [":", "#", "'", '"', "\n", "[", "]", "{", "}"]):
+        return yaml.safe_dump(value, allow_unicode=True).strip()
+
+    return value
+
+
+def slugify(text: str, max_length: int = 50) -> str:
+    """Convert text to a safe filename slug."""
+    if not text:
+        return ""
+    # Remove accents
+    text = unicodedata.normalize("NFKD", text)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    # Replace spaces and special chars with underscore
+    text = re.sub(r"[^a-zA-Z0-9]", "_", text)
+    # Remove multiple underscores
+    text = re.sub(r"_+", "_", text)
+    # Remove leading/trailing underscores
+    text = text.strip("_")
+    # Limit length
+    if len(text) > max_length:
+        text = text[:max_length].rstrip("_")
+    return text.lower()
 
 
 class VaultWriter:
@@ -14,17 +51,43 @@ class VaultWriter:
         # vault_path already includes "100 ARQUIVOS E REFERENCIAS/Livros"
         self.vault_path = Path(vault_path)
         self.book_folder = self.vault_path / book_name
+        self.book_name = book_name
 
     def create_book_folder(self) -> Path:
         """Create book folder in vault."""
         self.book_folder.mkdir(parents=True, exist_ok=True)
         return self.book_folder
 
+    def _generate_filename(self, chapter_num: int, chapter_data: Dict) -> str:
+        """Generate filename based on book name and chapter title.
+
+        Format: {book_name}_{title_slug}.md
+        Fallback: {book_name}_capitulo{chapter_num:02d}.md
+        """
+        book_name = chapter_data.get("book_name", self.book_name)
+        title = chapter_data.get("title", f"Chapter {chapter_num + 1}")
+
+        # Check if title is the default "Chapter X" format
+        is_default_title = re.match(r"^Chapter\s*\d+$", str(title), re.IGNORECASE)
+
+        if is_default_title:
+            # Use fallback: {book_name}_capitulo{chapter_num:02d}
+            filename = f"{slugify(book_name)}_capitulo{chapter_num + 1:02d}.md"
+        else:
+            # Use title: {book_name}_{title_slug}
+            title_slug = slugify(title, max_length=40)
+            if not title_slug:
+                filename = f"{slugify(book_name)}_capitulo{chapter_num + 1:02d}.md"
+            else:
+                filename = f"{slugify(book_name)}_{title_slug}.md"
+
+        return filename
+
     def write_chapter(self, chapter_num: int, chapter_data: Dict) -> Path:
         """Write single chapter file with full translated content."""
         self.create_book_folder()
 
-        filename = f"{chapter_num:02d}_Capitulo_{chapter_num + 1:02d}.md"
+        filename = self._generate_filename(chapter_num, chapter_data)
         filepath = self.book_folder / filename
 
         content = self._build_markdown(chapter_num, chapter_data)
@@ -44,9 +107,16 @@ class VaultWriter:
         lines.append(f"book_title: {chapter_data.get('book_title', 'Unknown')}")
         lines.append(f"author: {chapter_data.get('author', '')}")
         lines.append(f"chapter_number: {chapter_num + 1}")
-        lines.append(
-            f"chapter_title: {chapter_data.get('title', f'Chapter {chapter_num + 1}')}"
-        )
+
+        # Escape title for YAML
+        title = chapter_data.get("title", f"Chapter {chapter_num + 1}")
+        escaped_title = yaml_escape(title)
+        if "\n" in escaped_title:
+            lines.append(f"chapter_title: |")
+            for line in escaped_title.split("\n"):
+                lines.append(f"  {line}")
+        else:
+            lines.append(f"chapter_title: {escaped_title}")
         lines.append(
             f"chapter_pages: {chapter_data.get('start_page', '?')}-{chapter_data.get('end_page', '?')}"
         )

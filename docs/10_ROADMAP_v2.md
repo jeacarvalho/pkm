@@ -1,36 +1,36 @@
 # 🚀 Roadmap v2.0 - Topic Classification & Taxonomy System
 
 **Created:** 2026-03-03  
-**Version:** 2.0.0 (planned)  
-**Status:** 📋 PLANNING  
+**Version:** 2.0.0  
+**Status:** ✅ COMPLETE (2026-03-05)  
 **Baseline:** v1.1.0 (Sprints 01-06 COMPLETE)
 
 ---
 
 ## 🎯 Objetivo da v2.0
 
-Evoluir o sistema RAG de **embedding-based** para **topic-based classification** com:
+Sistema RAG puramente **topic-based** (sem embedding):
 
-1. **Classificação de Tópicos via Gemini** (cloud, não Ollama local)
-2. **Properties no Frontmatter** de cada nota do vault
-3. **Matching por Sobreposição de Tópicos** (não apenas embedding)
-4. **Cache de Tradução** (evitar retraduções de capítulos)
-5. **Integração com Dataview/Bases** do Obsidian
+1. **Classificação de Tópicos via Gemini** - Extrai 10 topics + CDU de cada nota do vault
+2. **Properties no Frontmatter** - Armazena topics classificados em cada nota
+3. **Matching por Sobreposição de Tópicos** - Fuzzy match entre topics do capítulo e notas
+4. **Cache de Tradução** - Evita retraduções de capítulos
+5. **Sem ChromaDB/Embedding** - Matching feito via frontmatter (muito mais rápido)
 
 ---
 
 ## 📊 Comparação: v1.0 vs v2.0
 
-| Aspecto | v1.0 (Atual) | v2.0 (Planejado) |
-|---------|--------------|------------------|
-| **Retrieval** | Embedding (bge-m3) | Topics + Embedding (híbrido) |
-| **Validação** | Ollama local (llama3.2) | Gemini 2.5 Flash-Lite |
-| **Matching** | Similaridade vetorial | Sobreposição de tópicos + pesos |
-| **Cache** | ChromaDB apenas | Properties no vault + ChromaDB |
-| **Tradução** | Sempre via Gemini | Cache-first (não retraduzir) |
+| Aspecto | v1.0 (Obsoleto) | v2.0 (Atual) |
+|---------|------------------|---------------|
+| **Retrieval** | Embedding (bge-m3 + ChromaDB) | Topic-based (sem embedding) |
+| **Validação** | Gemini re-ranking | Removida (topic matching já faz) |
+| **Matching** | Similaridade vetorial | Fuzzy match por topics + CDU |
+| **速度** | ~4 min/chapter | ~10 seg/chapter |
+| **Cache** | ChromaDB | Properties no vault + JSON |
+| **Tradução** | Sempre via Gemini | Cache-first |
 | **Output** | 1 arquivo por livro | 1 pasta + 1 arquivo/capítulo |
-| **Dataview** | Limitado | Full integration (properties) |
-| **Custo API** | ~$0.05/livro | ~$0.03/livro (com cache) |
+| **Custo API** | ~$0.05/livro | ~$0.02/livro |
 
 ---
 
@@ -39,11 +39,22 @@ Evoluir o sistema RAG de **embedding-based** para **topic-based classification**
 | Sprint | Descrição | Dependência | Tempo Est. | Status |
 |--------|-----------|-------------|------------|--------|
 | **Sprint 08** | Topic Extractor (Gemini) | Sprint 07 | 4-6 horas | ✅ COMPLETE |
-| **Sprint 09** | Vault Properties Writer | Sprint 08 | 3-4 horas | ✅ COMPLETE (2026-03-04 + fixes 2026-03-05) |
-| **Sprint 10** | Topic Matching Engine | Sprint 09 | 4-6 horas | ⏭️ READY (dependências satisfeitas) |
-| **Sprint 11** | Translation Cache System | Sprint 08 | 2-3 horas | ⏭️ READY |
-| **Sprint 12** | Hybrid Retrieval (v1+v2) | Sprint 10+11 | 4-6 horas | ⏭️ BLOCKED (aguardando Sprints 10+11) |
-| **Sprint 13** | Dataview Integration | Sprint 09 | 2-3 horas | ⏭️ READY (dependência Sprint 09 satisfeita) |
+| **Sprint 09** | Vault Properties Writer | Sprint 08 | 3-4 horas | ✅ COMPLETE |
+| **Sprint 10** | Topic Matching Engine | Sprint 09 | 4-6 horas | ✅ COMPLETE |
+| **Sprint 11** | Translation Cache System | Sprint 08 | 2-3 horas | ✅ COMPLETE |
+| **Sprint 12** | Embedding Removal | Sprint 10+11 | 1 hora | ✅ COMPLETE (2026-03-05) |
+| **Sprint 13** | Dataview Integration | Sprint 09 | 2-3 horas | ⏭️ OPCIONAL |
+
+### Parâmetros Atuais (v2.0)
+| Parâmetro | Valor | Arquivo |
+|-----------|-------|---------|
+| threshold | 0.0 | `src/topics/topic_matcher.py` |
+| top_k | 20 | `src/ingestion/pdf_processor.py` |
+| fuzzy_threshold | 40 | `src/topics/topic_matcher.py` |
+
+### Notas Processadas
+- **Antes:** 205 notas com topic_classification
+- **Depois:** 250 notas (adicionadas 45 notas de história) |
 
 **Total Estimado:** ~18-25 horas de desenvolvimento
 

@@ -67,7 +67,8 @@ class TopicValidator:
             if not name:
                 raise TopicValidationError(f"Topic {i}: name cannot be empty")
 
-            # Normalize name: remove accents for validation
+            # Normalize name: remove accents and strip whitespace
+            name = name.strip()
             normalized_name = remove_accents(name)
 
             # Check for snake_case (using normalized name)

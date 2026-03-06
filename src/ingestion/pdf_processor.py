@@ -20,8 +20,75 @@ from src.topics.topic_matcher import TopicMatcher
 from src.topics.config import TopicConfig
 from src.utils.config import settings
 from src.utils.logging import get_logger
+import re
+import unicodedata
 
 logger = get_logger(__name__)
+
+
+def slugify(text: str, max_length: int = 50) -> str:
+    """Convert text to a safe filename slug."""
+    # Remove accents
+    text = unicodedata.normalize("NFKD", text)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    # Replace spaces and special chars with underscore
+    text = re.sub(r"[^a-zA-Z0-9]", "_", text)
+    # Remove multiple underscores
+    text = re.sub(r"_+", "_", text)
+    # Remove leading/trailing underscores
+    text = text.strip("_")
+    # Limit length
+    if len(text) > max_length:
+        text = text[:max_length].rstrip("_")
+    return text.lower()
+
+
+def extract_chapter_title(first_page_text: str, chapter_num: int) -> str:
+    """Extract chapter title from first page text.
+
+    Looks for patterns like:
+    - "CHAPTER X: Title" or "Chapter X"
+    - Lines in UPPERCASE at the beginning
+    - First significant line of text
+
+    Returns:
+        Chapter title string or "Chapter X" if not found
+    """
+    if not first_page_text:
+        return f"Chapter {chapter_num + 1}"
+
+    lines = first_page_text.strip().split("\n")
+
+    # Clean up lines
+    lines = [line.strip() for line in lines if line.strip()]
+
+    if not lines:
+        return f"Chapter {chapter_num + 1}"
+
+    # Strategy 1: Look for "CHAPTER X" pattern
+    for line in lines[:5]:
+        # Check for "CHAPTER X" or "Chapter X" followed by text
+        match = re.match(
+            r"^(?:CHAPTER|Capítulo|Cap[ií]tulo)\s+\d+[:\s]+(.+)", line, re.IGNORECASE
+        )
+        if match:
+            title = match.group(1).strip()
+            if len(title) > 3:
+                return title
+
+    # Strategy 2: Look for first line that's not a page number or single word
+    for line in lines[:3]:
+        line = line.strip()
+        # Skip if too short or looks like a page number
+        if len(line) < 5 or line.isdigit() or re.match(r"^\d+\.\d+$", line):
+            continue
+        # Skip if it's all uppercase short text (likely a header)
+        if len(line) < 20 and line.isupper():
+            continue
+        return line
+
+    # Default: return "Chapter X"
+    return f"Chapter {chapter_num + 1}"
 
 
 class PDFProcessor:
@@ -132,6 +199,21 @@ class PDFProcessor:
 
         logger.info(f"Loaded {len(chapters)} chapters")
 
+        # Step 1.5: Validate chapter ranges against PDF page count
+        from PyPDF2 import PdfReader
+
+        reader = PdfReader(str(pdf_path))
+        total_pages = len(reader.pages)
+
+        max_chapter_page = max(c.end_page for c in chapters)
+        if max_chapter_page > total_pages:
+            raise ValueError(
+                f"ERROR: Chapter file specifies page {max_chapter_page} but PDF has only {total_pages} pages!\n"
+                f"Please check the chapter file and make sure page ranges don't exceed PDF length."
+            )
+
+        logger.info(f"✅ PDF has {total_pages} pages - all chapter ranges are valid")
+
         # Step 2: Extract metadata
         try:
             metadata = get_pdf_metadata(pdf_path)
@@ -160,6 +242,7 @@ class PDFProcessor:
         # Step 5: Extract text for ALL chapters first
         logger.info("Extracting text for chapters...")
         from PyPDF2 import PdfReader
+        import re
 
         reader = PdfReader(str(pdf_path))
         chapter_texts = []
@@ -167,16 +250,21 @@ class PDFProcessor:
         for ch in all_chapters:
             chapter_text = ""
             for page_num in range(
-                ch["num"] - 1, min(ch["end_page"], len(reader.pages))
+                ch["start_page"] - 1, min(ch["end_page"], len(reader.pages))
             ):
                 chapter_text += reader.pages[page_num].extract_text() + "\n"
+
+            # Extract chapter title from first page
+            first_page_text = reader.pages[ch["start_page"] - 1].extract_text()
+            chapter_title = extract_chapter_title(first_page_text, ch["num"])
 
             chapter_info = {
                 "chapter_num": ch["num"],
                 "start_page": ch["start_page"],
                 "end_page": ch["end_page"],
                 "text": chapter_text,
-                "title": f"Chapter {ch['num'] + 1}",
+                "title": chapter_title,
+                "book_name": self.book_name,
             }
             chapter_texts.append(chapter_info)
 
@@ -207,6 +295,7 @@ class PDFProcessor:
                         "end_page": chapter["end_page"],
                         "chapter_text": cached_content,
                         "title": chapter["title"],
+                        "book_name": chapter.get("book_name", "unknown"),
                         "translated": "true",
                         "was_cached": True,
                     }
@@ -236,10 +325,17 @@ class PDFProcessor:
                         "end_page": chapter["end_page"],
                         "chapter_text": translated_text,
                         "title": chapter["title"],
+                        "book_name": chapter.get("book_name", "unknown"),
                         "translated": str(was_translated),
                         "was_cached": False,
                     }
                     translated_count += 1
+
+                    # Save to local cache IMMEDIATELY after translation
+                    if was_translated:
+                        cache.save_to_local_cache(
+                            chapter["chapter_num"], translated_text
+                        )
 
                     # Small delay to respect rate limits
                     if was_translated:
@@ -257,6 +353,7 @@ class PDFProcessor:
                     "end_page": chapter["end_page"],
                     "chapter_text": chapter["text"],
                     "title": chapter["title"],
+                    "book_name": chapter.get("book_name", "unknown"),
                     "translated": "false",
                     "was_cached": False,
                 }
@@ -268,57 +365,17 @@ class PDFProcessor:
         logger.info(f"   🔄 {translated_count} newly processed")
 
         # Step 9: Validate chapters if requested
+        # NOTE: Embedding-based validation is deprecated in v2.0
+        # Now using topic-based matching (Step 7) instead
         if self.skip_validation:
             logger.info("Skipping validation (--skip-validation flag)")
-            validated_chapters = all_chapters_data
         else:
-            logger.info("Validating chapters with Gemini...")
-            try:
-                from src.validation.gemini_validator import GeminiValidator
-                from src.validation.pipeline import deduplicate_candidates
-                from src.retrieval.pipeline import RetrievalPipeline
-                from src.utils.config import Settings
+            logger.info(
+                "Skipping embedding-based validation (v2.0 uses topic matching)"
+            )
 
-                config = Settings()
-                config.rerank_threshold = (
-                    0.0  # Use 0 to get candidates even with low scores
-                )
-
-                validator = GeminiValidator(config)
-                retrieval = RetrievalPipeline(config)
-
-                validated_chapters = []
-                for chapter in tqdm(all_chapters_data, desc="Validating chapters"):
-                    # Get candidates from retrieval
-                    logger.info(f"🔍 Processing chapter {chapter['chapter_num']}...")
-                    candidates = retrieval.retrieve(
-                        query_text=chapter["chapter_text"],
-                        n_results_initial=20,
-                        n_results_final=10,  # Get more for deduplication
-                        generate_embedding=True,
-                    )
-
-                    # Deduplicate candidates before validation
-                    unique_candidates = deduplicate_candidates(
-                        candidates, max_unique=10
-                    )
-                    logger.info(
-                        f"🔄 Validating {len(unique_candidates)} unique notes..."
-                    )
-
-                    # Validate with Gemini
-                    validated = validator.validate_batch(
-                        book_chunk=chapter["chapter_text"],
-                        candidates=unique_candidates,
-                    )
-
-                    chapter["validated_matches"] = validated
-                    validated_chapters.append(chapter)
-
-            except Exception as e:
-                logger.error(f"Validation failed: {e}")
-                # If validation fails, continue with original chapters
-                validated_chapters = all_chapters_data
+        # Use chapters directly for topic matching (skip embedding validation)
+        validated_chapters = all_chapters_data
 
         # Step 7: Extract topics and find thematic connections
         logger.info("Extracting topics and finding thematic connections...")
@@ -379,10 +436,10 @@ class PDFProcessor:
                         # Run topic matcher
                         match_result = topic_matcher.run(
                             chapter_topics_path=Path(tmp_path),
-                            vault_dir=settings.vault_path,  # Use vault root directory directly
-                            output_path=None,  # Don't save to file, we'll use the result directly
-                            top_k=5,  # Changed from 20 to 5 per user request
-                            threshold=2.0,
+                            vault_dir=settings.vault_path,
+                            output_path=None,
+                            top_k=20,
+                            threshold=0.0,
                         )
 
                         # Add thematic connections to chapter data
@@ -631,7 +688,13 @@ class PDFProcessor:
 
 
 def main():
-    """Main entry point for PDF processing CLI."""
+    """Main entry point for PDF processing CLI.
+
+    This now uses PDFProcessorCoordinator which delegates to specialized services.
+    For backwards compatibility, the old PDFProcessor is still available.
+    """
+    from src.ingestion.pdf_processor_coordinator import PDFProcessorCoordinator
+
     parser = argparse.ArgumentParser(description="Process PDF books for Obsidian RAG")
     parser.add_argument("--book", type=str, help="Path to single PDF file to process")
     parser.add_argument("--library", type=str, help="Path to directory containing PDFs")
@@ -647,7 +710,6 @@ def main():
         default="pt",
         help="Target language for translation (default: pt)",
     )
-    # New arguments for Sprint 06 - Chapter-based processing
     parser.add_argument(
         "--chapters", type=str, help="Path to capitulos.txt file with chapter ranges"
     )
@@ -679,22 +741,22 @@ def main():
     # Determine if we're using chapter-based processing
     use_chapter_mode = bool(args.chapters)
 
-    # Initialize processor
-    processor = PDFProcessor(
-        target_language=args.target_lang,
-        enable_translation=not args.no_translate,
-        use_chapter_mode=use_chapter_mode,
-        chapters_file=args.chapters,
+    # Initialize coordinator (new refactored version)
+    coordinator = PDFProcessorCoordinator(
+        pdf_path=args.book if args.book else args.library,
         vault_path=args.vault_path,
         book_name=args.book_name
         or (args.book and Path(args.book).stem.replace(" ", "_")),
-        skip_validation=args.skip_validation,
+        chapters_file=args.chapters,
+        enable_translation=not args.no_translate,
+        target_language=args.target_lang,
         force_retranslate=args.force_retranslate,
+        skip_validation=args.skip_validation,
     )
 
     # Process
     if args.book:
-        result = processor.process_pdf(Path(args.book), dry_run=args.dry_run)
+        result = coordinator.process(dry_run=args.dry_run)
 
         print("\n" + "=" * 50)
         print("PROCESSING RESULT")
@@ -703,6 +765,14 @@ def main():
             print(f"{key}: {value}")
 
     elif args.library:
+        # For library processing, still use old processor
+        processor = PDFProcessor(
+            target_language=args.target_lang,
+            enable_translation=not args.no_translate,
+            use_chapter_mode=False,
+            vault_path=args.vault_path,
+            book_name="library",
+        )
         results = processor.process_library(Path(args.library), dry_run=args.dry_run)
 
         print("\n" + "=" * 50)

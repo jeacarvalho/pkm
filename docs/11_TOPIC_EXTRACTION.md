@@ -231,6 +231,35 @@ if not error:
 3. **Notas curtas:** Ignoradas se < 50 caracteres
 4. **Tamanho máximo:** Notas truncadas em 5000 caracteres
 
+## Troubleshooting
+
+### Problema: "No topic JSON found" ao rodar vault_writer
+
+**Causa:** O vault_writer não consegue encontrar os JSONs de extração.
+
+**Solução:**
+1. Verificar se o JSON existe: `ls -la data/logs/topics/topic_extraction_*.json`
+2. Verificar se o campo "file" tem o path correto (precisa ter path completo do vault)
+3. Rodar vault_writer novamente:
+   ```bash
+   python3 -m src.topics.vault_writer --vault-dir /home/s015533607/MEGAsync/Minhas_notas
+   ```
+
+### Problema: Matches não aparecem no capítulo
+
+**Causa 1:** Threshold muito alto
+- Verificar `src/ingestion/pdf_processor.py` - threshold deve ser 0.0
+
+**Causa 2:** Fuzzy threshold muito alto
+- Verificar `src/topics/topic_matcher.py` - fuzzy_threshold deve ser 40
+
+**Causa 3:** Vault não tem notas relevantes
+- O sistema só encontra matches se houver notas com topic_classification sobre tema similar
+- Para testar: verificar quantas notas têm topic_classification
+- Executar topic_extractor em mais notas do vault
+
+---
+
 ## Próximos Passos
 
 Ver `docs/10_ROADMAP_v2.md` para:
@@ -241,4 +270,4 @@ Ver `docs/10_ROADMAP_v2.md` para:
 ---
 
 **Última atualização:** 2026-03-05
-**Versão:** 1.3.0
+**Versão:** 1.3.1

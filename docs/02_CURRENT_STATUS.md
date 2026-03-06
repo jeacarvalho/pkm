@@ -4,8 +4,8 @@
 # Status Atual - Obsidian RAG Connector
 
 **Last Updated:** 2026-03-05  
-**Current Phase:** SPRINT 11 COMPLETE ✅ - TRANSLATION CACHE SYSTEM  
-**Index Status:** ✅ COMPLETE (10144 chunks, 3570 notas)
+**Current Phase:** v2.0 COMPLETE ✅ - TOPIC-BASED MATCHING (NO EMBEDDING)
+**Index Status:** ✅ 250+ notas com topic_classification
 
 ---
 
@@ -14,12 +14,35 @@
 | Phase | Sprint | Status | Completion |
 |-------|--------|--------|------------|
 | Documentation | Sprint 00 | ✅ COMPLETE | 100% |
-| Vault Indexing | Sprint 01 | ✅ COMPLETE | 100% (3570 notas, 10144 chunks) |
+| Vault Indexing (v1) | Sprint 01 | ⚠️ LEGACY | 100% (deprecated) |
 | PDF Ingestion | Sprint 02 | ✅ COMPLETE | 100% |
-| Retrieval & Re-Rank | Sprint 03 | ✅ COMPLETE | 100% (full vault coverage) |
-| Ollama Validation | Sprint 04 | ✅ COMPLETE | 100% |
+| Retrieval & Re-Rank (v1) | Sprint 03 | ⚠️ LEGACY | deprecated |
+| Ollama Validation (v1) | Sprint 04 | ⚠️ LEGACY | deprecated |
 | Output Generation | Sprint 05 | ✅ COMPLETE | 100% |
 | Chapter Processing | Sprint 06 | ✅ COMPLETE | 100% |
+| Topic Extraction (v2) | Sprint 08 | ✅ COMPLETE | 100% |
+| Vault Properties (v2) | Sprint 09 | ✅ COMPLETE | 100% |
+| Topic Matching (v2) | Sprint 10 | ✅ COMPLETE | 100% |
+| Translation Cache | Sprint 11 | ✅ COMPLETE | 100% |
+| Embedding Removal | Sprint 12 | ✅ COMPLETE | 100% |
+
+---
+
+## v2.0: Topic-Based Pipeline (ATIVO)
+
+### Fluxo Atual (v2.0)
+1. **Ler PDF** → Extrair capítulos
+2. **Traduzir** → Cache-first (não retraduz)
+3. **Gemini extrai topics + CDU** → 10 topics por capítulo
+4. **Fuzzy match** → Compara topics do capítulo com frontmatter das notas
+5. **Top 5** → "Conexões Validadas com o Vault"
+
+### Performance
+| Métrica | v1.0 (embedding) | v2.0 (topics) |
+|---------|------------------|---------------|
+| Tempo/chapter | ~4 min | ~10 seg |
+|Embedding DB | ChromaDB | Não usa |
+| Validação Gemini | Sim | Não (redundante) |
 
 ---
 
@@ -702,6 +725,34 @@ python3 -m src.topics.topic_matcher \
 
 ### Next Steps
 - Sprint 11: Translation Cache System (ready to start)
+
+---
+
+## 🔧 Correções e Aprendizados (2026-03-05)
+
+### Problema Identificado
+O capítulo de teste do livro "Dinastia" (Roma Antiga) não estava encontrando conexões no vault porque:
+1. O vault tinha apenas 205 notas com topic_classification
+2. O threshold de matching (2.0) era muito alto
+3. O fuzzy_threshold (70) era muito restritivo
+4. Não havia notas sobre Roma Antiga no vault (CDU 937)
+
+### Correções Aplicadas
+
+| Arquivo | Correção | Valor Anterior | Novo Valor |
+|---------|----------|---------------|------------|
+| `src/ingestion/pdf_processor.py` | threshold | 2.0 | 0.0 |
+| `src/ingestion/pdf_processor.py` | top_k | 5 | 20 |
+| `src/topics/topic_matcher.py` | fuzzy_threshold | 70 | 40 |
+| `src/topics/vault_writer.py` | JSON parsing | sóvia `result.topics` | Também lê `result.data.topics` |
+
+### Resultados
+- Notas com topic_classification: 205 → 250 (+45 notas de história processadas)
+- Matches encontrados: 1 → 20
+- ⚠️ Para livros sobre Roma Antiga: ainda há 0 matches relevantes (vault não tem notas sobre o tema)
+
+### Lesson Learned
+O sistema funciona bem para livros cuja temática Overlaps com notas existentes no vault (liderança, economia, contabilidade). Para livros de história antiga, é necessário adicionar mais notas relevantes ao vault primeiro.
 
 ---
 

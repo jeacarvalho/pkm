@@ -52,8 +52,18 @@ class TranslationCache:
                 self.vault_path / "100 ARQUIVOS E REFERENCIAS" / "Livros" / book_name
             )
 
+        # Local cache directory (data/cache/translation/{book_name}/)
+        self.local_cache_dir = (
+            Path("/home/s015533607/Documentos/desenv/pkm/data/cache/translation")
+            / book_name
+        )
+
     def get_cached_translation(self, chapter_num: int) -> Optional[str]:
         """Get cached translation for a chapter if it exists.
+
+        Checks in order:
+        1. Local cache (data/cache/translation/{book_name}/)
+        2. Vault (100 ARQUIVOS E REFERENCIAS/Livros/{book_name}/)
 
         Args:
             chapter_num: Chapter number (0-indexed).
@@ -67,6 +77,18 @@ class TranslationCache:
             )
             return None
 
+        # Check local cache first
+        local_cache_file = self.local_cache_dir / f"chapter_{chapter_num:02d}.txt"
+        if local_cache_file.exists():
+            try:
+                content = local_cache_file.read_text(encoding="utf-8")
+                if content:
+                    logger.info(f"✅ Using LOCAL cache for chapter {chapter_num}")
+                    return content
+            except Exception as e:
+                logger.warning(f"Error reading local cache: {e}")
+
+        # Check vault cache
         chapter_file = self._find_chapter_file(chapter_num)
         if not chapter_file or not chapter_file.exists():
             logger.debug(f"No cached file found for chapter {chapter_num}")
@@ -147,6 +169,24 @@ class TranslationCache:
         except Exception as e:
             logger.error(f"Error extracting content from {file_path}: {e}")
             return None
+
+    def save_to_local_cache(self, chapter_num: int, translated_text: str) -> None:
+        """Save translated text to local cache immediately after translation.
+
+        This ensures we have a backup even if the process crashes before
+        saving to the vault.
+
+        Args:
+            chapter_num: Chapter number (0-indexed).
+            translated_text: The translated text to cache.
+        """
+        try:
+            self.local_cache_dir.mkdir(parents=True, exist_ok=True)
+            cache_file = self.local_cache_dir / f"chapter_{chapter_num:02d}.txt"
+            cache_file.write_text(translated_text, encoding="utf-8")
+            logger.info(f"💾 Saved to local cache: chapter {chapter_num}")
+        except Exception as e:
+            logger.warning(f"Failed to save to local cache: {e}")
 
     def mark_as_cached(self, chapter_num: int, file_path: Path) -> None:
         """Mark a chapter as cached by updating frontmatter.

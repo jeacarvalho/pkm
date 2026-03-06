@@ -17,6 +17,7 @@ from thefuzz import fuzz  # Fuzzy matching
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from .config import TopicConfig
+from .topic_normalization import TopicNormalizer
 
 
 class TopicMatcher:
@@ -25,7 +26,13 @@ class TopicMatcher:
     def __init__(self, config: TopicConfig):
         self.config = config
         self.logger = self._setup_logger()
-        self.fuzzy_threshold = 85  # Threshold para fuzzy match
+        self.fuzzy_threshold = (
+            40  # Threshold para fuzzy match (reduzido para encontrar mais matches)
+        )
+        self.normalizer = TopicNormalizer()  # Topic normalizer
+
+        # Skip list - notas com frontmatter inválido (não tenta ler novamente)
+        self._skip_notes = set()
 
         # Estatísticas
         self.stats = {
@@ -96,6 +103,10 @@ class TopicMatcher:
         """Lê frontmatter de uma nota (apenas topic_classification)"""
         import yaml
 
+        # Check skip list
+        if str(note_path) in self._skip_notes:
+            return None
+
         try:
             with open(note_path, "r", encoding="utf-8") as f:
                 content = f.read()
@@ -110,6 +121,8 @@ class TopicMatcher:
             return {}
 
         except Exception as e:
+            # Add to skip list to avoid repeated errors
+            self._skip_notes.add(str(note_path))
             self.logger.error(f"Error reading frontmatter {note_path}: {str(e)}")
             return None
 
@@ -133,25 +146,38 @@ class TopicMatcher:
         chapter_cdu_secondary: Optional[List[str]] = None,
         vault_cdu_primary: Optional[str] = None,
         vault_cdu_secondary: Optional[List[str]] = None,
+        use_normalization: bool = True,
     ) -> Dict:
         """
         Calcula score de matching entre tópicos do capítulo e do vault
         Inclui matching por CDU além de matching por tópicos
 
         Algoritmo:
-        1. Para cada tópico do capítulo, busca match fuzzy no vault
-        2. Score += min(chapter_weight, vault_weight) para cada match
-        3. Bônus de score por matching de CDU
-        4. Normaliza score para 0-100
+        1. Normaliza tópicos do capítulo para categorias mais amplas
+        2. Para cada tópico (original ou normalizado), busca match fuzzy no vault
+        3. Score += min(chapter_weight, vault_weight) para cada match
+        4. Bônus de score por matching de CDU
+        5. Normaliza score para 0-100
         """
         score = 0
         matched = []
         cdu_bonus = 0
 
-        # Matching por tópicos
-        for ch_topic in chapter_topics:
+        # Normaliza tópicos do capítulo se habilitado
+        if use_normalization:
+            chapter_topics_normalized = self.normalizer.normalize_topics(chapter_topics)
+            self.logger.debug(
+                f"Normalized {len(chapter_topics)} topics to {len(chapter_topics_normalized)} topics"
+            )
+        else:
+            chapter_topics_normalized = chapter_topics
+
+        # Matching por tópicos (incluindo normalizados)
+        for ch_topic in chapter_topics_normalized:
             ch_name = ch_topic.get("name", "")
             ch_weight = ch_topic.get("weight", 5)
+            is_normalized = ch_topic.get("is_normalized", False)
+            original_topic = ch_topic.get("original_topic", "")
 
             for vt_topic in vault_topics:
                 vt_name = vt_topic.get("name", "")
@@ -161,17 +187,31 @@ class TopicMatcher:
                 is_match, fuzzy_score = self._fuzzy_match(ch_name, vt_name)
 
                 if is_match:
-                    # Score ponderado pelo peso
-                    match_score = min(ch_weight, vt_weight)
+                    # Score ponderado pelo peso (reduzido para tópicos normalizados)
+                    if is_normalized:
+                        match_score = max(
+                            1, min(ch_weight, vt_weight) // 2
+                        )  # Reduz peso para normalizados
+                    else:
+                        match_score = min(ch_weight, vt_weight)
+
                     score += match_score
+
+                    match_type = "topic_normalized" if is_normalized else "topic"
+                    chapter_topic_display = (
+                        f"{ch_name} [from: {original_topic}]"
+                        if is_normalized
+                        else ch_name
+                    )
 
                     matched.append(
                         {
-                            "chapter_topic": ch_name,
+                            "chapter_topic": chapter_topic_display,
                             "vault_topic": vt_name,
                             "weight": match_score,
                             "fuzzy_score": fuzzy_score,
-                            "match_type": "topic",
+                            "match_type": match_type,
+                            "is_normalized": is_normalized,
                         }
                     )
                     break  # Um tópico do capítulo matcha com no máximo 1 do vault
@@ -192,15 +232,15 @@ class TopicMatcher:
                 )
             else:
                 # Verifica se CDUs compartilham mesma categoria principal (primeiros 2 dígitos)
+                # Convert to string for safe operations
+                ch_cdu_str = str(chapter_cdu_primary)
+                vt_cdu_str = str(vault_cdu_primary)
+
                 ch_main = (
-                    chapter_cdu_primary.split(".")[0]
-                    if "." in chapter_cdu_primary
-                    else chapter_cdu_primary[:2]
+                    ch_cdu_str.split(".")[0] if "." in ch_cdu_str else ch_cdu_str[:2]
                 )
                 vt_main = (
-                    vault_cdu_primary.split(".")[0]
-                    if "." in vault_cdu_primary
-                    else vault_cdu_primary[:2]
+                    vt_cdu_str.split(".")[0] if "." in vt_cdu_str else vt_cdu_str[:2]
                 )
 
                 if ch_main == vt_main:
@@ -264,6 +304,9 @@ class TopicMatcher:
             # Ignora pasta .obsidian
             if ".obsidian" in str(md_file):
                 continue
+            # Ignora pasta de Livros processados (capítulos já tem seus próprios matches)
+            if "/Livros/" in str(md_file) or "\\Livros\\" in str(md_file):
+                continue
 
             notes.append(md_file)
 
@@ -308,6 +351,7 @@ class TopicMatcher:
         vault_dir: Path,
         top_k: int = 20,
         threshold: float = 0.0,
+        use_normalization: bool = True,
     ) -> List[Dict]:
         """
         Match tópicos do capítulo contra todas as notas do vault
@@ -367,10 +411,11 @@ class TopicMatcher:
                 chapter_cdu_secondary=chapter_cdu_secondary,
                 vault_cdu_primary=vault_cdu_primary,
                 vault_cdu_secondary=vault_cdu_secondary,
+                use_normalization=use_normalization,
             )
 
-            # Filtra por threshold
-            if match_result["score"] < threshold:
+            # Filtra por threshold (exclui scores zero ou muito baixos)
+            if match_result["score"] < threshold or match_result["score"] < 0.1:
                 continue
 
             # Adiciona metadata da nota
@@ -394,6 +439,7 @@ class TopicMatcher:
         output_path: Optional[Path] = None,
         top_k: int = 20,
         threshold: float = 10.0,
+        use_normalization: bool = True,
     ) -> Dict:
         """
         Executa matching completo
@@ -429,6 +475,7 @@ class TopicMatcher:
             vault_dir=vault_dir,
             top_k=top_k,
             threshold=threshold,
+            use_normalization=use_normalization,
         )
 
         self.stats["end_time"] = datetime.now()

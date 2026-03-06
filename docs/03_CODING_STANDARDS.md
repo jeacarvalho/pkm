@@ -428,3 +428,21 @@ Always maintain `docs/RECOVERY.md` with:
 ```
 
 ---
+
+## Topic Matching Parameters (Sprint 10)
+
+Os seguintes parâmetros foram ajustados em 2026-03-05 para melhorar a taxa de matches:
+
+| Parâmetro | Valor Padrão | Local | Descrição |
+|-----------|--------------|-------|-----------|
+| `fuzzy_threshold` | 40 | `src/topics/topic_matcher.py:29` | Threshold para fuzzy matching (0-100). Menor = mais permissivo |
+| `match_threshold` | 0.0 | `src/ingestion/pdf_processor.py:385` | Score mínimo para aceitar match |
+| `top_k` | 20 | `src/ingestion/pdf_processor.py:384` | Número de matches a retornar |
+
+### Tuning de Parâmetros
+
+- **Para mais matches:** Reduzir `fuzzy_threshold` (mín: 30) e `match_threshold` (mín: 0.0)
+- **Para menos falsos positivos:** Aumentar `fuzzy_threshold` (máx: 85) e `match_threshold` (mín: 5.0)
+- **Nota:** O vault precisa ter notas com topic_classification relevantes ao tema do livro
+
+---
