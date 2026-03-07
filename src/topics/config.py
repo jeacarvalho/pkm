@@ -36,6 +36,11 @@ class TopicConfig(BaseSettings):
     retry_delay: float = Field(
         default=2.0, description="Initial delay between retries (seconds)"
     )
+    api_timeout: int = Field(default=90, description="API timeout in seconds")
+    api_delay: float = Field(
+        default=8.0,
+        description="Delay between API calls to avoid rate limiting (seconds)",
+    )
 
     # Sprint 09: Vault Writer Settings
     dry_run: bool = Field(

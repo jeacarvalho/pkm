@@ -149,148 +149,262 @@ class TopicMatcher:
         use_normalization: bool = True,
     ) -> Dict:
         """
-        Calcula score de matching entre tópicos do capítulo e do vault
-        Inclui matching por CDU além de matching por tópicos
+        Calcula score de matching entre tópicos do capítulo e do vault.
 
         Algoritmo:
         1. Normaliza tópicos do capítulo para categorias mais amplas
-        2. Para cada tópico (original ou normalizado), busca match fuzzy no vault
-        3. Score += min(chapter_weight, vault_weight) para cada match
-        4. Bônus de score por matching de CDU
-        5. Normaliza score para 0-100
+        2. Fuzzy match entre tópicos do capítulo e do vault
+        3. Bônus de score por matching de CDU
+        4. Normaliza score para 0-100
         """
-        score = 0
+        # Step 1: Normalize chapter topics
+        normalized_topics = self._normalize_chapter_topics(
+            chapter_topics, use_normalization
+        )
+
+        # Step 2: Match topics
+        topic_score, matched_topics = self._match_topics(
+            normalized_topics, vault_topics
+        )
+
+        # Step 3: Calculate CDU bonuses
+        cdu_bonus, cdu_matches = self._calculate_cdu_bonus(
+            chapter_cdu_primary,
+            chapter_cdu_secondary,
+            vault_cdu_primary,
+            vault_cdu_secondary,
+        )
+
+        # Step 4: Calculate final score
+        total_score = topic_score + cdu_bonus
+        all_matches = matched_topics + cdu_matches
+
+        return self._normalize_final_score(
+            total_score, cdu_bonus, all_matches, chapter_topics
+        )
+
+    def _normalize_chapter_topics(
+        self, chapter_topics: List[Dict], use_normalization: bool
+    ) -> List[Dict]:
+        """Normaliza tópicos do capítulo se habilitado."""
+        if not use_normalization:
+            return chapter_topics
+
+        normalized = self.normalizer.normalize_topics(chapter_topics)
+        self.logger.debug(
+            f"Normalized {len(chapter_topics)} topics to {len(normalized)} topics"
+        )
+        return normalized
+
+    def _match_topics(
+        self, chapter_topics: List[Dict], vault_topics: List[Dict]
+    ) -> Tuple[int, List[Dict]]:
+        """
+        Faz matching fuzzy entre tópicos do capítulo e do vault.
+
+        Returns:
+            Tuple of (total_score, matched_topics_list)
+        """
+        total_score = 0
         matched = []
-        cdu_bonus = 0
 
-        # Normaliza tópicos do capítulo se habilitado
-        if use_normalization:
-            chapter_topics_normalized = self.normalizer.normalize_topics(chapter_topics)
-            self.logger.debug(
-                f"Normalized {len(chapter_topics)} topics to {len(chapter_topics_normalized)} topics"
-            )
-        else:
-            chapter_topics_normalized = chapter_topics
+        for ch_topic in chapter_topics:
+            match = self._find_single_topic_match(ch_topic, vault_topics)
+            if match:
+                total_score += match["weight"]
+                matched.append(match)
 
-        # Matching por tópicos (incluindo normalizados)
-        for ch_topic in chapter_topics_normalized:
-            ch_name = ch_topic.get("name", "")
-            ch_weight = ch_topic.get("weight", 5)
-            is_normalized = ch_topic.get("is_normalized", False)
-            original_topic = ch_topic.get("original_topic", "")
+        return total_score, matched
 
-            for vt_topic in vault_topics:
-                vt_name = vt_topic.get("name", "")
-                vt_weight = vt_topic.get("weight", 5)
+    def _find_single_topic_match(
+        self, ch_topic: Dict, vault_topics: List[Dict]
+    ) -> Optional[Dict]:
+        """
+        Encontra o melhor match para um único tópico do capítulo.
 
-                # Fuzzy match
-                is_match, fuzzy_score = self._fuzzy_match(ch_name, vt_name)
+        Returns:
+            Match dictionary se encontrado, None caso contrário
+        """
+        ch_name = ch_topic.get("name", "")
+        ch_weight = ch_topic.get("weight", 5)
+        is_normalized = ch_topic.get("is_normalized", False)
+        original_topic = ch_topic.get("original_topic", "")
 
-                if is_match:
-                    # Score ponderado pelo peso (reduzido para tópicos normalizados)
-                    if is_normalized:
-                        match_score = max(
-                            1, min(ch_weight, vt_weight) // 2
-                        )  # Reduz peso para normalizados
-                    else:
-                        match_score = min(ch_weight, vt_weight)
+        for vt_topic in vault_topics:
+            vt_name = vt_topic.get("name", "")
+            vt_weight = vt_topic.get("weight", 5)
 
-                    score += match_score
+            is_match, fuzzy_score = self._fuzzy_match(ch_name, vt_name)
 
-                    match_type = "topic_normalized" if is_normalized else "topic"
-                    chapter_topic_display = (
-                        f"{ch_name} [from: {original_topic}]"
-                        if is_normalized
-                        else ch_name
-                    )
-
-                    matched.append(
-                        {
-                            "chapter_topic": chapter_topic_display,
-                            "vault_topic": vt_name,
-                            "weight": match_score,
-                            "fuzzy_score": fuzzy_score,
-                            "match_type": match_type,
-                            "is_normalized": is_normalized,
-                        }
-                    )
-                    break  # Um tópico do capítulo matcha com no máximo 1 do vault
-
-        # Matching por CDU
-        if chapter_cdu_primary and vault_cdu_primary:
-            # Matching exato de CDU primário
-            if chapter_cdu_primary == vault_cdu_primary:
-                cdu_bonus += 20  # Bônus significativo para CDU primário exato
-                matched.append(
-                    {
-                        "chapter_topic": f"CDU: {chapter_cdu_primary}",
-                        "vault_topic": f"CDU: {vault_cdu_primary}",
-                        "weight": 20,
-                        "fuzzy_score": 100,
-                        "match_type": "cdu_primary_exact",
-                    }
-                )
-            else:
-                # Verifica se CDUs compartilham mesma categoria principal (primeiros 2 dígitos)
-                # Convert to string for safe operations
-                ch_cdu_str = str(chapter_cdu_primary)
-                vt_cdu_str = str(vault_cdu_primary)
-
-                ch_main = (
-                    ch_cdu_str.split(".")[0] if "." in ch_cdu_str else ch_cdu_str[:2]
-                )
-                vt_main = (
-                    vt_cdu_str.split(".")[0] if "." in vt_cdu_str else vt_cdu_str[:2]
+            if is_match:
+                match_score = self._calculate_match_weight(
+                    ch_weight, vt_weight, is_normalized
                 )
 
-                if ch_main == vt_main:
-                    cdu_bonus += 10  # Bônus para mesma categoria principal
-                    matched.append(
-                        {
-                            "chapter_topic": f"CDU: {chapter_cdu_primary}",
-                            "vault_topic": f"CDU: {vault_cdu_primary}",
-                            "weight": 10,
-                            "fuzzy_score": 100,
-                            "match_type": "cdu_primary_category",
-                        }
-                    )
+                return self._create_match_dict(
+                    ch_name,
+                    vt_name,
+                    original_topic,
+                    match_score,
+                    fuzzy_score,
+                    is_normalized,
+                )
 
-        # Matching por CDU secundário
-        if chapter_cdu_secondary and vault_cdu_secondary:
-            # Verifica sobreposição entre CDUs secundários
-            common_secondary = set(chapter_cdu_secondary) & set(vault_cdu_secondary)
-            if common_secondary:
-                cdu_bonus += (
-                    len(common_secondary) * 5
-                )  # 5 pontos por cada CDU secundário comum
-                for cdu in common_secondary:
-                    matched.append(
-                        {
-                            "chapter_topic": f"CDU_sec: {cdu}",
-                            "vault_topic": f"CDU_sec: {cdu}",
-                            "weight": 5,
-                            "fuzzy_score": 100,
-                            "match_type": "cdu_secondary",
-                        }
-                    )
+        return None
 
-        # Adiciona bônus de CDU ao score total
-        score += cdu_bonus
+    def _calculate_match_weight(
+        self, ch_weight: int, vt_weight: int, is_normalized: bool
+    ) -> int:
+        """Calcula peso do match baseado nos pesos dos tópicos."""
+        if is_normalized:
+            return max(1, min(ch_weight, vt_weight) // 2)
+        return min(ch_weight, vt_weight)
 
-        # Normaliza score (0-100)
-        max_possible = (
-            sum(t.get("weight", 5) for t in chapter_topics) + 30
-        )  # Máximo bônus de CDU
-        normalized_score = (score / max_possible * 100) if max_possible > 0 else 0
+    def _create_match_dict(
+        self,
+        ch_name: str,
+        vt_name: str,
+        original_topic: str,
+        match_score: int,
+        fuzzy_score: int,
+        is_normalized: bool,
+    ) -> Dict:
+        """Cria dicionário de match."""
+        chapter_topic_display = (
+            f"{ch_name} [from: {original_topic}]" if is_normalized else ch_name
+        )
+        match_type = "topic_normalized" if is_normalized else "topic"
 
         return {
-            "score": round(normalized_score, 2),
-            "raw_score": score,
+            "chapter_topic": chapter_topic_display,
+            "vault_topic": vt_name,
+            "weight": match_score,
+            "fuzzy_score": fuzzy_score,
+            "match_type": match_type,
+            "is_normalized": is_normalized,
+        }
+
+    def _calculate_cdu_bonus(
+        self,
+        chapter_cdu_primary: Optional[str],
+        chapter_cdu_secondary: Optional[List[str]],
+        vault_cdu_primary: Optional[str],
+        vault_cdu_secondary: Optional[List[str]],
+    ) -> Tuple[int, List[Dict]]:
+        """
+        Calcula bônus de matching por CDU.
+
+        Returns:
+            Tuple of (total_cdu_bonus, cdu_matches_list)
+        """
+        cdu_bonus = 0
+        cdu_matches = []
+
+        # Match CDU primário
+        primary_bonus, primary_matches = self._match_primary_cdu(
+            chapter_cdu_primary, vault_cdu_primary
+        )
+        cdu_bonus += primary_bonus
+        cdu_matches.extend(primary_matches)
+
+        # Match CDU secundário
+        secondary_bonus, secondary_matches = self._match_secondary_cdu(
+            chapter_cdu_secondary, vault_cdu_secondary
+        )
+        cdu_bonus += secondary_bonus
+        cdu_matches.extend(secondary_matches)
+
+        return cdu_bonus, cdu_matches
+
+    def _match_primary_cdu(
+        self, chapter_cdu: Optional[str], vault_cdu: Optional[str]
+    ) -> Tuple[int, List[Dict]]:
+        """Match CDU primário com bônus para match exato ou categoria."""
+        if not chapter_cdu or not vault_cdu:
+            return 0, []
+
+        # Match exato
+        if chapter_cdu == vault_cdu:
+            return 20, [
+                {
+                    "chapter_topic": f"CDU: {chapter_cdu}",
+                    "vault_topic": f"CDU: {vault_cdu}",
+                    "weight": 20,
+                    "fuzzy_score": 100,
+                    "match_type": "cdu_primary_exact",
+                }
+            ]
+
+        # Match de categoria (primeiros dígitos)
+        ch_main = self._extract_cdu_category(chapter_cdu)
+        vt_main = self._extract_cdu_category(vault_cdu)
+
+        if ch_main == vt_main:
+            return 10, [
+                {
+                    "chapter_topic": f"CDU: {chapter_cdu}",
+                    "vault_topic": f"CDU: {vault_cdu}",
+                    "weight": 10,
+                    "fuzzy_score": 100,
+                    "match_type": "cdu_primary_category",
+                }
+            ]
+
+        return 0, []
+
+    def _extract_cdu_category(self, cdu: str) -> str:
+        """Extrai categoria principal do CDU (primeiros dígitos)."""
+        cdu_str = str(cdu)
+        if "." in cdu_str:
+            return cdu_str.split(".")[0]
+        return cdu_str[:2]
+
+    def _match_secondary_cdu(
+        self,
+        chapter_secondary: Optional[List[str]],
+        vault_secondary: Optional[List[str]],
+    ) -> Tuple[int, List[Dict]]:
+        """Match CDU secundários comuns."""
+        if not chapter_secondary or not vault_secondary:
+            return 0, []
+
+        common = set(chapter_secondary) & set(vault_secondary)
+        if not common:
+            return 0, []
+
+        bonus = len(common) * 5
+        matches = [
+            {
+                "chapter_topic": f"CDU_sec: {cdu}",
+                "vault_topic": f"CDU_sec: {cdu}",
+                "weight": 5,
+                "fuzzy_score": 100,
+                "match_type": "cdu_secondary",
+            }
+            for cdu in common
+        ]
+
+        return bonus, matches
+
+    def _normalize_final_score(
+        self,
+        total_score: int,
+        cdu_bonus: int,
+        matched_topics: List[Dict],
+        chapter_topics: List[Dict],
+    ) -> Dict:
+        """Normaliza score final para escala 0-100."""
+        max_possible = sum(t.get("weight", 5) for t in chapter_topics) + 30
+        normalized = (total_score / max_possible * 100) if max_possible > 0 else 0
+
+        return {
+            "score": round(normalized, 2),
+            "raw_score": total_score,
             "cdu_bonus": cdu_bonus,
             "max_possible": max_possible,
-            "matched_topics": matched,
+            "matched_topics": matched_topics,
             "total_chapter_topics": len(chapter_topics),
-            "total_matched": len(matched),
+            "total_matched": len(matched_topics),
         }
 
     def _find_notes_with_topics(self, vault_dir: Path) -> List[Path]:

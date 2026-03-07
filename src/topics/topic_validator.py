@@ -10,6 +10,8 @@ from src.topics.config import TopicConfig
 def remove_accents(text: str) -> str:
     """Remove accents from text while preserving base characters.
 
+    Also transliterates Cyrillic and Arabic characters to their Latin equivalents.
+
     Args:
         text: Input text with possible accents
 
@@ -20,7 +22,153 @@ def remove_accents(text: str) -> str:
     normalized = unicodedata.normalize("NFD", text)
     # Filter out combining characters (Mn category)
     result = "".join(c for c in normalized if unicodedata.category(c) != "Mn")
-    return result
+
+    # Transliterate Cyrillic characters to Latin
+    cyrillic_to_latin = {
+        "а": "a",
+        "б": "b",
+        "в": "v",
+        "г": "g",
+        "д": "d",
+        "е": "e",
+        "ё": "e",
+        "ж": "zh",
+        "з": "z",
+        "и": "i",
+        "й": "y",
+        "к": "k",
+        "л": "l",
+        "м": "m",
+        "н": "n",
+        "о": "o",
+        "п": "p",
+        "р": "r",
+        "с": "s",
+        "т": "t",
+        "у": "u",
+        "ф": "f",
+        "х": "h",
+        "ц": "ts",
+        "ч": "ch",
+        "ш": "sh",
+        "щ": "sch",
+        "ъ": "",
+        "ы": "y",
+        "ь": "",
+        "э": "e",
+        "ю": "yu",
+        "я": "ya",
+        "А": "A",
+        "Б": "B",
+        "В": "V",
+        "Г": "G",
+        "Д": "D",
+        "Е": "E",
+        "Ё": "E",
+        "Ж": "Zh",
+        "З": "Z",
+        "И": "I",
+        "Й": "Y",
+        "К": "K",
+        "Л": "L",
+        "М": "M",
+        "Н": "N",
+        "О": "O",
+        "П": "P",
+        "Р": "R",
+        "С": "S",
+        "Т": "T",
+        "У": "U",
+        "Ф": "F",
+        "Х": "H",
+        "Ц": "Ts",
+        "Ч": "Ch",
+        "Ш": "Sh",
+        "Щ": "Sch",
+        "Ъ": "",
+        "Ы": "Y",
+        "Ь": "",
+        "Э": "E",
+        "Ю": "Yu",
+        "Я": "Ya",
+    }
+
+    # Transliterate Arabic characters to Latin
+    arabic_to_latin = {
+        "ا": "a",
+        "أ": "a",
+        "إ": "i",
+        "آ": "a",
+        "ب": "b",
+        "ت": "t",
+        "ث": "th",
+        "ج": "j",
+        "ح": "h",
+        "خ": "kh",
+        "د": "d",
+        "ذ": "dh",
+        "ر": "r",
+        "ز": "z",
+        "س": "s",
+        "ش": "sh",
+        "ص": "s",
+        "ض": "d",
+        "ط": "t",
+        "ظ": "z",
+        "ع": "a",
+        "غ": "gh",
+        "ف": "f",
+        "ق": "q",
+        "ك": "k",
+        "ل": "l",
+        "م": "m",
+        "ن": "n",
+        "ه": "h",
+        "و": "w",
+        "ي": "y",
+        "ى": "a",
+        "ة": "h",
+        "ء": "",
+        "ؤ": "w",
+        "ئ": "y",
+        "ـ": "",
+        "َ": "a",
+        "ُ": "u",
+        "ِ": "i",
+        "ْ": "",
+        "ّ": "",
+        "ٰ": "a",
+        "ً": "an",
+        "ٌ": "un",
+        "ٍ": "in",
+        "ٓ": "",
+        "ٖ": "",
+        "ٗ": "",
+        "٘": "",
+        "ٙ": "",
+        "ٚ": "",
+        "ٛ": "",
+        "ٜ": "",
+        "ٝ": "",
+        "ٞ": "",
+        "ٟ": "",
+        "ﺕ": "t",  # Arabic letter tah isolated form
+        "ﺗ": "t",  # Arabic letter tah initial form
+        "ﺘ": "t",  # Arabic letter tah medial form
+        "ﺖ": "t",  # Arabic letter tah final form
+    }
+
+    # Convert Cyrillic and Arabic characters
+    transliterated = []
+    for char in result:
+        if char in cyrillic_to_latin:
+            transliterated.append(cyrillic_to_latin[char])
+        elif char in arabic_to_latin:
+            transliterated.append(arabic_to_latin[char])
+        else:
+            transliterated.append(char)
+
+    return "".join(transliterated)
 
 
 class TopicValidationError(Exception):
@@ -32,7 +180,7 @@ class TopicValidationError(Exception):
 class TopicValidator:
     """Validator for topic extraction results."""
 
-    def __init__(self, config: TopicConfig = None):
+    def __init__(self, config: Optional[TopicConfig] = None):
         self.config = config or TopicConfig()
 
     def validate_topics(self, topics: List[Dict[str, Any]]) -> bool:
@@ -67,14 +215,34 @@ class TopicValidator:
             if not name:
                 raise TopicValidationError(f"Topic {i}: name cannot be empty")
 
-            # Normalize name: remove accents and strip whitespace
+            # Normalize name: remove accents, convert to lowercase, and strip whitespace
             name = name.strip()
-            normalized_name = remove_accents(name)
+            normalized_name = remove_accents(name).lower()
+
+            # Replace colons with underscores (e.g., "contexto_cultural_de_lucas_16:18" -> "contexto_cultural_de_lucas_16_18")
+            normalized_name = normalized_name.replace(":", "_")
+
+            # Replace spaces with underscores (e.g., "herança espiritual dos filhos de Deus" -> "heranca_espiritual_dos_filhos_de_deus")
+            normalized_name = normalized_name.replace(" ", "_")
+
+            # Remove parentheses and their contents (e.g., "atividade física regular (ciclismo, flexão, prancha)" -> "atividade_fisica_regular")
+            # First remove parentheses and everything inside them
+            normalized_name = re.sub(r"\([^)]*\)", "", normalized_name)
+
+            # Replace periods with underscores (e.g., "estudo_de_n.t._wright_sobre_casamento" -> "estudo_de_n_t_wright_sobre_casamento")
+            normalized_name = normalized_name.replace(".", "_")
+
+            # Then clean up any double underscores or trailing underscores
+            normalized_name = re.sub(r"_+", "_", normalized_name)
+            normalized_name = normalized_name.strip("_")
 
             # Check for snake_case (using normalized name)
-            if not re.match(r"^[a-z][a-z0-9_]*$", normalized_name):
+            # Allow Portuguese characters (with accents removed), hyphens, and underscores
+            # Original: ^[a-z][a-z0-9_]*$ - too strict for Portuguese content
+            # New: ^[a-z][a-z0-9_-]*$ - allows hyphens and underscores
+            if not re.match(r"^[a-z][a-z0-9_-]*$", normalized_name):
                 raise TopicValidationError(
-                    f"Topic {i}: name '{name}' must be snake_case"
+                    f"Topic {i}: name '{name}' must be snake_case (letters, numbers, hyphens, underscores)"
                 )
 
             # Update topic name to normalized version

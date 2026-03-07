@@ -63,11 +63,17 @@ class PDFProcessorCoordinator:
         """
         self.pdf_path = Path(pdf_path)
 
-        # If vault_path ends with "Livros", use parent as vault root
+        # Determine vault root - should be the root of the Obsidian vault (e.g., /path/to/Minhas_notas)
         vault_path_obj = Path(vault_path)
+
+        # If path ends with "Livros", go up to find vault root
         if vault_path_obj.name == "Livros":
-            self.vault_root = vault_path_obj.parent.parent  # Go up to "Minhas_notas"
+            self.vault_root = vault_path_obj.parent.parent  # .../Minhas_notas
+        elif "100 ARQUIVOS E REFERENCIAS" in str(vault_path_obj):
+            # Path includes the intermediate folders, go up to vault root
+            self.vault_root = vault_path_obj.parent.parent.parent  # .../Minhas_notas
         else:
+            # Assume it's already the vault root
             self.vault_root = vault_path_obj
 
         self.vault_path = str(self.vault_root)
@@ -217,9 +223,13 @@ class PDFProcessorCoordinator:
 
     def _write_chapters(self, chapters: List[Dict]) -> None:
         """Write processed chapters to vault."""
-        writer = VaultWriter(self.vault_path, self.book_name)
+        # Ensure we write to the correct location: vault_root/100 ARQUIVOS E REFERENCIAS/Livros/book_name
+        livros_path = Path(self.vault_path) / "100 ARQUIVOS E REFERENCIAS" / "Livros"
+        livros_path.mkdir(parents=True, exist_ok=True)
+
+        writer = VaultWriter(str(livros_path), self.book_name)
         writer.write_all_chapters(chapters)
-        logger.info(f"Wrote {len(chapters)} chapters to vault")
+        logger.info(f"Wrote {len(chapters)} chapters to {livros_path / self.book_name}")
 
 
 def main():

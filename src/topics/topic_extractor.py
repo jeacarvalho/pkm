@@ -9,8 +9,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from google import genai
-from google.genai import types
+import google.generativeai as genai
+from google.generativeai.types import GenerationConfig
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.topics.config import TopicConfig
@@ -117,10 +117,44 @@ class TopicExtractor:
         if not self.gemini_api_key:
             raise ValueError("GEMINI_API_KEY not configured")
 
-        self.client = genai.Client(api_key=self.gemini_api_key)
+        genai.configure(api_key=self.gemini_api_key)
+        self.model = genai.GenerativeModel(self.config.gemini_model)
         logger.info(
             f"Initialized TopicExtractor with model: {self.config.gemini_model}"
         )
+
+    def _clean_unicode_chars(self, text: str) -> str:
+        """Clean Unicode characters that can cause JSON parsing issues.
+
+        Args:
+            text: Input text
+
+        Returns:
+            Cleaned text with Unicode characters replaced
+        """
+        # Replace common Unicode characters with ASCII equivalents
+        replacements = {
+            "‘": "'",
+            "’": "'",
+            "“": '"',
+            "”": '"',
+            "—": "-",
+            "–": "-",
+            "…": "...",
+            " ": " ",  # non-breaking space to regular space
+        }
+
+        cleaned = text
+        for unicode_char, ascii_char in replacements.items():
+            cleaned = cleaned.replace(unicode_char, ascii_char)
+
+        # Also remove unusual Unicode characters (U+2000 to U+2FFF range)
+        # These can cause issues with some APIs
+        import re
+
+        cleaned = re.sub(r"[\u2000-\u2FFF]", "", cleaned)
+
+        return cleaned
 
     @retry(
         stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10)
@@ -137,8 +171,11 @@ class TopicExtractor:
         Returns:
             Dictionary with topics and CDU classification
         """
+        # Clean Unicode characters that can cause JSON parsing issues
+        cleaned_content = self._clean_unicode_chars(note_content)
+
         # Truncate if too long
-        truncated = note_content[: self.config.max_note_length]
+        truncated = cleaned_content[: self.config.max_note_length]
 
         # Use different prompt for chapters vs. notes
         if is_chapter:
@@ -147,12 +184,13 @@ class TopicExtractor:
             prompt = TOPIC_EXTRACTION_PROMPT.format(note_content=truncated)
 
         try:
-            response = self.client.models.generate_content(
-                model=self.config.gemini_model,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=0.0, response_mime_type="application/json"
+            response = self.model.generate_content(
+                prompt,
+                generation_config=GenerationConfig(
+                    temperature=0.0,
+                    response_mime_type="application/json",
                 ),
+                request_options={"timeout": self.config.api_timeout},
             )
 
             # Parse JSON response
@@ -166,15 +204,93 @@ class TopicExtractor:
 
             return result
 
-        except json.JSONDecodeError as e:
-            logger.error(f"JSON decode error: {e}")
-            raise
         except TopicValidationError as e:
             logger.error(f"Validation error: {e}")
             raise
         except Exception as e:
-            logger.error(f"Gemini API error: {e}")
+            # Check if it's a timeout error
+            error_str = str(e).lower()
+            if "timeout" in error_str or "504" in error_str or "deadline" in error_str:
+                logger.warning(
+                    f"⚠️ API timeout for note (content length: {len(truncated)} chars)"
+                )
+                # Log a sample of the content to debug
+                if len(truncated) > 500:
+                    logger.debug(f"Content sample (first 500 chars): {truncated[:500]}")
+            # Check for rate limit errors
+            elif "rate" in error_str or "quota" in error_str or "429" in error_str:
+                logger.warning(f"⚠️ Rate limit detected: {error_str}")
+                # Add extra delay before retry
+                time.sleep(10)
+            else:
+                logger.error(f"Gemini API error: {e}")
             raise
+
+    def _strip_frontmatter(self, content: str) -> str:
+        """Strip YAML frontmatter from note content.
+
+        Args:
+            content: Full note content including frontmatter
+
+        Returns:
+            Content without frontmatter (body only)
+        """
+        content = content.strip()
+        if content.startswith("---"):
+            # Find the second "---"
+            first_end = content.find("---", 3)  # Start searching after the first "---"
+            if first_end != -1:
+                # Return everything after the second "---"
+                content = content[first_end + 3 :].strip()
+        return content
+
+    def _clean_obsidian_syntax(self, content: str) -> str:
+        """Clean Obsidian-specific syntax from content.
+
+        Removes embedded images (![[filename.png]]), wikilinks ([[link]]),
+        and code blocks with dataview/tasks queries which can cause timeout issues.
+
+        Args:
+            content: Note content with Obsidian syntax
+
+        Returns:
+            Content cleaned of Obsidian syntax
+        """
+        import re
+
+        # Remove embedded images: ![[filename.png]]
+        content = re.sub(r"!\[\[[^\]]+\]\]", "", content)
+
+        # Remove wikilinks: [[link]]
+        content = re.sub(r"\[\[[^\]]+\]\]", "", content)
+
+        # Remove code blocks (```code```) - especially dataview and tasks queries
+        # This regex matches code blocks with any language specification
+        content = re.sub(r"```[\w\s]*\n[\s\S]*?\n```", "", content)
+
+        return content.strip()
+
+    def _clean_urls(self, content: str) -> str:
+        """Clean URLs from content to prevent API timeouts.
+
+        Args:
+            content: Note content with URLs
+
+        Returns:
+            Content with URLs replaced with placeholders
+        """
+        import re
+
+        # More comprehensive URL pattern that catches URLs with various prefixes/suffixes
+        # Handles URLs that might be preceded by •, -, *, etc. and followed by various characters
+        url_pattern = r"\b(?:https?://|www\.)\S+[/\w.?=&%-]*"
+        content = re.sub(url_pattern, "[URL]", content)
+
+        # Also catch URLs without http:// prefix but with common patterns
+        url_pattern2 = r"\b[\w.-]+\.(?:com|org|net|br|edu|gov)[/\w.?=&%-]*"
+        content = re.sub(url_pattern2, "[URL]", content)
+
+        return content.strip()
 
     def process_note(self, note_path: Path) -> Tuple[Optional[Dict], Optional[str]]:
         """Process a single note.
@@ -195,7 +311,41 @@ class TopicExtractor:
                 result = self._extract_from_title(note_path, content_stripped)
                 return result, None
 
-            result = self.extract_topics(content)
+            # Strip frontmatter before sending to Gemini API
+            # Frontmatter can cause timeout issues with certain content
+            body_content = self._strip_frontmatter(content_stripped)
+
+            # Log if frontmatter was stripped
+            if body_content != content_stripped:
+                original_len = len(content_stripped)
+                stripped_len = len(body_content)
+                logger.debug(
+                    f"  📋 Stripped frontmatter: {original_len} → {stripped_len} chars"
+                )
+
+            # Clean Obsidian syntax (embedded images, wikilinks)
+            # These can cause timeout issues with Gemini API
+            cleaned_content = self._clean_obsidian_syntax(body_content)
+
+            # Log if Obsidian syntax was cleaned
+            if cleaned_content != body_content:
+                original_len = len(body_content)
+                cleaned_len = len(cleaned_content)
+                logger.debug(
+                    f"  🧹 Cleaned Obsidian syntax: {original_len} → {cleaned_len} chars"
+                )
+
+            # Clean URLs to prevent API timeouts
+            # URLs in content can cause Gemini API to hang
+            url_cleaned_content = self._clean_urls(cleaned_content)
+
+            # Log if URLs were cleaned
+            if url_cleaned_content != cleaned_content:
+                original_len = len(cleaned_content)
+                cleaned_len = len(url_cleaned_content)
+                logger.debug(f"  🔗 Cleaned URLs: {original_len} → {cleaned_len} chars")
+
+            result = self.extract_topics(url_cleaned_content)
 
             # Add metadata
             result["metadata"] = {
@@ -365,10 +515,19 @@ class TopicExtractor:
                 results.append(
                     {"file": str(note_path), "status": "error", "error": error}
                 )
-            else:
+            elif result:
                 logger.info(f"  ✅ Success: {len(result.get('topics', []))} topics")
                 results.append(
                     {"file": str(note_path), "status": "success", "data": result}
+                )
+            else:
+                logger.error(f"  ❌ Failed: No result returned")
+                results.append(
+                    {
+                        "file": str(note_path),
+                        "status": "error",
+                        "error": "No result returned",
+                    }
                 )
 
             # Small delay between API calls

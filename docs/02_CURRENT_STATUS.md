@@ -3,9 +3,9 @@
 ```markdown
 # Status Atual - Obsidian RAG Connector
 
-**Last Updated:** 2026-03-05  
+**Last Updated:** 2026-03-06  
 **Current Phase:** v2.0 COMPLETE ✅ - TOPIC-BASED MATCHING (NO EMBEDDING)
-**Index Status:** ✅ 250+ notas com topic_classification
+**Index Status:** ✅ 3464/3631 notas com topic_classification (95.4% coverage)
 
 ---
 
