@@ -9,8 +9,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-import google.generativeai as genai
-from google.generativeai.types import GenerationConfig
+from google import genai
+from google.genai import types
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.topics.config import TopicConfig
@@ -117,8 +117,8 @@ class TopicExtractor:
         if not self.gemini_api_key:
             raise ValueError("GEMINI_API_KEY not configured")
 
-        genai.configure(api_key=self.gemini_api_key)
-        self.model = genai.GenerativeModel(self.config.gemini_model)
+        self.client = genai.Client(api_key=self.gemini_api_key)
+        self.model_name = self.config.gemini_model
         logger.info(
             f"Initialized TopicExtractor with model: {self.config.gemini_model}"
         )
@@ -184,13 +184,13 @@ class TopicExtractor:
             prompt = TOPIC_EXTRACTION_PROMPT.format(note_content=truncated)
 
         try:
-            response = self.model.generate_content(
-                prompt,
-                generation_config=GenerationConfig(
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
                     temperature=0.0,
                     response_mime_type="application/json",
                 ),
-                request_options={"timeout": self.config.api_timeout},
             )
 
             # Parse JSON response

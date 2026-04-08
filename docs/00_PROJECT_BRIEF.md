@@ -381,7 +381,7 @@ cat data/logs/daily_sync/daily_sync_2026-03-07.log
 # (No Ollama/ChromaDB needed anymore)
 
 # 2. Install new dependencies
-pip install google-generativeai pyyaml thefuzz
+pip install google-genai pyyaml thefuzz
 
 # 3. Configure Gemini API key
 export GEMINI_API_KEY=your_key

@@ -324,7 +324,7 @@ settings = Settings()
 python = "^3.10"
 chromadb = "^0.4.22"
 ollama = "^0.1.7"
-google-generativeai = "^0.3.2"
+google-genai = "^1.0.0"
 pymupdf = "^1.23.8"
 sentence-transformers = "^2.3.1"
 pydantic = "^2.5.3"
@@ -343,7 +343,7 @@ ruff = "^0.1.9"
 
 ```bash
 poetry install
-poetry add google-generativeai pymupdf chromadb ollama
+poetry add google-genai pymupdf chromadb ollama
 ```
 
 ---

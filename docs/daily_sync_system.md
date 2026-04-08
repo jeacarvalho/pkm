@@ -156,10 +156,10 @@ Notes that fail 3 times are skipped for 7 days to prevent wasting API calls. The
    - Status: All notes have this timestamp (0 missing)
    - If found: Run with `--force-all` to add missing timestamps
 
-3. **Python Package Warnings**
-   - Warning: `google.generativeai` is deprecated
-   - Status: Using deprecated package due to SSL issues with `google.genai`
-   - Impact: None - system works correctly
+3. **Python Package**
+   - Status: ✅ Migrated to `google.genai` (new official package)
+   - Previous: `google.generativeai` (deprecated)
+   - Impact: Uses latest stable API
 
 ### Debugging
 
@@ -176,7 +176,7 @@ python3 test_simple_extraction.py
 
 ## Future Improvements
 
-1. **Migrate to `google.genai`** - Fix SSL certificate issues
+1. **✅ Migrate to `google.genai`** - Completed
 2. **Content Chunking** - Handle extremely long notes (>20KB)
 3. **Topic Deduplication** - Merge similar topics across notes
 4. **Quality Metrics** - Track topic relevance and consistency
@@ -185,7 +185,7 @@ python3 test_simple_extraction.py
 
 ## Dependencies
 
-- `google-generativeai` (deprecated - temporary due to SSL issues)
+- `google-genai` (official Google GenAI SDK)
 - `python-frontmatter`
 - `python-dotenv`
 

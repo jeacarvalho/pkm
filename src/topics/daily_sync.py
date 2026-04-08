@@ -91,6 +91,7 @@ class DailySync:
 
     def _get_note_metadata(self, note_path: Path) -> Dict:
         """Get metadata for a note file."""
+        frontmatter = {}  # Initialize early to ensure it's always defined
         try:
             # Get filesystem timestamps (make them timezone-aware)
             stat = note_path.stat()
@@ -98,7 +99,7 @@ class DailySync:
             modified_time = datetime.fromtimestamp(stat.st_mtime, timezone.utc)
 
             # Read frontmatter
-            frontmatter = {}
+            content = ""
             try:
                 with open(note_path, "r", encoding="utf-8") as f:
                     content = f.read()
@@ -108,29 +109,48 @@ class DailySync:
                     if len(parts) >= 3:
                         frontmatter_raw = parts[1]
                         try:
-                            frontmatter = yaml.safe_load(frontmatter_raw) or {}
+                            frontmatter = yaml.safe_load(frontmatter_raw)
                         except yaml.YAMLError:
                             frontmatter = {}
             except Exception as e:
                 logger.debug(f"Error reading frontmatter for {note_path}: {e}")
+
+            # CRITICAL: Ensure frontmatter is always a dict before using 'in' operator
+            if frontmatter is None:
+                frontmatter = {}
+            elif not isinstance(frontmatter, dict):
+                logger.debug(
+                    f"Frontmatter for {note_path.name} is not a dict (type: {type(frontmatter).__name__}), using empty dict"
+                )
+                frontmatter = {}
+
+            # Now it's safe to use 'in' operator
+            has_tc = "topic_classification" in frontmatter
 
             return {
                 "path": note_path,
                 "created_time": created_time,
                 "modified_time": modified_time,
                 "frontmatter": frontmatter,
-                "has_topic_classification": "topic_classification" in frontmatter,
+                "has_topic_classification": has_tc,
                 "last_classification_time": self._get_last_classification_time(
                     frontmatter
                 ),
             }
         except Exception as e:
+            import traceback
+
             logger.error(f"Error getting metadata for {note_path}: {e}")
+            logger.debug(f"Traceback: {traceback.format_exc()}")
             return {}
 
     def _get_last_classification_time(self, frontmatter: Dict) -> Optional[datetime]:
         """Get the last classification time from frontmatter."""
-        if not frontmatter or "topic_classification" not in frontmatter:
+        if (
+            not frontmatter
+            or not isinstance(frontmatter, dict)
+            or "topic_classification" not in frontmatter
+        ):
             return None
 
         tc = frontmatter.get("topic_classification", {})
@@ -139,14 +159,19 @@ class DailySync:
         if not classified_at:
             return None
 
+        # If already a datetime object, return it directly
+        if isinstance(classified_at, datetime):
+            return classified_at
+
         try:
-            # Try to parse ISO format
-            if "Z" in classified_at:
-                # UTC timezone
-                return datetime.fromisoformat(classified_at.replace("Z", "+00:00"))
-            else:
-                # Local timezone or naive
-                return datetime.fromisoformat(classified_at)
+            # Try to parse ISO format (string)
+            if isinstance(classified_at, str):
+                if "Z" in classified_at:
+                    # UTC timezone
+                    return datetime.fromisoformat(classified_at.replace("Z", "+00:00"))
+                else:
+                    # Local timezone or naive
+                    return datetime.fromisoformat(classified_at)
         except (ValueError, AttributeError):
             logger.debug(f"Could not parse classification time: {classified_at}")
             return None
@@ -364,12 +389,15 @@ class DailySync:
 
         return modified_notes
 
-    def process_notes(self, vault_dir: Path, force_all: bool = False) -> List[Path]:
+    def process_notes(
+        self, vault_dir: Path, force_all: bool = False, only_missing: bool = False
+    ) -> List[Path]:
         """Main processing method for daily sync.
 
         Args:
             vault_dir: Path to Obsidian vault
             force_all: If True, process all notes without topic_classification (not just today's)
+            only_missing: If True, process only notes without topic_classification (skip reindexing modified notes)
 
         Returns:
             List of modified note paths
@@ -378,6 +406,7 @@ class DailySync:
         logger.info(f"📅 Date: {datetime.now().strftime('%Y-%m-%d')}")
         logger.info(f"📁 Vault: {vault_dir}")
         logger.info(f"🔧 Force all: {force_all}")
+        logger.info(f"🔧 Only missing: {only_missing}")
 
         # Scan vault
         new_notes, modified_notes = self.scan_vault(vault_dir)
@@ -392,6 +421,19 @@ class DailySync:
             all_notes_to_process = list(set(new_notes + all_notes_without_tc))
             logger.info(
                 f"📝 Found {len(all_notes_without_tc)} notes without topic_classification"
+            )
+        elif only_missing:
+            # Process only notes without topic_classification (skip reindexing)
+            logger.info(
+                "🔧 Only-missing mode: Processing only notes without topic_classification"
+            )
+            all_notes_without_tc = self._find_all_notes_without_tc(vault_dir)
+            all_notes_to_process = all_notes_without_tc
+            logger.info(
+                f"📝 Found {len(all_notes_without_tc)} notes without topic_classification"
+            )
+            logger.info(
+                f"   (Skipping {len(modified_notes)} modified notes that already have classification)"
             )
         else:
             all_notes_to_process = new_notes + modified_notes
@@ -468,7 +510,11 @@ class DailySync:
                         frontmatter_raw = parts[1]
                         try:
                             frontmatter = yaml.safe_load(frontmatter_raw) or {}
-                            if "topic_classification" in frontmatter:
+                            # Ensure frontmatter is a dict before checking
+                            if (
+                                isinstance(frontmatter, dict)
+                                and "topic_classification" in frontmatter
+                            ):
                                 has_tc = True
                         except yaml.YAMLError:
                             pass
@@ -504,13 +550,16 @@ def main():
 Examples:
   # Run daily sync (process today's new/modified notes only)
   python -m src.topics.daily_sync --vault-dir "/path/to/vault"
-  
+
   # Force process all notes without topic_classification
   python -m src.topics.daily_sync --vault-dir "/path/to/vault" --force-all
-  
+
+  # Process only notes without topic_classification (skip reindexing)
+  python -m src.topics.daily_sync --vault-dir "/path/to/vault" --only-missing
+
   # Dry run (only scan, don't process)
   python -m src.topics.daily_sync --vault-dir "/path/to/vault" --dry-run
-  
+
   # Limit number of notes to process
   python -m src.topics.daily_sync --vault-dir "/path/to/vault" --limit 10
         """,
@@ -526,6 +575,12 @@ Examples:
         "--force-all",
         action="store_true",
         help="Process all notes without topic_classification (not just today's)",
+    )
+    parser.add_argument(
+        "--only-missing",
+        action="store_true",
+        dest="only_missing",
+        help="Process only notes without topic_classification (skip reindexing modified notes)",
     )
     parser.add_argument(
         "--dry-run",
@@ -551,7 +606,9 @@ Examples:
 
     # Run
     vault_dir = Path(args.vault_dir)
-    modified_notes = daily_sync.process_notes(vault_dir, args.force_all)
+    modified_notes = daily_sync.process_notes(
+        vault_dir, args.force_all, args.only_missing
+    )
 
     # Exit code
     if daily_sync.stats["notes_failed"] > 0:

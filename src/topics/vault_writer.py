@@ -184,6 +184,9 @@ class VaultWriter:
                 content_body = parts[2]
                 try:
                     frontmatter_dict = yaml.safe_load(frontmatter_raw) or {}
+                    # Ensure frontmatter is a dict (yaml.safe_load can return other types)
+                    if not isinstance(frontmatter_dict, dict):
+                        frontmatter_dict = {}
                 except yaml.YAMLError as e:
                     logger.error(f"YAML parse error in {note_path}: {e}")
                     frontmatter_dict = {}

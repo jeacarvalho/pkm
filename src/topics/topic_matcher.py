@@ -116,6 +116,9 @@ class TopicMatcher:
                 parts = content.split("---", 2)
                 if len(parts) >= 3:
                     frontmatter = yaml.safe_load(parts[1]) or {}
+                    # Ensure frontmatter is a dict (yaml.safe_load can return other types)
+                    if not isinstance(frontmatter, dict):
+                        return {}
                     return frontmatter
 
             return {}
