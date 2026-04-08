@@ -77,14 +77,14 @@ setup_logging() {
 
 run_daily_sync() {
     log_info "Starting Daily Sync v2.1..."
-    
+
     # Set PYTHONPATH for system Python
     export PYTHONPATH="$PROJECT_ROOT"
-    
-    # Run daily sync with force_all to process any remaining notes
+
+    # Run daily sync with only_missing to process only unclassified notes
     cd "$PROJECT_ROOT"
-    
-    log_info "Running daily sync with force_all=True..."
+
+    log_info "Running daily sync with only_missing=True..."
     python3 -c "
 import os
 import sys
@@ -103,11 +103,11 @@ daily_sync = DailySync(topics_config)
 vault_path = Path('$VAULT_PATH')
 
 print('🚀 Starting Daily Sync v2.1 - Production Mode')
-print(f'📅 Date: $(date +"%Y-%m-%d %H:%M:%S")')
+print(f'📅 Date: $(date +\"%Y-%m-%d %H:%M:%S\")')
 print(f'📁 Vault: {vault_path}')
 
-# Process notes
-modified_notes = daily_sync.process_notes(vault_path, force_all=True)
+# Process notes (only notes without topic_classification)
+modified_notes = daily_sync.process_notes(vault_path, force_all=False, only_missing=True)
 
 print(f'✅ Processing complete!')
 print(f'📝 Notes processed: {len(modified_notes)}')
