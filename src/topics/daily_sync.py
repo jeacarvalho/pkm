@@ -66,6 +66,10 @@ class DailySync:
         )
         self.today_end = self.today_start + timedelta(days=1)
 
+        # Time thresholds for yesterday
+        self.yesterday_start = self.today_start - timedelta(days=1)
+        self.yesterday_end = self.today_start
+
     def _setup_logger(self):
         """Configure logging for daily sync."""
         # Create daily sync log directory
@@ -192,6 +196,14 @@ class DailySync:
 
         return self.today_start <= modified_time < self.today_end
 
+    def _is_note_modified_yesterday(self, note_metadata: Dict) -> bool:
+        """Check if note was modified yesterday."""
+        modified_time = note_metadata.get("modified_time")
+        if not modified_time:
+            return False
+
+        return self.yesterday_start <= modified_time < self.yesterday_end
+
     def _needs_reindexing(self, note_metadata: Dict) -> bool:
         """Check if note needs reindexing (modified after last classification)."""
         if not note_metadata.get("has_topic_classification"):
@@ -206,18 +218,32 @@ class DailySync:
         # Needs reindexing if modified after last classification
         return modified_time > last_classification_time
 
-    def scan_vault(self, vault_dir: Path) -> Tuple[List[Path], List[Path]]:
+    def scan_vault(
+        self, vault_dir: Path, production_mode: bool = False
+    ) -> Tuple[List[Path], List[Path]]:
         """Scan vault to find notes that need processing.
+
+        Args:
+            vault_dir: Path to Obsidian vault
+            production_mode: If True, process all unclassified notes and notes modified yesterday.
+                           If False, process only today's new notes and today's modified notes.
 
         Returns:
             Tuple of (new_notes, modified_notes)
-            - new_notes: Notes created today without topic_classification
-            - modified_notes: Notes modified today with topic_classification that need reindexing
+            - new_notes: Notes without topic_classification
+            - modified_notes: Notes with topic_classification that need reindexing
         """
         new_notes = []
         modified_notes = []
 
-        logger.info(f"🔍 Scanning vault: {vault_dir}")
+        if production_mode:
+            logger.info(f"🔍 Scanning vault in PRODUCTION mode: {vault_dir}")
+            logger.info("   - Will process ALL notes without topic_classification")
+            logger.info("   - Will reindex notes modified YESTERDAY")
+        else:
+            logger.info(f"🔍 Scanning vault in NORMAL mode: {vault_dir}")
+            logger.info("   - Will process only TODAY's new notes")
+            logger.info("   - Will reindex notes modified TODAY")
 
         # Scan all markdown files
         for md_file in vault_dir.rglob("*.md"):
@@ -233,21 +259,38 @@ class DailySync:
             if not metadata:
                 continue
 
-            # Check if note is new (created today) and has no topic classification
-            if (
-                self._is_note_created_today(metadata)
-                and not metadata["has_topic_classification"]
-            ):
-                new_notes.append(md_file)
-                self.stats["new_notes_found"] += 1
-                logger.debug(f"📝 New note found: {md_file.name}")
+            if production_mode:
+                # PRODUCTION MODE: Process ALL notes without classification
+                if not metadata["has_topic_classification"]:
+                    new_notes.append(md_file)
+                    self.stats["new_notes_found"] += 1
+                    logger.debug(f"📝 Unclassified note found: {md_file.name}")
 
-            # Check if note was modified today and needs reindexing
-            elif self._is_note_modified_today(metadata) and self._needs_reindexing(
-                metadata
-            ):
-                modified_notes.append(md_file)
-                self.stats["modified_notes_found"] += 1
+                # PRODUCTION MODE: Reindex notes modified YESTERDAY
+                elif self._is_note_modified_yesterday(
+                    metadata
+                ) and self._needs_reindexing(metadata):
+                    modified_notes.append(md_file)
+                    self.stats["modified_notes_found"] += 1
+                    logger.debug(
+                        f"🔄 Note modified yesterday needs reindexing: {md_file.name}"
+                    )
+            else:
+                # NORMAL MODE: Process only today's new notes
+                if (
+                    self._is_note_created_today(metadata)
+                    and not metadata["has_topic_classification"]
+                ):
+                    new_notes.append(md_file)
+                    self.stats["new_notes_found"] += 1
+                    logger.debug(f"📝 New note found: {md_file.name}")
+
+                # NORMAL MODE: Reindex notes modified TODAY
+                elif self._is_note_modified_today(metadata) and self._needs_reindexing(
+                    metadata
+                ):
+                    modified_notes.append(md_file)
+                    self.stats["modified_notes_found"] += 1
                 logger.debug(f"🔄 Modified note needs reindexing: {md_file.name}")
 
         logger.info(
@@ -390,7 +433,11 @@ class DailySync:
         return modified_notes
 
     def process_notes(
-        self, vault_dir: Path, force_all: bool = False, only_missing: bool = False
+        self,
+        vault_dir: Path,
+        force_all: bool = False,
+        only_missing: bool = False,
+        production_mode: bool = False,
     ) -> List[Path]:
         """Main processing method for daily sync.
 
@@ -398,6 +445,7 @@ class DailySync:
             vault_dir: Path to Obsidian vault
             force_all: If True, process all notes without topic_classification (not just today's)
             only_missing: If True, process only notes without topic_classification (skip reindexing modified notes)
+            production_mode: If True, process ALL unclassified notes + notes modified YESTERDAY
 
         Returns:
             List of modified note paths
@@ -407,9 +455,12 @@ class DailySync:
         logger.info(f"📁 Vault: {vault_dir}")
         logger.info(f"🔧 Force all: {force_all}")
         logger.info(f"🔧 Only missing: {only_missing}")
+        logger.info(f"🔧 Production mode: {production_mode}")
 
-        # Scan vault
-        new_notes, modified_notes = self.scan_vault(vault_dir)
+        # Scan vault with appropriate mode
+        new_notes, modified_notes = self.scan_vault(
+            vault_dir, production_mode=production_mode
+        )
 
         # If force_all, find all notes without topic_classification
         all_notes_to_process = []
